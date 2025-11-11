@@ -717,7 +717,7 @@ button {
 .shop_section {
     width: 100%;
     float: left;
-    background-color: #972c2d
+    background-color: #972c2d;
     height: auto;
     padding: 90px 0px;
     background-size: cover;
@@ -1153,6 +1153,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
