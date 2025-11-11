@@ -266,7 +266,17 @@ button {
 }
 
 .navbar-brand {
-    width: 24%;
+    /* width: 24%; */ /* Xóa hoặc comment dòng này đi */
+    width: auto; /* Để logo co giãn tự nhiên */
+    padding: 5px 0; /* Thêm chút đệm trên dưới cho cân đối */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt */
+}
+
+.navbar-brand img {
+    /* Đây là kích thước logo desktop */
+    max-height: 50px; /* Đặt chiều cao tối đa cho logo */
+    width: auto; /* Chiều rộng tự động theo */
+    transition: max-height 0.3s ease; /* Hiệu ứng mượt */
 }
 
 .navbar {
@@ -1076,5 +1086,15 @@ input.Enter_text::placeholder {
         text-align: center;
         margin-left: 0; /* Bỏ khoảng cách trái */
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+    }
+}
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO LOGO (Thêm mới)
+---------------------------------------------------------------------
+*/
+@media (max-width: 991px) {
+    .navbar-brand img {
+        /* Kích thước logo mobile (nhỏ hơn) */
+        max-height: 40px; 
     }
 }
