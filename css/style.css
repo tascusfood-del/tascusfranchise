@@ -1142,47 +1142,90 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
-NEW BANNER SLIDER (Thêm mới)
+/* ---------------------------------------------------------------------
+  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER)
 ---------------------------------------------------------------------
 */
+
+/* 1. NÚT TƯ VẤN NAVBAR */
+.btn-tu-van {
+    background-color: #8B0000; 
+    color: #ffffff;
+    border: 2px solid #8B0000;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-tu-van:hover {
+    background-color: #ffffff;
+    color: #8B0000;
+    border-color: #8B0000;
+}
+
+/* 2. LOGO NAVBAR DESKTOP */
+.navbar-brand {
+    width: auto;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    max-height: 50px; /* Chiều cao logo desktop */
+    width: auto;
+    transition: max-height 0.3s ease;
+}
+
+/* 3. FIX LỖI KHOẢNG CÁCH VÀ NỀN TRẮNG */
+.header_section,
+.banner_section_new {
+    float: none !important; /* Quan trọng: Sửa lỗi khoảng cách */
+}
+
+.header_section .navbar-collapse {
+    background-color: transparent !important; /* Quan trọng: Sửa lỗi nền trắng */
+}
+
+/* 4. BANNER SLIDER MỚI */
 .banner_section_new {
     width: 100%;
-    float: left;
-    /* Lấy màu nền từ header, phòng trường hợp ảnh load chậm */
     background-color: #f9b116; 
 }
 
 .banner-rotator-slider .item img {
     width: 100%;
-    height: 700px; /* Chiều cao cho desktop */
-    object-fit: cover; /* Cắt ảnh vừa vặn, không bị méo */
+    height: 550px; /* Chiều cao banner desktop */
+    object-fit: cover;
     display: block;
 }
 
-/* CSS cho các nút điều hướng (đã có trong custom.js) */
 .banner-rotator-slider .owl-nav {
     position: absolute;
     top: 50%;
     width: 100%;
     transform: translateY(-50%);
-    pointer-events: none; /* Cho phép bấm xuyên qua */
+    pointer-events: none;
 }
 
 .banner-rotator-slider .owl-nav .owl-prev,
 .banner-rotator-slider .owl-nav .owl-next {
     position: absolute;
-    background: rgba(249, 177, 22, 0.7) !important; /* Màu vàng mờ */
+    background: rgba(249, 177, 22, 0.7) !important;
     color: #ffffff !important;
     padding: 10px 15px !important;
     font-size: 30px !important;
     border-radius: 5px;
-    pointer-events: auto; /* Cho phép bấm nút này */
+    pointer-events: auto;
     transition: all 0.3s ease;
 }
 
 .banner-rotator-slider .owl-nav .owl-prev:hover,
 .banner-rotator-slider .owl-nav .owl-next:hover {
-    background: #f9b116 !important; /* Màu vàng đậm khi hover */
+    background: #f9b116 !important;
 }
 
 .banner-rotator-slider .owl-nav .owl-prev {
@@ -1195,15 +1238,50 @@ NEW BANNER SLIDER (Thêm mới)
 
 
 /* ---------------------------------------------------------------------
-  RESPONSIVE CHO BANNER MỚI
+  TỔNG HỢP RESPONSIVE (LOGO, MENU, BANNER)
 ---------------------------------------------------------------------
 */
 @media (max-width: 991px) {
-    .banner-rotator-slider .item img {
-        height: 300px; /* Chiều cao cho mobile (giống ảnh mẫu) */
+
+    /* 5. LOGO MOBILE */
+    .navbar-brand img {
+        max-height: 40px; /* Chiều cao logo mobile */
     }
 
-    /* Ẩn nút prev/next trên mobile cho gọn */
+    /* 6. SỬA LỖI CĂN LỀ MENU MOBILE */
+    .header_section .navbar-nav {
+        margin-left: 0 !important;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header_section .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .header_section .navbar-nav .nav-link {
+        padding: 10px 0px; 
+    }
+
+    /* 7. NÚT BẤM MOBILE */
+    .header_section .form-inline {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .btn-tu-van {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        padding: 12px 20px;
+    }
+
+    /* 8. BANNER MOBILE */
+    .banner-rotator-slider .item img {
+        height: 300px; /* Chiều cao banner mobile */
+    }
+
     .banner-rotator-slider .owl-nav {
         display: none;
     }
