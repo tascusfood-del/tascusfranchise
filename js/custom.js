@@ -106,7 +106,7 @@ $(function () {
 		margin: 10,
 		navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive: {
-		  0: { /* <-- LỖI "D" ĐÃ SỬA */
+		  0: {
 			items: 1
 		  },
 		  600: {
@@ -143,7 +143,7 @@ $(function () {
       });
       $("#back-to-top").on("click", function(){
         $('body,html').animate({
-          scrollTop: 0 /* <-- LỖI "m" ĐÃ SỬA */
+          scrollTop: 0
         }, 1000);
     });
 	
@@ -320,7 +320,7 @@ $(function () {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 1,
-              S slidesToScroll: 1,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: false
             }
@@ -335,7 +335,7 @@ $(function () {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
-            }
+          S }
         }]
     });
 	
@@ -355,7 +355,7 @@ $(function () {
      $(document).ready(function () {
        $('#sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
-          $(this).toggleClass('active');
+    S       $(this).toggleClass('active');
        });
      });
 
