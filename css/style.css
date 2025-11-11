@@ -478,7 +478,7 @@ button {
     font-family: 'FontCuaToi', sans-serif;
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 22px;
     color: #fcfcfd;
     background-color: #232222;
     text-align: center;
@@ -572,7 +572,7 @@ button {
     font-family: 'FontCuaToi', sans-serif;
     width: 100%;
     float: left;
-    font-size: 16px;
+    font-size: 22px;
     color: #fcfcfd;
     background-color: #f9b116;
     text-align: center;
@@ -583,7 +583,7 @@ button {
 
 .readmore_btn a:hover {
     color: #ffffff;
-    background-color: #232222;
+    background-color: #972c2d;
 }
 
 .about_img img {
@@ -1156,3 +1156,4 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
