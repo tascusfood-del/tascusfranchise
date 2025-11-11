@@ -1142,200 +1142,47 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
-/* ---------------------------------------------------------------------
-  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER)
+NEW BANNER SLIDER (Thêm mới)
 ---------------------------------------------------------------------
 */
-
-/* 1. NÚT TƯ VẤN NAVBAR */
-.btn-tu-van {
-    background-color: #8B0000; 
-    color: #ffffff;
-    border: 2px solid #8B0000;
-    border-radius: 25px;
-    padding: 8px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-left: 20px;
-    transition: all 0.3s ease;
-}
-
-.btn-tu-van:hover {
-    background-color: #ffffff;
-    color: #8B0000;
-    border-color: #8B0000;
-}
-
-/* 2. LOGO NAVBAR DESKTOP */
-.navbar-brand {
-    width: auto;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand img {
-    max-height: 50px; /* Chiều cao logo desktop */
-    width: auto;
-    transition: max-height 0.3s ease;
-}
-
-/* 3. FIX LỖI KHOẢNG CÁCH VÀ NỀN TRẮNG */
-.header_section,
-.banner_section_new {
-    float: none !important; /* Quan trọng: Sửa lỗi khoảng cách */
-}
-
-.header_section .navbar-collapse {
-    background-color: transparent !important; /* Quan trọng: Sửa lỗi nền trắng */
-}
-
-/* 4. BANNER SLIDER MỚI */
 .banner_section_new {
     width: 100%;
+    float: left;
+    /* Lấy màu nền từ header, phòng trường hợp ảnh load chậm */
     background-color: #f9b116; 
 }
 
 .banner-rotator-slider .item img {
     width: 100%;
-    height: 550px; /* Chiều cao banner desktop */
-    object-fit: cover;
+    height: 550px; /* Chiều cao cho desktop */
+    object-fit: cover; /* Cắt ảnh vừa vặn, không bị méo */
     display: block;
 }
 
+/* CSS cho các nút điều hướng (đã có trong custom.js) */
 .banner-rotator-slider .owl-nav {
     position: absolute;
     top: 50%;
     width: 100%;
     transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none; /* Cho phép bấm xuyên qua */
 }
 
 .banner-rotator-slider .owl-nav .owl-prev,
 .banner-rotator-slider .owl-nav .owl-next {
     position: absolute;
-    background: rgba(249, 177, 22, 0.7) !important;
+    background: rgba(249, 177, 22, 0.7) !important; /* Màu vàng mờ */
     color: #ffffff !important;
     padding: 10px 15px !important;
     font-size: 30px !important;
     border-radius: 5px;
-    pointer-events: auto;
+    pointer-events: auto; /* Cho phép bấm nút này */
     transition: all 0.3s ease;
 }
 
 .banner-rotator-slider .owl-nav .owl-prev:hover,
 .banner-rotator-slider .owl-nav .owl-next:hover {
-    background: #f9b116 !important;
-}
-
-.banner-rotator-slider .owl-nav .owl-prev {
-    left: 20px;
-}
-
-.banner-rotator-slider .owl-nav .owl-next {
-    right: 20px;
-}
-
-/* ---------------------------------------------------------------------
-  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER) - V2
----------------------------------------------------------------------
-*/
-
-/* 1. NÚT TƯ VẤN NAVBAR */
-.btn-tu-van {
-    background-color: #8B0000; 
-    color: #ffffff;
-    border: 2px solid #8B0000;
-    border-radius: 25px;
-    padding: 8px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-left: 20px;
-    transition: all 0.3s ease;
-}
-
-.btn-tu-van:hover {
-    background-color: #ffffff;
-    color: #8B0000;
-    border-color: #8B0000;
-}
-
-/* 2. LOGO NAVBAR DESKTOP */
-.navbar-brand {
-    width: auto;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand img {
-    max-height: 50px; /* Chiều cao logo desktop */
-    width: auto;
-    transition: max-height 0.3s ease;
-}
-
-/* 3. FIX LỖI KHOẢNG CÁCH, NỀN TRẮNG, BÓP NAVBAR (CÁCH MỚI) */
-.header_section,
-.banner_section_new {
-    float: none !important; /* Sửa lỗi khoảng cách */
-}
-
-.header_section .navbar-collapse {
-    background-color: transparent !important; /* Sửa lỗi nền trắng */
-}
-
-/* FIX NAVBAR BỊ BÓP: 
-  Thêm padding trực tiếp vào .header_section
-*/
-.header_section {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    height: auto !important; /* Đảm bảo chiều cao tự động */
-}
-
-/* Bỏ padding gốc của .navbar để không bị cộng dồn 
-*/
-.navbar {
-    padding: 0px 0px !important; 
-}
-
-
-/* 4. BANNER SLIDER MỚI */
-.banner_section_new {
-    width: 100%;
-    background-color: #f9b116; 
-}
-
-.banner-rotator-slider .item img {
-    width: 100%;
-    height: 550px; /* Chiều cao banner desktop */
-    object-fit: cover;
-    display: block;
-}
-
-.banner-rotator-slider .owl-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    pointer-events: none;
-}
-
-.banner-rotator-slider .owl-nav .owl-prev,
-.banner-rotator-slider .owl-nav .owl-next {
-    position: absolute;
-    background: rgba(249, 177, 22, 0.7) !important;
-    color: #ffffff !important;
-    padding: 10px 15px !important;
-    font-size: 30px !important;
-    border-radius: 5px;
-    pointer-events: auto;
-    transition: all 0.3s ease;
-}
-
-.banner-rotator-slider .owl-nav .owl-prev:hover,
-.banner-rotator-slider .owl-nav .owl-next:hover {
-    background: #f9b116 !important;
+    background: #f9b116 !important; /* Màu vàng đậm khi hover */
 }
 
 .banner-rotator-slider .owl-nav .owl-prev {
@@ -1348,51 +1195,33 @@ input.Enter_text::placeholder {
 
 
 /* ---------------------------------------------------------------------
-  TỔNG HỢP RESPONSIVE (LOGO, MENU, BANNER)
+  RESPONSIVE CHO BANNER MỚI
 ---------------------------------------------------------------------
 */
 @media (max-width: 991px) {
-
-    /* 5. LOGO MOBILE */
-    .navbar-brand img {
-        max-height: 40px; /* Chiều cao logo mobile */
-    }
-
-    /* 6. SỬA LỖI CĂN LỀ MENU MOBILE */
-    .header_section .navbar-nav {
-        margin-left: 0 !important;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .header_section .navbar-nav .nav-item {
-        width: 100%;
-    }
-
-    .header_section .navbar-nav .nav-link {
-        padding: 10px 0px; 
-    }
-
-    /* 7. NÚT BẤM MOBILE */
-    .header_section .form-inline {
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
-
-    .btn-tu-van {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-        padding: 12px 20px;
-    }
-
-    /* 8. BANNER MOBILE */
     .banner-rotator-slider .item img {
-        height: 300px; /* Chiều cao banner mobile */
+        height: 300px; /* Chiều cao cho mobile (giống ảnh mẫu) */
     }
 
+    /* Ẩn nút prev/next trên mobile cho gọn */
     .banner-rotator-slider .owl-nav {
         display: none;
     }
+}
+/* ---------------------------------------------------------------------
+  FIX LỖI NỀN TRẮNG VÀ KHOẢNG CÁCH (Thêm mới)
+---------------------------------------------------------------------
+*/
+
+/* Vô hiệu hóa float: left; bị lỗi */
+.header_section,
+.banner_section_new {
+    float: none !important; 
+}
+
+/* Đảm bảo phần menu (khi co lại) cũng trong suốt
+  (Đây là code tôi gửi lần trước, nhưng dán ở đây cho chắc) 
+*/
+.header_section .navbar-collapse {
+    background-color: transparent !important;
 }
