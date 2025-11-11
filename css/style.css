@@ -256,7 +256,7 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
     font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     padding: 3px 20px;
-    font-size: 17px;
+    font-size: 22px;
     color: #fefefd;
     border-radius: 5px;
     text-transform: uppercase;
@@ -264,14 +264,14 @@ button {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-    color: 962b2d;
+    color: #962b2d;
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #252525;
+    color: #962b2d;
 }
 
 .navbar-brand {
@@ -348,7 +348,7 @@ button {
 }
 
 .read_bt a:hover {
-    color: #252525;
+    color: #962b2d;
     background-color: #ffffff;
 }
 
@@ -363,7 +363,7 @@ button {
     right: 0px;
     top: 90%;
     background-color: #ffffff;
-    color: #252525;
+    color: #962b2d;
 }
 
 #main_slider .carousel-control-prev,
@@ -704,7 +704,7 @@ button {
 #my_slider .carousel-control-next:hover,
 #my_slider .carousel-control-prev:focus,
 #my_slider .carousel-control-next:focus {
-    background: #252525;
+    background: #962b2d;
     color: #ffffff;
 }
 
@@ -765,7 +765,7 @@ button {
 }
 
 .quote_bt a:hover {
-    color: #252525;
+    color: #962b2d;
     background-color: #ffffff;
 }
 
@@ -788,13 +788,13 @@ button {
 }
 
 .call_bt a:hover {
-    color: #252525;
+    color: #962b2d;
     background-color: #ffffff;
 }
 
 .call_bt.active a {
     background: #ffffff;
-    color: #252525
+    color: #962b2d
 }
 
 
@@ -872,7 +872,7 @@ button {
 }
 
 .send_bt a:hover {
-    background-color: #252525;
+    background-color: #962b2d;
     color: #fefeff;
 }
 
@@ -889,7 +889,7 @@ button {
 .footer_section {
     width: 100%;
     float: left;
-    background-color: #252525;
+    background-color: #ffc107;
     height: auto;
     background-size: 100%;
     padding-bottom: 30px;
@@ -982,7 +982,7 @@ input.Enter_text::placeholder {
 }
 
 .subscribe_bt a:hover {
-    color: #252525;
+    color: #962b2d;
     background-color: #ffffff;
 }
 
@@ -1024,7 +1024,7 @@ input.Enter_text::placeholder {
 .copyright_section {
     width: 100%;
     float: left;
-    background-color: #252525;
+    background-color: #962b2d;
     height: auto;
 }
 
@@ -1151,6 +1151,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
