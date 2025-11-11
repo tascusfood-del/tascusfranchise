@@ -1236,6 +1236,106 @@ input.Enter_text::placeholder {
     right: 20px;
 }
 
+/* ---------------------------------------------------------------------
+  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER)
+---------------------------------------------------------------------
+*/
+
+/* 1. NÚT TƯ VẤN NAVBAR */
+.btn-tu-van {
+    background-color: #8B0000; 
+    color: #ffffff;
+    border: 2px solid #8B0000;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-tu-van:hover {
+    background-color: #ffffff;
+    color: #8B0000;
+    border-color: #8B0000;
+}
+
+/* 2. LOGO NAVBAR DESKTOP */
+.navbar-brand {
+    width: auto;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    max-height: 50px; /* Chiều cao logo desktop */
+    width: auto;
+    transition: max-height 0.3s ease;
+}
+
+/* 3. FIX LỖI KHOẢNG CÁCH, NỀN TRẮNG, BÓP NAVBAR */
+.header_section,
+.banner_section_new {
+    float: none !important; /* Sửa lỗi khoảng cách */
+}
+
+.header_section .navbar-collapse {
+    background-color: transparent !important; /* Sửa lỗi nền trắng */
+}
+
+.header_section .navbar {
+    padding-top: 15px !important;     /* Sửa lỗi navbar bị bóp */
+    padding-bottom: 15px !important;  /* Sửa lỗi navbar bị bóp */
+}
+
+
+/* 4. BANNER SLIDER MỚI */
+.banner_section_new {
+    width: 100%;
+    background-color: #f9b116; 
+}
+
+.banner-rotator-slider .item img {
+    width: 100%;
+    height: 550px; /* Chiều cao banner desktop */
+    object-fit: cover;
+    display: block;
+}
+
+.banner-rotator-slider .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.banner-rotator-slider .owl-nav .owl-prev,
+.banner-rotator-slider .owl-nav .owl-next {
+    position: absolute;
+    background: rgba(249, 177, 22, 0.7) !important;
+    color: #ffffff !important;
+    padding: 10px 15px !important;
+    font-size: 30px !important;
+    border-radius: 5px;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+}
+
+.banner-rotator-slider .owl-nav .owl-prev:hover,
+.banner-rotator-slider .owl-nav .owl-next:hover {
+    background: #f9b116 !important;
+}
+
+.banner-rotator-slider .owl-nav .owl-prev {
+    left: 20px;
+}
+
+.banner-rotator-slider .owl-nav .owl-next {
+    right: 20px;
+}
+
 
 /* ---------------------------------------------------------------------
   TỔNG HỢP RESPONSIVE (LOGO, MENU, BANNER)
