@@ -434,12 +434,12 @@ button {
 }
 
 .service_box:hover {
-    background-color: #161616;
+    background-color: #972c2d;
     margin-top: 50px;
 }
 
 .service_box.active {
-    background-color: #161616;
+    background-color: #972c2d;
     margin-top: 50px;
 }
 
@@ -717,7 +717,7 @@ button {
 .shop_section {
     width: 100%;
     float: left;
-    background-image: url(../images/shop-bg.png);
+    background-color: #972c2d
     height: auto;
     padding: 90px 0px;
     background-size: cover;
@@ -1066,7 +1066,7 @@ input.Enter_text::placeholder {
     padding: 8px 20px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 22px;
     margin-left: 20px; /* Tạo khoảng cách với menu */
     transition: all 0.3s ease;
 }
@@ -1153,6 +1153,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
