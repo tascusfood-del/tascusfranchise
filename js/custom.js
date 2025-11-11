@@ -300,7 +300,7 @@ $(function () {
             breakpoint: 480,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+          S     slidesToScroll: 1
             }
         }]
     });
@@ -332,7 +332,7 @@ $(function () {
             }
         }, {
             breakpoint: 480,
-            settings: {
+Z             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
             }
@@ -356,7 +356,7 @@ $(function () {
        $('#sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
           $(this).toggleClass('active');
-       });
+  S    });
      });
 
      /* Product slider 
