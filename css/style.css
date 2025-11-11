@@ -1157,5 +1157,49 @@ input.Enter_text::placeholder {
     }
 }
 
+/* ---------------------------------------------------------------------
+  CSS BANNER SLIDE (Kiểu Highlands)
+---------------------------------------------------------------------
+*/
+
+#carouselExampleIndicators {
+    width: 100%;
+    margin-top: -1px; /* Khắc phục khoảng trắng */
+}
+
+/* 1. Chiều cao của ảnh banner */
+#carouselExampleIndicators .carousel-item img {
+    height: 500px; /* Chiều cao desktop (Bạn tự điều chỉnh) */
+    object-fit: cover; 
+}
+
+/* 2. ẨN các nút mũi tên (Next/Prev) */
+#carouselExampleIndicators .carousel-control-prev,
+#carouselExampleIndicators .carousel-control-next {
+    display: none;
+}
+
+/* 3. Style các dấu chấm tròn (Indicators) */
+#carouselExampleIndicators .carousel-indicators li {
+    background-color: #AFAFAF; /* Màu xám mờ cho chấm */
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.7; /* Hơi mờ */
+}
+
+#carouselExampleIndicators .carousel-indicators .active {
+    background-color: #FFFFFF; /* Màu trắng cho chấm active */
+    opacity: 1; /* Rõ nét */
+}
+
+/* 4. Responsive cho mobile */
+@media (max-width: 768px) {
+    #carouselExampleIndicators .carousel-item img {
+        height: 300px; /* Chiều cao mobile (Bạn tự điều chỉnh) */
+    }
+}
 
 
