@@ -1142,19 +1142,18 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
-.bghero {
+.bghero2 {
   width: 100%;
-  height: 100vh;                /* Full chiều cao màn hình */
-  background-image: url("https://picsum.photos/1920/1080");
-  background-size: contain;     /* Không cắt ảnh */
-  background-repeat: no-repeat; /* Không lặp ảnh */
-  background-position: center center; /* Căn giữa ảnh */
-  background-color: #000;       /* Màu nền phụ */
+  height: 100%;
+  object-fit: contain;          /* Giữ tỉ lệ, không bị cắt */
+  object-position: center;      /* Căn giữa */
+  background-color: #000;       /* Màu nền phụ khi ảnh chưa full */
+  display: block;
 }
-
 /* Responsive (tùy chọn) */
 @media (max-width: 768px) {
   .bg {
     background-size: contain; /* vẫn giữ tỉ lệ */
   }
 }
+
