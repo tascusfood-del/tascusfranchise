@@ -12,14 +12,13 @@
 }
 /* ... (code @import và @font-face "Righteous" ở trên) ... */
 
-/* ---- DÁN FONT MỚI CỦA BẠN VÀO ĐÂY ---- */
+/* ---- FONT TÙY CHỈNH (PHIÊN BẢN .TTF) ---- */
 @font-face {
-    font-family: 'KenyanCoffee'; /* Đặt tên cho dễ gọi */
-    src: url('../fonts/') format('woff2');
+    font-family: 'FontCuaToi';  /* Giữ nguyên tên này */
+    src: url('../fonts/kenyan.ttf') format('truetype'); /* <-- ĐÃ SỬA .ttf */
     font-weight: normal;
     font-style: normal;
 }
-/* ---- HẾT CODE MỚI ---- */
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
@@ -76,9 +75,14 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'KenyanCoffee', sans-serif; /* <-- THÊM DÒNG NÀY */
+    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     letter-spacing: 0;
-    /* ... (các dòng code khác) ... */
+    font-weight: normal;
+    position: relative;
+    padding: 0 0 10px 0;
+    font-weight: normal;
+    line-height: normal;
+    color: #111111;
     margin: 0
 }
 
@@ -250,7 +254,7 @@ button {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    font-family: 'KenyanCoffee', sans-serif; /* <-- ĐÃ THÊM DÒNG NÀY */
+    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     padding: 3px 20px;
     font-size: 17px;
     color: #fefefd;
@@ -1147,6 +1151,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
