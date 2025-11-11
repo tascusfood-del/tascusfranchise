@@ -15,7 +15,7 @@
 /* ---- DÁN FONT MỚI CỦA BẠN VÀO ĐÂY ---- */
 @font-face {
     font-family: 'KenyanCoffee'; /* Đặt tên cho dễ gọi */
-    src: url('../fonts/kenyan coffee bd.woff2') format('woff2');
+    src: url('../fonts/') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -1147,5 +1147,6 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
