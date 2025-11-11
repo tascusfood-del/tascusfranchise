@@ -10,7 +10,16 @@
     src: url("../fonts/BalooChettan-Regular.ttf");
     src: url("../fonts/BalooChettan-Regular.ttf");
 }
+/* ... (code @import và @font-face "Righteous" ở trên) ... */
 
+/* ---- DÁN FONT MỚI CỦA BẠN VÀO ĐÂY ---- */
+@font-face {
+    font-family: 'KenyanCoffee'; /* Đặt tên cho dễ gọi */
+    src: url('../fonts/kenyan coffee bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ---- HẾT CODE MỚI ---- */
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
@@ -61,21 +70,16 @@ a {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    letter-spacing: 0;
-    font-weight: normal;
-    position: relative;
-    padding: 0 0 10px 0;
-    font-weight: normal;
-    line-height: normal;
-    color: #111111;
-    margin: 0
+    font-family: 'KenyanCoffee', sans-serif; /* <-- THÊM DÒNG NÀY */
+    letter-spacing: 0;
+    /* ... (các dòng code khác) ... */
+    margin: 0
 }
 
 h1 {
@@ -1142,3 +1146,4 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
