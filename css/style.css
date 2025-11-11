@@ -1066,7 +1066,7 @@ input.Enter_text::placeholder {
     padding: 8px 20px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 32px;
     margin-left: 20px; /* Tạo khoảng cách với menu */
     transition: all 0.3s ease;
 }
@@ -1153,6 +1153,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
