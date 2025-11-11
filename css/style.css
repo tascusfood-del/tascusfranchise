@@ -1143,11 +1143,13 @@ input.Enter_text::placeholder {
     }
 }
 /* ---------------------------------------------------------------------
+/* ---------------------------------------------------------------------
   NEW BANNER SLIDER (Thêm mới)
 ---------------------------------------------------------------------
 */
 .banner_section_new {
     width: 100%;
+    float: left;
     background-color: #f9b116; 
 }
 .banner-rotator-slider .item img {
@@ -1206,3 +1208,4 @@ input.Enter_text::placeholder {
         display: none;
     }
 }
+
