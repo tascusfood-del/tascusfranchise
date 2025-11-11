@@ -335,7 +335,7 @@ $(function () {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
-          S }
+            }
         }]
     });
 	
@@ -355,7 +355,7 @@ $(function () {
      $(document).ready(function () {
        $('#sidebarCollapse').on('click', function () {
           $('#sidebar').toggleClass('active');
-    S       $(this).toggleClass('active');
+          $(this).toggleClass('active');
        });
      });
 
