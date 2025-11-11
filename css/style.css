@@ -1208,20 +1208,3 @@ NEW BANNER SLIDER (Thêm mới)
         display: none;
     }
 }
-/* ---------------------------------------------------------------------
-  FIX LỖI NỀN TRẮNG VÀ KHOẢNG CÁCH (Thêm mới)
----------------------------------------------------------------------
-*/
-
-/* Vô hiệu hóa float: left; bị lỗi */
-.header_section,
-.banner_section_new {
-    float: none !important; 
-}
-
-/* Đảm bảo phần menu (khi co lại) cũng trong suốt
-  (Đây là code tôi gửi lần trước, nhưng dán ở đây cho chắc) 
-*/
-.header_section .navbar-collapse {
-    background-color: transparent !important;
-}
