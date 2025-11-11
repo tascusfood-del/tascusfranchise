@@ -230,7 +230,7 @@ button {
 
 .header_section {
     width: 100%;
-    /* float: left; */ /* Đã xóa hoặc vô hiệu hóa */
+    float: left;
     background-color: #f9b116;
     height: auto;
     background-size: 100%;
@@ -1142,15 +1142,14 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
-NEW BANNER SLIDER (Thêm mới)
+/* ---------------------------------------------------------------------
+  NEW BANNER SLIDER (Thêm mới)
 ---------------------------------------------------------------------
 */
 .banner_section_new {
     width: 100%;
-    /* Lấy màu nền từ header, phòng trường hợp ảnh load chậm */
     background-color: #f9b116; 
 }
-
 .banner-rotator-slider .item img {
     width: 100%;
     height: 550px; /* Chiều cao cho desktop */
@@ -1206,19 +1205,4 @@ NEW BANNER SLIDER (Thêm mới)
     .banner-rotator-slider .owl-nav {
         display: none;
     }
-}
-
-/* ---------------------------------------------------------------------
-  FIX NAVBAR NỀN TRẮNG (Thêm mới)
----------------------------------------------------------------------
-*/
-.header_section .navbar-collapse {
-    background-color: transparent !important;
-}
-
-/* Đảm bảo .bg-light cũng trong suốt
-  (Ghi đè lên file style.css gốc nếu có lỗi) 
-*/
-.header_section .bg-light {
-    background-color: transparent !important;
 }
