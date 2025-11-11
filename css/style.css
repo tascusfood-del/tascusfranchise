@@ -1142,18 +1142,45 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
-.bghero2 {
-  width: 100%;
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  object-fit: contain;          /* Giữ tỉ lệ, không bị cắt */
-  object-position: center;      /* Căn giữa */
-  background-color: #000;       /* Màu nền phụ khi ảnh chưa full */
-  display: block;
-}
-/* Responsive (tùy chọn) */
-@media (max-width: 768px) {
-  .bg {
-    background-size: contain; /* vẫn giữ tỉ lệ */
-  }
+  overflow: hidden;
 }
 
+/* Container toàn màn hình */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* Mỗi slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;      /* Giữ tỉ lệ, không bị cắt */
+  background-position: center;   /* Căn giữa */
+  background-repeat: no-repeat;  /* Không lặp */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Slide hiển thị */
+.slide.active {
+  opacity: 1;
+}
+
+/* Hiệu ứng fade mượt */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
