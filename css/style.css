@@ -1030,4 +1030,51 @@ input.Enter_text::placeholder {
 }
 
 
+
 /* copyright section end */
+/* ---------------------------------------------------------------------
+  CUSTOM NAVBAR BUTTON (Thêm bởi bạn)
+---------------------------------------------------------------------
+*/
+
+.btn-tu-van {
+    /* Màu nền đỏ sậm giống ảnh minh họa */
+    background-color: #8B0000; 
+    color: #ffffff; /* Chữ trắng */
+    border: 2px solid #8B0000; /* Viền cùng màu */
+    border-radius: 25px; /* Bo góc tròn */
+    padding: 8px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 20px; /* Tạo khoảng cách với menu */
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi rê chuột */
+.btn-tu-van:hover {
+    background-color: #ffffff; /* Nền trắng */
+    color: #8B0000; /* Chữ đỏ */
+    border-color: #8B0000; /* Giữ viền đỏ */
+}
+
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO NAVBAR BUTTON
+---------------------------------------------------------------------
+*/
+
+/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
+@media (max-width: 991px) {
+    .header_section .form-inline {
+        width: 100%;
+        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
+        padding-bottom: 10px;
+    }
+
+    .btn-tu-van {
+        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
+        text-align: center;
+        margin-left: 0; /* Bỏ khoảng cách trái */
+        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+    }
+}
