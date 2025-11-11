@@ -303,7 +303,7 @@ button {
     width: 100%;
     float: left;
     background-image: url(../images/banner-bg.png);
-    height: auto;
+    height: 600;
     background-repeat: no-repeat;
     background-size: 100%;
     padding-bottom: 100px;
@@ -1156,4 +1156,5 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
