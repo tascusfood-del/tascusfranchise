@@ -1098,3 +1098,47 @@ input.Enter_text::placeholder {
         max-height: 40px; 
     }
 }
+
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO NAVBAR (FIX LỖI CĂN LỀ MOBILE)
+---------------------------------------------------------------------
+*/
+
+/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
+@media (max-width: 991px) {
+
+    /* ---- PHẦN MỚI THÊM ĐỂ SỬA LỖI CĂN LỀ ---- */
+    .header_section .navbar-nav {
+        /* Bỏ căn lề tự động bên trái trên mobile */
+        margin-left: 0 !important;
+        /* Căn lề trái cho toàn bộ menu */
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .header_section .navbar-nav .nav-item {
+        /* Đảm bảo mỗi item chiếm 100% chiều rộng */
+        width: 100%;
+    }
+
+    .header_section .navbar-nav .nav-link {
+        /* Đồng nhất padding cho tất cả link để chúng thẳng hàng */
+        padding: 10px 0px; 
+    }
+    /* ---- HẾT PHẦN SỬA LỖI ---- */
+
+
+    /* ---- Phần cho nút bấm (đã có từ trước) ---- */
+    .header_section .form-inline {
+        width: 100%;
+        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
+        padding-bottom: 10px;
+    }
+
+    .btn-tu-van {
+        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
+        text-align: center;
+        margin-left: 0; /* Bỏ khoảng cách trái */
+        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+    }
+}
