@@ -1237,7 +1237,7 @@ input.Enter_text::placeholder {
 }
 
 /* ---------------------------------------------------------------------
-  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER)
+  TỔNG HỢP CODE TÙY CHỈNH (NÚT, LOGO, MENU, BANNER) - V2
 ---------------------------------------------------------------------
 */
 
@@ -1274,7 +1274,7 @@ input.Enter_text::placeholder {
     transition: max-height 0.3s ease;
 }
 
-/* 3. FIX LỖI KHOẢNG CÁCH, NỀN TRẮNG, BÓP NAVBAR */
+/* 3. FIX LỖI KHOẢNG CÁCH, NỀN TRẮNG, BÓP NAVBAR (CÁCH MỚI) */
 .header_section,
 .banner_section_new {
     float: none !important; /* Sửa lỗi khoảng cách */
@@ -1284,9 +1284,19 @@ input.Enter_text::placeholder {
     background-color: transparent !important; /* Sửa lỗi nền trắng */
 }
 
-.header_section .navbar {
-    padding-top: 15px !important;     /* Sửa lỗi navbar bị bóp */
-    padding-bottom: 15px !important;  /* Sửa lỗi navbar bị bóp */
+/* FIX NAVBAR BỊ BÓP: 
+  Thêm padding trực tiếp vào .header_section
+*/
+.header_section {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    height: auto !important; /* Đảm bảo chiều cao tự động */
+}
+
+/* Bỏ padding gốc của .navbar để không bị cộng dồn 
+*/
+.navbar {
+    padding: 0px 0px !important; 
 }
 
 
