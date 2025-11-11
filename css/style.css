@@ -1200,6 +1200,36 @@ input.Enter_text::placeholder {
         height: 300px; /* Chiều cao mobile (Bạn tự điều chỉnh) */
     }
 }
+/* ---------------------------------------------------------------------
+  FIX BANNER ĐÈ LÊN NAVBAR (Dán vào cuối file)
+---------------------------------------------------------------------
+*/
+
+/* 1. Ép header (thanh vàng) nổi lên trên */
+.header_section {
+    position: relative; /* Bắt buộc phải có để z-index hoạt động */
+    z-index: 100;       /* Đặt số cao để nó nổi lên trên */
+    float: none !important; /* Tắt float cũ để tránh lỗi layout */
+}
+
+/* 2. Đảm bảo banner nằm bên dưới */
+#carouselExampleIndicators {
+    width: 100%;
+    margin-top: 0; /* Xóa margin-top âm nếu có */
+    position: relative; /* Đảm bảo nó cũng tham gia vào thứ tự */
+    z-index: 1;         /* Đặt số thấp hơn header */
+}
+
+/* 3. Tắt float cho các section khác để đồng bộ */
+.service_section,
+.about_section,
+.testimonial_section,
+.shop_section,
+.contact_section,
+.footer_section,
+.copyright_section {
+    float: none !important;
+}
 
 
 
