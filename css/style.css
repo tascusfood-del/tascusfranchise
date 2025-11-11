@@ -1154,7 +1154,7 @@ NEW BANNER SLIDER (Thêm mới)
 
 .banner-rotator-slider .item img {
     width: 100%;
-    height: 550px; /* Chiều cao cho desktop */
+    height: 605px; /* Chiều cao cho desktop */
     object-fit: cover; /* Cắt ảnh vừa vặn, không bị méo */
     display: block;
 }
@@ -1200,28 +1200,11 @@ NEW BANNER SLIDER (Thêm mới)
 */
 @media (max-width: 991px) {
     .banner-rotator-slider .item img {
-        height: 300px; /* Chiều cao cho mobile (giống ảnh mẫu) */
+        height: 330px; /* Chiều cao cho mobile (giống ảnh mẫu) */
     }
 
     /* Ẩn nút prev/next trên mobile cho gọn */
     .banner-rotator-slider .owl-nav {
         display: none;
     }
-}
-/* ---------------------------------------------------------------------
-  FIX LỖI NỀN TRẮNG VÀ KHOẢNG CÁCH (Thêm mới)
----------------------------------------------------------------------
-*/
-
-/* Vô hiệu hóa float: left; bị lỗi */
-.header_section,
-.banner_section_new {
-    float: none !important; 
-}
-
-/* Đảm bảo phần menu (khi co lại) cũng trong suốt
-  (Đây là code tôi gửi lần trước, nhưng dán ở đây cho chắc) 
-*/
-.header_section .navbar-collapse {
-    background-color: transparent !important;
 }
