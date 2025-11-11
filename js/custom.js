@@ -106,7 +106,7 @@ $(function () {
 		margin: 10,
 		navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive: {
-		D 0: {
+		  0: { /* <-- LỖI ĐÃ ĐƯỢC SỬA Ở ĐÂY */
 			items: 1
 		  },
 		  600: {
@@ -143,7 +143,7 @@ $(function () {
       });
       $("#back-to-top").on("click", function(){
         $('body,html').animate({
-          scrollTop: 0
+    m       scrollTop: 0
         }, 1000);
     });
 	
@@ -286,7 +286,7 @@ $(function () {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-S               slidesToScroll: 2,
+                slidesToScroll: 2,
                 infinite: true,
                 dots: false
             }
@@ -325,7 +325,7 @@ S               slidesToScroll: 2,
                 dots: false
             }
         }, {
-            breakpoint: 600,
+          t   breakpoint: 600,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -353,17 +353,3 @@ S               slidesToScroll: 2,
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
      
      $(document).ready(function () {
-       $('#sidebarCollapse').on('click', function () {
-          $('#sidebar').toggleClass('active');
-          $(this).toggleClass('active');
-       });
-     });
-
-     /* Product slider 
-     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
-     // optional
-     $('#blogCarousel').carousel({
-        interval: 5000
-     });
-
-});
