@@ -256,7 +256,7 @@ button {
 .navbar-expand-lg .navbar-nav .nav-link {
     font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     padding: 3px 20px;
-    font-size: 22px;
+    font-size: 25px;
     color: #fefefd;
     border-radius: 5px;
     text-transform: uppercase;
@@ -1057,6 +1057,7 @@ input.Enter_text::placeholder {
 */
 
 .btn-tu-van {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
     /* Màu nền đỏ sậm giống ảnh minh họa */
     background-color: #8B0000; 
     color: #ffffff; /* Chữ trắng */
@@ -1072,6 +1073,7 @@ input.Enter_text::placeholder {
 
 /* Hiệu ứng khi rê chuột */
 .btn-tu-van:hover {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
     background-color: #ffffff; /* Nền trắng */
     color: #8B0000; /* Chữ đỏ */
     border-color: #8B0000; /* Giữ viền đỏ */
@@ -1151,6 +1153,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
