@@ -229,11 +229,11 @@ button {
 /* header section start */
 
 .header_section {
-    width: 100%;
-    float: left;
-    background-color: #f9b116;
-    height: auto;
-    background-size: 100%;
+    width: 100%;
+    /* float: left; */ /* Đã xóa hoặc vô hiệu hóa */
+    background-color: #f9b116;
+    height: auto;
+    background-size: 100%;
 }
 
 .bg-light {
@@ -1147,7 +1147,6 @@ NEW BANNER SLIDER (Thêm mới)
 */
 .banner_section_new {
     width: 100%;
-    float: left;
     /* Lấy màu nền từ header, phòng trường hợp ảnh load chậm */
     background-color: #f9b116; 
 }
@@ -1208,3 +1207,4 @@ NEW BANNER SLIDER (Thêm mới)
         display: none;
     }
 }
+
