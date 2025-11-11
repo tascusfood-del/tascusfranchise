@@ -1208,3 +1208,17 @@ NEW BANNER SLIDER (Thêm mới)
     }
 }
 
+/* ---------------------------------------------------------------------
+  FIX NAVBAR NỀN TRẮNG (Thêm mới)
+---------------------------------------------------------------------
+*/
+.header_section .navbar-collapse {
+    background-color: transparent !important;
+}
+
+/* Đảm bảo .bg-light cũng trong suốt
+  (Ghi đè lên file style.css gốc nếu có lỗi) 
+*/
+.header_section .bg-light {
+    background-color: transparent !important;
+}
