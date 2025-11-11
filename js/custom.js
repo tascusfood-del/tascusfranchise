@@ -367,4 +367,20 @@ $(function () {
      });
 
 
+
 });
+
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlides() {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slideIndex = (slideIndex + 1) > slides.length ? 1 : slideIndex + 1;
+  slides[slideIndex - 1].classList.add("active");
+}
+
+// Hiển thị slide đầu tiên ngay khi load
+showSlides();
+
+// Tự động đổi slide mỗi 3 giây
+setInterval(showSlides, 3000);
