@@ -10,6 +10,16 @@
     src: url("../fonts/BalooChettan-Regular.ttf");
     src: url("../fonts/BalooChettan-Regular.ttf");
 }
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/* ---- THÊM FONT MỚI CỦA BẠN VÀO ĐÂY ---- */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+US+Trad:wght@100..400&display=swap');
+
+@font-face {
+/* ... (phần còn lại của file) ... */
 /* ... (code @import và @font-face "Righteous" ở trên) ... */
 
 /* ---- FONT TÙY CHỈNH (PHIÊN BẢN .TTF) ---- */
@@ -56,7 +66,7 @@ body {
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-    font-family: 'Sen', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 a {
@@ -474,6 +484,7 @@ button {
 }
 
 .readmore_bt a {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
     width: 100%;
     float: left;
     font-size: 16px;
@@ -567,6 +578,7 @@ button {
 }
 
 .readmore_btn a {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
     width: 100%;
     float: left;
     font-size: 16px;
@@ -1066,7 +1078,7 @@ input.Enter_text::placeholder {
     padding: 8px 20px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 17px;
     margin-left: 20px; /* Tạo khoảng cách với menu */
     transition: all 0.3s ease;
 }
@@ -1153,6 +1165,7 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
 
 
 
