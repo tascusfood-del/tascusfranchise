@@ -367,3 +367,81 @@ $(function () {
      });
 
 
+// Đợi cho đến khi toàn bộ nội dung HTML được tải xong
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // Khai báo các biến
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slider-aspect-ratio .slide");
+    const dotsContainer = document.querySelector(".slider-dots");
+    const intervalTime = 3000; // 3 giây
+    let slideInterval; // Biến để lưu trữ bộ đếm thời gian
+
+    // Kiểm tra xem có slide nào không, nếu không thì dừng lại
+    if (slides.length === 0) return;
+
+    // --- 1. Tạo các dấu chấm (dots) ---
+    slides.forEach((slide, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+        if (index === 0) dot.classList.add("active"); // Active dot đầu tiên
+        
+        dot.setAttribute("data-slide", index); // Lưu vị trí slide
+        
+        // Thêm sự kiện click cho mỗi dot
+        dot.addEventListener("click", () => {
+            showSlide(index); // Chuyển slide khi click
+            resetInterval();  // Reset bộ đếm thời gian
+        });
+        
+        dotsContainer.appendChild(dot); // Thêm dot vào container
+    });
+
+    // Lấy danh sách tất cả các dot vừa tạo
+    const dots = document.querySelectorAll(".slider-dots .dot");
+
+    // --- 2. Hàm hiển thị slide ---
+    function showSlide(index) {
+        // Ẩn tất cả slide
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        
+        // Bỏ active tất cả dot
+        dots.forEach((dot) => {
+            dot.classList.remove("active");
+        });
+
+        // Hiển thị slide và dot được chọn
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+        
+        // Cập nhật vị trí hiện tại
+        currentSlide = index;
+    }
+
+    // --- 3. Hàm chuyển slide tiếp theo ---
+    function nextSlide() {
+        let newIndex = currentSlide + 1;
+        if (newIndex >= slides.length) {
+            newIndex = 0; // Quay về slide đầu tiên
+        }
+        showSlide(newIndex);
+    }
+
+    // --- 4. Chức năng tự động trượt (Auto-scroll) ---
+    function startInterval() {
+        // Bắt đầu tự động trượt và lưu vào biến
+        slideInterval = setInterval(nextSlide, intervalTime);
+    }
+
+    // Reset bộ đếm khi người dùng tương tác
+    function resetInterval() {
+        clearInterval(slideInterval); // Xóa bộ đếm cũ
+        startInterval(); // Bắt đầu bộ đếm mới
+    }
+
+    // --- 5. Khởi chạy ---
+    showSlide(0); // Hiển thị slide đầu tiên khi tải trang
+    startInterval(); // Bắt đầu tự động trượt
+});
