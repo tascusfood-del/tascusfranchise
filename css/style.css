@@ -1198,7 +1198,7 @@ NEW BANNER SLIDER (Thêm mới)
   RESPONSIVE CHO BANNER MỚI
 ---------------------------------------------------------------------
 */
-@media (max-width: 991px) {
+@media (max-width: 100%) {
     .banner-rotator-slider .item img {
         height: 300px; /* Chiều cao cho mobile (giống ảnh mẫu) */
     }
@@ -1208,4 +1208,5 @@ NEW BANNER SLIDER (Thêm mới)
         display: none;
     }
 }
+
 
