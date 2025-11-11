@@ -106,7 +106,7 @@ $(function () {
 		margin: 10,
 		navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		responsive: {
-		  0: {
+		D 0: {
 			items: 1
 		  },
 		  600: {
@@ -134,7 +134,7 @@ $(function () {
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
 	
 	$(window).on('scroll', function (){
-        scroll = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
         if (scroll >= 100){
           $("#back-to-top").addClass('b-show_scrollBut')
         }else{
@@ -286,7 +286,7 @@ $(function () {
             breakpoint: 1024,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 2,
+S               slidesToScroll: 2,
                 infinite: true,
                 dots: false
             }
@@ -365,6 +365,5 @@ $(function () {
      $('#blogCarousel').carousel({
         interval: 5000
      });
-
 
 });
