@@ -1159,3 +1159,115 @@ input.Enter_text::placeholder {
         padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
 }
+
+
+
+
+
+
+    /* ---- NEW ---- */
+/* ===== Tascus isolated banner CSS ===== */
+#tascus-banner-widget.tascus-fullbleed{
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: #000;
+  overflow: hidden;
+}
+
+/* inner (holds slides) */
+#tascus-banner-widget .tascus-inner{
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+/* slide blocks */
+#tascus-banner-widget .tascus-slide{
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+/* active slide */
+#tascus-banner-widget .tascus-slide.tascus-active{
+  display: block;
+}
+
+/* image: full width, preserve ratio (no crop) */
+#tascus-banner-widget .tascus-img{
+  display: block;
+  width: 100%;
+  height: auto;            /* preserve aspect ratio */
+  max-height: 70vh;        /* avoid extremely tall banners on desktop */
+  object-fit: contain;     /* show whole image */
+  object-position: center right;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* arrows */
+#tascus-banner-widget .tascus-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* left/right positions */
+#tascus-banner-widget .tascus-prev { left: 12px; }
+#tascus-banner-widget .tascus-next { right: 12px; }
+
+/* dots */
+#tascus-banner-widget .tascus-dots{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  z-index: 70;
+  display: flex;
+  gap: 10px;
+}
+#tascus-banner-widget .tascus-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+}
+#tascus-banner-widget .tascus-dot.tascus-active{
+  background: #ff9f1c;
+  border-color: #ff9f1c;
+}
+
+/* focus outlines for accessibility */
+#tascus-banner-widget .tascus-arrow:focus,
+#tascus-banner-widget .tascus-dot:focus {
+  outline: 3px solid rgba(255,159,28,0.25);
+  outline-offset: 2px;
+}
+
+/* responsive adjustments */
+@media (max-width:1100px){
+  #tascus-banner-widget .tascus-img{ max-height: 50vh; object-position: center; }
+  #tascus-banner-widget .tascus-arrow { width:44px; height:44px; font-size:20px; }
+}
+@media (max-width:600px){
+  #tascus-banner-widget .tascus-img{ max-height: 40vh; object-position: center; }
+  #tascus-banner-widget .tascus-arrow { width:36px; height:36px; font-size:18px; }
+  #tascus-banner-widget .tascus-prev { left: 8px; }
+  #tascus-banner-widget .tascus-next { right: 8px; }
+}
+
