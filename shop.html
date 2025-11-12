@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locator</title>
+    <link rel="stylesheet" href="store-map.css">
+</head>
+<body>
+    <div class="store-locator-container">
+        <!-- Map Container (Bên trái) -->
+        <div id="map"></div>
+
+        <!-- Store List Sidebar (Bên phải) -->
+        <aside class="store-sidebar">
+            <h2>Danh sách cửa hàng</h2>
+            <div class="store-count">
+                <p>Tìm được <strong id="total-stores">6</strong> cửa hàng</p>
+            </div>
+            
+            <div class="store-list" id="store-list">
+                <!-- Store items sẽ được tạo ở đây bằng JavaScript -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="store-map.js"></script>
+</body>
+</html>
