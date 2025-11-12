@@ -476,5 +476,84 @@ $(function () {
   });
 
 })();
+/* ========== CF Slide JS (isolated) ========== */
+(function () {
+  'use strict';
+  var AUTOPLAY_MS = 3000;
+
+  function initCfSlideOne(container) {
+    if (!container) return;
+    var slidesWrap = container.querySelector('.cf-slides');
+    var slides = Array.prototype.slice.call(container.querySelectorAll('.cf-slide'));
+    if (!slides.length) return;
+    var dotsWrap = container.querySelector('.cf-dots');
+    // ensure dots empty
+    dotsWrap.innerHTML = '';
+
+    slides.forEach(function(_, idx) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'cf-dot' + (idx === 0 ? ' cf-active' : '');
+      btn.setAttribute('data-idx', idx);
+      btn.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+      btn.addEventListener('click', function() {
+        goTo(idx);
+        resetAutoplay();
+      });
+      dotsWrap.appendChild(btn);
+    });
+
+    var current = 0;
+    var autoplayId = null;
+
+    function update() {
+      var tx = -current * 100;
+      slidesWrap.style.transform = 'translateX(' + tx + '%)';
+      var allDots = dotsWrap.querySelectorAll('.cf-dot');
+      allDots.forEach(function(d, i) { d.classList.toggle('cf-active', i === current); });
+    }
+    function goTo(i) {
+      if (i < 0) i = slides.length - 1;
+      if (i >= slides.length) i = 0;
+      current = i;
+      update();
+    }
+    function next() { goTo(current + 1); }
+    function resetAutoplay() {
+      if (autoplayId) clearInterval(autoplayId);
+      autoplayId = setInterval(next, AUTOPLAY_MS);
+    }
+
+    container.addEventListener('mouseenter', function(){ if (autoplayId) clearInterval(autoplayId); });
+    container.addEventListener('mouseleave', function(){ resetAutoplay(); });
+    container.addEventListener('focusin', function(){ if (autoplayId) clearInterval(autoplayId); });
+    container.addEventListener('focusout', function(){ resetAutoplay(); });
+
+    // touch swipe
+    (function(){
+      var startX = null, threshold = 40;
+      slidesWrap.addEventListener('touchstart', function(e){ startX = e.touches[0].clientX; }, {passive:true});
+      slidesWrap.addEventListener('touchend', function(e){
+        if (startX === null) return;
+        var endX = e.changedTouches[0].clientX;
+        var diff = startX - endX;
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) next(); else goTo(current - 1);
+          resetAutoplay();
+        }
+        startX = null;
+      }, {passive:true});
+    })();
+
+    update();
+    resetAutoplay();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var c = document.querySelector('#cfSlide1');
+    initCfSlideOne(c);
+  });
+})();
 
 });
+
