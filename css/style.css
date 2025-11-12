@@ -1270,4 +1270,121 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-prev { left: 8px; }
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
+/* stảrt */
 
+
+:root{
+  --tascus-pricing-gap: 28px;
+  --tascus-card-radius: 18px;
+  --tascus-soft-bg: #fdeee6;
+  --tascus-accent-bg: #f0f2f4;
+  --tascus-accent-color: #ff9f1c;
+  --tascus-text-strong: #111;
+  --tascus-muted: #6b6b6b;
+}
+
+#tascus-pricing.tascus-pricing-section{
+  padding: 48px 20px;
+  background: white;
+}
+#tascus-pricing .tascus-pricing-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--tascus-pricing-gap);
+  align-items: center;
+}
+
+/* left */
+#tascus-pricing .tascus-pricing-intro { padding-right: 12px; }
+#tascus-pricing .tascus-pricing-title{
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.02;
+  margin: 0 0 18px;
+  color: var(--tascus-text-strong);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+#tascus-pricing .tascus-pricing-desc{
+  color: var(--tascus-muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 420px;
+  margin-bottom: 22px;
+}
+#tascus-pricing .tascus-pricing-cta{
+  display: inline-block;
+  padding: 10px 22px;
+  background: #4fc06f;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(79,192,111,0.14);
+}
+
+/* right */
+#tascus-pricing .tascus-pricing-cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+#tascus-pricing .tascus-price-card{
+  padding: 30px;
+  border-radius: var(--tascus-card-radius);
+  box-shadow: 0 6px 18px rgba(13,13,13,0.05);
+  background: white;
+  border: 1px solid rgba(0,0,0,0.04);
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#tascus-pricing .tascus-price-card--soft{ background: var(--tascus-soft-bg); }
+#tascus-pricing .tascus-price-card--accent{ background: var(--tascus-accent-bg); }
+
+#tascus-pricing .tascus-price-card__tag{ font-size: 13px; color: var(--tascus-muted); margin-bottom: 8px; font-weight:600; }
+#tascus-pricing .tascus-price-card__title{ font-size: 48px; margin: 0 0 6px; font-weight: 800; color: var(--tascus-text-strong); }
+#tascus-pricing .tascus-price-card__price{ font-size: 48px; font-weight: 800; color: var(--tascus-text-strong); }
+#tascus-pricing .tascus-price-card__subtitle{ font-size: 12px; color: var(--tascus-muted); letter-spacing: 1px; margin-bottom: 14px; }
+
+#tascus-pricing .tascus-price-features{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex-grow: 1;
+}
+#tascus-pricing .tascus-price-features li{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--tascus-text-strong);
+  font-size: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+#tascus-pricing .tascus-tick{ width: 18px; height: 18px; color: #e07a25; flex-shrink: 0; }
+#tascus-pricing .tascus-price-card--accent .tascus-tick{ color: #47c46b; }
+
+/* responsive */
+@media (max-width: 980px){
+  #tascus-pricing .tascus-pricing-inner{ grid-template-columns: 1fr; gap: 26px; padding: 0 6px; }
+  #tascus-pricing .tascus-pricing-cards{ grid-template-columns: 1fr; }
+  #tascus-pricing .tascus-pricing-intro{ order: 1; }
+  #tascus-pricing .tascus-pricing-cards{ order: 2; }
+  #tascus-pricing .tascus-price-card{ min-height: 0; }
+  #tascus-pricing.tascus-pricing-section{ padding: 36px 16px; }
+}
+@media (max-width: 420px){
+  #tascus-pricing .tascus-pricing-title{ font-size: 28px; }
+  #tascus-pricing .tascus-price-card{ padding: 20px; border-radius: 14px; }
+  #tascus-pricing .tascus-price-features li{ gap: 10px; font-size: 14px; }
+}
+/* end pricing */
