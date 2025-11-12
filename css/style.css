@@ -1272,66 +1272,150 @@ input.Enter_text::placeholder {
 }
 /* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
 
-.pricing-row {
-  display: flex;
-  justify-content: center;
-  gap: 40px; /* khoảng cách cố định giữa 2 bảng */
-  flex-wrap: wrap;
-  margin: 40px auto;
+* {
+  box-sizing: border-box;
 }
 
+.columns {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+/* === CARD GIÁ === */
 .price {
+  list-style-type: none;
   border: 1px solid #eee;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 320px;
-  background: #fff;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px; /* 🎯 Bo góc card */
+  overflow: hidden;    /* Ẩn phần tràn để bo góc chuẩn */
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .price:hover {
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  transform: translateY(-3px);
-}
-
-.price > div {
-  border-bottom: 1px solid #eee;
-  padding: 18px;
-  text-align: center;
-  font-size: 16px;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
 }
 
 .price .header {
-  background: #efa425;
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  border-top-left-radius: 20px;  /* bo góc trên cùng */
+  border-top-right-radius: 20px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
 }
 
 .price .grey {
-  background: #f5f5f5;
-  font-weight: 600;
+  background-color: #eee;
+  font-size: 20px;
 }
 
+/* === NÚT SIGN UP === */
 .button {
-  display: inline-block;
-  background: #efa425;
-  color: #fff;
+  background-color: #efa425;
+  border: none;
+  color: white;
   padding: 10px 25px;
-  border-radius: 20px;
+  text-align: center;
   text-decoration: none;
-  font-weight: 600;
+  font-size: 18px;
+  border-radius: 20px; /* 🎯 Bo góc nút */
+  transition: 0.3s;
 }
 
 .button:hover {
-  background: #e38f00;
+  background-color: #e38f00;
 }
 
-@media (max-width: 768px) {
-  .pricing-row {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}* {
+  box-sizing: border-box;
+}
+
+/* === CONTAINER WRAPPER === */
+.pricing-container {
+  max-width: 1000px;        /* Giới hạn chiều rộng tối đa */
+  margin: 0 auto;           /* Căn giữa container */
+  padding: 20px;            /* Khoảng cách 2 bên */
+}
+
+.columns {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+/* === CARD GIÁ === */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* === NÚT SIGN UP === */
+.button {
+  background-color: #efa425;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #e38f00;
+}
+
+/* === CLEARFIX cho float === */
+.pricing-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
   }
 }
-
