@@ -1168,48 +1168,60 @@ input.Enter_text::placeholder {
 
 
     /* ---- NEW ---- */
-/* ===== Tascus isolated banner CSS ===== */
-#tascus-banner-widget.tascus-fullbleed{
+/* ===== Tascus Banner với Aspect Ratio Responsive ===== */
+#tascus-banner-widget.tascus-fullbleed {
   position: relative;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   background: #000;
   overflow: hidden;
 }
 
-/* inner (holds slides) */
-#tascus-banner-widget .tascus-inner{
+/* Container cho slides */
+#tascus-banner-widget .tascus-inner {
   width: 100%;
   display: block;
   position: relative;
+  /* Desktop: tỉ lệ 21:9 */
+  aspect-ratio: 21 / 9;
 }
 
-/* slide blocks */
-#tascus-banner-widget .tascus-slide{
+/* Slide blocks */
+#tascus-banner-widget .tascus-slide {
   display: none;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-/* active slide */
-#tascus-banner-widget .tascus-slide.tascus-active{
+/* Active slide */
+#tascus-banner-widget .tascus-slide.tascus-active {
   display: block;
 }
 
-/* image: full width, preserve ratio (no crop) */
-#tascus-banner-widget .tascus-img{
+/* Picture element */
+#tascus-banner-widget .tascus-slide picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Image: lấp đầy container */
+#tascus-banner-widget .tascus-img {
   display: block;
   width: 100%;
-  height: auto;            /* preserve aspect ratio */
-  max-height: 70vh;        /* avoid extremely tall banners on desktop */
-  object-fit: contain;     /* show whole image */
-  object-position: center right;
+  height: 100%;
+  object-fit: cover;  /* Lấp đầy và cắt nếu cần */
+  object-position: center;
   margin: 0;
   vertical-align: middle;
 }
 
-/* arrows */
-#tascus-banner-widget .tascus-arrow{
+/* Arrows */
+#tascus-banner-widget .tascus-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1227,12 +1239,11 @@ input.Enter_text::placeholder {
   box-shadow: 0 6px 16px rgba(0,0,0,0.18);
 }
 
-/* left/right positions */
 #tascus-banner-widget .tascus-prev { left: 12px; }
 #tascus-banner-widget .tascus-next { right: 12px; }
 
-/* dots */
-#tascus-banner-widget .tascus-dots{
+/* Dots */
+#tascus-banner-widget .tascus-dots {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1241,7 +1252,8 @@ input.Enter_text::placeholder {
   display: flex;
   gap: 10px;
 }
-#tascus-banner-widget .tascus-dot{
+
+#tascus-banner-widget .tascus-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -1249,39 +1261,41 @@ input.Enter_text::placeholder {
   background: rgba(255,255,255,0.85);
   cursor: pointer;
 }
-#tascus-banner-widget .tascus-dot.tascus-active{
+
+#tascus-banner-widget .tascus-dot.tascus-active {
   background: #ff9f1c;
   border-color: #ff9f1c;
 }
 
-/* focus outlines for accessibility */
+/* Focus outlines */
 #tascus-banner-widget .tascus-arrow:focus,
 #tascus-banner-widget .tascus-dot:focus {
   outline: 3px solid rgba(255,159,28,0.25);
   outline-offset: 2px;
 }
 
-/* responsive adjustments */
-@media (max-width:1100px){
-  #tascus-banner-widget .tascus-img{ max-height: 50vh; object-position: center; }
-  #tascus-banner-widget .tascus-arrow { width:44px; height:44px; font-size:20px; }
-}
-@media (max-width:600px){
-  #tascus-banner-widget .tascus-img{ max-height: 40vh; object-position: center; }
-  #tascus-banner-widget .tascus-arrow { width:36px; height:36px; font-size:18px; }
+/* ===== RESPONSIVE: Mobile - Tỉ lệ 4:4.5 ===== */
+@media (max-width: 768px) {
+  #tascus-banner-widget .tascus-inner {
+    /* Mobile: tỉ lệ 4:4.5 = 8:9 */
+    aspect-ratio: 8 / 9;
+  }
+
+  #tascus-banner-widget .tascus-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
   #tascus-banner-widget .tascus-prev { left: 8px; }
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
-/* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
 
-* {
-  box-sizing: border-box;
-}
-
-.columns {
-  float: left;
-  width: 50%;
-  padding: 20px;
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1100px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 16 / 9;  /* Tỉ lệ trung gian cho tablet */
+  }
 }
 
 /* === CARD GIÁ === */
@@ -1421,6 +1435,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
