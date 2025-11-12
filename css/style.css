@@ -1271,129 +1271,73 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
 /* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
-* {
-  box-sizing: border-box;
-}
-
-.columns {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-}
-
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-}
-
-.price .grey {
-  background-color: #eee;
-  font-size: 20px;
-}
-
-.button {
-  background-color: #efa425;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 600px) {
-  .columns {
+.banggia {
     width: 100%;
-  }
-}* {
-  box-sizing: border-box;
+    float: left;
+    font-size: 50px;
+    color: #111111;
+    text-align: center;
+    font-weight: bold;
+}
+.pricing-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* khoảng cách cố định giữa 2 bảng */
+  flex-wrap: wrap;
+  margin: 40px auto;
 }
 
-.columns {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
-/* === CARD GIÁ === */
 .price {
-  list-style-type: none;
   border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  border-radius: 20px; /* 🎯 Bo góc card */
-  overflow: hidden;    /* Ẩn phần tràn để bo góc chuẩn */
-  -webkit-transition: 0.3s;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 320px;
+  background: #fff;
   transition: 0.3s;
 }
 
 .price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+}
+
+.price > div {
+  border-bottom: 1px solid #eee;
+  padding: 18px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-  border-top-left-radius: 20px;  /* bo góc trên cùng */
-  border-top-right-radius: 20px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
+  background: #efa425;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .price .grey {
-  background-color: #eee;
-  font-size: 20px;
+  background: #f5f5f5;
+  font-weight: 600;
 }
 
-/* === NÚT SIGN UP === */
 .button {
-  background-color: #efa425;
-  border: none;
-  color: white;
+  display: inline-block;
+  background: #efa425;
+  color: #fff;
   padding: 10px 25px;
-  text-align: center;
+  border-radius: 20px;
   text-decoration: none;
-  font-size: 18px;
-  border-radius: 20px; /* 🎯 Bo góc nút */
-  transition: 0.3s;
+  font-weight: 600;
 }
 
 .button:hover {
-  background-color: #e38f00;
+  background: #e38f00;
 }
 
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
+@media (max-width: 768px) {
+  .pricing-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
   }
 }
-
-
-
-
-
