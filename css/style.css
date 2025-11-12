@@ -1271,14 +1271,7 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
 /* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
-.banggia {
-    width: 100%;
-    float: left;
-    font-size: 50px;
-    color: #111111;
-    text-align: center;
-    font-weight: bold;
-}
+
 .pricing-row {
   display: flex;
   justify-content: center;
@@ -1341,3 +1334,4 @@ input.Enter_text::placeholder {
     gap: 25px;
   }
 }
+
