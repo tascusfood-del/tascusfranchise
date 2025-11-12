@@ -1317,3 +1317,77 @@ input.Enter_text::placeholder {
   }
   .cf-dot { width: 10px; height: 10px; }
 }
+
+/* ========== CF SLIDE (namespaced, high-specificity to avoid conflicts) ========== */
+#cf-slide-section { width:100%; margin:0; padding:0; }
+#cf-slide-section .cf-slide-wrap {
+  width: 100% !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important; /* header_section giữ z-index cao hơn */
+  overflow: hidden !important;
+  background: transparent !important;
+  box-sizing: border-box !important;
+}
+
+/* force slides container to be a flex row (override theme) */
+#cf-slide-section .cf-slides {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  transition: transform 0.6s ease-in-out !important;
+  will-change: transform !important;
+}
+
+/* each slide takes full viewport width of the wrapper */
+#cf-slide-section .cf-slide {
+  min-width: 100% !important;
+  flex: 0 0 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+}
+
+/* image: keep aspect ratio (no crop), centered */
+#cf-slide-section .cf-slide img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important; /* no crop */
+  max-height: 600px !important; /* adjust if needed */
+}
+
+/* dots (indicators) */
+#cf-slide-section .cf-dots {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  bottom: 12px !important;
+  display: flex !important;
+  gap: 8px !important;
+  z-index: 5 !important;
+}
+#cf-slide-section .cf-dot {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  background: rgba(180,180,180,0.9) !important;
+  cursor: pointer !important;
+  border: 2px solid rgba(255,255,255,0.6) !important;
+  transition: transform .15s ease, background .15s ease !important;
+}
+#cf-slide-section .cf-dot.cf-active {
+  background: #fff !important;
+  transform: scale(1.12) !important;
+  border-color: rgba(0,0,0,0.2) !important;
+}
+
+/* responsive heights (tweak as you like) */
+@media (max-width:991px) {
+  #cf-slide-section .cf-slide img { max-height: 380px !important; }
+}
+@media (max-width:480px) {
+  #cf-slide-section .cf-slide img { max-height: 240px !important; }
+  #cf-slide-section .cf-dot { width:10px !important; height:10px !important; }
+}
