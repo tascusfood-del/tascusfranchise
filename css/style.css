@@ -1314,7 +1314,7 @@ input.Enter_text::placeholder {
 /* Left intro */
 #tascus-pricing .tascus-pricing-intro {
   flex: 1 1 45%;
-  min-width: 260px;
+  min-width: 300px;
   box-sizing: border-box;
   margin: 0;
   padding-right: 12px;
@@ -1325,7 +1325,7 @@ input.Enter_text::placeholder {
 /* Right cards */
 #tascus-pricing .tascus-pricing-cards {
   flex: 1 1 45%;
-  min-width: 260px;
+  min-width: 300px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1447,6 +1447,7 @@ input.Enter_text::placeholder {
 
 
 /* end pricing */
+
 
 
 
