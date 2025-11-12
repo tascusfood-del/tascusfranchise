@@ -366,32 +366,115 @@ $(function () {
         interval: 5000
      });
 
+/* ========== CF Slide: isolated, no global vars ========== */
+(function () {
+  'use strict';
+
+  // config
+  var AUTOPLAY_MS = 3000; // 3 seconds
+
+  // init function for a given container element
+  function initCfSlide(container) {
+    if (!container) return;
+    var slidesWrap = container.querySelector('.cf-slides');
+    var slides = Array.prototype.slice.call(container.querySelectorAll('.cf-slide'));
+    if (!slides.length) return;
+
+    // create dots
+    var dotsWrap = container.querySelector('.cf-dots');
+    slides.forEach(function (_, idx) {
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.className = 'cf-dot' + (idx === 0 ? ' cf-active' : '');
+      d.setAttribute('aria-label', 'Go to slide ' + (idx + 1));
+      d.setAttribute('data-idx', idx);
+      d.addEventListener('click', function (e) {
+        goTo(idx);
+        resetAutoplay();
+      });
+      dotsWrap.appendChild(d);
+    });
+
+    var current = 0;
+    var autoplayId = null;
+
+    function update() {
+      var translateX = -current * 100;
+      slidesWrap.style.transform = 'translateX(' + translateX + '%)';
+      // update dots
+      var allDots = dotsWrap.querySelectorAll('.cf-dot');
+      allDots.forEach(function (dot, i) {
+        dot.classList.toggle('cf-active', i === current);
+      });
+    }
+
+    function goTo(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      current = index;
+      update();
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function resetAutoplay() {
+      if (autoplayId) clearInterval(autoplayId);
+      autoplayId = setInterval(next, AUTOPLAY_MS);
+    }
+
+    // pause on hover/focus
+    container.addEventListener('mouseenter', function () {
+      if (autoplayId) clearInterval(autoplayId);
+    });
+    container.addEventListener('mouseleave', function () {
+      resetAutoplay();
+    });
+    // also pause when any child gets focus (accessibility)
+    container.addEventListener('focusin', function () {
+      if (autoplayId) clearInterval(autoplayId);
+    });
+    container.addEventListener('focusout', function () {
+      resetAutoplay();
+    });
+
+    // set initial sizes if needed (not required)
+    update();
+    resetAutoplay();
+
+    // optional: make swipe support for touch devices
+    (function addSwipe() {
+      var startX = null;
+      var threshold = 40; // px
+      slidesWrap.addEventListener('touchstart', function (e) {
+        startX = e.touches[0].clientX;
+      }, {passive: true});
+      slidesWrap.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var endX = e.changedTouches[0].clientX;
+        var diff = startX - endX;
+        if (Math.abs(diff) > threshold) {
+          if (diff > 0) { // swipe left
+            next();
+          } else {
+            goTo(current - 1);
+          }
+          resetAutoplay();
+        }
+        startX = null;
+      }, {passive: true});
+    })();
+  }
+
+  // auto-init all instances with class .cf-slide-wrap
+  document.addEventListener('DOMContentLoaded', function () {
+    var containers = document.querySelectorAll('.cf-slide-wrap');
+    containers.forEach(function (c) {
+      initCfSlide(c);
+    });
+  });
+
+})();
 
 });
-
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  const slides = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("dot");
-
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
