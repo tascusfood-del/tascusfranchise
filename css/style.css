@@ -1233,3 +1233,87 @@ input.Enter_text::placeholder {
 .copyright_section {
     float: none !important;
 }
+
+/* ========== CF Slide (namespaced) ========== */
+.cf-slide-wrap {
+  width: 100%;
+  max-width: 1200px; /* hoặc 100% nếu muốn full */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* header_section đã z-index:100 nên navbar vẫn trên */
+  overflow: hidden;
+  background: #fff;
+}
+
+/* slides container uses flex so we move by transform */
+.cf-slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+/* each slide is full width */
+.cf-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0; /* tạo khoảng trắng trên/dưới khi ảnh cao thấp */
+  box-sizing: border-box;
+}
+
+/* Image responsive, giữ tỉ lệ — không crop */
+.cf-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* giữ tỉ lệ, không crop */
+  max-height: 600px; /* giới hạn chiều cao desktop */
+}
+
+/* Dots */
+.cf-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+
+.cf-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(180,180,180,0.8);
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.cf-dot.cf-active {
+  background: #fff;
+  transform: scale(1.15);
+  border-color: rgba(0,0,0,0.2);
+}
+
+/* Pause on hover hint: slightly darker overlay (optional) */
+.cf-slide-wrap:hover .cf-slide {
+  /* no change: just used to detect hover in JS */
+}
+
+/* Responsive tweaks */
+@media (max-width: 991px) {
+  .cf-slide img {
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cf-slide img {
+    max-height: 260px;
+    padding: 8px 0;
+  }
+  .cf-dot { width: 10px; height: 10px; }
+}
