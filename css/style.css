@@ -1419,3 +1419,12 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
+.bangia {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: #111111;
+    text-align: center;
+    font-weight: bold;
+}
