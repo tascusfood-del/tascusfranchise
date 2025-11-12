@@ -1270,108 +1270,183 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-prev { left: 8px; }
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
-/* stảrt *//* ===== Tascus Pricing Section (Isolated, 15px rounded) ===== */
-#tascus-pricing.tascus-pricing-section {
-  padding: 50px 20px;
-  background: #fff;
-  box-sizing: border-box;
+/* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
+:root{
+  --tascus-pricing-gap: 28px;
+  --tascus-card-radius: 15px; /* bạn đặt 15px */
+  --tascus-soft-bg: #fdeee6;
+  --tascus-accent-bg: #f0f2f4;
+  --tascus-accent-color: #ff9f1c;
+  --tascus-text-strong: #111;
+  --tascus-muted: #6b6b6b;
 }
 
-#tascus-pricing .tascus-pricing-wrapper {
+/* Root section */
+#tascus-pricing.tascus-pricing-section {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 40px auto;
+  padding-left: 0;
+  padding-right: 0;
+  /* prevent inherited transforms/writing modes from theme */
+  transform: none;
+  writing-mode: horizontal-tb;
+  min-width: 0;
+  align-self: stretch;
+}
+
+/* Inner wrapper: center content and define grid/flex layout */
+#tascus-pricing > .tascus-pricing-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: var(--tascus-pricing-gap);
+  align-items: stretch;
 }
 
-/* Columns */
-#tascus-pricing .tascus-column {
+/* Left intro */
+#tascus-pricing .tascus-pricing-intro {
   flex: 1 1 45%;
-  min-width: 280px;
+  min-width: 260px;
+  box-sizing: border-box;
+  margin: 0;
+  padding-right: 12px;
+  order: 0;
+  float: none;
+}
+
+/* Right cards */
+#tascus-pricing .tascus-pricing-cards {
+  flex: 1 1 45%;
+  min-width: 260px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 0;
+}
+
+/* Single card */
+#tascus-pricing .tascus-price-card {
+  list-style: none;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: var(--tascus-card-radius);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(13,13,13,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform .22s ease, box-shadow .22s ease;
   box-sizing: border-box;
 }
 
-/* Price card */
-#tascus-pricing .tascus-price-card {
-  list-style: none;
-  border: 1px solid #eee;
-  border-radius: 15px; /* ✅ Bo góc 15px */
-  margin: 0;
-  padding: 0;
-  transition: 0.3s ease;
-  overflow: hidden;
-  background: #fff;
-}
-
+/* Hover */
 #tascus-pricing .tascus-price-card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
-/* Header */
+/* Header / title */
 #tascus-pricing .tascus-header {
   color: #fff;
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  padding: 24px 0;
-  letter-spacing: 0.5px;
+  padding: 20px 0;
+  letter-spacing: .4px;
 }
 
-/* Price / grey rows */
+/* Price row */
 #tascus-pricing .tascus-price-grey {
   background-color: #f6f6f6;
   font-size: 18px;
   font-weight: 600;
   color: #333;
+  text-align: center;
+  padding: 14px;
 }
 
-/* Common li */
+/* Feature rows */
 #tascus-pricing .tascus-price-card li {
-  border-bottom: 1px solid #eee;
-  padding: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 16px;
   text-align: center;
   font-size: 15px;
-  color: #333;
+  color: var(--tascus-text-strong);
 }
 
+/* last child (button) remove bottom border */
 #tascus-pricing .tascus-price-card li:last-child {
   border-bottom: none;
+  padding: 18px;
 }
 
-/* Button */
+/* Button style */
 #tascus-pricing .tascus-btn {
-  background-color: #efa425;
-  border: none;
-  color: white;
-  padding: 10px 26px;
-  font-size: 17px;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: background 0.3s ease, transform 0.2s ease;
   display: inline-block;
+  background-color: #efa425;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 15px; /* match card radius aesthetic */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform .15s ease, background .15s ease;
 }
-
 #tascus-pricing .tascus-btn:hover {
   background-color: #e38f00;
-  transform: scale(1.05);
+  transform: translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 700px) {
-  #tascus-pricing .tascus-pricing-wrapper {
+/* tick color (if using svg ticks) */
+#tascus-pricing .tascus-tick { color: #e07a25; width: 18px; height: 18px; }
+
+/* Ensure headings inside do not pick up odd theme transforms */
+#tascus-pricing h1, #tascus-pricing h2, #tascus-pricing h3, #tascus-pricing h4 {
+  transform: none;
+  writing-mode: horizontal-tb;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 980px) {
+  #tascus-pricing > .tascus-pricing-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 22px;
+    padding: 0 14px;
   }
-  #tascus-pricing .tascus-column {
+  #tascus-pricing .tascus-pricing-intro,
+  #tascus-pricing .tascus-pricing-cards {
+    flex: 1 1 100%;
     width: 100%;
-    max-width: 420px;
+    max-width: 720px;
   }
+  #tascus-pricing .tascus-pricing-cards {
+    grid-template-columns: 1fr;
+  }
+  #tascus-pricing .tascus-price-card { min-height: 0; }
+}
+
+/* Small phone */
+@media (max-width: 420px) {
+  #tascus-pricing { margin: 28px 0; }
+  #tascus-pricing .tascus-header { font-size: 20px; padding: 16px 0; }
+  #tascus-pricing .tascus-btn { padding: 10px 20px; font-size: 15px; border-radius: 12px; }
 }
 
 
 /* end pricing */
+
 
 
