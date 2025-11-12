@@ -61,6 +61,8 @@ body {
     font-weight: normal;
     overflow-x: hidden;
     font-family: 'Sen', sans-serif;
+ background-color: #eadeca;  /* 🎯 THÊM DÒNG NÀY */
+
 }
 
 a {
@@ -1419,5 +1421,6 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
