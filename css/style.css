@@ -1270,174 +1270,108 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-prev { left: 8px; }
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
-/* stảrt */
-
-:root{
-  --tascus-pricing-gap: 28px;
-  --tascus-card-radius: 18px;
-  --tascus-soft-bg: #fdeee6;
-  --tascus-accent-bg: #f0f2f4;
-  --tascus-accent-color: #ff9f1c;
-  --tascus-text-strong: #111;
-  --tascus-muted: #6b6b6b;
-}
-
-/* Root container: ensure it behaves as a normal block in most layouts */
+/* stảrt *//* ===== Tascus Pricing Section (Isolated, 15px rounded) ===== */
 #tascus-pricing.tascus-pricing-section {
-  display: block;
-  width: 100%;
+  padding: 50px 20px;
+  background: #fff;
   box-sizing: border-box;
-  margin: 40px auto;
-  padding-left: 0;
-  padding-right: 0;
 }
 
-/* If parent is flex/grid/column, make sure the section spans full row:
-   using a selector that targets immediate parent situations increases specificity */
-section#tascus-pricing.tascus-pricing-section,
-div#tascus-pricing.tascus-pricing-section {
-  min-width: 0; /* prevent parent min-width from shrinking contents */
-  align-self: stretch;
-}
-
-/* inner container: explicitly set layout and constraints */
-#tascus-pricing > .tascus-pricing-inner {
-  max-width: 1200px;
-  width: 100%;
+#tascus-pricing .tascus-pricing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+}
+
+/* Columns */
+#tascus-pricing .tascus-column {
+  flex: 1 1 45%;
+  min-width: 280px;
   box-sizing: border-box;
-
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: var(--tascus-pricing-gap);
-  align-items: center;
 }
 
-/* If your theme wraps the section inside a .row/.container that applies columns,
-   targeting the immediate child ensures our grid rules take precedence. */
-#tascus-pricing.tascus-pricing-section .tascus-pricing-inner {
-  /* enforce grid layout even if ancestors apply flex or other display */
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-}
-
-/* Left column (intro) */
-#tascus-pricing .tascus-pricing-intro {
-  margin: 0;
-  padding-right: 12px;
-  min-width: 0; /* allow flex children to shrink properly */
-  order: 0;
-  float: none;
-}
-
-/* Right column (cards area) */
-#tascus-pricing .tascus-pricing-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  width: 100%;
-  margin: 0;
-  float: none;
-}
-
-/* Card base */
+/* Price card */
 #tascus-pricing .tascus-price-card {
-  padding: 30px;
-  border-radius: var(--tascus-card-radius);
-  box-shadow: 0 6px 18px rgba(13,13,13,0.05);
-  background: white;
-  border: 1px solid rgba(0,0,0,0.04);
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
-}
-
-/* Variants */
-#tascus-pricing .tascus-price-card--soft { background: var(--tascus-soft-bg); }
-#tascus-pricing .tascus-price-card--accent { background: var(--tascus-accent-bg); }
-
-/* Headings and texts */
-#tascus-pricing .tascus-price-card__tag { font-size: 13px; color: var(--tascus-muted); margin-bottom: 8px; font-weight: 600; }
-#tascus-pricing .tascus-price-card__title { font-size: 48px; margin: 0 0 6px; font-weight: 800; color: var(--tascus-text-strong); }
-#tascus-pricing .tascus-price-card__price { font-size: 48px; font-weight: 800; color: var(--tascus-text-strong); }
-#tascus-pricing .tascus-price-card__subtitle { font-size: 12px; color: var(--tascus-muted); letter-spacing: 1px; margin-bottom: 14px; }
-
-/* Feature list */
-#tascus-pricing .tascus-price-features {
   list-style: none;
+  border: 1px solid #eee;
+  border-radius: 15px; /* ✅ Bo góc 15px */
+  margin: 0;
   padding: 0;
-  margin: 6px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  flex-grow: 1;
-}
-#tascus-pricing .tascus-price-features li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: var(--tascus-text-strong);
-  font-size: 15px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  overflow: hidden;
+  background: #fff;
 }
 
-/* Tick color per card */
-#tascus-pricing .tascus-tick { width: 18px; height: 18px; color: #e07a25; flex-shrink: 0; }
-#tascus-pricing .tascus-price-card--accent .tascus-tick { color: #47c46b; }
+#tascus-pricing .tascus-price-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
 
-/* Intro left column typography & CTA */
-#tascus-pricing .tascus-pricing-title {
-  font-size: clamp(28px, 6vw, 44px);
-  line-height: 1.02;
-  margin: 0 0 18px;
-  color: var(--tascus-text-strong);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-#tascus-pricing .tascus-pricing-desc {
-  color: var(--tascus-muted);
-  font-size: 15px;
-  line-height: 1.6;
-  max-width: 420px;
-  margin-bottom: 22px;
-}
-#tascus-pricing .tascus-pricing-cta {
-  display: inline-block;
-  padding: 10px 22px;
-  background: #4fc06f;
+/* Header */
+#tascus-pricing .tascus-header {
   color: #fff;
-  border-radius: 999px;
-  text-decoration: none;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  padding: 24px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Price / grey rows */
+#tascus-pricing .tascus-price-grey {
+  background-color: #f6f6f6;
+  font-size: 18px;
   font-weight: 600;
-  box-shadow: 0 6px 14px rgba(79,192,111,0.14);
+  color: #333;
 }
 
-/* Accessibility: ensure headings don't inherit strange transforms */
-#tascus-pricing h1, #tascus-pricing h2, #tascus-pricing h3, #tascus-pricing h4 {
-  transform: none;
-  writing-mode: horizontal-tb;
+/* Common li */
+#tascus-pricing .tascus-price-card li {
+  border-bottom: 1px solid #eee;
+  padding: 18px;
+  text-align: center;
+  font-size: 15px;
+  color: #333;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 980px) {
-  #tascus-pricing > .tascus-pricing-inner {
-    grid-template-columns: 1fr;
-    gap: 26px;
-    padding: 0 12px;
+#tascus-pricing .tascus-price-card li:last-child {
+  border-bottom: none;
+}
+
+/* Button */
+#tascus-pricing .tascus-btn {
+  background-color: #efa425;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  font-size: 17px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+#tascus-pricing .tascus-btn:hover {
+  background-color: #e38f00;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  #tascus-pricing .tascus-pricing-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
-  #tascus-pricing .tascus-pricing-cards { grid-template-columns: 1fr; }
-  #tascus-pricing .tascus-price-card { min-height: 0; }
-  #tascus-pricing { padding: 36px 8px; }
+  #tascus-pricing .tascus-column {
+    width: 100%;
+    max-width: 420px;
+  }
 }
-@media (max-width: 420px) {
-  #tascus-pricing .tascus-pricing-title { font-size: 28px; }
-  #tascus-pricing .tascus-price-card { padding: 20px; border-radius: 14px; }
-  #tascus-pricing .tascus-price-features li { gap: 10px; font-size: 14px; }
-}
+
 
 /* end pricing */
+
 
