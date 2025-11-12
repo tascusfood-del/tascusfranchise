@@ -1231,5 +1231,26 @@ input.Enter_text::placeholder {
     float: none !important;
 }
 
+/* --- FIX NAVBAR BỊ CHE BỞI BANNER --- */
+.header_section {
+  position: relative; /* hoặc fixed nếu muốn header dính trên cùng */
+  z-index: 9999;
+  width: 100%;
+}
+
+/* Nếu muốn header luôn cố định trên cùng khi cuộn */
+ /*
+.header_section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+body {
+  padding-top: 80px; 
+}
+ */
+
 
 
