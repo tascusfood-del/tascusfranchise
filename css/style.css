@@ -7,13 +7,8 @@
 
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@font-face {
-    font-family: "Righteous";
-    src: url("../fonts/BalooChettan-Regular.ttf");
-    src: url("../fonts/BalooChettan-Regular.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
 /* ... (code @import và @font-face "Righteous" ở trên) ... */
 
 /* ---- FONT TÙY CHỈNH (PHIÊN BẢN .TTF) ---- */
@@ -60,8 +55,9 @@ body {
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-    font-family: 'Sen', sans-serif;
- background-color: #fffbf0;  /* 🎯 THÊM DÒNG NÀY */
+    font-family: 'Nunito', sans-serif;  /* 🎯 ĐỔI THÀNH NUNITO */
+    background-color: #fffbf0;
+}
 
 }
 
@@ -1435,6 +1431,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
