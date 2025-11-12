@@ -1445,8 +1445,22 @@ input.Enter_text::placeholder {
   #tascus-pricing .tascus-btn { padding: 10px 20px; font-size: 15px; border-radius: 12px; }
 }
 
+#tascus-pricing .tascus-column {
+  flex: 1 1 420px;     /* card to hơn, cân đẹp */
+  max-width: 500px;    /* không vượt quá nửa màn hình */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  #tascus-pricing .tascus-column {
+    flex: 1 1 100%;
+    max-width: 420px;
+  }
+}
 
 /* end pricing */
+
 
 
 
