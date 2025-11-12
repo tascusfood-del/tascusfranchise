@@ -1271,182 +1271,127 @@ input.Enter_text::placeholder {
   #tascus-banner-widget .tascus-next { right: 8px; }
 }
 /* ===================== TACUS PRICING (REPLACE OLD BLOCK) ===================== */
-:root{
-  --tascus-pricing-gap: 28px;
-  --tascus-card-radius: 15px; /* bạn đặt 15px */
-  --tascus-soft-bg: #fdeee6;
-  --tascus-accent-bg: #f0f2f4;
-  --tascus-accent-color: #ff9f1c;
-  --tascus-text-strong: #111;
-  --tascus-muted: #6b6b6b;
+* {
+  box-sizing: border-box;
 }
 
-/* Root section */
-#tascus-pricing.tascus-pricing-section {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 40px auto;
-  padding-left: 0;
-  padding-right: 0;
-  /* prevent inherited transforms/writing modes from theme */
-  transform: none;
-  writing-mode: horizontal-tb;
-  min-width: 0;
-  align-self: stretch;
+.columns {
+  float: left;
+  width: 50%;
+  padding: 20px;
 }
 
-/* Inner wrapper: center content and define grid/flex layout */
-#tascus-pricing > .tascus-pricing-wrapper {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--tascus-pricing-gap);
-  align-items: stretch;
-}
-
-/* Left intro */
-#tascus-pricing .tascus-pricing-intro {
-  flex: 1 1 45%;
-  min-width: 300px;
-  box-sizing: border-box;
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
   margin: 0;
-  padding-right: 12px;
-  order: 0;
-  float: none;
-}
-
-/* Right cards */
-#tascus-pricing .tascus-pricing-cards {
-  flex: 1 1 45%;
-  min-width: 300px;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-  margin: 0;
-}
-
-/* Single card */
-#tascus-pricing .tascus-price-card {
-  list-style: none;
-  border: 1px solid rgba(0,0,0,0.04);
-  border-radius: var(--tascus-card-radius);
   padding: 0;
-  margin: 0;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 6px 18px rgba(13,13,13,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition: transform .22s ease, box-shadow .22s ease;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #efa425;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}* {
   box-sizing: border-box;
 }
 
-/* Hover */
-#tascus-pricing .tascus-price-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+.columns {
+  float: left;
+  width: 50%;
+  padding: 20px;
 }
 
-/* Header / title */
-#tascus-pricing .tascus-header {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
+/* === CARD GIÁ === */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px; /* 🎯 Bo góc card */
+  overflow: hidden;    /* Ẩn phần tràn để bo góc chuẩn */
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+  border-top-left-radius: 20px;  /* bo góc trên cùng */
+  border-top-right-radius: 20px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
   text-align: center;
-  padding: 20px 0;
-  letter-spacing: .4px;
 }
 
-/* Price row */
-#tascus-pricing .tascus-price-grey {
-  background-color: #f6f6f6;
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  text-align: center;
-  padding: 14px;
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
 }
 
-/* Feature rows */
-#tascus-pricing .tascus-price-card li {
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  padding: 16px;
-  text-align: center;
-  font-size: 15px;
-  color: var(--tascus-text-strong);
-}
-
-/* last child (button) remove bottom border */
-#tascus-pricing .tascus-price-card li:last-child {
-  border-bottom: none;
-  padding: 18px;
-}
-
-/* Button style */
-#tascus-pricing .tascus-btn {
-  display: inline-block;
+/* === NÚT SIGN UP === */
+.button {
   background-color: #efa425;
-  color: #fff;
-  padding: 10px 26px;
-  border-radius: 15px; /* match card radius aesthetic */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: transform .15s ease, background .15s ease;
+  font-size: 18px;
+  border-radius: 20px; /* 🎯 Bo góc nút */
+  transition: 0.3s;
 }
-#tascus-pricing .tascus-btn:hover {
+
+.button:hover {
   background-color: #e38f00;
-  transform: translateY(-2px);
 }
 
-/* tick color (if using svg ticks) */
-#tascus-pricing .tascus-tick { color: #e07a25; width: 18px; height: 18px; }
-
-/* Ensure headings inside do not pick up odd theme transforms */
-#tascus-pricing h1, #tascus-pricing h2, #tascus-pricing h3, #tascus-pricing h4 {
-  transform: none;
-  writing-mode: horizontal-tb;
-}
-
-/* Responsive: stack on small screens */
-@media (max-width: 980px) {
-  #tascus-pricing > .tascus-pricing-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    padding: 0 14px;
-  }
-  #tascus-pricing .tascus-pricing-intro,
-  #tascus-pricing .tascus-pricing-cards {
-    flex: 1 1 100%;
+@media only screen and (max-width: 600px) {
+  .columns {
     width: 100%;
-    max-width: 720px;
   }
-  #tascus-pricing .tascus-pricing-cards {
-    grid-template-columns: 1fr;
-  }
-  #tascus-pricing .tascus-price-card { min-height: 0; }
 }
-
-/* Small phone */
-@media (max-width: 420px) {
-  #tascus-pricing { margin: 28px 0; }
-  #tascus-pricing .tascus-header { font-size: 20px; padding: 16px 0; }
-  #tascus-pricing .tascus-btn { padding: 10px 20px; font-size: 15px; border-radius: 12px; }
-}
-
-/* end pricing */
-
 
 
 
