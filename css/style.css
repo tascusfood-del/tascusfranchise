@@ -1376,13 +1376,13 @@ input.Enter_text::placeholder {
 .price .header {
   background-color: #111;
   color: white;
-  font-size: 25px;
+  font-size: 32px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .price li {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ffffff;
   padding: 20px;
   text-align: center;
 }
@@ -1421,6 +1421,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
