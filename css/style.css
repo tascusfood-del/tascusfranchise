@@ -1254,6 +1254,45 @@ body {
   padding-top: 80px; 
 }
  */
+/* ===== FIX: đảm bảo header luôn trên cùng và carousel không chặn click ===== */
+.header_section {
+  position: relative;     /* hoặc fixed nếu bạn muốn header dính trên cùng */
+  z-index: 9999 !important;
+  pointer-events: auto;
+}
+
+/* Đảm bảo carousel nằm bên dưới header */
+#carouselExampleIndicators,
+.carousel {
+  position: relative !important;
+  z-index: 1 !important;
+  pointer-events: auto;
+}
+
+/* Nếu carousel có overlay (ví dụ .carousel-overlay hoặc ::after) chặn click -> disable pointer */
+#carouselExampleIndicators .carousel-overlay,
+#carouselExampleIndicators::after,
+.carousel::after,
+.carousel .overlay {
+  pointer-events: none !important;
+}
+
+/* Nếu ảnh trong carousel dùng object-fit: cover rồi nhưng có thể phủ header do top:0 -> reset */
+#carouselExampleIndicators .carousel-item {
+  position: relative !important;
+}
+
+/* Giữ nút toggler luôn “clickable” (đôi khi icon ở trong background) */
+.navbar-toggler {
+  position: relative;
+  z-index: 10001; /* lớn hơn header nếu cần */
+}
+
+/* Nếu bạn dùng header fixed, tránh carousel đứng ngay dưới che nội dung */
+body.has-fixed-header {
+  padding-top: 70px; /* chỉnh theo chiều cao header thực tế */
+}
+
 
 
 
