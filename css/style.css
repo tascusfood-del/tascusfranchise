@@ -1261,26 +1261,37 @@ body {
   pointer-events: auto;
 }
 
-/* HERO BANNER - style */
-.hero-carousel { width: 100%; }
-.hero-carousel .carousel-item { height: 520px; }
-.hero-carousel .carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* Đảm bảo carousel nằm bên dưới header */
+#carouselExampleIndicators,
+.carousel {
+  position: relative !important;
+  z-index: 1 !important;
+  pointer-events: auto;
 }
 
-/* responsive */
-@media (max-width: 768px) {
-  .hero-carousel .carousel-item { height: 320px; }
+/* Nếu carousel có overlay (ví dụ .carousel-overlay hoặc ::after) chặn click -> disable pointer */
+#carouselExampleIndicators .carousel-overlay,
+#carouselExampleIndicators::after,
+.carousel::after,
+.carousel .overlay {
+  pointer-events: none !important;
 }
 
-/* nếu header cố định, thêm padding-top cho body phù hợp */
-/* body { padding-top: 72px; } */
+/* Nếu ảnh trong carousel dùng object-fit: cover rồi nhưng có thể phủ header do top:0 -> reset */
+#carouselExampleIndicators .carousel-item {
+  position: relative !important;
+}
 
+/* Giữ nút toggler luôn “clickable” (đôi khi icon ở trong background) */
+.navbar-toggler {
+  position: relative;
+  z-index: 10001; /* lớn hơn header nếu cần */
+}
 
-
+/* Nếu bạn dùng header fixed, tránh carousel đứng ngay dưới che nội dung */
+body.has-fixed-header {
+  padding-top: 70px; /* chỉnh theo chiều cao header thực tế */
+}
 
 
 
