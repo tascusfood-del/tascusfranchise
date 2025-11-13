@@ -1164,13 +1164,13 @@ input.Enter_text::placeholder {
 
 
     /* ---- NEW ---- */
-/* ===== Tascus Banner với Aspect Ratio Responsive ===== */
+/* ===== Tascus Banner - Flex theo màn hình ===== */
 #tascus-banner-widget.tascus-fullbleed {
   position: relative;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  background: #000;
+  background: transparent;  /* 🎯 Không cần background */
   overflow: hidden;
 }
 
@@ -1179,7 +1179,7 @@ input.Enter_text::placeholder {
   width: 100%;
   display: block;
   position: relative;
-  /* Desktop: tỉ lệ 21:9 */
+  /* 🎯 Desktop: tỉ lệ 21:9 - sẽ tự động scale */
   aspect-ratio: 21 / 9;
 }
 
@@ -1205,12 +1205,12 @@ input.Enter_text::placeholder {
   display: block;
 }
 
-/* Image: lấp đầy container */
+/* 🎯 Image: Tự động scale theo container */
 #tascus-banner-widget .tascus-img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;  /* 🎯 ĐỔI THÀNH CONTAIN */
+  object-fit: cover;  /* Lấp đầy và giữ tỉ lệ */
   object-position: center;
   margin: 0;
   vertical-align: middle;
@@ -1233,6 +1233,13 @@ input.Enter_text::placeholder {
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-arrow:hover {
+  background: rgba(249, 177, 22, 0.95);
+  border-color: rgba(249, 177, 22, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 #tascus-banner-widget .tascus-prev { left: 12px; }
@@ -1256,11 +1263,18 @@ input.Enter_text::placeholder {
   border: 2px solid rgba(255,255,255,0.9);
   background: rgba(255,255,255,0.85);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-dot:hover {
+  background: rgba(249, 177, 22, 0.7);
+  transform: scale(1.2);
 }
 
 #tascus-banner-widget .tascus-dot.tascus-active {
   background: #ff9f1c;
   border-color: #ff9f1c;
+  transform: scale(1.3);
 }
 
 /* Focus outlines */
@@ -1270,11 +1284,63 @@ input.Enter_text::placeholder {
   outline-offset: 2px;
 }
 
-/* ===== RESPONSIVE: Mobile - Tỉ lệ 4:4.5 ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE: Tự động điều chỉnh ===== */
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1920px) {
   #tascus-banner-widget .tascus-inner {
-    /* Mobile: tỉ lệ 4:4.5 = 8:9 */
-    aspect-ratio: 8 / 9;
+    aspect-ratio: 21 / 9;
+    max-height: 900px;  /* Giới hạn tối đa để không quá cao */
+  }
+}
+
+/* Desktop (1200px - 1919px) */
+@media (min-width: 1200px) and (max-width: 1919px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 21 / 9;
+  }
+}
+
+/* Tablet Landscape (1101px - 1199px) */
+@media (min-width: 1101px) and (max-width: 1199px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 18 / 9;  /* Tỉ lệ 2:1 */
+  }
+}
+
+/* Tablet (769px - 1100px) */
+@media (min-width: 769px) and (max-width: 1100px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 16 / 9;  /* Tỉ lệ chuẩn */
+  }
+
+  #tascus-banner-widget .tascus-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile Landscape (601px - 768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 3 / 2;  /* Tỉ lệ 3:2 */
+  }
+
+  #tascus-banner-widget .tascus-arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  #tascus-banner-widget .tascus-prev { left: 10px; }
+  #tascus-banner-widget .tascus-next { right: 10px; }
+}
+
+/* Mobile Portrait (≤ 600px) */
+@media (max-width: 600px) {
+  #tascus-banner-widget .tascus-inner {
+    aspect-ratio: 4 / 5;  /* Tỉ lệ dọc cho mobile */
   }
 
   #tascus-banner-widget .tascus-arrow {
@@ -1285,14 +1351,18 @@ input.Enter_text::placeholder {
 
   #tascus-banner-widget .tascus-prev { left: 8px; }
   #tascus-banner-widget .tascus-next { right: 8px; }
-}
 
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1100px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 16 / 9;  /* Tỉ lệ trung gian cho tablet */
+  #tascus-banner-widget .tascus-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  #tascus-banner-widget .tascus-dots {
+    bottom: 8px;
+    gap: 8px;
   }
 }
+
 
 /* === CARD GIÁ === */
 .price {
@@ -1431,6 +1501,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
