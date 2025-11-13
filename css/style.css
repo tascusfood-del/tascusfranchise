@@ -1,30 +1,24 @@
+/*---------------------------------------------------------------------
+File Name: style.css (ĐÃ SỬA LỖI - VERSION FINAL)
+---------------------------------------------------------------------*/
 
-
-
-
-/*---------------------------------------------------------------------File Name: style.css ---------------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- 
+import Fonts 
+---------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 
-/* ... (code @import và @font-face "Righteous" ở trên) ... */
-
 /* ---- FONT TÙY CHỈNH (PHIÊN BẢN .TTF) ---- */
 @font-face {
-    font-family: 'FontCuaToi';  /* Giữ nguyên tên này */
-    src: url('../fonts/kenyan.ttf') format('truetype'); /* <-- ĐÃ SỬA .ttf */
+    font-family: 'FontCuaToi';
+    src: url('../fonts/kenyan.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
- 2) font-family: 'Poppins', sans-serif;
- ----------------------------------------*****/
-
-
-/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- 
+import Files 
+---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -38,7 +32,9 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
-/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
+/*--------------------------------------------------------------------- 
+skeleton 
+---------------------------------------------------------------------*/
 
 * {
     box-sizing: border-box !important;
@@ -55,10 +51,8 @@ body {
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-    font-family: 'Nunito', sans-serif;  /* 🎯 ĐỔI THÀNH NUNITO */
+    font-family: 'Nunito', sans-serif;
     background-color: #fffbf0;
-}
-
 }
 
 a {
@@ -71,45 +65,45 @@ a {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
+    font-family: 'FontCuaToi', sans-serif;
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
     padding: 0 0 10px 0;
-    font-weight: normal;
     line-height: normal;
     color: #111111;
-    margin: 0
+    margin: 0;
 }
 
 h1 {
-    font-size: 24px
+    font-size: 24px;
 }
 
 h2 {
-    font-size: 22px
+    font-size: 22px;
 }
 
 h3 {
-    font-size: 18px
+    font-size: 18px;
 }
 
 h4 {
-    font-size: 16px
+    font-size: 16px;
 }
 
 h5 {
-    font-size: 14px
+    font-size: 14px;
 }
 
 h6 {
-    font-size: 13px
+    font-size: 13px;
 }
 
 *,
@@ -128,7 +122,7 @@ h5 a,
 h6 a {
     color: #212121;
     text-decoration: none!important;
-    opacity: 1
+    opacity: 1;
 }
 
 button:focus {
@@ -172,7 +166,7 @@ img {
     height: auto;
 }
 
- :focus {
+:focus {
     outline: 0;
 }
 
@@ -235,7 +229,6 @@ button {
     padding: 0px;
 }
 
-
 /* header section start */
 
 .header_section {
@@ -256,7 +249,7 @@ button {
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
+    font-family: 'FontCuaToi', sans-serif;
     padding: 3px 20px;
     font-size: 25px;
     color: #fefefd;
@@ -277,26 +270,22 @@ button {
 }
 
 .navbar-brand {
-    /* width: 24%; */ /* Xóa hoặc comment dòng này đi */
-    width: auto; /* Để logo co giãn tự nhiên */
-    padding: 5px 0; /* Thêm chút đệm trên dưới cho cân đối */
-    transition: all 0.3s ease; /* Thêm hiệu ứng mượt */
+    width: auto;
+    padding: 5px 0;
+    transition: all 0.3s ease;
 }
 
 .navbar-brand img {
-    /* Đây là kích thước logo desktop */
-    max-height: 50px; /* Đặt chiều cao tối đa cho logo */
-    width: auto; /* Chiều rộng tự động theo */
-    transition: max-height 0.3s ease; /* Hiệu ứng mượt */
+    max-height: 50px;
+    width: auto;
+    transition: max-height 0.3s ease;
 }
 
 .navbar {
     padding: 15px 0px;
 }
 
-
 /* header section end */
-
 
 /* banner section start */
 
@@ -386,9 +375,7 @@ button {
     color: #000;
 }
 
-
 /* banner section end */
-
 
 /* service section start */
 
@@ -499,9 +486,7 @@ button {
     background-color: #f9b116;
 }
 
-
 /* service section end */
-
 
 /* about section start */
 
@@ -518,6 +503,19 @@ button {
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
+}
+
+.about_taital::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    left: 0px;
+    background-color: #f9b116;
+    height: 10px;
+    bottom: 0px;
+    right: 0px;
+    margin: 0 auto;
+    border-radius: 20px;
 }
 
 .about_section_2 {
@@ -579,9 +577,7 @@ button {
     float: left;
 }
 
-
 /* about section end */
-
 
 /* testimonial section start */
 
@@ -699,9 +695,7 @@ button {
     color: #ffffff;
 }
 
-
 /* testimonial section end */
-
 
 /* shop section start */
 
@@ -785,12 +779,10 @@ button {
 
 .call_bt.active a {
     background: #ffffff;
-    color: #962b2d
+    color: #962b2d;
 }
 
-
 /* shop section end */
-
 
 /* contact section start */
 
@@ -871,9 +863,7 @@ button {
     padding-right: 0px;
 }
 
-
-/* contact section start */
-
+/* contact section end */
 
 /* footer section start */
 
@@ -1006,9 +996,7 @@ input.Enter_text::placeholder {
     color: #f9b116;
 }
 
-
 /* footer section end */
-
 
 /* copyright section start */
 
@@ -1039,530 +1027,480 @@ input.Enter_text::placeholder {
     margin-top: 90px;
 }
 
-
-
 /* copyright section end */
-/* ---------------------------------------------------------------------
-  CUSTOM NAVBAR BUTTON (Thêm bởi bạn)
----------------------------------------------------------------------
-*/
+
+/* =====================================================================
+  CUSTOM NAVBAR BUTTON
+===================================================================== */
 
 .btn-tu-van {
-    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
-    /* Màu nền đỏ sậm giống ảnh minh họa */
-    background-color: #8B0000; 
-    color: #ffffff; /* Chữ trắng */
-    border: 2px solid #8B0000; /* Viền cùng màu */
-    border-radius: 25px; /* Bo góc tròn */
+    font-family: 'FontCuaToi', sans-serif;
+    background-color: #8B0000;
+    color: #ffffff;
+    border: 2px solid #8B0000;
+    border-radius: 25px;
     padding: 8px 20px;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 22px;
-    margin-left: 20px; /* Tạo khoảng cách với menu */
+    margin-left: 20px;
     transition: all 0.3s ease;
 }
 
-/* Hiệu ứng khi rê chuột */
 .btn-tu-van:hover {
-    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
-    background-color: #ffffff; /* Nền trắng */
-    color: #8B0000; /* Chữ đỏ */
-    border-color: #8B0000; /* Giữ viền đỏ */
+    background-color: #ffffff;
+    color: #8B0000;
+    border-color: #8B0000;
 }
 
-/* ---------------------------------------------------------------------
-  RESPONSIVE CHO NAVBAR BUTTON
----------------------------------------------------------------------
-*/
+/* =====================================================================
+  TASCUS BANNER WIDGET
+===================================================================== */
 
-/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
+#tascus-banner-widget.tascus-fullbleed {
+    position: relative;
+    width: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+
+#tascus-banner-widget .tascus-inner {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+#tascus-banner-widget .tascus-slide {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+#tascus-banner-widget .tascus-slide.tascus-active {
+    display: block;
+}
+
+#tascus-banner-widget .tascus-slide picture {
+    width: 100%;
+    display: block;
+}
+
+#tascus-banner-widget .tascus-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#tascus-banner-widget .tascus-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 60;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-arrow:hover {
+    background: rgba(249, 177, 22, 0.95);
+    border-color: rgba(249, 177, 22, 0.9);
+    transform: translateY(-50%) scale(1.1);
+}
+
+#tascus-banner-widget .tascus-prev {
+    left: 12px;
+}
+
+#tascus-banner-widget .tascus-next {
+    right: 12px;
+}
+
+#tascus-banner-widget .tascus-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px;
+    z-index: 70;
+    display: flex;
+    gap: 10px;
+}
+
+#tascus-banner-widget .tascus-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.85);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-dot:hover {
+    background: rgba(249, 177, 22, 0.7);
+    transform: scale(1.2);
+}
+
+#tascus-banner-widget .tascus-dot.tascus-active {
+    background: #ff9f1c;
+    border-color: #ff9f1c;
+    transform: scale(1.3);
+}
+
+#tascus-banner-widget .tascus-arrow:focus,
+#tascus-banner-widget .tascus-dot:focus {
+    outline: 3px solid rgba(255,159,28,0.25);
+    outline-offset: 2px;
+}
+
+/* =====================================================================
+  PRICING CONTAINER (🎯 ĐÃ SỬA - XÓA * {...})
+===================================================================== */
+
+.pricing-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.columns {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+}
+
+.price .header {
+    background-color: #efa425;
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.price .grey {
+    background-color: #f5f5f5;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.button {
+    background-color: #efa425;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: 0.3s;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #e38f00;
+}
+
+.pricing-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* =====================================================================
+  CONTENT BANNER SECTION (Full Width)
+===================================================================== */
+
+.content-banner-section {
+    width: 100%;
+    background: linear-gradient(210deg, #FB8E2A, #FDC154);
+    padding: 60px 0;
+}
+
+.banner-container {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.banner-container:hover .banner-image img {
+    transform: scale(1.05);
+}
+
+.banner-text-container {
+    padding: 60px 45px 55px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.accent-line {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: #f9b116;
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.banner-text-container h1 {
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    margin: 0 0 20px 0 !important;
+    color: #333 !important;
+    line-height: 1.3 !important;
+    padding: 0 !important;
+}
+
+.banner-text-container p {
+    font-family: 'Nunito', sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 25px 0 !important;
+    color: #666;
+}
+
+.learn-more {
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f9b116;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    padding: 5px;
+    left: -5px;
+    letter-spacing: 0.5px;
+    transition: all 0.33s ease;
+}
+
+.learn-more:hover {
+    color: #e3a014;
+}
+
+.learn-more::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: calc(50%);
+    left: 0;
+    width: 100%;
+    height: 40%;
+    pointer-events: none;
+    background: #fff3e0;
+    transform: scale3d(0, 1, 1);
+    transform-origin: 0% 50%;
+    transition: transform 0.33s ease;
+}
+
+.learn-more:hover::before {
+    transform: scale3d(1, 1, 1);
+    transform-origin: 0% 50%;
+}
+
+/* =====================================================================
+  RESPONSIVE
+===================================================================== */
+
+/* Navbar Button Mobile */
 @media (max-width: 991px) {
     .header_section .form-inline {
         width: 100%;
-        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
+        padding-top: 15px;
         padding-bottom: 10px;
     }
 
     .btn-tu-van {
-        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
+        width: 100%;
         text-align: center;
-        margin-left: 0; /* Bỏ khoảng cách trái */
-        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+        margin-left: 0;
+        padding: 12px 20px;
     }
-}
-/* ---------------------------------------------------------------------
-  RESPONSIVE CHO LOGO (Thêm mới)
----------------------------------------------------------------------
-*/
-@media (max-width: 991px) {
+
     .navbar-brand img {
-        /* Kích thước logo mobile (nhỏ hơn) */
-        max-height: 40px; 
+        max-height: 40px;
     }
-}
 
-/* ---------------------------------------------------------------------
-  RESPONSIVE CHO NAVBAR (FIX LỖI CĂN LỀ MOBILE)
----------------------------------------------------------------------
-*/
-
-/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
-@media (max-width: 991px) {
-
-    /* ---- PHẦN MỚI THÊM ĐỂ SỬA LỖI CĂN LỀ ---- */
     .header_section .navbar-nav {
-        /* Bỏ căn lề tự động bên trái trên mobile */
         margin-left: 0 !important;
-        /* Căn lề trái cho toàn bộ menu */
         align-items: flex-start;
         width: 100%;
     }
 
     .header_section .navbar-nav .nav-item {
-        /* Đảm bảo mỗi item chiếm 100% chiều rộng */
         width: 100%;
     }
 
     .header_section .navbar-nav .nav-link {
-        /* Đồng nhất padding cho tất cả link để chúng thẳng hàng */
-        padding: 10px 0px; 
-    }
-    /* ---- HẾT PHẦN SỬA LỖI ---- */
-
-
-    /* ---- Phần cho nút bấm (đã có từ trước) ---- */
-    .header_section .form-inline {
-        width: 100%;
-        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
-        padding-bottom: 10px;
-    }
-
-    .btn-tu-van {
-        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
-        text-align: center;
-        margin-left: 0; /* Bỏ khoảng cách trái */
-        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+        padding: 10px 0px;
     }
 }
 
-
-
-
-
-
-    /* ---- NEW ---- */
-/* ===== Tascus Banner - Flex theo màn hình ===== */
-/* ===== Banner Flex tự nhiên (giống Burger King) ===== */
-#tascus-banner-widget.tascus-fullbleed {
-  position: relative;
-  width: 100%;
-  background: transparent;
-  overflow: hidden;
-}
-
-#tascus-banner-widget .tascus-inner {
-  width: 100%;
-  display: block;
-  position: relative;
-  /* 🎯 BỎ aspect-ratio để ảnh tự nhiên */
-}
-
-#tascus-banner-widget .tascus-slide {
-  display: none;
-  width: 100%;
-  position: relative;
-  /* 🎯 BỎ height: 100% */
-}
-
-#tascus-banner-widget .tascus-slide.tascus-active {
-  display: block;
-}
-
-#tascus-banner-widget .tascus-slide picture {
-  width: 100%;
-  display: block;
-}
-
-/* 🎯 Image tự nhiên - không cắt, không dải màu */
-#tascus-banner-widget .tascus-img {
-  display: block;
-  width: 100%;
-  height: auto;  /* 🎯 AUTO để giữ tỉ lệ gốc */
-  /* BỎ object-fit */
-  /* BỎ object-position */
-  margin: 0;
-  vertical-align: middle;
-}
-
-/* Arrows */
-#tascus-banner-widget .tascus-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 60;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.9);
-  background: rgba(255,255,255,0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-  transition: all 0.3s ease;
-}
-
-#tascus-banner-widget .tascus-arrow:hover {
-  background: rgba(249, 177, 22, 0.95);
-  border-color: rgba(249, 177, 22, 0.9);
-  transform: translateY(-50%) scale(1.1);
-}
-
-#tascus-banner-widget .tascus-prev { left: 12px; }
-#tascus-banner-widget .tascus-next { right: 12px; }
-
-/* Dots */
-#tascus-banner-widget .tascus-dots {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 12px;
-  z-index: 70;
-  display: flex;
-  gap: 10px;
-}
-
-#tascus-banner-widget .tascus-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.9);
-  background: rgba(255,255,255,0.85);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#tascus-banner-widget .tascus-dot:hover {
-  background: rgba(249, 177, 22, 0.7);
-  transform: scale(1.2);
-}
-
-#tascus-banner-widget .tascus-dot.tascus-active {
-  background: #ff9f1c;
-  border-color: #ff9f1c;
-  transform: scale(1.3);
-}
-
-#tascus-banner-widget .tascus-arrow:focus,
-#tascus-banner-widget .tascus-dot:focus {
-  outline: 3px solid rgba(255,159,28,0.25);
-  outline-offset: 2px;
-}
-
-/* Responsive */
+/* Tascus Banner Mobile */
 @media (max-width: 768px) {
-  #tascus-banner-widget .tascus-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 18px;
-  }
-  #tascus-banner-widget .tascus-prev { left: 8px; }
-  #tascus-banner-widget .tascus-next { right: 8px; }
-  #tascus-banner-widget .tascus-dot {
-    width: 10px;
-    height: 10px;
-  }
-  #tascus-banner-widget .tascus-dots {
-    bottom: 8px;
-    gap: 8px;
-  }
+    #tascus-banner-widget .tascus-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    #tascus-banner-widget .tascus-prev {
+        left: 8px;
+    }
+
+    #tascus-banner-widget .tascus-next {
+        right: 8px;
+    }
+
+    #tascus-banner-widget .tascus-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    #tascus-banner-widget .tascus-dots {
+        bottom: 8px;
+        gap: 8px;
+    }
 }
 
-/* === CARD GIÁ === */
-* {
-  box-sizing: border-box;
-}
-
-/* === CONTAINER WRAPPER === */
-.pricing-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.columns {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
-
-/* === CARD GIÁ === */
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  border-radius: 20px;
-  overflow: hidden;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: #ffffff; /* 🎯 Nền trắng cho card */
-}
-
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
-}
-
-.price .header {
-  background-color: #efa425; /* Màu header giống nút */
-  color: white;
-  font-size: 38px; /* Tăng 20% từ 32px */
-  font-weight: 700; /* Đậm hơn */
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-  background-color: #ffffff; /* 🎯 Nền trắng cho nội dung */
-  font-size: 19px; /* Tăng 20% từ ~16px mặc định */
-  font-weight: 600; /* Đậm hơn */
-}
-
-.price .grey {
-  background-color: #f5f5f5; /* Màu xám nhẹ thay vì #eee */
-  font-size: 24px; /* Tăng 20% từ 20px */
-  font-weight: 700; /* Đậm hơn */
-}
-
-/* === NÚT SIGN UP === */
-.button {
-  background-color: #efa425;
-  border: none;
-  color: white;
-  padding: 12px 30px; /* Tăng padding một chút */
-  text-align: center;
-  text-decoration: none;
-  font-size: 22px; /* Tăng 20% từ 18px */
-  font-weight: 700; /* Đậm hơn */
-  border-radius: 20px;
-  transition: 0.3s;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #e38f00;
-}
-
-/* === CLEARFIX cho float === */
-.pricing-container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
+/* Pricing Mobile */
 @media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}
-/* ===== CONTENT BANNER (Full Width) ===== */
-
-.content-banner-section {
-  width: 100%;
-  background: linear-gradient(210deg, #FB8E2A, #FDC154);
-  padding: 60px 0;
+    .columns {
+        width: 100%;
+    }
 }
 
-.banner-container {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 1400px;  /* 🎯 Giới hạn chiều rộng tối đa */
-  margin: 0 auto;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
-/* Banner Image */
-.banner-image {
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-}
-
-.banner-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.5s ease;
-}
-
-.banner-container:hover .banner-image img {
-  transform: scale(1.05);  /* Zoom effect on hover */
-}
-
-/* Banner Text Container */
-.banner-text-container {
-  padding: 60px 45px 55px;
-  font-family: 'Nunito', sans-serif;  /* 🎯 Font Nunito */
-}
-
-/* Accent Line */
-.accent-line {
-  display: inline-block;
-  width: 50px;
-  height: 5px;
-  background-color: #f9b116;  /* 🎯 Màu của website bạn */
-  margin-bottom: 30px;
-  border-radius: 3px;
-}
-
-/* Heading */
-.banner-text-container h1 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  margin: 0 0 20px 0;
-  color: #333;
-  line-height: 1.3;
-}
-
-/* Paragraph */
-.banner-text-container p {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 0 0 25px 0;
-  color: #666;
-}
-
-/* Learn More Link */
-.learn-more {
-  font-family: 'Nunito', sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f9b116;  /* 🎯 Màu của website bạn */
-  font-weight: 700;
-  font-size: 14px;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding: 5px;
-  left: -5px;
-  letter-spacing: 0.5px;
-  transition: all 0.33s ease;
-}
-
-.learn-more:hover {
-  color: #e3a014;
-}
-
-/* Underline effect */
-.learn-more::before {
-  content: '';
-  z-index: -1;
-  position: absolute;
-  top: calc(50%);
-  left: 0;
-  width: 100%;
-  height: 40%;
-  pointer-events: none;
-  background: #fff3e0;  /* 🎯 Màu nhạt của website bạn */
-  transform: scale3d(0, 1, 1);
-  transform-origin: 0% 50%;
-  transition: transform 0.33s ease;
-}
-
-.learn-more:hover::before {
-  transform: scale3d(1, 1, 1);
-  transform-origin: 0% 50%;
-}
-
-/* ===== RESPONSIVE ===== */
-
-/* Tablet & Desktop */
+/* Content Banner Tablet & Desktop */
 @media screen and (min-width: 768px) {
-  .content-banner-section {
-    padding: 80px 20px;  /* 🎯 Padding 2 bên để không sát lề */
-  }
+    .content-banner-section {
+        padding: 80px 20px;
+    }
 
-  .banner-container {
-    flex-direction: row;
-    align-items: stretch;
-  }
+    .banner-container {
+        flex-direction: row;
+        align-items: stretch;
+    }
 
-  .banner-image {
-    width: 50%;
-    height: auto;
-    min-height: 420px;
-  }
+    .banner-image {
+        width: 50%;
+        height: auto;
+        min-height: 420px;
+    }
 
-  .banner-text-container {
-    width: 50%;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+    .banner-text-container {
+        width: 50%;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-  .banner-text-container h1 {
-    font-size: 40px;
-  }
+    .banner-text-container h1 {
+        font-size: 40px !important;
+    }
 
-  .banner-text-container p {
-    font-size: 17px;
-    max-width: 560px;
-  }
+    .banner-text-container p {
+        font-size: 17px;
+        max-width: 560px;
+    }
 }
 
-/* Large Desktop */
+/* Content Banner Large Desktop */
 @media screen and (min-width: 1200px) {
-  .banner-container {
-    max-width: 1400px;
-  }
+    .banner-container {
+        max-width: 1400px;
+    }
 
-  .banner-text-container {
-    padding: 80px;
-  }
+    .banner-text-container {
+        padding: 80px;
+    }
 
-  .banner-text-container h1 {
-    font-size: 44px;
-  }
+    .banner-text-container h1 {
+        font-size: 44px !important;
+    }
 
-  .banner-text-container p {
-    font-size: 18px;
-  }
+    .banner-text-container p {
+        font-size: 18px;
+    }
 }
 
-/* Mobile Small */
+/* Content Banner Mobile Small */
 @media screen and (max-width: 480px) {
-  .content-banner-section {
-    padding: 40px 15px;
-  }
+    .content-banner-section {
+        padding: 40px 15px;
+    }
 
-  .banner-image {
-    height: 280px;
-  }
+    .banner-image {
+        height: 280px;
+    }
 
-  .banner-text-container {
-    padding: 40px 30px;
-  }
+    .banner-text-container {
+        padding: 40px 30px;
+    }
 
-  .banner-text-container h1 {
-    font-size: 28px;
-  }
+    .banner-text-container h1 {
+        font-size: 28px !important;
+    }
 
-  .banner-text-container p {
-    font-size: 15px;
-  }
+    .banner-text-container p {
+        font-size: 15px;
+    }
 }
-
