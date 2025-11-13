@@ -520,19 +520,6 @@ button {
     text-transform: uppercase;
 }
 
-.about_taital::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    left: 0px;
-    background-color: #f9b116;
-    height: 10px;
-    bottom: 0px;
-    right: 0px;
-    margin: 0 auto;
-    border-radius: 20px;
-}
-
 .about_section_2 {
     width: 100%;
     float: left;
@@ -1384,3 +1371,4 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
