@@ -1371,4 +1371,199 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+/* ===== CONTENT BANNER (Full Width) ===== */
+
+.content-banner-section {
+  width: 100%;
+  background: linear-gradient(210deg, #FB8E2A, #FDC154);
+  padding: 60px 0;
+}
+
+.banner-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;  /* 🎯 Giới hạn chiều rộng tối đa */
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Banner Image */
+.banner-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover .banner-image img {
+  transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+/* Banner Text Container */
+.banner-text-container {
+  padding: 60px 45px 55px;
+  font-family: 'Nunito', sans-serif;  /* 🎯 Font Nunito */
+}
+
+/* Accent Line */
+.accent-line {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #f9b116;  /* 🎯 Màu của website bạn */
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+/* Heading */
+.banner-text-container h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+/* Paragraph */
+.banner-text-container p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 25px 0;
+  color: #666;
+}
+
+/* Learn More Link */
+.learn-more {
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f9b116;  /* 🎯 Màu của website bạn */
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  left: -5px;
+  letter-spacing: 0.5px;
+  transition: all 0.33s ease;
+}
+
+.learn-more:hover {
+  color: #e3a014;
+}
+
+/* Underline effect */
+.learn-more::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: calc(50%);
+  left: 0;
+  width: 100%;
+  height: 40%;
+  pointer-events: none;
+  background: #fff3e0;  /* 🎯 Màu nhạt của website bạn */
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.33s ease;
+}
+
+.learn-more:hover::before {
+  transform: scale3d(1, 1, 1);
+  transform-origin: 0% 50%;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet & Desktop */
+@media screen and (min-width: 768px) {
+  .content-banner-section {
+    padding: 80px 20px;  /* 🎯 Padding 2 bên để không sát lề */
+  }
+
+  .banner-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .banner-image {
+    width: 50%;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .banner-text-container {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner-text-container h1 {
+    font-size: 40px;
+  }
+
+  .banner-text-container p {
+    font-size: 17px;
+    max-width: 560px;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .banner-container {
+    max-width: 1400px;
+  }
+
+  .banner-text-container {
+    padding: 80px;
+  }
+
+  .banner-text-container h1 {
+    font-size: 44px;
+  }
+
+  .banner-text-container p {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 480px) {
+  .content-banner-section {
+    padding: 40px 15px;
+  }
+
+  .banner-image {
+    height: 280px;
+  }
+
+  .banner-text-container {
+    padding: 40px 30px;
+  }
+
+  .banner-text-container h1 {
+    font-size: 28px;
+  }
+
+  .banner-text-container p {
+    font-size: 15px;
+  }
+}
+
 
