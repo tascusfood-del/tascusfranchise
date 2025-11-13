@@ -1165,12 +1165,13 @@ input.Enter_text::placeholder {
 
     /* ---- NEW ---- */
 /* ===== Tascus Banner - Flex theo màn hình ===== */
+/* ===== Tascus Banner - KHÔNG CROP ===== */
 #tascus-banner-widget.tascus-fullbleed {
   position: relative;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  background: transparent;  /* 🎯 Không cần background */
+  background: #fffbf0;  /* 🎯 Màu nền website để thay dải đen */
   overflow: hidden;
 }
 
@@ -1179,7 +1180,7 @@ input.Enter_text::placeholder {
   width: 100%;
   display: block;
   position: relative;
-  /* 🎯 Desktop: tỉ lệ 21:9 - sẽ tự động scale */
+  /* Desktop: tỉ lệ 21:9 */
   aspect-ratio: 21 / 9;
 }
 
@@ -1205,12 +1206,12 @@ input.Enter_text::placeholder {
   display: block;
 }
 
-/* 🎯 Image: Tự động scale theo container */
+/* 🎯 Image: CONTAIN để KHÔNG CROP */
 #tascus-banner-widget .tascus-img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* Lấp đầy và giữ tỉ lệ */
+  object-fit: contain;  /* 🎯 CONTAIN = Không crop, hiển thị toàn bộ ảnh */
   object-position: center;
   margin: 0;
   vertical-align: middle;
@@ -1284,34 +1285,26 @@ input.Enter_text::placeholder {
   outline-offset: 2px;
 }
 
-/* ===== RESPONSIVE: Tự động điều chỉnh ===== */
+/* ===== RESPONSIVE ===== */
 
-/* Large Desktop (1920px+) */
+/* Desktop lớn */
 @media (min-width: 1920px) {
   #tascus-banner-widget .tascus-inner {
     aspect-ratio: 21 / 9;
-    max-height: 900px;  /* Giới hạn tối đa để không quá cao */
   }
 }
 
-/* Desktop (1200px - 1919px) */
+/* Desktop trung bình */
 @media (min-width: 1200px) and (max-width: 1919px) {
   #tascus-banner-widget .tascus-inner {
     aspect-ratio: 21 / 9;
   }
 }
 
-/* Tablet Landscape (1101px - 1199px) */
-@media (min-width: 1101px) and (max-width: 1199px) {
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1199px) {
   #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 18 / 9;  /* Tỉ lệ 2:1 */
-  }
-}
-
-/* Tablet (769px - 1100px) */
-@media (min-width: 769px) and (max-width: 1100px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 16 / 9;  /* Tỉ lệ chuẩn */
+    aspect-ratio: 16 / 9;
   }
 
   #tascus-banner-widget .tascus-arrow {
@@ -1321,24 +1314,8 @@ input.Enter_text::placeholder {
   }
 }
 
-/* Mobile Landscape (601px - 768px) */
-@media (min-width: 601px) and (max-width: 768px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 3 / 2;  /* Tỉ lệ 3:2 */
-  }
-
-  #tascus-banner-widget .tascus-arrow {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-  }
-
-  #tascus-banner-widget .tascus-prev { left: 10px; }
-  #tascus-banner-widget .tascus-next { right: 10px; }
-}
-
-/* Mobile Portrait (≤ 600px) */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 768px) {
   #tascus-banner-widget .tascus-inner {
     aspect-ratio: 4 / 5;  /* Tỉ lệ dọc cho mobile */
   }
@@ -1350,19 +1327,7 @@ input.Enter_text::placeholder {
   }
 
   #tascus-banner-widget .tascus-prev { left: 8px; }
-  #tascus-banner-widget .tascus-next { right: 8px; }
-
-  #tascus-banner-widget .tascus-dot {
-    width: 10px;
-    height: 10px;
-  }
-
-  #tascus-banner-widget .tascus-dots {
-    bottom: 8px;
-    gap: 8px;
-  }
-}
-
+  #tascus-banner-widget .tascus-next {
 
 /* === CARD GIÁ === */
 .price {
@@ -1501,6 +1466,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
