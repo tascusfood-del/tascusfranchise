@@ -1165,54 +1165,44 @@ input.Enter_text::placeholder {
 
     /* ---- NEW ---- */
 /* ===== Tascus Banner - Flex theo màn hình ===== */
-/* ===== Tascus Banner - KHÔNG CROP ===== */
+/* ===== Banner Flex tự nhiên (giống Burger King) ===== */
 #tascus-banner-widget.tascus-fullbleed {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  background: #fffbf0;  /* 🎯 Màu nền website để thay dải đen */
+  background: transparent;
   overflow: hidden;
 }
 
-/* Container cho slides */
 #tascus-banner-widget .tascus-inner {
   width: 100%;
   display: block;
   position: relative;
-  /* Desktop: tỉ lệ 21:9 */
-  aspect-ratio: 21 / 9;
+  /* 🎯 BỎ aspect-ratio để ảnh tự nhiên */
 }
 
-/* Slide blocks */
 #tascus-banner-widget .tascus-slide {
   display: none;
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  /* 🎯 BỎ height: 100% */
 }
 
-/* Active slide */
 #tascus-banner-widget .tascus-slide.tascus-active {
   display: block;
 }
 
-/* Picture element */
 #tascus-banner-widget .tascus-slide picture {
   width: 100%;
-  height: 100%;
   display: block;
 }
 
-/* 🎯 Image: CONTAIN để KHÔNG CROP */
+/* 🎯 Image tự nhiên - không cắt, không dải màu */
 #tascus-banner-widget .tascus-img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;  /* 🎯 CONTAIN = Không crop, hiển thị toàn bộ ảnh */
-  object-position: center;
+  height: auto;  /* 🎯 AUTO để giữ tỉ lệ gốc */
+  /* BỎ object-fit */
+  /* BỎ object-position */
   margin: 0;
   vertical-align: middle;
 }
@@ -1278,56 +1268,30 @@ input.Enter_text::placeholder {
   transform: scale(1.3);
 }
 
-/* Focus outlines */
 #tascus-banner-widget .tascus-arrow:focus,
 #tascus-banner-widget .tascus-dot:focus {
   outline: 3px solid rgba(255,159,28,0.25);
   outline-offset: 2px;
 }
 
-/* ===== RESPONSIVE ===== */
-
-/* Desktop lớn */
-@media (min-width: 1920px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 21 / 9;
-  }
-}
-
-/* Desktop trung bình */
-@media (min-width: 1200px) and (max-width: 1919px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 21 / 9;
-  }
-}
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1199px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 16 / 9;
-  }
-
-  #tascus-banner-widget .tascus-arrow {
-    width: 42px;
-    height: 42px;
-    font-size: 20px;
-  }
-}
-
-/* Mobile */
+/* Responsive */
 @media (max-width: 768px) {
-  #tascus-banner-widget .tascus-inner {
-    aspect-ratio: 4 / 5;  /* Tỉ lệ dọc cho mobile */
-  }
-
   #tascus-banner-widget .tascus-arrow {
     width: 36px;
     height: 36px;
     font-size: 18px;
   }
-
   #tascus-banner-widget .tascus-prev { left: 8px; }
-  #tascus-banner-widget .tascus-next {
+  #tascus-banner-widget .tascus-next { right: 8px; }
+  #tascus-banner-widget .tascus-dot {
+    width: 10px;
+    height: 10px;
+  }
+  #tascus-banner-widget .tascus-dots {
+    bottom: 8px;
+    gap: 8px;
+  }
+}
 
 /* === CARD GIÁ === */
 .price {
@@ -1466,6 +1430,7 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
+
 
 
 
