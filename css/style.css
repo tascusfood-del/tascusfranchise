@@ -1294,70 +1294,15 @@ input.Enter_text::placeholder {
 }
 
 /* === CARD GIÁ === */
-.price {
-  list-style-type: none;
-  border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  border-radius: 20px; /* 🎯 Bo góc card */
-  overflow: hidden;    /* Ẩn phần tràn để bo góc chuẩn */
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
-}
-
-.price .header {
-  background-color: #111;
-  color: white;
-  font-size: 25px;
-  border-top-left-radius: 20px;  /* bo góc trên cùng */
-  border-top-right-radius: 20px;
-}
-
-.price li {
-  border-bottom: 1px solid #eee;
-  padding: 20px;
-  text-align: center;
-}
-
-.price .grey {
-  background-color: #eee;
-  font-size: 20px;
-}
-
-/* === NÚT SIGN UP === */
-.button {
-  background-color: #efa425;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 18px;
-  border-radius: 20px; /* 🎯 Bo góc nút */
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: #e38f00;
-}
-
-@media only screen and (max-width: 600px) {
-  .columns {
-    width: 100%;
-  }
-}* {
+* {
   box-sizing: border-box;
 }
 
 /* === CONTAINER WRAPPER === */
 .pricing-container {
-  max-width: 1000px;        /* Giới hạn chiều rộng tối đa */
-  margin: 0 auto;           /* Căn giữa container */
-  padding: 20px;            /* Khoảng cách 2 bên */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .columns {
@@ -1376,6 +1321,7 @@ input.Enter_text::placeholder {
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  background-color: #ffffff; /* 🎯 Nền trắng cho card */
 }
 
 .price:hover {
@@ -1383,22 +1329,27 @@ input.Enter_text::placeholder {
 }
 
 .price .header {
-  background-color: #111;
+  background-color: #efa425; /* Màu header giống nút */
   color: white;
-  font-size: 32px;
+  font-size: 38px; /* Tăng 20% từ 32px */
+  font-weight: 700; /* Đậm hơn */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .price li {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #eee;
   padding: 20px;
   text-align: center;
+  background-color: #ffffff; /* 🎯 Nền trắng cho nội dung */
+  font-size: 19px; /* Tăng 20% từ ~16px mặc định */
+  font-weight: 600; /* Đậm hơn */
 }
 
 .price .grey {
-  background-color: #eee;
-  font-size: 20px;
+  background-color: #f5f5f5; /* Màu xám nhẹ thay vì #eee */
+  font-size: 24px; /* Tăng 20% từ 20px */
+  font-weight: 700; /* Đậm hơn */
 }
 
 /* === NÚT SIGN UP === */
@@ -1406,12 +1357,15 @@ input.Enter_text::placeholder {
   background-color: #efa425;
   border: none;
   color: white;
-  padding: 10px 25px;
+  padding: 12px 30px; /* Tăng padding một chút */
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px; /* Tăng 20% từ 18px */
+  font-weight: 700; /* Đậm hơn */
   border-radius: 20px;
   transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -1430,14 +1384,3 @@ input.Enter_text::placeholder {
     width: 100%;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
