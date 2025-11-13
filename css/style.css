@@ -706,87 +706,6 @@ button {
 
 /* shop section start */
 
-.shop_section {
-    width: 100%;
-    float: left;
-    height: auto;
-    padding: 90px 0px;
-    background-size: cover;
-    margin-top: 90px;
-}
-
-.shop_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    text-align: center;
-    color: #f8f8f8;
-}
-
-.shop_text {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    text-align: center;
-    color: #f8f8f8;
-    margin: 0px 0px 40px 0px;
-}
-
-.btn_main {
-    width: 33%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.quote_bt {
-    width: 170px;
-    float: left;
-}
-
-.quote_bt a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #f9b116;
-    padding: 10px 0px;
-    text-align: center;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.quote_bt a:hover {
-    color: #962b2d;
-    background-color: #ffffff;
-}
-
-.call_bt {
-    width: 170px;
-    float: left;
-    margin-left: 15px;
-}
-
-.call_bt a {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #f9b116;
-    padding: 10px 0px;
-    text-align: center;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-.call_bt a:hover {
-    color: #962b2d;
-    background-color: #ffffff;
-}
-
-.call_bt.active a {
-    background: #ffffff;
-    color: #962b2d
-}
 
 
 /* shop section end */
@@ -1565,6 +1484,7 @@ input.Enter_text::placeholder {
     font-size: 15px;
   }
 }
+
 
 
 
