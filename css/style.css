@@ -709,7 +709,6 @@ button {
 .shop_section {
     width: 100%;
     float: left;
-    background-color: #972c2d;
     height: auto;
     padding: 90px 0px;
     background-size: cover;
@@ -1566,5 +1565,6 @@ input.Enter_text::placeholder {
     font-size: 15px;
   }
 }
+
 
 
