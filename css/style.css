@@ -90,7 +90,7 @@ h6 {
 }
 
 h1 {
-    font-size: 24px
+    font-size: 32px
 }
 
 h2 {
@@ -1237,7 +1237,7 @@ input.Enter_text::placeholder {
 .price .header {
   background-color: #efa425; /* Màu header giống nút */
   color: white;
-  font-size: 38px; /* Tăng 20% từ 32px */
+  font-size: 45px; /* Tăng 20% từ 32px */
   font-weight: 700; /* Đậm hơn */
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -1484,6 +1484,7 @@ input.Enter_text::placeholder {
     font-size: 15px;
   }
 }
+
 
 
 
