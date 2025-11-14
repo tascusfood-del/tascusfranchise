@@ -613,15 +613,37 @@ color: #f9b116;
 /* ===================================================================
 9. FOOTER SECTION
 =================================================================== */
-
 .footer_section {
-width: 100%;
+width: 100% !important;
+max-width: 100% !important; /* 🎯 THÊM để override /
 float: left;
 background-color: #ffc107;
 height: auto;
 padding: 90px 0px;
 clear: both;
 margin-top: 90px;
+margin-left: 0 !important; / 🎯 THÊM /
+margin-right: 0 !important; / 🎯 THÊM */
+}
+
+/* Container bên trong footer */
+.footer_section .container {
+max-width: 1200px;
+margin: 0 auto;
+width: 100%;
+padding: 0 15px;
+}
+
+.footer_section .row {
+display: flex;
+flex-wrap: wrap;
+margin: 0 -15px;
+}
+
+.footer_section .col-sm-4 {
+flex: 0 0 33.333%;
+max-width: 33.333%;
+padding: 0 15px;
 }
 
 .useful_text {
@@ -630,11 +652,11 @@ font-size: 24px;
 color: #ffffff;
 margin-bottom: 15px;
 font-weight: bold;
+font-family: 'FontCuaToi', sans-serif; /* 🎯 THÊM */
 }
 
 .footer_text {
-width: 68%;
-float: left;
+width: 100%; /* 🎯 ĐỔI từ 68% */
 font-size: 16px;
 color: #f8f8f8;
 margin: 0px;
@@ -654,14 +676,16 @@ padding: 0px;
 .footer_menu li {
 font-size: 16px;
 color: #f8f8f8;
+padding: 5px 0; /* 🎯 THÊM padding */
 }
 
 .footer_menu li a {
 color: #f8f8f8;
+transition: color 0.3s ease; /* 🎯 THÊM transition */
 }
 
 .footer_menu li a:hover {
-color: #f9b116;
+color: #962b2d; /* 🎯 ĐỔI màu hover */
 }
 
 .Enter_text {
@@ -673,6 +697,7 @@ background-color: transparent;
 padding: 8px 15px;
 margin-top: 10px;
 border: 1px solid #f8f8f8;
+border-radius: 5px; /* 🎯 THÊM bo góc */
 }
 
 input.Enter_text::placeholder {
@@ -690,52 +715,61 @@ width: 100%;
 float: left;
 font-size: 18px;
 color: #f8f8f8;
-background-color: #f9b116;
+background-color: #962b2d; /* 🎯 ĐỔI màu nền /
 text-align: center;
 padding: 12px 0px;
 text-transform: uppercase;
 border-radius: 4px;
+transition: all 0.3s ease; / 🎯 THÊM */
 }
 
 .subscribe_bt a:hover {
-color: #962b2d;
 background-color: #ffffff;
+color: #962b2d;
 }
 
 .social_icon {
 width: 100%;
 float: left;
+margin-top: 20px; /* 🎯 THÊM khoảng cách */
 }
 
 .social_icon ul {
 margin: 0px;
 padding: 0px;
+display: flex; /* 🎯 THÊM flexbox /
+gap: 15px; / 🎯 THÊM gap */
 }
 
 .social_icon li {
-float: left;
+float: none; /* 🎯 BỎ float */
 }
 
 .social_icon li a {
-float: left;
-padding: 20px 30px 0px 0px;
+display: block;
 color: #f8f8f8;
 font-size: 22px;
+transition: all 0.3s ease; /* 🎯 THÊM */
 }
 
 .social_icon li a:hover {
-color: #f9b116;
+color: #962b2d;
+transform: scale(1.2); /* 🎯 THÊM zoom effect */
 }
+
+
 
 /* ===================================================================
 10. COPYRIGHT SECTION
 =================================================================== */
-
 .copyright_section {
-width: 100%;
+width: 100% !important;
+max-width: 100% !important;
 float: left;
 background-color: #962b2d;
 height: auto;
+margin: 0 !important;
+padding: 0 !important;
 }
 
 .copyright_text {
@@ -743,16 +777,20 @@ width: 100%;
 color: #f8f8f8;
 text-align: center;
 font-size: 16px;
-margin: 20px 0px;
+margin: 0;
+padding: 20px 15px;
 }
 
 .copyright_text a {
 color: #f8f8f8;
+font-weight: 600; /* 🎯 THÊM */
 }
 
 .copyright_text a:hover {
 color: #f9b116;
 }
+
+
 
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -853,3 +891,4 @@ width: 100%;
 padding: 10px 0px;
 }
 }
+
