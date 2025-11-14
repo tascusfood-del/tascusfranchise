@@ -1,26 +1,32 @@
-/*=====================================================================
-  FILE: style.css - TASCUS FOOD WEBSITE
-  - Đã sắp xếp theo thứ tự: Fonts → Imports → Global → Sections
-  - Đã xóa code thừa và duplicate
-  - Đã comment rõ ràng từng section
-=====================================================================*/
 
-/* ===================================================================
-  1. IMPORT FONTS
-=================================================================== */
+
+
+
+
+
+/*---------------------------------------------------------------------File Name: style.css ---------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
 
+/* ... (code @import và @font-face "Righteous" ở trên) ... */
+
+/* ---- FONT TÙY CHỈNH (PHIÊN BẢN .TTF) ---- */
 @font-face {
-    font-family: 'FontCuaToi';
-    src: url('../fonts/kenyan.ttf') format('truetype');
+    font-family: 'FontCuaToi';  /* Giữ nguyên tên này */
+    src: url('../fonts/kenyan.ttf') format('truetype'); /* <-- ĐÃ SỬA .ttf */
     font-weight: normal;
     font-style: normal;
 }
 
-/* ===================================================================
-  2. IMPORT CSS FILES
-=================================================================== */
+/*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
+ 2) font-family: 'Poppins', sans-serif;
+ ----------------------------------------*****/
+
+
+/*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -34,11 +40,9 @@
 @import url(jquery-ui.css);
 @import url(nice-select.css);
 
-/* ===================================================================
-  3. GLOBAL STYLES (Skeleton)
-=================================================================== */
+/*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
-* {  /* 🎯 ĐÃ SỬA - THÊM LẠI SELECTOR * */
+* {
     box-sizing: border-box !important;
     transition: ease all 0.5s;
 }
@@ -53,38 +57,89 @@ body {
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif;  /* 🎯 ĐỔI THÀNH NUNITO */
     background-color: #fffbf0;
-    margin: 0;
-    padding: 0;
+}
+
 }
 
 a {
     color: #1f1f1f;
     text-decoration: none !important;
     outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'FontCuaToi', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     letter-spacing: 0;
     font-weight: normal;
     position: relative;
     padding: 0 0 10px 0;
+    font-weight: normal;
     line-height: normal;
     color: #111111;
-    margin: 0;
+    margin: 0
 }
 
-h1 { font-size: 32px; }
-h2 { font-size: 22px; }
-h3 { font-size: 18px; }
-h4 { font-size: 16px; }
-h5 { font-size: 14px; }
-h6 { font-size: 13px; }
+h1 {
+    font-size: 32px
+}
 
-ul, li, ol {
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    font-size: 18px
+}
+
+h4 {
+    font-size: 16px
+}
+
+h5 {
+    font-size: 14px
+}
+
+h6 {
+    font-size: 13px
+}
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: #212121;
+    text-decoration: none!important;
+    opacity: 1
+}
+
+button:focus {
+    outline: none;
+}
+
+ul,
+li,
+ol {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -97,9 +152,68 @@ p {
     line-height: 24px;
 }
 
+a {
+    color: #222222;
+    text-decoration: none;
+    outline: none !important;
+}
+
+a,
+.btn {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
 img {
     max-width: 100%;
     height: auto;
+}
+
+ :focus {
+    outline: 0;
+}
+
+.paddind_bottom_0 {
+    padding-bottom: 0 !important;
+}
+
+.btn-custom {
+    margin-top: 20px;
+    background-color: transparent !important;
+    border: 2px solid #ddd;
+    padding: 12px 40px;
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 18px;
+    line-height: 30px;
+    color: #767676;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    border-color: #ffffff !important;
+    box-shadow: 0 0 0 .2rem rgba(255, 255, 255, .25);
+}
+
+.navbar-form input {
+    border: none !important;
+}
+
+.badge {
+    font-weight: 500;
+}
+
+blockquote {
+    margin: 20px 0 20px;
+    padding: 30px;
 }
 
 button {
@@ -109,10 +223,6 @@ button {
     cursor: pointer;
 }
 
-button:focus {
-    outline: none;
-}
-
 .full {
     float: left;
     width: 100%;
@@ -120,52 +230,35 @@ button:focus {
 
 .layout_padding {
     padding-top: 90px;
-    padding-bottom: 90px;
+    padding-bottom: 0px;
 }
 
 .padding_0 {
     padding: 0px;
 }
 
-/* ===================================================================
-  4. HEADER SECTION
-=================================================================== */
+
+/* header section start */
 
 .header_section {
     width: 100%;
     float: left;
     background-color: #f9b116;
     height: auto;
-    position: relative; /* 🎯 THÊM */
-    z-index: 999; /* 🎯 THÊM để navbar ở trên cùng */
+    background-size: 100%;
 }
 
 .bg-light {
     background-color: transparent !important;
 }
 
-.navbar {
-    padding: 15px 0px;
-}
-
-.navbar-brand {
-    width: auto;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand img {
-    max-height: 50px;
-    width: auto;
-    transition: max-height 0.3s ease;
-}
-
-.ml-auto, .mx-auto {
+.ml-auto,
+.mx-auto {
     margin: 0 auto !important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    font-family: 'FontCuaToi', sans-serif;
+    font-family: 'FontCuaToi', sans-serif; /* <-- SỬ DỤNG FONT MỚI */
     padding: 3px 20px;
     font-size: 25px;
     color: #fefefd;
@@ -179,141 +272,244 @@ button:focus {
 }
 
 .navbar-light .navbar-nav .active>.nav-link,
-.navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
     color: #962b2d;
 }
 
-/* Nút Tư Vấn */
-.btn-tu-van {
+.navbar-brand {
+    /* width: 24%; */ /* Xóa hoặc comment dòng này đi */
+    width: auto; /* Để logo co giãn tự nhiên */
+    padding: 5px 0; /* Thêm chút đệm trên dưới cho cân đối */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt */
+}
+
+.navbar-brand img {
+    /* Đây là kích thước logo desktop */
+    max-height: 50px; /* Đặt chiều cao tối đa cho logo */
+    width: auto; /* Chiều rộng tự động theo */
+    transition: max-height 0.3s ease; /* Hiệu ứng mượt */
+}
+
+.navbar {
+    padding: 15px 0px;
+}
+
+
+/* header section end */
+
+
+/* banner section start */
+
+.banner_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/banner-bg.png);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 100px;
+}
+
+.banner_taital {
+    width: 100%;
+    float: left;
+    font-size: 70px;
+    color: #ffffff;
+    padding-top: 100px;
+    font-weight: bold;
+    line-height: 70px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.banner_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #f8f8f8;
+    margin: 0px;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.read_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.read_bt a {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #f9b116;
+    padding: 12px 0px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.read_bt a:hover {
+    color: #962b2d;
+    background-color: #ffffff;
+}
+
+#main_slider a.carousel-control-prev {
+    position: absolute;
+    left: 0px;
+    top: 90%;
+}
+
+#main_slider a.carousel-control-next {
+    position: absolute;
+    right: 0px;
+    top: 90%;
+    background-color: #ffffff;
+    color: #962b2d;
+}
+
+#main_slider .carousel-control-prev,
+#main_slider .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: #f9b116;
+    opacity: 1;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#main_slider .carousel-control-prev:hover,
+#main_slider .carousel-control-next:hover,
+#main_slider .carousel-control-prev:focus,
+#main_slider .carousel-control-next:focus {
+    background: #ffffff;
+    color: #000;
+}
+
+
+/* banner section end */
+
+
+/* service section start */
+
+.service_section {
+    width: 100%;
+    float: left;
+    padding-top: 90px;
+}
+
+.service_taital {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: #232222;
+    font-weight: 800;
+    text-align: center;
+}
+
+.service_taital::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    left: 0px;
+    right: 0px;
+    background-color: #f9b116;
+    height: 10px;
+    bottom: 0px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.service_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 30px;
+}
+
+.service_box {
+    width: 100%;
+    background-color: #f9b116;
+    height: auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.service_box:hover {
+    background-color: #972c2d;
+    margin-top: 50px;
+}
+
+.service_box.active {
+    background-color: #972c2d;
+    margin-top: 50px;
+}
+
+.building_icon {
+    width: 100%;
+    text-align: center;
+    padding: 0px 0px 20px 0px;
+    min-height: 93px;
+}
+
+.residential_text {
+    width: 80%;
+    font-size: 26px;
+    color: #fcfcfd;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.service_text {
+    width: 100%;
+    font-size: 15px;
+    color: #fcfcfd;
+    text-align: center;
+    margin: 0px;
+}
+
+.readmore_bt {
+    width: 170px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.readmore_bt a {
     font-family: 'FontCuaToi', sans-serif;
-    background-color: #8B0000;
-    color: #ffffff !important; /* 🎯 THÊM !important */
-    border: 2px solid #8B0000;
-    border-radius: 25px;
-    padding: 8px 20px;
+    width: 100%;
+    float: left;
+    font-size: 22px;
+    color: #fcfcfd;
+    background-color: #232222;
+    text-align: center;
+    padding: 12px 0px;
+    border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 22px;
-    margin-left: 20px;
-    transition: all 0.3s ease;
 }
 
-.btn-tu-van:hover {
-    background-color: #ffffff;
-    color: #8B0000 !important; /* 🎯 THÊM !important */
+.readmore_bt a:hover {
+    color: #fcfcfd;
+    background-color: #f9b116;
 }
 
-/* ===================================================================
-  5. TASCUS BANNER SLIDER
-=================================================================== */
-
-#tascus-banner-widget.tascus-fullbleed {
-    position: relative;
-    width: 100%;
-    background: transparent;
-    overflow: hidden;
+.readmore_bt.active a {
+    color: #fcfcfd;
+    background-color: #f9b116;
 }
 
-#tascus-banner-widget .tascus-inner {
-    width: 100%;
-    display: block;
-    position: relative;
-}
 
-#tascus-banner-widget .tascus-slide {
-    display: none;
-    width: 100%;
-    position: relative;
-}
+/* service section end */
 
-#tascus-banner-widget .tascus-slide.tascus-active {
-    display: block;
-}
 
-#tascus-banner-widget .tascus-slide picture {
-    width: 100%;
-    display: block;
-}
-
-#tascus-banner-widget .tascus-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    vertical-align: middle;
-}
-
-/* Banner Arrows */
-#tascus-banner-widget .tascus-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 60;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.9);
-    background: rgba(255,255,255,0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-    transition: all 0.3s ease;
-}
-
-#tascus-banner-widget .tascus-arrow:hover {
-    background: rgba(249, 177, 22, 0.95);
-    border-color: rgba(249, 177, 22, 0.9);
-    transform: translateY(-50%) scale(1.1);
-}
-
-#tascus-banner-widget .tascus-prev { left: 12px; }
-#tascus-banner-widget .tascus-next { right: 12px; }
-
-/* Banner Dots */
-#tascus-banner-widget .tascus-dots {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 12px;
-    z-index: 70;
-    display: flex;
-    gap: 10px;
-}
-
-#tascus-banner-widget .tascus-dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.9);
-    background: rgba(255,255,255,0.85);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#tascus-banner-widget .tascus-dot:hover {
-    background: rgba(249, 177, 22, 0.7);
-    transform: scale(1.2);
-}
-
-#tascus-banner-widget .tascus-dot.tascus-active {
-    background: #ff9f1c;
-    border-color: #ff9f1c;
-    transform: scale(1.3);
-}
-
-/* ===================================================================
-  6. ABOUT SECTION
-=================================================================== */
+/* about section start */
 
 .about_section {
     width: 100%;
     float: left;
-    clear: both;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .about_taital {
@@ -324,26 +520,6 @@ button:focus {
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'FontCuaToi', sans-serif !important;
-    position: relative;
-    margin-bottom: 60px;
-    padding-bottom: 20px;
-}
-
-.about_taital span {
-    font-family: 'FontCuaToi', sans-serif !important;
-}
-
-.about_taital::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f9b116;
-    height: 10px;
-    bottom: -10px;
-    border-radius: 20px;
 }
 
 .about_section_2 {
@@ -351,6 +527,7 @@ button:focus {
     float: left;
     background-color: #ffffff;
     height: auto;
+    background-size: 100%;
 }
 
 .about_taital_main {
@@ -372,7 +549,7 @@ button:focus {
     float: left;
     font-size: 18px;
     color: #232222;
-    margin: 30px 0px;
+    margin: 30px 0px 30px 0px;
 }
 
 .readmore_btn {
@@ -404,228 +581,238 @@ button:focus {
     float: left;
 }
 
-/* ===================================================================
-  7. PRICING SECTION (Mô hình cửa hàng)
-=================================================================== */
 
-.pricing-container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-    clear: both;
-}
+/* about section end */
 
-.pricing-container .columns {
+
+/* testimonial section start */
+
+.testimonial_section {
+    width: 100%;
     float: left;
-    width: 50%;
-    padding: 20px;
+    padding-bottom: 65px;
 }
 
-.price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    border-radius: 25px;
-    overflow: hidden;
-    transition: 0.3s;
-    background-color: #ffffff;
-}
-
-.price:hover {
-    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
-}
-
-.price .header {
-    background-color: #efa425;
-    color: white;
-    font-size: 45px;
-    font-weight: 700;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-.price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
+.testimonial_taital {
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: #111111;
     text-align: center;
-    background-color: #ffffff;
-    font-size: 19px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-.price .grey {
-    background-color: #f5f5f5;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.button {
-    background-color: #efa425;
-    border: none;
-    color: white;
-    padding: 12px 30px;
+.testimonial_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
     text-align: center;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 700;
-    border-radius: 20px;
-    transition: 0.3s;
-    display: inline-block;
-    cursor: pointer;
+    color: #232222;
+    margin-left: 0px;
 }
 
-.button:hover {
-    background-color: #e38f00;
-}
-
-.pricing-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* ===================================================================
-  8. NEWS CARD SECTION (Menu Food)
-=================================================================== */
-
-.content-wrapper {
-    margin: 50px auto;
-    max-width: 1200px;
+.testimonial_section_2 {
+    width: 70%;
+    margin: 0 auto;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 0.5rem;
-    gap: 1rem;
-    clear: both;
+    padding-top: 40px;
+    margin-bottom: 10px;
 }
 
-.news-card {
-    margin: 0;
+.testimonial_left {
+    width: 30%;
+    float: left;
+}
+
+.testimonial_right {
+    width: 70%;
+    float: left;
+}
+
+.client_img {
+    width: 100%;
+    float: left;
     position: relative;
-    width: calc(50% - 0.5rem);
-    aspect-ratio: 4.5 / 5;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
-.news-card::before {
+.client_img::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
-    z-index: 0;
-}
-
-.news-card__card-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.news-card__image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 3s ease;
-    position: relative;
+    width: 180px;
+    height: 214px;
+    border: 2px solid #f9b116;
+    left: 0px;
+    top: 0px;
     z-index: -1;
 }
 
-.news-card__text-wrapper {
+.markro_text {
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: #232222;
+    font-weight: bold;
+}
+
+.many_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #2f2f2e;
+    margin: 0px;
+}
+
+.quick_icon {
+    width: 100%;
+    float: left;
+    padding-top: 20px;
+}
+
+#my_slider a.carousel-control-prev {
     position: absolute;
-    bottom: 0rem;
-    padding: 1rem;
-    color: white;
-    transition: background-color 1.5s ease;
+    left: 200px;
+    top: 105%;
 }
 
-.news-card__title {
-    font-family: 'FontCuaToi', sans-serif;
-    transition: color 1s ease;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 700;
+#my_slider a.carousel-control-next {
+    position: absolute;
+    right: inherit;
+    top: 105%;
+    left: 260px;
+}
+
+#my_slider .carousel-control-prev,
+#my_slider .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: #f9b116;
+    opacity: 1;
+    font-size: 30px;
     color: #ffffff;
-    line-height: 1.3;
 }
 
-.news-card__post-date {
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.65rem;
-    margin-bottom: 0.5rem;
-    color: #CCC;
+#my_slider .carousel-control-prev:hover,
+#my_slider .carousel-control-next:hover,
+#my_slider .carousel-control-prev:focus,
+#my_slider .carousel-control-next:focus {
+    background: #962b2d;
+    color: #ffffff;
 }
 
-.news-card__details-wrapper {
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 1.5s ease, opacity 1s ease;
+
+/* testimonial section end */
+
+
+/* shop section start */
+
+
+
+/* shop section end */
+
+
+/* contact section start */
+
+.contact_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/contact-bg.png);
+    height: auto;
+    background-size: 100%;
 }
 
-.news-card__excerpt {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 300;
-    font-size: 0.85rem;
-    line-height: 1.5;
+.contact_taital {
+    width: 100%;
+    float: left;
+    color: #0b0b0b;
+    font-weight: bold;
+    font-size: 40px;
+    padding-left: 100px;
 }
 
-.news-card__read-more {
-    font-family: 'Nunito', sans-serif;
-    background: black;
-    color: #bbb;
-    display: block;
-    padding: 0.4rem 0.6rem;
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    border: 1px solid #444;
-    font-size: 0.75rem;
-    text-decoration: none;
-    width: 6rem;
-    margin-left: auto;
-    position: relative;
-    z-index: 5;
+.contact_section_2 {
+    width: 100%;
+    float: left;
+}
+
+.mail_section_1 {
+    width: 100%;
+    float: left;
+    padding-left: 100px;
+}
+
+.mail_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #363636;
+    border: 0px;
+    border: 1px solid #003471;
+    background-color: #ffffff !important;
+    padding: 10px 15px 10px 15px;
+    margin-top: 20px;
+}
+
+.massage-bt {
+    color: #363636;
+    width: 100%;
+    height: 110px;
+    font-size: 18px;
+    border: 1px solid #003471 !important;
+    background-color: #ffffff !important;
+    padding: 40px 15px 10px 15px;
+    margin-top: 20px;
+}
+
+.send_bt {
+    width: 170px;
+    float: left;
+    margin-top: 20px;
+}
+
+.send_bt a {
+    width: 100%;
+    float: left;
+    background-color: #f9b116;
+    color: #fefeff;
     text-align: center;
+    padding: 12px 0px;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
-.news-card__read-more i {
-    position: relative;
-    left: 0.2rem;
-    color: #888;
-    transition: left 0.5s ease, color 0.6s ease;
+.send_bt a:hover {
+    background-color: #962b2d;
+    color: #fefeff;
 }
 
-.news-card__read-more:hover i {
-    left: 0.5rem;
-    color: #f9b116;
+.padding_right0 {
+    padding-right: 0px;
 }
 
-/* ===================================================================
-  9. FOOTER SECTION - FULL WIDTH
-=================================================================== */
+
+/* contact section start */
+
+
+/* footer section start */
 
 .footer_section {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    padding-left: calc(50vw - 50%) !important;
-    padding-right: calc(50vw - 50%) !important;
+    width: 100%;
     float: left;
-    background-color: #962b2d;
+    background-color: #ffc107;
     height: auto;
-    padding-top: 90px !important;
-    padding-bottom: 90px !important;
-    clear: both;
-    margin-top: 90px !important;
+    background-size: 100%;
+    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    margin-top: 90px;
+    padding: 90px 0px;
+}
+
+.footer_section_2 {
+    width: 100%;
+    float: left;
+    padding-top: 90px;
 }
 
 .useful_text {
@@ -637,7 +824,8 @@ button:focus {
 }
 
 .footer_text {
-    width: 100%; /* 🎯 ĐỔI từ 68% */
+    width: 68%;
+    float: left;
     font-size: 16px;
     color: #f8f8f8;
     margin: 0px;
@@ -657,7 +845,6 @@ button:focus {
 .footer_menu li {
     font-size: 16px;
     color: #f8f8f8;
-    padding: 5px 0;
 }
 
 .footer_menu li a {
@@ -665,6 +852,10 @@ button:focus {
 }
 
 .footer_menu li a:hover {
+    color: #f9b116;
+}
+
+.footer_menu li.active a {
     color: #f9b116;
 }
 
@@ -677,7 +868,6 @@ button:focus {
     padding: 8px 15px;
     margin-top: 10px;
     border: 1px solid #f8f8f8;
-    border-radius: 5px;
 }
 
 input.Enter_text::placeholder {
@@ -707,25 +897,27 @@ input.Enter_text::placeholder {
     background-color: #ffffff;
 }
 
+.padding_left_15 {
+    padding-left: 15px;
+}
+
 .social_icon {
     width: 100%;
     float: left;
-    margin-top: 20px;
 }
 
 .social_icon ul {
     margin: 0px;
     padding: 0px;
-    display: flex;
-    gap: 15px;
 }
 
 .social_icon li {
-    float: none;
+    float: left;
 }
 
 .social_icon li a {
-    display: block;
+    float: left;
+    padding: 20px 30px 0px 0px;
     color: #f8f8f8;
     font-size: 22px;
 }
@@ -734,153 +926,756 @@ input.Enter_text::placeholder {
     color: #f9b116;
 }
 
-/* ===================================================================
-  10. COPYRIGHT SECTION - FULL WIDTH
-=================================================================== */
+
+/* footer section end */
+
+
+/* copyright section start */
 
 .copyright_section {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    padding-left: calc(50vw - 50%) !important;
-    padding-right: calc(50vw - 50%) !important;
+    width: 100%;
     float: left;
-    background-color: #f9b116;
+    background-color: #962b2d;
     height: auto;
 }
 
 .copyright_text {
     width: 100%;
-    color: #962b2d; /* 🎯 ĐỔI màu */
+    color: #f8f8f8;
     text-align: center;
     font-size: 16px;
-    margin: 0;
-    padding: 20px 0;
+    margin: 20px 0px;
 }
 
 .copyright_text a {
-    color: #962b2d;
+    color: #f8f8f8;
 }
 
 .copyright_text a:hover {
-    color: #8B0000;
+    color: #f9b116;
 }
 
-/* ===================================================================
-  11. RESPONSIVE - MOBILE
-=================================================================== */
-
-@media (max-width: 479px) {
-    .news-card {
-        width: calc(50% - 0.5rem);
-    }
-    .news-card__title {
-        font-size: 1rem;
-    }
-    .news-card__text-wrapper {
-        padding: 0.75rem;
-    }
+.margin_top_90 {
+    margin-top: 90px;
 }
 
-@media (min-width: 480px) and (max-width: 599px) {
-    .news-card {
-        width: calc(50% - 0.5rem);
-    }
-    .news-card__title {
-        font-size: 1.1rem;
-    }
+
+
+/* copyright section end */
+/* ---------------------------------------------------------------------
+  CUSTOM NAVBAR BUTTON (Thêm bởi bạn)
+---------------------------------------------------------------------
+*/
+
+.btn-tu-van {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
+    /* Màu nền đỏ sậm giống ảnh minh họa */
+    background-color: #8B0000; 
+    color: #ffffff; /* Chữ trắng */
+    border: 2px solid #8B0000; /* Viền cùng màu */
+    border-radius: 25px; /* Bo góc tròn */
+    padding: 8px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-left: 20px; /* Tạo khoảng cách với menu */
+    transition: all 0.3s ease;
 }
 
-@media (min-width: 600px) and (max-width: 899px) {
-    .news-card {
-        width: calc(33.333% - 0.67rem);
-    }
-    .news-card__title {
-        font-size: 1.3rem;
-    }
+/* Hiệu ứng khi rê chuột */
+.btn-tu-van:hover {
+    font-family: 'FontCuaToi', sans-serif; /* <-- THÊM DÒNG NÀY */
+    background-color: #ffffff; /* Nền trắng */
+    color: #8B0000; /* Chữ đỏ */
+    border-color: #8B0000; /* Giữ viền đỏ */
 }
 
-@media (min-width: 900px) {
-    .news-card {
-        width: calc(25% - 0.75rem);
-    }
-    .news-card__title {
-        font-size: 1.4rem;
-    }
-    .news-card:hover .news-card__details-wrapper {
-        max-height: 500px;
-        opacity: 1;
-    }
-    .news-card:hover .news-card__text-wrapper {
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-    .news-card:hover .news-card__title {
-        color: #f9b116;
-    }
-    .news-card:hover .news-card__image {
-        transform: scale(1.2);
-    }
-}
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO NAVBAR BUTTON
+---------------------------------------------------------------------
+*/
 
-@media (max-width: 768px) {
-    #tascus-banner-widget .tascus-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 18px;
-    }
-    #tascus-banner-widget .tascus-prev { left: 8px; }
-    #tascus-banner-widget .tascus-next { right: 8px; }
-    
-    .footer_section .col-lg-4,
-    .footer_section .col-md-4 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 650px) {
-    .pricing-container .columns {
-        width: 100%;
-    }
-}
-
+/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
 @media (max-width: 991px) {
     .header_section .form-inline {
         width: 100%;
-        padding-top: 15px;
+        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
         padding-bottom: 10px;
     }
+
     .btn-tu-van {
-        width: 100%;
+        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
         text-align: center;
-        margin-left: 0;
-        padding: 12px 20px;
+        margin-left: 0; /* Bỏ khoảng cách trái */
+        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
     }
+}
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO LOGO (Thêm mới)
+---------------------------------------------------------------------
+*/
+@media (max-width: 991px) {
     .navbar-brand img {
-        max-height: 40px;
+        /* Kích thước logo mobile (nhỏ hơn) */
+        max-height: 40px; 
     }
+}
+
+/* ---------------------------------------------------------------------
+  RESPONSIVE CHO NAVBAR (FIX LỖI CĂN LỀ MOBILE)
+---------------------------------------------------------------------
+*/
+
+/* Áp dụng khi màn hình co nhỏ (dưới 992px) - menu mobile */
+@media (max-width: 991px) {
+
+    /* ---- PHẦN MỚI THÊM ĐỂ SỬA LỖI CĂN LỀ ---- */
     .header_section .navbar-nav {
+        /* Bỏ căn lề tự động bên trái trên mobile */
         margin-left: 0 !important;
+        /* Căn lề trái cho toàn bộ menu */
         align-items: flex-start;
         width: 100%;
     }
+
     .header_section .navbar-nav .nav-item {
+        /* Đảm bảo mỗi item chiếm 100% chiều rộng */
         width: 100%;
     }
+
     .header_section .navbar-nav .nav-link {
-        padding: 10px 0px;
+        /* Đồng nhất padding cho tất cả link để chúng thẳng hàng */
+        padding: 10px 0px; 
     }
+    /* ---- HẾT PHẦN SỬA LỖI ---- */
+
+
+    /* ---- Phần cho nút bấm (đã có từ trước) ---- */
+    .header_section .form-inline {
+        width: 100%;
+        padding-top: 15px; /* Tạo khoảng cách với các link menu bên trên */
+        padding-bottom: 10px;
+    }
+
+    .btn-tu-van {
+        width: 100%; /* Nút bấm chiếm 100% chiều rộng */
+        text-align: center;
+        margin-left: 0; /* Bỏ khoảng cách trái */
+        padding: 12px 20px; /* To hơn để dễ bấm trên mobile */
+    }
+}
+
+
+
+
+
+
+    /* ---- NEW ---- */
+/* ===== Tascus Banner - Flex theo màn hình ===== */
+/* ===== Banner Flex tự nhiên (giống Burger King) ===== */
+#tascus-banner-widget.tascus-fullbleed {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+#tascus-banner-widget .tascus-inner {
+  width: 100%;
+  display: block;
+  position: relative;
+  /* 🎯 BỎ aspect-ratio để ảnh tự nhiên */
+}
+
+#tascus-banner-widget .tascus-slide {
+  display: none;
+  width: 100%;
+  position: relative;
+  /* 🎯 BỎ height: 100% */
+}
+
+#tascus-banner-widget .tascus-slide.tascus-active {
+  display: block;
+}
+
+#tascus-banner-widget .tascus-slide picture {
+  width: 100%;
+  display: block;
+}
+
+/* 🎯 Image tự nhiên - không cắt, không dải màu */
+#tascus-banner-widget .tascus-img {
+  display: block;
+  width: 100%;
+  height: auto;  /* 🎯 AUTO để giữ tỉ lệ gốc */
+  /* BỎ object-fit */
+  /* BỎ object-position */
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* Arrows */
+#tascus-banner-widget .tascus-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-arrow:hover {
+  background: rgba(249, 177, 22, 0.95);
+  border-color: rgba(249, 177, 22, 0.9);
+  transform: translateY(-50%) scale(1.1);
+}
+
+#tascus-banner-widget .tascus-prev { left: 12px; }
+#tascus-banner-widget .tascus-next { right: 12px; }
+
+/* Dots */
+#tascus-banner-widget .tascus-dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12px;
+  z-index: 70;
+  display: flex;
+  gap: 10px;
+}
+
+#tascus-banner-widget .tascus-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#tascus-banner-widget .tascus-dot:hover {
+  background: rgba(249, 177, 22, 0.7);
+  transform: scale(1.2);
+}
+
+#tascus-banner-widget .tascus-dot.tascus-active {
+  background: #ff9f1c;
+  border-color: #ff9f1c;
+  transform: scale(1.3);
+}
+
+#tascus-banner-widget .tascus-arrow:focus,
+#tascus-banner-widget .tascus-dot:focus {
+  outline: 3px solid rgba(255,159,28,0.25);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #tascus-banner-widget .tascus-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  #tascus-banner-widget .tascus-prev { left: 8px; }
+  #tascus-banner-widget .tascus-next { right: 8px; }
+  #tascus-banner-widget .tascus-dot {
+    width: 10px;
+    height: 10px;
+  }
+  #tascus-banner-widget .tascus-dots {
+    bottom: 8px;
+    gap: 8px;
+  }
+}
+
+/* === CARD GIÁ === */
+* {
+  box-sizing: border-box;
+}
+
+/* === CONTAINER WRAPPER === */
+.pricing-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.columns {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+
+/* === CARD GIÁ === */
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  border-radius: 25px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #ffffff; /* 🎯 Nền trắng cho card */
+}
+
+.price:hover {
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
+}
+
+.price .header {
+  background-color: #efa425; /* Màu header giống nút */
+  color: white;
+  font-size: 45px; /* Tăng 20% từ 32px */
+  font-weight: 700; /* Đậm hơn */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff; /* 🎯 Nền trắng cho nội dung */
+  font-size: 19px; /* Tăng 20% từ ~16px mặc định */
+  font-weight: 600; /* Đậm hơn */
+}
+
+.price .grey {
+  background-color: #f5f5f5; /* Màu xám nhẹ thay vì #eee */
+  font-size: 24px; /* Tăng 20% từ 20px */
+  font-weight: 700; /* Đậm hơn */
+}
+
+/* === NÚT SIGN UP === */
+.button {
+  background-color: #efa425;
+  border: none;
+  color: white;
+  padding: 12px 30px; /* Tăng padding một chút */
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px; /* Tăng 20% từ 18px */
+  font-weight: 700; /* Đậm hơn */
+  border-radius: 20px;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #e38f00;
+}
+
+/* === CLEARFIX cho float === */
+.pricing-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media only screen and (max-width: 650px) {
+  .columns {
+    width: 100%;
+  }
+}
+/* ===== CONTENT BANNER (Full Width) ===== */
+
+.content-banner-section {
+  width: 100%;
+  background: linear-gradient(210deg, #FB8E2A, #FDC154);
+  padding: 60px 0;
+}
+
+.banner-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1400px;  /* 🎯 Giới hạn chiều rộng tối đa */
+  margin: 0 auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Banner Image */
+.banner-image {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.banner-container:hover .banner-image img {
+  transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+/* Banner Text Container */
+.banner-text-container {
+  padding: 60px 45px 55px;
+  font-family: 'Nunito', sans-serif;  /* 🎯 Font Nunito */
+}
+
+/* Accent Line */
+.accent-line {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #f9b116;  /* 🎯 Màu của website bạn */
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+/* Heading */
+.banner-text-container h1 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0 0 20px 0;
+  color: #333;
+  line-height: 1.3;
+}
+
+/* Paragraph */
+.banner-text-container p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 25px 0;
+  color: #666;
+}
+
+/* Learn More Link */
+.learn-more {
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f9b116;  /* 🎯 Màu của website bạn */
+  font-weight: 700;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 5px;
+  left: -5px;
+  letter-spacing: 0.5px;
+  transition: all 0.33s ease;
+}
+
+.learn-more:hover {
+  color: #e3a014;
+}
+
+/* Underline effect */
+.learn-more::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: calc(50%);
+  left: 0;
+  width: 100%;
+  height: 40%;
+  pointer-events: none;
+  background: #fff3e0;  /* 🎯 Màu nhạt của website bạn */
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+  transition: transform 0.33s ease;
+}
+
+.learn-more:hover::before {
+  transform: scale3d(1, 1, 1);
+  transform-origin: 0% 50%;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet & Desktop */
+@media screen and (min-width: 768px) {
+  .content-banner-section {
+    padding: 80px 20px;  /* 🎯 Padding 2 bên để không sát lề */
+  }
+
+  .banner-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .banner-image {
+    width: 50%;
+    height: auto;
+    min-height: 420px;
+  }
+
+  .banner-text-container {
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .banner-text-container h1 {
+    font-size: 40px;
+  }
+
+  .banner-text-container p {
+    font-size: 17px;
+    max-width: 560px;
+  }
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .banner-container {
+    max-width: 1400px;
+  }
+
+  .banner-text-container {
+    padding: 80px;
+  }
+
+  .banner-text-container h1 {
+    font-size: 44px;
+  }
+
+  .banner-text-container p {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Small */
+@media screen and (max-width: 480px) {
+  .content-banner-section {
+    padding: 40px 15px;
+  }
+
+  .banner-image {
+    height: 280px;
+  }
+
+  .banner-text-container {
+    padding: 40px 30px;
+  }
+
+  .banner-text-container h1 {
+    font-size: 28px;
+  }
+
+  .banner-text-container p {
+    font-size: 15px;
+  }
+}
+
+
+
+/* ===== NEWS CARD SECTION - FULL VERSION ===== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: transparent;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.news-card {
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 290px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+.news-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+  z-index: 0;
+}
+
+.news-card__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.news-card__text-wrapper {
+  position: absolute;
+  bottom: 0rem;
+  padding: 1rem;
+  color: white;
+  transition: background-color 1.5s ease;
+}
+
+.news-card__title {
+  font-family: 'FontCuaToi', sans-serif;
+  transition: color 1s ease;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.news-card__post-date {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: #CCC;
+}
+
+.news-card__details-wrapper {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 1s ease;
+}
+
+.news-card__excerpt {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+.news-card__read-more {
+  font-family: 'Nunito', sans-serif;
+  background: black;
+  color: #bbb;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: 1px solid #444;
+  font-size: 0.8rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration: none;
+  width: 7rem;
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.news-card__read-more i {
+  position: relative;
+  left: 0.2rem;
+  color: #888;
+  transition: left 0.5s ease, color 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.news-card__read-more:hover i {
+  left: 0.5rem;
+  color: #f9b116;
+}
+
+/* ===== RESPONSIVE - TABLET (600px+) ===== */
+@media (min-width: 600px) {
+  .news-card {
+    height: 16rem;
+  }
+}
+
+/* ===== RESPONSIVE - DESKTOP (900px+) ===== */
+@media (min-width: 900px) {
+  .news-card {
+    height: 20rem;
+  }
+
+  .news-card:hover .news-card__details-wrapper {
+    max-height: 20rem;
+    opacity: 1;
+  }
+
+  .news-card:hover .news-card__text-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .news-card:hover .news-card__title {
+    color: #f9b116;
+  }
+
+  .news-card:hover .news-card__image {
+    transform: scale(1.2);
+    z-index: -1;
+  }
 }
 ```
 
-## Lỗi đã sửa:
+## Các điểm chính:
 
-✅ **Thêm lại selector `*`** - Dòng bị thiếu ở đầu file  
-✅ **Thêm `z-index: 999`** cho header để navbar ở trên cùng  
-✅ **Thêm `!important`** cho màu nút "Tư vấn"  
-✅ **Footer full width** - Giữ nguyên fix  
-✅ **Sửa màu copyright** - Đổi từ `#fffff` → `#962b2d`  
+✅ **Xóa background xám** - Body có `background-color: transparent`  
+✅ **Font Nunito** - Dùng cho body text  
+✅ **Font FontCuaToi** - Dùng cho title (heading)  
+✅ **Màu #f9b116** - Màu vàng của website bạn cho hover effect  
+✅ **Responsive** - 3 breakpoints: mobile (12rem), tablet (16rem), desktop (20rem)  
+✅ **Hover effects** - Zoom ảnh, hiện mô tả, đổi màu title  
+✅ **CSS thuần** - Không cần PostCSS, dùng được ngay
 
-Bây giờ navbar sẽ **hoạt động bình thường** và không bị lỗi nữa! 🎉
+
+section,
+.about_section,
+.content-wrapper,
+.service_section {
+    clear: both !important;
+    display: block !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
