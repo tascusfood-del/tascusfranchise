@@ -243,7 +243,7 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-color: #f9b116;
+    background-color: #efa425;
     height: auto;
     background-size: 100%;
 }
@@ -345,7 +345,7 @@ button {
     float: left;
     font-size: 16px;
     color: #ffffff;
-    background-color: #f9b116;
+    background-color: #efa425;
     padding: 12px 0px;
     text-align: center;
     border-radius: 4px;
@@ -374,7 +374,7 @@ button {
 #main_slider .carousel-control-next {
     width: 50px;
     height: 50px;
-    background: #f9b116;
+    background: #efa425;
     opacity: 1;
     font-size: 30px;
     color: #ffffff;
@@ -415,7 +415,7 @@ button {
     width: 50px;
     left: 0px;
     right: 0px;
-    background-color: #f9b116;
+    background-color: #efa425;
     height: 10px;
     bottom: 0px;
     margin: 0 auto;
@@ -430,7 +430,7 @@ button {
 
 .service_box {
     width: 100%;
-    background-color: #f9b116;
+    background-color: #efa425;
     height: auto;
     padding: 40px 20px;
     border-radius: 10px;
@@ -493,12 +493,12 @@ button {
 
 .readmore_bt a:hover {
     color: #fcfcfd;
-    background-color: #f9b116;
+    background-color: #efa425;
 }
 
 .readmore_bt.active a {
     color: #fcfcfd;
-    background-color: #f9b116;
+    background-color: #efa425;
 }
 
 
@@ -564,7 +564,7 @@ button {
     float: left;
     font-size: 22px;
     color: #fcfcfd;
-    background-color: #f9b116;
+    background-color: #efa425;
     text-align: center;
     padding: 12px 0px;
     border-radius: 5px;
@@ -642,7 +642,7 @@ button {
     position: absolute;
     width: 180px;
     height: 214px;
-    border: 2px solid #f9b116;
+    border: 2px solid #efa425;
     left: 0px;
     top: 0px;
     z-index: -1;
@@ -687,7 +687,7 @@ button {
 #my_slider .carousel-control-next {
     width: 50px;
     height: 50px;
-    background: #f9b116;
+    background: #efa425;
     opacity: 1;
     font-size: 30px;
     color: #ffffff;
@@ -774,7 +774,7 @@ button {
 .send_bt a {
     width: 100%;
     float: left;
-    background-color: #f9b116;
+    background-color: #efa425;
     color: #fefeff;
     text-align: center;
     padding: 12px 0px;
@@ -852,11 +852,11 @@ button {
 }
 
 .footer_menu li a:hover {
-    color: #f9b116;
+    color: #efa425;
 }
 
 .footer_menu li.active a {
-    color: #f9b116;
+    color: #efa425;
 }
 
 .Enter_text {
@@ -885,7 +885,7 @@ input.Enter_text::placeholder {
     float: left;
     font-size: 18px;
     color: #f8f8f8;
-    background-color: #f9b116;
+    background-color: #efa425;
     text-align: center;
     padding: 12px 0px;
     text-transform: uppercase;
@@ -923,7 +923,7 @@ input.Enter_text::placeholder {
 }
 
 .social_icon li a:hover {
-    color: #f9b116;
+    color: #efa425;
 }
 
 
@@ -952,7 +952,7 @@ input.Enter_text::placeholder {
 }
 
 .copyright_text a:hover {
-    color: #f9b116;
+    color: #efa425;
 }
 
 .margin_top_90 {
@@ -1340,7 +1340,7 @@ input.Enter_text::placeholder {
   display: inline-block;
   width: 50px;
   height: 5px;
-  background-color: #f9b116;  /* 🎯 Màu của website bạn */
+  background-color: #efa425;  /* 🎯 Màu của website bạn */
   margin-bottom: 30px;
   border-radius: 3px;
 }
@@ -1370,7 +1370,7 @@ input.Enter_text::placeholder {
   font-family: 'Nunito', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
-  color: #f9b116;  /* 🎯 Màu của website bạn */
+  color: #efa425;  /* 🎯 Màu của website bạn */
   font-weight: 700;
   font-size: 14px;
   position: relative;
@@ -1622,7 +1622,7 @@ body {
 
 .news-card__read-more:hover i {
   left: 0.5rem;
-  color: #f9b116;
+  color: #efa425;
 }
 
 /* ===== RESPONSIVE - TABLET (600px+) ===== */
@@ -1648,7 +1648,7 @@ body {
   }
 
   .news-card:hover .news-card__title {
-    color: #f9b116;
+    color: #efa425;
   }
 
   .news-card:hover .news-card__image {
@@ -1676,5 +1676,6 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
 
 
