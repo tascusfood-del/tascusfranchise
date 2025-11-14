@@ -827,6 +827,17 @@ font-size: 18px;
 }
 #tascus-banner-widget .tascus-prev { left: 8px; }
 #tascus-banner-widget .tascus-next { right: 8px; }
+  /* =================================================
+   🎯 BẮT ĐẦU SỬA LỖI KHOẢNG CÁCH HEADING MOBILE
+   ================================================= */
+.about_section {
+    margin-top: 15px; /* Giảm lề trên của cả section (gốc là 25px) */
+    margin-bottom: 15px; 
+}
+
+.about_taital {
+    margin-top: 10px; /* Giảm lề trên của tiêu đề (gốc là 40px) */
+    margin-bottom: 20px; /* Giảm lề dưới của tiêu đề (gốc là 30px) */
 }
 
 @media (max-width: 650px) {
@@ -872,5 +883,6 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
 
 
