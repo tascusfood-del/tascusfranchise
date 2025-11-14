@@ -1668,6 +1668,15 @@ body {
 ✅ **Hover effects** - Zoom ảnh, hiện mô tả, đổi màu title  
 ✅ **CSS thuần** - Không cần PostCSS, dùng được ngay
 
-Copy toàn bộ code này vào file CSS của bạn là xong! 🎉
+
+section,
+.about_section,
+.content-wrapper,
+.service_section {
+    clear: both !important;
+    display: block !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
 
 
