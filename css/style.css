@@ -1656,19 +1656,6 @@ body {
     z-index: -1;
   }
 }
-```
-
-## Các điểm chính:
-
-✅ **Xóa background xám** - Body có `background-color: transparent`  
-✅ **Font Nunito** - Dùng cho body text  
-✅ **Font FontCuaToi** - Dùng cho title (heading)  
-✅ **Màu #f9b116** - Màu vàng của website bạn cho hover effect  
-✅ **Responsive** - 3 breakpoints: mobile (12rem), tablet (16rem), desktop (20rem)  
-✅ **Hover effects** - Zoom ảnh, hiện mô tả, đổi màu title  
-✅ **CSS thuần** - Không cần PostCSS, dùng được ngay
-
-
 section,
 .about_section,
 .content-wrapper,
@@ -1678,4 +1665,16 @@ section,
     margin-top: 30px !important;
     margin-bottom: 30px !important;
 }
+
+/* 🎯 FIX NHANH - FOOTER FULL WIDTH */
+.footer_section,
+.copyright_section {
+width: 100vw !important;
+max-width: 100vw !important;
+margin-left: calc(50% - 50vw) !important;
+margin-right: calc(50% - 50vw) !important;
+padding-left: calc(50vw - 50%) !important;
+padding-right: calc(50vw - 50%) !important;
+}
+
 
