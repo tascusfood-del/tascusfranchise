@@ -3,6 +3,7 @@
 
 
 
+
 /*---------------------------------------------------------------------File Name: style.css ---------------------------------------------------------------------*/
 
 
@@ -1487,237 +1488,186 @@ input.Enter_text::placeholder {
 
 
 
-/* ===== NEWS CARD SECTION - TỈ LỆ 4.5:5 & 2 CỘT MOBILE ===== */
+/* ===== NEWS CARD SECTION - FULL VERSION ===== */
 
-{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-font-family: 'Nunito', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
 }
 
 body {
-background-color: transparent;
+  background-color: transparent;
 }
 
 .content-wrapper {
-margin: 0 auto;
-max-width: 1200px;
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-padding: 0.5rem;
-gap: 1rem; /* 🎯 Thêm gap để đẹp hơn */
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
 }
 
-/* 🎯 TỈ LỆ 4.5:5 CHO TẤT CẢ MÀN HÌNH /
 .news-card {
-border: 0px solid aqua;
-margin: 0;
-position: relative;
-width: calc(50% - 0.5rem); / 🎯 2 cột trên mobile /
-aspect-ratio: 4.5 / 5; / 🎯 TỈ LỆ 4.5:5 CỐ ĐỊNH */
-overflow: hidden;
-border-radius: 0.5rem;
-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
--webkit-backface-visibility: hidden;
--moz-backface-visibility: hidden;
--webkit-transform: translate3d(0, 0, 0);
--moz-transform: translate3d(0, 0, 0);
+  border: 0px solid aqua;
+  margin: 0.5rem;
+  position: relative;
+  height: 12rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 290px;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 }
 
 .news-card::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
-z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+  z-index: 0;
 }
 
 .news-card__card-link {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .news-card__image {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
-transition: transform 3s ease;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
-position: relative;
-z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 3s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: -1;
 }
 
 .news-card__text-wrapper {
-position: absolute;
-bottom: 0rem;
-padding: 1rem;
-color: white;
-transition: background-color 1.5s ease;
+  position: absolute;
+  bottom: 0rem;
+  padding: 1rem;
+  color: white;
+  transition: background-color 1.5s ease;
 }
 
 .news-card__title {
-font-family: 'FontCuaToi', sans-serif;
-transition: color 1s ease;
-margin-bottom: 0.5rem;
-font-size: 1.2rem; /* 🎯 Nhỏ hơn cho mobile 2 cột */
-font-weight: 700;
-color: #ffffff;
-line-height: 1.3;
+  font-family: 'FontCuaToi', sans-serif;
+  transition: color 1s ease;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .news-card__post-date {
-font-family: 'Nunito', sans-serif;
-font-size: 0.65rem;
-margin-bottom: 0.5rem;
-color: #CCC;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: #CCC;
 }
 
 .news-card__details-wrapper {
-max-height: 0;
-opacity: 0;
-transition: max-height 1.5s ease, opacity 1s ease;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 1s ease;
 }
 
 .news-card__excerpt {
-font-family: 'Nunito', sans-serif;
-font-weight: 300;
-font-size: 0.85rem;
-line-height: 1.5;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
 .news-card__read-more {
-font-family: 'Nunito', sans-serif;
-background: black;
-color: #bbb;
-display: block;
-padding: 0.4rem 0.6rem;
-border-radius: 0.3rem;
-margin-top: 1rem;
-border: 1px solid #444;
-font-size: 0.75rem;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
-text-decoration: none;
-width: 6rem;
-margin-left: auto;
-position: relative;
-z-index: 5;
-text-align: center;
+  font-family: 'Nunito', sans-serif;
+  background: black;
+  color: #bbb;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: 1px solid #444;
+  font-size: 0.8rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-decoration: none;
+  width: 7rem;
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
 }
 
 .news-card__read-more i {
-position: relative;
-left: 0.2rem;
-color: #888;
-transition: left 0.5s ease, color 0.6s ease;
--webkit-backface-visibility: hidden;
-backface-visibility: hidden;
+  position: relative;
+  left: 0.2rem;
+  color: #888;
+  transition: left 0.5s ease, color 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .news-card__read-more:hover i {
-left: 0.5rem;
-color: #f9b116;
+  left: 0.5rem;
+  color: #f9b116;
 }
 
-/* ===== RESPONSIVE - MOBILE NHỎ (320px - 479px) ===== /
-@media (max-width: 479px) {
-.news-card {
-width: calc(50% - 0.5rem); / 🎯 2 CỘT */
+/* ===== RESPONSIVE - TABLET (600px+) ===== */
+@media (min-width: 600px) {
+  .news-card {
+    height: 16rem;
+  }
 }
 
-.news-card__title {
-font-size: 1rem;
-}
-
-.news-card__text-wrapper {
-padding: 0.75rem;
-}
-}
-
-/* ===== RESPONSIVE - MOBILE (480px - 599px) ===== /
-@media (min-width: 480px) and (max-width: 599px) {
-.news-card {
-width: calc(50% - 0.5rem); / 🎯 2 CỘT */
-}
-
-.news-card__title {
-font-size: 1.1rem;
-}
-}
-
-/* ===== RESPONSIVE - TABLET (600px - 899px) ===== /
-@media (min-width: 600px) and (max-width: 899px) {
-.news-card {
-width: calc(33.333% - 0.67rem); / 🎯 3 CỘT trên tablet */
-}
-
-.news-card__title {
-font-size: 1.3rem;
-}
-
-.news-card__post-date {
-font-size: 0.7rem;
-}
-}
-
-/* ===== RESPONSIVE - DESKTOP (900px+) ===== /
+/* ===== RESPONSIVE - DESKTOP (900px+) ===== */
 @media (min-width: 900px) {
-.news-card {
-width: calc(25% - 0.75rem); / 🎯 4 CỘT trên desktop */
-}
+  .news-card {
+    height: 20rem;
+  }
 
-.news-card__title {
-font-size: 1.4rem;
-}
+  .news-card:hover .news-card__details-wrapper {
+    max-height: 20rem;
+    opacity: 1;
+  }
 
-.news-card__excerpt {
-font-size: 0.9rem;
-}
+  .news-card:hover .news-card__text-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
 
-.news-card__read-more {
-font-size: 0.8rem;
-width: 7rem;
-}
+  .news-card:hover .news-card__title {
+    color: #f9b116;
+  }
 
-/* Hover effects chỉ trên desktop */
-.news-card:hover .news-card__details-wrapper {
-max-height: 500px;
-opacity: 1;
+  .news-card:hover .news-card__image {
+    transform: scale(1.2);
+    z-index: -1;
+  }
 }
+```
 
-.news-card:hover .news-card__text-wrapper {
-background-color: rgba(0, 0, 0, 0.6);
-}
+## Các điểm chính:
 
-.news-card:hover .news-card__title {
-color: #f9b116;
-}
+✅ **Xóa background xám** - Body có `background-color: transparent`  
+✅ **Font Nunito** - Dùng cho body text  
+✅ **Font FontCuaToi** - Dùng cho title (heading)  
+✅ **Màu #f9b116** - Màu vàng của website bạn cho hover effect  
+✅ **Responsive** - 3 breakpoints: mobile (12rem), tablet (16rem), desktop (20rem)  
+✅ **Hover effects** - Zoom ảnh, hiện mô tả, đổi màu title  
+✅ **CSS thuần** - Không cần PostCSS, dùng được ngay
 
-.news-card:hover .news-card__image {
-transform: scale(1.2);
-z-index: -1;
-}
-}
+Copy toàn bộ code này vào file CSS của bạn là xong! 🎉
 
-/* ===== RESPONSIVE - LARGE DESKTOP (1200px+) ===== /
-@media (min-width: 1200px) {
-.news-card {
-width: calc(25% - 0.75rem); / 🎯 4 CỘT */
-}
-
-.news-card__title {
-font-size: 1.5rem;
-}
-}
 
