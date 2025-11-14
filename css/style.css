@@ -735,24 +735,24 @@ color: #f9b116;
 .copyright_section {
 width: 100%;
 float: left;
-background-color: #962b2d;
+background-color: #f9b116;
 height: auto;
 }
 
 .copyright_text {
 width: 100%;
-color: #f8f8f8;
+color: #fffff;
 text-align: center;
 font-size: 16px;
 margin: 20px 0px;
 }
 
 .copyright_text a {
-color: #f8f8f8;
+color: #fffff;
 }
 
 .copyright_text a:hover {
-color: #f9b116;
+color: #fffff;
 }
 
 /* ===================================================================
@@ -864,4 +864,5 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
 
