@@ -617,7 +617,7 @@ color: #f9b116;
 .footer_section {
 width: 100%;
 float: left;
-background-color: #ffc107;
+background-color: #962b2d;
 height: auto;
 padding: 90px 0px;
 clear: both;
@@ -734,7 +734,7 @@ color: #f9b116;
 .copyright_section {
 width: 100%;
 float: left;
-background-color: #962b2d;
+background-color: #efa425;
 height: auto;
 }
 
@@ -863,3 +863,4 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
