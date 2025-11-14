@@ -328,8 +328,12 @@ text-align: center;
 text-transform: uppercase;
 font-family: 'FontCuaToi', sans-serif !important;
 position: relative;
-margin-bottom: 60px;
-padding-bottom: 20px;
+
+/* === SỬA ĐỔI THEO YÊU CẦU === */
+margin-top: 40px; /* Tăng khoảng cách bên trên */
+margin-bottom: 30px; /* Giảm khoảng cách bên dưới (thay vì 60px) */
+padding-bottom: 10px; /* Giảm padding dưới (thay vì 20px) */
+/* === KẾT THÚC SỬA ĐỔI === */
 }
 
 .about_taital span {
@@ -337,6 +341,9 @@ font-family: 'FontCuaToi', sans-serif !important;
 }
 
 .about_taital::after {
+/* === SỬA ĐỔI THEO YÊU CẦU: Xóa gạch chân === */
+display: none; 
+/*
 content: '';
 position: absolute;
 width: 100px;
@@ -346,6 +353,8 @@ background-color: #f9b116;
 height: 10px;
 bottom: -10px;
 border-radius: 20px;
+*/
+/* === KẾT THÚC SỬA ĐỔI === */
 }
 
 .about_section_2 {
@@ -863,4 +872,3 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
-
