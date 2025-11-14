@@ -1223,7 +1223,7 @@ input.Enter_text::placeholder {
   border: 1px solid #eee;
   margin: 0;
   padding: 0;
-  border-radius: 20px;
+  border-radius: 25px;
   overflow: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -1231,7 +1231,7 @@ input.Enter_text::placeholder {
 }
 
 .price:hover {
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
 }
 
 .price .header {
@@ -1285,7 +1285,7 @@ input.Enter_text::placeholder {
   clear: both;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .columns {
     width: 100%;
   }
@@ -1484,6 +1484,7 @@ input.Enter_text::placeholder {
     font-size: 15px;
   }
 }
+
 
 
 
