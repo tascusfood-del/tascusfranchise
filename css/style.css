@@ -990,12 +990,33 @@ color: #f9b116;
 }
 
 /* Responsive cho mobile */
+/* 🎯 FIX MOBILE - Video full height */
 @media (max-width: 768px) {
+    .tascus-contact-section {
+        min-height: 100vh; /* 🎯 Section cao bằng viewport */
+    }
+    
     .tascus-video-bg {
-        width: 100vw;
+        width: 177.78vh; /* 🎯 16:9 aspect ratio */
         height: 100vh;
         min-width: 100vw;
         min-height: 100vh;
+    }
+    
+    .tascus-contact-container {
+        min-height: 100vh; /* 🎯 Container cũng full height */
+        align-content: center; /* 🎯 Căn giữa nội dung */
+    }
+}
+
+@media (max-width: 480px) {
+    .tascus-contact-section {
+        min-height: 100vh;
+    }
+    
+    .tascus-video-bg {
+        width: 200vh; /* 🎯 Zoom lớn hơn trên phone */
+        height: 100vh;
     }
 }
 
@@ -1408,6 +1429,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
