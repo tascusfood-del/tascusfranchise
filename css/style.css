@@ -6,6 +6,7 @@ FILE: style.css - TASCUS FOOD WEBSITE
 Đã xóa code thừa và duplicate
 
 Đã comment rõ ràng từng section
+
 =====================================================================*/
 
 /* ===================================================================
@@ -42,7 +43,7 @@ font-style: normal;
 3. GLOBAL STYLES (Skeleton)
 =================================================================== */
 
-{
+* { /* Thêm dấu * thay vì để trống */
 box-sizing: border-box !important;
 transition: ease all 0.5s;
 }
@@ -314,8 +315,8 @@ transform: scale(1.3);
 width: 100%;
 float: left;
 clear: both;
-margin-top: 25px;
-margin-bottom: 25px;
+/* XÓA: margin-top: 25px; */
+/* XÓA: margin-bottom: 25px; */
 }
 
 .about_taital {
@@ -329,10 +330,15 @@ text-transform: uppercase;
 font-family: 'FontCuaToi', sans-serif !important;
 position: relative;
 
-/* === SỬA ĐỔI THEO YÊU CẦU === */
-margin-top: 40px; /* Tăng khoảng cách bên trên */
-margin-bottom: 30px; /* Giảm khoảng cách bên dưới (thay vì 60px) */
-padding-bottom: 10px; /* Giảm padding dưới (thay vì 20px) */
+/* === SỬA ĐỔI KHOẢNG CÁCH THEO QUY TẮC MỚI === */
+/* Nguyên tắc: Heading sẽ tự quyết định khoảng cách.
+   1. margin-top để tạo khoảng cách với section phía TRÊN. 
+      Dùng 90px để đồng bộ với .layout_padding.
+   2. margin-bottom để tạo khoảng cách với content phía DƯỚI.
+*/
+margin-top: 90px; /* (Gốc là 40px) - Tạo khoảng cách RÕ RÀNG bên trên. */
+margin-bottom: 40px; /* (Gốc là 30px) - Khoảng cách vừa phải TỚI content. */
+padding-bottom: 0; /* (Gốc là 10px) - Xóa padding, dùng margin là đủ. */
 /* === KẾT THÚC SỬA ĐỔI === */
 }
 
@@ -341,28 +347,34 @@ font-family: 'FontCuaToi', sans-serif !important;
 }
 
 .about_taital::after {
-/* === SỬA ĐỔI THEO YÊU CẦU: Xóa gạch chân === */
 display: none; 
-/*
-content: '';
-position: absolute;
-width: 100px;
-left: 50%;
-transform: translateX(-50%);
-background-color: #f9b116;
-height: 10px;
-bottom: -10px;
-border-radius: 20px;
-*/
-/* === KẾT THÚC SỬA ĐỔI === */
 }
 
 .about_section_2 {
 width: 100%;
 float: left;
-background-color:  #fffbf0;
+background-color: #fffbf0;
 height: auto;
+/* Cần đảm bảo section này có padding-bottom để đẩy section sau ra */
+padding-bottom: 90px;
 }
+
+/* =================================================
+   🎯 QUY TẮC VÀNG ĐỂ SỬA LỖI KHOẢNG CÁCH 🎯
+   =================================================
+   Bất cứ content block nào (.layout_padding, .pricing-container, v.v.)
+   nằm "ngay sau" (toán tử +) heading .about_taital 
+   ĐỀU PHẢI bỏ khoảng cách bên trên của nó đi (vì heading đã lo việc đó).
+*/
+h1.about_taital + .layout_padding,
+h1.about_taital + .about_section_2,
+h1.about_taital + .pricing-container,
+h1.about_taital + .content-wrapper,
+h1.about_taital + p { /* Thêm p vì có 1 thẻ p mồ côi */
+    padding-top: 0 !important; /* Ghi đè padding-top: 90px của .layout_padding */
+    margin-top: 0 !important; /* Ghi đè margin-top: 50px của .pricing-container */
+}
+
 
 .about_taital_main {
 width: 100%;
@@ -421,9 +433,14 @@ float: left;
 
 .pricing-container {
 max-width: 1000px;
-margin: 50px auto;
+/* SỬA ĐỔI: Xóa margin-top: 50px. 
+   Đã bị quy tắc (h1.about_taital + .pricing-container) ghi đè, 
+   nhưng chúng ta set lại cho rõ ràng */
+margin: 0 auto;
 padding: 20px;
 clear: both;
+/* THÊM: padding-bottom để tạo khoảng cách nhất quán */
+padding-bottom: 90px;
 }
 
 .pricing-container .columns {
@@ -501,7 +518,8 @@ clear: both;
 =================================================================== */
 
 .content-wrapper {
-margin: 50px auto;
+/* SỬA ĐỔI: Xóa margin-top: 50px. */
+margin: 0 auto;
 max-width: 1200px;
 display: flex;
 flex-flow: row wrap;
@@ -509,6 +527,8 @@ justify-content: center;
 padding: 0.5rem;
 gap: 1rem;
 clear: both;
+/* THÊM: padding-bottom để tạo khoảng cách nhất quán */
+padding-bottom: 90px;
 }
 
 .news-card {
@@ -630,7 +650,7 @@ background-color: #962b2d;
 height: auto;
 padding: 90px 0px;
 clear: both;
-margin-top: 90px;
+/* XÓA: margin-top: 90px; (Không cần thiết vì content-wrapper đã có padding-bottom) */
 }
 
 .useful_text {
@@ -827,18 +847,32 @@ font-size: 18px;
 }
 #tascus-banner-widget .tascus-prev { left: 8px; }
 #tascus-banner-widget .tascus-next { right: 8px; }
-  /* =================================================
-   🎯 BẮT ĐẦU SỬA LỖI KHOẢNG CÁCH HEADING MOBILE
+
+/* =================================================
+   🎯 SỬA LỖI KHOẢNG CÁCH HEADING MOBILE
    ================================================= */
 .about_section {
-    margin-top: 15px; /* Giảm lề trên của cả section (gốc là 25px) */
-    margin-bottom: 15px; 
+    /* Xóa margin */
 }
 
 .about_taital {
-    margin-top: 10px; /* Giảm lề trên của tiêu đề (gốc là 40px) */
-    margin-bottom: 20px; /* Giảm lề dưới của tiêu đề (gốc là 30px) */
+    /* Sửa lại khoảng cách cho mobile để dễ nhìn hơn */
+    margin-top: 60px; /* (Gốc 90px) */
+    margin-bottom: 30px; /* (Gốc 40px) */
+    font-size: 40px; /* Giảm cỡ chữ heading một chút */
 }
+
+/* Các section content cũng cần giảm padding-bottom
+   để đồng bộ với heading
+*/
+.about_section_2,
+.pricing-container,
+.content-wrapper {
+    padding-bottom: 60px; /* (Gốc 90px) */
+}
+
+} /* Kết thúc @media (max-width: 768px) */
+
 
 @media (max-width: 650px) {
 .pricing-container .columns {
@@ -874,6 +908,10 @@ padding: 10px 0px;
 }
 }
 /* 🎯 FIX NHANH - FOOTER FULL WIDTH */
+/* Đoạn code này có vẻ là một "hack" để sửa lỗi layout.
+   Nó có thể không cần thiết sau khi đã sửa lỗi HTML, 
+   nhưng tôi sẽ giữ lại phòng trường hợp nó giải quyết vấn đề khác.
+*/
 .footer_section,
 .copyright_section {
 width: 100vw !important;
@@ -883,6 +921,3 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
-
-
-
