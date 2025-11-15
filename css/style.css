@@ -1035,13 +1035,14 @@ body {
 /* ==============================================
    3. ẨN HÌNH NỀN TRÊN DI ĐỘNG (Giữ nguyên)
    ============================================== */
-@media (max-width: 1300px) { 
+@media (max-width: 1280px) { 
     /* Đoạn mã này không cần sửa, nó vẫn sẽ 
        tắt toàn bộ background-image khi màn hình nhỏ */
     body {
         background-image: none;
     }
 }
+
 
 
 
