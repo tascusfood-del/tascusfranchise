@@ -1007,9 +1007,10 @@ color: #f9b116;
 /* Info bên trái */
 .tascus-contact-info {
     color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); */ /* 🎯 TẮT */
     box-sizing: border-box;
 }
+
 
 .tascus-contact-h2 {
     font-family: 'FontCuaToi', sans-serif;
@@ -1044,18 +1045,18 @@ color: #f9b116;
     margin-right: 15px;
     width: 50px;
     height: 50px;
-    background: rgba(249, 177, 22, 0.95);
+    background: rgba(255, 255, 255, 0.2); /* 🎯 ĐỔI về trắng mờ */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */ /* 🎯 TẮT shadow */
     box-sizing: border-box;
 }
 
 .tascus-info-icon i {
-    color: #962b2d;
+    color: #ffffff; /* 🎯 ĐỔI về trắng */
 }
 
 .tascus-info-text {
@@ -1406,6 +1407,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
