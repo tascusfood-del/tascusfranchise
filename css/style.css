@@ -846,6 +846,63 @@ color: #f9b116;
 }
 
 /* ===================================================================
+10. chữ chạy vô cực
+=================================================================== */
+.marquee-wrapper {
+    width: 100%;
+    background-color: #efa425;  /* Nền vàng */
+    padding: 15px 0;           /* Đệm trên và dưới (tùy chỉnh) */
+    overflow: hidden;          /* Quan trọng: Ẩn mọi thứ tràn ra ngoài */
+    box-sizing: border-box;
+    /* Đảm bảo nó nằm trên cùng, 
+       bên dưới header nếu header có z-index */
+    position: relative; 
+    z-index: 998; 
+}
+
+.marquee-content {
+    display: flex;
+    /* Tự động co giãn theo nội dung bên trong */
+    width: fit-content; 
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    
+    /* - 25s: Tốc độ chạy (thay đổi số này để nhanh/chậm)
+      - linear: Chạy đều
+      - infinite: Chạy vô cực
+    */
+    animation: scroll-left 25s linear infinite; 
+}
+
+.marquee-item {
+    /* Sử dụng FontCuaToi từ tệp CSS của bạn */
+    font-family: 'FontCuaToi', sans-serif; 
+    color: #962c2d;                /* Chữ đỏ */
+    font-size: 28px;           /* Cỡ chữ (tùy chỉnh) */
+    font-weight: bold;         /* Chữ đậm */
+    padding-right: 50px;       /* Khoảng cách giữa các mục */
+    flex-shrink: 0;            /* Ngăn co rút */
+    text-transform: uppercase; /* Viết hoa giống ảnh GIF */
+}
+
+/* Định nghĩa chuyển động */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Di chuyển sang trái đúng 50% tổng chiều dài */
+        transform: translateX(-50%);
+    }
+}
+
+/* Thêm một quy tắc nhỏ để đảm bảo 
+  header của bạn nằm bên dưới dải chữ chạy này
+*/
+.header_section {
+    position: relative;
+    z-index: 997; /* Thấp hơn .marquee-wrapper */
+}
+/* ===================================================================
 11. RESPONSIVE - MOBILE
 =================================================================== */
 
@@ -1042,6 +1099,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
