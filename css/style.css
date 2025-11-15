@@ -376,6 +376,25 @@ h1.about_taital + p { /* Thêm p vì có 1 thẻ p mồ côi */
 }
 
 
+/* === 🎯 BẮT ĐẦU SỬA LỖI KHOẢNG CÁCH HEADING VÀ SUBTEXT 🎯 === */
+
+/* GIẢI THÍCH:
+  - h1.about_taital có margin-bottom: 40px (tạo khoảng cách lớn).
+  - Thẻ <p> ngay sau nó (subtext) có style="text-align: center;".
+  - Chúng ta nhắm mục tiêu cụ thể thẻ <p> này và kéo nó lên bằng margin-top âm
+    để nó nằm gần heading hơn.
+*/
+h1.about_taital + p[style="text-align: center;"] { 
+    padding-top: 0 !important; 
+    margin-top: -25px !important; /* Kéo <p> lên, GHI ĐÈ margin-bottom 40px của h1 */
+    margin-bottom: 30px; /* Đặt khoảng cách mới cho content (.pricing-container) bên dưới */
+    margin-left: 0; /* Ghi đè margin: 20px mặc định của <p> */
+    margin-right: 0; /* Ghi đè margin: 20px mặc định của <p> */
+}
+
+/* === 🎯 KẾT THÚC SỬA LỖI KHOẢNG CÁCH 🎯 === */
+
+
 .about_taital_main {
 width: 100%;
 float: left;
@@ -870,6 +889,13 @@ font-size: 18px;
 .content-wrapper {
     padding-bottom: 60px; /* (Gốc 90px) */
 }
+
+/* 🎯 SỬA LỖI KHOẢNG CÁCH HEADING VÀ SUBTEXT (MOBILE) 🎯 */
+h1.about_taital + p[style="text-align: center;"] { 
+    margin-top: -15px !important; /* Kéo lên ít hơn cho mobile (vì margin-bottom của h1 là 30px) */
+    margin-bottom: 25px; 
+}
+
 
 } /* Kết thúc @media (max-width: 768px) */
 
