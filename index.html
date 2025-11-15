@@ -327,11 +327,55 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       <!-- Menu food start end -->
      
             
-            <!-- Loading & Success message -->
-            <div id="form-status" style="display:none; margin-top: 15px; padding: 15px; border-radius: 5px; text-align: center;"></div>
+           <!-- ===== CONTACT SECTION - TASCUS ===== -->
+<section class="tascus-contact-section">
+    <div class="tascus-contact-container">
+        <!-- Cột trái: Thông tin -->
+        <div class="tascus-contact-info">
+            <h2 class="tascus-contact-h2">Nhượng quyền Tascus Food<br>Sinh lời bền vững</h2>
+            <p class="tascus-contact-p">Tham gia hệ thống nhượng quyền thức ăn nhanh hàng đầu Việt Nam. Đội ngũ chuyên gia của Tascus sẵn sàng đồng hành cùng bạn.</p>
+            
+            <div class="tascus-info-item">
+                <span class="tascus-info-icon"><i class="fa fa-map-marker"></i></span> 
+                <div class="tascus-info-text">
+                    <strong>Địa chỉ văn phòng</strong>
+                    <span>123 Nguyễn Văn Linh, Quận 7, TP.HCM</span>
+                </div>
+            </div>
+
+            <div class="tascus-info-item">
+                <span class="tascus-info-icon"><i class="fa fa-clock-o"></i></span>
+                <div class="tascus-info-text">
+                    <strong>Giờ làm việc</strong>
+                    <span>Thứ 2 - Thứ 7: 8h00 - 20h00, Chủ Nhật: 9h - 17h</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột phải: Form -->
+        <div class="tascus-form-container">
+            <h3 class="tascus-form-h3">Đăng ký tư vấn trực tuyến</h3>
+            <form id="tascus-contact-form">
+                <div class="tascus-form-grid">
+                    <input type="text" name="name" class="tascus-input" placeholder="Họ và tên" required>
+                    <input type="email" name="email" class="tascus-input" placeholder="Email của bạn" required>
+                    <input type="tel" name="mobile" class="tascus-input" placeholder="Số điện thoại" required>
+                    <select name="service" class="tascus-input tascus-select" required>
+                        <option value="">Chọn mô hình quan tâm</option>
+                        <option value="Tascus Station">Tascus Station</option>
+                        <option value="Tascus House">Tascus House</option>
+                    </select>
+                </div>
+                <textarea name="message" class="tascus-input tascus-textarea" placeholder="Nội dung tư vấn"></textarea>
+                <button type="submit" class="tascus-submit-btn">Gửi yêu cầu ngay</button>
+            </form>
+            
+            <div id="tascus-form-status" class="tascus-form-status"></div>
         </div>
     </div>
 </section>
+
+
 
       <!-- shop section start -->
       <!-- shop section end -->
@@ -386,7 +430,55 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="js/tascusweb.js"></script>
+      <!-- JavaScript -->
+<script>
+(function() {
+    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE'; // 🎯 PASTE URL
+    const form = document.getElementById('tascus-contact-form');
+    const statusDiv = document.getElementById('tascus-form-status');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            statusDiv.innerHTML = '⏳ Đang gửi...';
+            statusDiv.style.display = 'block';
+            statusDiv.style.backgroundColor = '#fff3cd';
+            statusDiv.style.color = '#856404';
+            
+            const formData = {
+                name: form.name.value,
+                email: form.email.value,
+                mobile: form.mobile.value,
+                service: form.service.value,
+                message: form.message.value
+            };
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+            .then(function() {
+                statusDiv.innerHTML = '✅ Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 24 giờ.';
+                statusDiv.style.backgroundColor = '#d4edda';
+                statusDiv.style.color = '#155724';
+                form.reset();
+                setTimeout(function() { statusDiv.style.display = 'none'; }, 5000);
+            })
+            .catch(function() {
+                statusDiv.innerHTML = '❌ Có lỗi xảy ra. Vui lòng thử lại!';
+                statusDiv.style.backgroundColor = '#f8d7da';
+                statusDiv.style.color = '#721c24';
+            });
+        });
+    }
+})();
+</script>
+
 
    </body>
 </html>
+
 
