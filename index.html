@@ -139,16 +139,30 @@
       <!-- about section end -->
       
         <!-- === SỬA ĐỔI HTML: GỘP H1 VÀ P VÀO MỘT CỤM === -->
-      <div class="about_taital_wrapper">
-         <h1 class="about_taital" style="color: #962c2d;">
-            Mô hình 
-            <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">Cửa hàng</span>
-         </h1>
-         <!-- Bỏ style inline và dùng class mới "about_subtext" -->
-         <p class="about_subtext">
-            <strong   text-align: center; }>Chưa bao gồm phí gia nhập thương hiệu</strong>
-         </p>
-      </div>
+    <style>
+    .about_taital_wrapper {
+        text-align: center; /* Căn giữa tất cả nội dung */
+    }
+
+    .about_subtext {
+        margin-top: 8px;
+        font-size: 16px;
+        line-height: 1.4;
+        display: block;
+    }
+</style>
+
+<div class="about_taital_wrapper">
+    <h1 class="about_taital" style="color: #962c2d;">
+        Mô hình 
+        <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">Cửa hàng</span>
+    </h1>
+
+    <p class="about_subtext">
+        <strong>Chưa bao gồm phí gia nhập thương hiệu</strong>
+    </p>
+</div>
+
       <!-- === KẾT THÚC SỬA ĐỔI HTML === -->
       <div id="prices" class="pricing-container">
          <div class="columns">
@@ -278,4 +292,5 @@
       <script src="js/tascusweb.js"></script>
    </body>
 </html>
+
 
