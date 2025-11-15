@@ -1003,9 +1003,9 @@ body {
     /* 2. VỊ TRÍ TƯƠNG ỨNG CHO 4 ẢNH */
     /* Bạn điều chỉnh các số 150px, 600px (khoảng cách từ trên xuống) */
     background-position: left 1200px,  /* Vị trí ảnh 1 */
-                       left 800px,  /* Vị trí ảnh 2 */
-                       right 2500px, /* Vị trí ảnh 3 */
-                       right 2200px; /* Vị trí ảnh 4 */
+                       left 2500px,  /* Vị trí ảnh 2 */
+                       right 700px, /* Vị trí ảnh 3 */
+                       right 2700px; /* Vị trí ảnh 4 */
 
     /* 3. KÍCH THƯỚC TƯƠNG ỨNG CHO 4 ẢNH */
     /* (Bạn chỉnh 4 số này theo ý muốn) */
@@ -1042,3 +1042,4 @@ body {
         background-image: none;
     }
 }
+
