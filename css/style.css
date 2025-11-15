@@ -923,65 +923,57 @@ color: #f9b116;
   Container vẫn giữ max-width 1100px
 =================================================================== */
 
+/* ===================================================================
+  TASCUS CONTACT SECTION - VIDEO FULL WIDTH (NO OVERLAY)
+=================================================================== */
+
 .tascus-contact-section,
 .tascus-contact-section * {
     box-sizing: border-box;
 }
 
-/* Section GIỮ NGUYÊN - không full width */
+/* Section */
 .tascus-contact-section {
     width: 100%;
-    padding: 60px 20px;
+    padding: 90px 0;
     position: relative;
     overflow: hidden;
     clear: both;
-    min-height: 600px;
-    background-color: #962b2d;
+    min-height: 700px;
 }
 
-/* Video ZOOM RA FULL WIDTH 2 BÊN */
+/* Video FULL WIDTH ABSOLUTE */
 .tascus-video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw; /* 🎯 FULL VIEWPORT WIDTH */
-    height: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
+    position: fixed; /* 🎯 FIXED để full viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* 🎯 Đẩy xuống dưới tất cả */
     pointer-events: none;
     border: none;
     object-fit: cover;
 }
 
-/* Overlay màu đỏ - cũng FULL WIDTH */
-.tascus-video-overlay {
-    position: absolute;
-    top: 0;
-  opacity:0%
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw; /* 🎯 FULL VIEWPORT WIDTH */
-    height: 100%;
-    background: linear-gradient(135deg, rgba(150, 43, 45, 0.85) 0%, rgba(139, 0, 0, 0.85) 100%);
-    z-index: 1;
-}
+/* 🎯 ĐÃ XÓA .tascus-video-overlay */
 
-/* Container GIỮ NGUYÊN max-width */
+/* Container */
 .tascus-contact-container {
-    max-width: 1100px; /* 🎯 GIỮ NGUYÊN */
+    max-width: 1100px;
     margin: 0 auto;
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: flex-start;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Cột thông tin bên trái */
+/* Info bên trái - THÊM SHADOW ĐỂ DỄ ĐỌC */
 .tascus-contact-info {
     color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* 🎯 Shadow để dễ đọc */
 }
 
 .tascus-contact-h2 {
@@ -1000,7 +992,7 @@ color: #f9b116;
     line-height: 1.6;
     margin: 0 0 30px 0;
     padding: 0;
-    color: #f0f0f0;
+    color: #ffffff;
 }
 
 .tascus-info-item {
@@ -1014,12 +1006,17 @@ color: #f9b116;
     margin-right: 15px;
     width: 50px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(249, 177, 22, 0.9); /* 🎯 ĐỔI background vàng */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tascus-info-icon i {
+    color: #962b2d; /* 🎯 Icon đỏ */
 }
 
 .tascus-info-text {
@@ -1042,12 +1039,12 @@ color: #f9b116;
     color: #ffffff;
 }
 
-/* Cột Form bên phải */
+/* Form bên phải */
 .tascus-form-container {
     background: rgba(255, 255, 255, 0.98);
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
 }
 
 .tascus-form-h3 {
@@ -1134,8 +1131,13 @@ color: #f9b116;
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .tascus-contact-section {
+        padding: 60px 0;
+    }
+    
     .tascus-contact-container {
         grid-template-columns: 1fr;
+        padding: 0 15px;
     }
 
     .tascus-form-grid {
@@ -1147,10 +1149,9 @@ color: #f9b116;
     }
 
     .tascus-form-container {
-        padding: 25px;
+        padding: 30px 25px;
     }
 }
-
 
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -1349,6 +1350,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
