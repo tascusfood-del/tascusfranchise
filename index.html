@@ -139,14 +139,22 @@
       <!-- about section end -->
       
       <!-- SỬA LỖI: Đã xóa lỗi cú pháp '<<h1' và các thẻ </div> thừa tại đây -->
-      <h1 class="about_taital" style="color: #962c2d;">
-         Mô hình 
-         <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">Cửa hàng</span>
-      </h1>
       
-      <p style="text-align: center;">
-         <strong>Chưa bao gồm phí gia nhập thương hiệu</strong>
-      </p>
+      <!-- === SỬA ĐỔI HTML: GỘP H1 VÀ P VÀO MỘT CỤM === -->
+      <div class="about_taital_wrapper">
+         <h1 class="about_taital" style="color: #962c2d;">
+            Mô hình 
+            <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">Cửa hàng</span>
+         </h1>
+         <!-- Bỏ style inline và dùng class mới "about_subtext" -->
+         <p class="about_subtext">
+            <strong>Chưa bao gồm phí gia nhập thương hiệu</strong>
+         </p>
+      </div>
+      <!-- === KẾT THÚC SỬA ĐỔI HTML === -->
+      
+      <!-- Thẻ <p> cũ (nằm trơ trọi) đã được đưa vào trong div.about_taital_wrapper ở trên -->
+      
       <div id="prices" class="pricing-container">
          <div class="columns">
             <ul class="price">
