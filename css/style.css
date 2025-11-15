@@ -412,7 +412,6 @@ display: none;
 .about_section_2 {
 width: 100%;
 float: left;
-background-color: #fffbf0;
 height: auto;
 /* Cần đảm bảo section này có padding-bottom để đẩy section sau ra */
 padding-bottom: 50px;
@@ -992,7 +991,7 @@ body {
     /* Vị trí của từng hình */
     /* Hình 1: bên trái, cách top 150px */
     /* Hình 2: bên phải, cách top 400px */
-    background-position: left 150px, right 400px;
+    background-position: left 150px, right 700px;
 
     /* Không lặp lại hình nền */
     background-repeat: no-repeat, no-repeat;
@@ -1007,6 +1006,7 @@ body {
     background-color: #ffffff;
     padding: 20px;
 }
+
 
 
 
