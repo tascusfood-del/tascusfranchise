@@ -998,16 +998,16 @@ body {
     background-repeat: no-repeat, no-repeat;
 
     /* Quan trọng: Giữ hình nền cố định khi cuộn trang */
-    background-attachment: fixed;
-}
+   
 
 /* Bạn vẫn cần căn giữa nội dung chính */
 .container-noi-dung {
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: #ffffff;
     padding: 20px;
 }
+
 
 
 
