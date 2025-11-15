@@ -319,19 +319,6 @@ clear: both;
 /* XÓA: margin-bottom: 25px; */
 }
 
-/* === SỬA ĐỔI CSS: TẠO CỤM HEADING MỚI (GỘP H1 VÀ P) === */
-
-/* 1. Wrapper sẽ lo toàn bộ KHOẢNG CÁCH VÀ CANH LỀ */
-.about_taital_wrapper {
-    width: 100%;
-    float: left;
-    text-align: center;
-    /* Wrapper quyết định khoảng cách với section trên và dưới */
-    margin-top: 90px;
-    margin-bottom: 40px; 
-}
-
-/* 2. H1 (about_taital) bây giờ chỉ lo FONT, không lo khoảng cách */
 .about_taital {
 width: 100%;
 float: left;
@@ -343,11 +330,15 @@ text-transform: uppercase;
 font-family: 'FontCuaToi', sans-serif !important;
 position: relative;
 
-/* === SỬA ĐỔI KHOẢNG CÁCH === */
-/* Xóa margin, vì wrapper đã lo việc này */
-margin-top: 0;
-margin-bottom: 0;
-padding-bottom: 10px; /* Giữ khoảng cách nhỏ tới subtext */
+/* === SỬA ĐỔI KHOẢNG CÁCH THEO QUY TẮC MỚI === */
+/* Nguyên tắc: Heading sẽ tự quyết định khoảng cách.
+   1. margin-top để tạo khoảng cách với section phía TRÊN. 
+      Dùng 90px để đồng bộ với .layout_padding.
+   2. margin-bottom để tạo khoảng cách với content phía DƯỚI.
+*/
+margin-top: 90px; /* (Gốc là 40px) - Tạo khoảng cách RÕ RÀNG bên trên. */
+margin-bottom: 40px; /* (Gốc là 30px) - Khoảng cách vừa phải TỚI content. */
+padding-bottom: 0; /* (Gốc là 10px) - Xóa padding, dùng margin là đủ. */
 /* === KẾT THÚC SỬA ĐỔI === */
 }
 
@@ -375,34 +366,13 @@ padding-bottom: 90px;
    nằm "ngay sau" (toán tử +) heading .about_taital 
    ĐỀU PHẢI bỏ khoảng cách bên trên của nó đi (vì heading đã lo việc đó).
 */
-
-/* 3. QUAN TRỌNG: XÓA BỎ QUY TẮC CŨ (nhắm vào h1) */
-/* Bạn hãy TÌM VÀ XÓA đoạn 'h1.about_taital + .layout_padding, ...' */
-
-
-/* 4. THÊM QUY TẮC MỚI (nhắm vào div.about_taital_wrapper) */
-div.about_taital_wrapper + .layout_padding,
-div.about_taital_wrapper + .about_section_2,
-div.about_taital_wrapper + .pricing-container,
-div.about_taital_wrapper + .content-wrapper,
-div.about_taital_wrapper + p {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-}
-
-
-/* 5. QUAN TRỌNG: XÓA BỎ CSS HACK CŨ */
-/* Bạn hãy TÌM VÀ XÓA đoạn 'h1.about_taital + p[style="text-align: center;"] { ... }' */
-
-
-/* 6. THÊM CLASS MỚI CHO SUBTEXT */
-.about_subtext {
-    margin: 0; /* Xóa margin 20px mặc định của <p> */
-    font-size: 16px;
-    font-weight: 600;
-    color: #444; /* Làm màu chữ tối hơn một chút */
-    font-family: 'Nunito', sans-serif; /* Đảm bảo nó dùng font Nunito */
-    line-height: 1.5; /* Thêm line-height cho dễ đọc */
+h1.about_taital + .layout_padding,
+h1.about_taital + .about_section_2,
+h1.about_taital + .pricing-container,
+h1.about_taital + .content-wrapper,
+h1.about_taital + p { /* Thêm p vì có 1 thẻ p mồ côi */
+    padding-top: 0 !important; /* Ghi đè padding-top: 90px của .layout_padding */
+    margin-top: 0 !important; /* Ghi đè margin-top: 50px của .pricing-container */
 }
 
 
@@ -897,16 +867,9 @@ font-size: 18px;
 */
 .about_section_2,
 .pricing-container,
-/* 7. SỬA LẠI MARGIN CỦA WRAPPER TRÊN MOBILE */
-.about_taital_wrapper {
-    margin-top: 60px; /* (Gốc 90px) */
-    margin-bottom: 30px; /* (Gốc 40px) */
+.content-wrapper {
+    padding-bottom: 60px; /* (Gốc 90px) */
 }
-
-/* 8. QUAN TRỌNG: XÓA BỎ CSS HACK CŨ (TRÊN MOBILE) */
-/* Bạn hãy TÌM VÀ XÓA đoạn 'h1.about_taital + p[style="text-align: center;"] { ... }'
-   nằm bên trong @media (max-width: 768px) */
-
 
 } /* Kết thúc @media (max-width: 768px) */
 
