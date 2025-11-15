@@ -280,7 +280,7 @@ transform: translateY(-50%) scale(1.1);
 position: absolute;
 left: 50%;
 transform: translateX(-50%);
-bottom: 2px;
+bottom: -10px;
 z-index: 70;
 display: flex;
 gap: 10px;
@@ -1106,6 +1106,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
