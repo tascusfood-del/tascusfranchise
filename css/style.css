@@ -943,19 +943,22 @@ color: #f9b116;
 }
 
 
+/* ===================================================================
+   FIX VIDEO BACKGROUND ĐỂ LUÔN FULL SECTION
+=================================================================== */
+
 .tascus-video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+    top: 0;  /* 🎯 Thay vì 50% */
+    left: 0; /* 🎯 Thay vì 50% */
+    width: 100%;  /* 🎯 Thay vì min-width/width: auto */
+    height: 100%; /* 🎯 Thay vì min-height/height: auto */
+    /* ❌ Bỏ transform: translate(-50%, -50%); */
+    
     z-index: 0;
     pointer-events: none;
     border: none;
-    object-fit: cover;
+    object-fit: cover; /* 👈 Đây là thuộc tính quan trọng nhất */
 }
 
 
@@ -1368,23 +1371,3 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
-/* Responsive Contact Section */
-@media (max-width: 768px) {
-    .tascus-contact-section {
-        padding: 60px 0 !important;
-        min-height: 600px;
-    }
-    
-    .tascus-video-bg {
-        min-width: 100%;
-        min-height: 100%;
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .tascus-contact-section {
-        min-height: 550px;
-    }
-}
