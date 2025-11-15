@@ -949,8 +949,8 @@ color: #f9b116;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw; /* 🎯 Full width viewport */
-    height: 100%;
+    width: 100%; /* 🎯 Full width viewport */
+    height:auto;
     min-height: 100%;
     z-index: 0;
     pointer-events: none;
@@ -1351,6 +1351,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
