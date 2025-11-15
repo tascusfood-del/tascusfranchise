@@ -1586,7 +1586,7 @@ text-align-last: left;
 
 /* Total rows */
 .tascus-tr-total {
-    background: #f9e8cc;
+    background: #fffff;
     font-weight: bold;
 }
 
@@ -1601,7 +1601,7 @@ text-align-last: left;
 }
 
 .tascus-tr-final td {
- color: #fffff;
+ color:  #962b2d;
   font-weight: bold;
     font-size: 14px;
 }
@@ -1924,6 +1924,7 @@ body {
         font-size: 24px;
     }
 }
+
 
 
 
