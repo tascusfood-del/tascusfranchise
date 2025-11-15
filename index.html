@@ -190,116 +190,6 @@
             </ul>
          </div>
       </div>
-      <!-- chi phí ứớc tính start -->
-      <!-- Tải Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Tải font Nunito (thay cho Inter) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <div class="w-full max-w-5xl mx-auto">
-        <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-6">
-            Bảng Chi Phí Ước Tính
-        </h1>
-
-        <!-- 
-          Đây là phần quan trọng: 
-          - overflow-x-auto: Bật thanh cuộn ngang CHỈ KHI cần (trên màn hình nhỏ)
-          - rounded-lg shadow-lg: Thêm bo góc và bóng đổ cho đẹp mắt
-        -->
-        <div class="overflow-x-auto rounded-lg shadow-lg border border-[#EADCBF]">
-            
-            <!-- 
-              min-w-full: Đảm bảo bảng không bị co lại trên màn hình lớn
-              trên thực tế có thể dùng min-w-[800px] hoặc một giá trị cụ thể
-              để buộc nó phải cuộn trên màn hình nhỏ hơn
-            -->
-            <table class="min-w-full w-full border-collapse">
-                
-                <!-- Hàng Tiêu Đề Cột -->
-                <thead class="bg-[#D4A24E] text-white">
-                    <tr>
-                        <th class="p-4 font-semibold text-center whitespace-nowrap border-r border-[#EADCBF]">Quy mô</th>
-                        <th class="p-4 font-semibold text-center whitespace-nowrap border-r border-[#EADCBF]">25m2 – 30m2</th>
-                        <th class="p-4 font-semibold text-center whitespace-nowrap border-r border-[#EADCBF]">30-40m2</th>
-                        <th class="p-4 font-semibold text-center whitespace-nowrap border-r border-[#EADCBF]">40-50m2</th>
-                        <th class="p-4 font-semibold text-center whitespace-nowrap">100m2</th>
-                    </tr>
-                </thead>
-                
-                <!-- Nội Dung Bảng -->
-                <tbody class="text-[#6B4226]">
-                    
-                    <!-- Hàng 1: Cải tạo -->
-                    <tr class="border-t border-[#EADCBF]">
-                        <th scope="row" class="bg-[#D4A24E] text-white p-4 font-semibold text-left whitespace-nowrap border-r border-[#EADCBF]">
-                            Cải tạo, thi công, trang trí nội thất (chi phí ước tính)
-                        </th>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            100.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            120.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            140.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap">
-                            350.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                    </tr>
-                    
-                    <!-- Hàng 2: Máy móc -->
-                    <tr class="border-t border-[#EADCBF]">
-                        <th scope="row" class="bg-[#D4A24E] text-white p-4 font-semibold text-left whitespace-nowrap border-r border-[#EADCBF]">
-                            Máy móc, trang thiết bị (chi phí ước tính)
-                        </th>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            190.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            190.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF]">
-                            190.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap">
-                            190.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                    </tr>
-                    
-                    <!-- Hàng 3: Tổng cộng -->
-                    <tr class="border-t border-[#EADCBF]">
-                        <th scope="row" class="bg-[#D4A24E] text-white p-4 font-semibold text-left whitespace-nowrap border-r border-[#EADCBF]">
-                            Tổng cộng (chi phí ước tính)
-                        </th>
-                        <!-- 
-                          Lớp 'font-bold' được thêm vào các ô tổng cộng 
-                          để làm đậm chữ như trong hình
-                        -->
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF] font-bold">
-                            290.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF] font-bold">
-                            310.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap border-r border-[#EADCBF] font-bold">
-                            330.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                        <td class="bg-[#FFF9EE] p-4 text-center whitespace-nowrap font-bold">
-                            540.000.000 <span class="font-bold">VNĐ</span>
-                        </td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        
-    </div>
-
-      
       <!-- Menu food start -->
       <div class="content-wrapper">
          <div class="news-card">
@@ -398,7 +288,5 @@
       <script src="js/tascusweb.js"></script>
    </body>
 </html>
-
-
 
 
