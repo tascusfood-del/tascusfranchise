@@ -423,8 +423,64 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="js/tascusweb.js"></script>
+      <script>
+const scriptURL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec'; // 🎯 PASTE URL TỪ BƯỚC 2
+const form = document.getElementById('contact-form');
+const statusDiv = document.getElementById('form-status');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    // Hiển thị loading
+    statusDiv.innerHTML = '⏳ Đang gửi...';
+    statusDiv.style.display = 'block';
+    statusDiv.style.backgroundColor = '#fff3cd';
+    statusDiv.style.color = '#856404';
+    
+    // Lấy dữ liệu form
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        mobile: form.mobile.value,
+        service: form.service.value,
+        message: form.message.value
+    };
+    
+    // Gửi đến Google Apps Script
+    fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        // Hiển thị success
+        statusDiv.innerHTML = 'Cảm ơn bạn! Chúng tôi sẽ liên hệ sớm.';
+        statusDiv.style.backgroundColor = '#d4edda';
+        statusDiv.style.color = '#155724';
+        
+        // Reset form
+        form.reset();
+        
+        // Ẩn message sau 5s
+        setTimeout(() => {
+            statusDiv.style.display = 'none';
+        }, 5000);
+    })
+    .catch(error => {
+        // Hiển thị error
+        statusDiv.innerHTML = 'Có lỗi xảy ra. Vui lòng thử lại!';
+        statusDiv.style.backgroundColor = '#f8d7da';
+        statusDiv.style.color = '#721c24';
+    });
+});
+</script>
+
    </body>
 </html>
+
 
 
 
