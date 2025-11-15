@@ -1486,6 +1486,146 @@ text-align-last: left;
     }
 }
 
+/* ===================================================================
+  BẢNG CHI PHÍ NHƯỢNG QUYỀN TASCUS
+=================================================================== */
+
+.tascus-pricing-table-section {
+    width: 100%;
+    padding: 90px 20px;
+    background-color: #fffbf0;
+    clear: both;
+}
+
+.tascus-pricing-title {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 40px;
+    color: #962b2d;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+    font-weight: bold;
+}
+
+.tascus-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tascus-pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif;
+    min-width: 1200px;
+}
+
+/* Header */
+.tascus-pricing-table thead th {
+    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
+    color: #ffffff;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+}
+
+.tascus-th-main {
+    background: #962b2d !important;
+}
+
+.tascus-th-note {
+    background: #efa425 !important;
+}
+
+.tascus-th-sub {
+    background: #f9b116 !important;
+    font-size: 12px;
+}
+
+/* Body */
+.tascus-pricing-table tbody td {
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 13px;
+    border: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.tascus-td-label {
+    text-align: left !important;
+    font-weight: 600;
+    background: #fff8e6;
+    color: #962b2d;
+}
+
+.tascus-td-note {
+    text-align: left !important;
+    font-size: 12px;
+    color: #666;
+    padding-left: 15px !important;
+}
+
+/* Highlight rows */
+.tascus-tr-highlight {
+    background: #fff4d9;
+}
+
+.tascus-tr-highlight .tascus-td-label {
+    background: #ffe8a3;
+    font-weight: bold;
+}
+
+/* Indent rows */
+.tascus-tr-indent .tascus-td-label {
+    padding-left: 30px !important;
+    background: #fffef9;
+}
+
+/* Total rows */
+.tascus-tr-total {
+    background: #f9e8cc;
+    font-weight: bold;
+}
+
+.tascus-tr-total td {
+    font-weight: bold;
+    color: #962b2d;
+}
+
+/* Final row */
+.tascus-tr-final {
+    background: linear-gradient(135deg, #962b2d 0%, #8B0000 100%);
+}
+
+.tascus-tr-final td {
+    color: #ffffff !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tascus-pricing-title {
+        font-size: 28px;
+    }
+    
+    .tascus-pricing-table {
+        font-size: 11px;
+    }
+    
+    .tascus-pricing-table thead th {
+        padding: 10px 5px;
+        font-size: 11px;
+    }
+    
+    .tascus-pricing-table tbody td {
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
 
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -1784,6 +1924,7 @@ body {
         font-size: 24px;
     }
 }
+
 
 
 
