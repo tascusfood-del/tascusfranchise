@@ -1,3 +1,4 @@
+
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 
@@ -938,20 +939,25 @@ color: #f9b116;
     min-height: 700px;
     background-color: #000;
     isolation: isolate;
-    box-sizing: border-box; /* 🎯 Chỉ cho section này */
+    box-sizing: border-box;
 }
+
 
 .tascus-video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 13o% !important;
-    height: 120% !important;
-    transform: translate(-50%, -50%) !important;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
     z-index: 0;
     pointer-events: none;
     border: none;
+    object-fit: cover;
 }
+
 
 .tascus-contact-container {
     max-width: 1100px;
@@ -1359,26 +1365,26 @@ body {
         background-image: none;
     }
 }
+/* ==============================================
+   3. fix video
+   ============================================== */
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .tascus-contact-section {
+        padding: 60px 0 !important;
+        min-height: 600px;
+    }
+    
+    .tascus-video-bg {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 480px) {
+    .tascus-contact-section {
+        min-height: 550px;
+    }
+}
