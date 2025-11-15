@@ -999,9 +999,7 @@ body {
     /* Không lặp lại hình nền */
     background-repeat: no-repeat, no-repeat;
 
-    /* * SỬA LỖI 1: Thêm dòng này để giữ cố định hình khi cuộn 
-     */
-    background-attachment: fixed;
+   
 
     /* * SỬA LỖI 2: Chuyển 'background-size' từ .container-noi-dung lên đây
      * Hình 1 (khoai) rộng 150px, Hình 2 (burger) rộng 180px
@@ -1034,6 +1032,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
