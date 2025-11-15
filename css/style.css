@@ -395,7 +395,7 @@ position: relative;
       Dùng 90px để đồng bộ với .layout_padding.
    2. margin-bottom để tạo khoảng cách với content phía DƯỚI.
 */
-margin-top: 90px; /* (Gốc là 40px) - Tạo khoảng cách RÕ RÀNG bên trên. */
+margin-top: 60px; /* (Gốc là 40px) - Tạo khoảng cách RÕ RÀNG bên trên. */
 margin-bottom: 40px; /* (Gốc là 30px) - Khoảng cách vừa phải TỚI content. */
 padding-bottom: 0; /* (Gốc là 10px) - Xóa padding, dùng margin là đủ. */
 /* === KẾT THÚC SỬA ĐỔI === */
@@ -1106,6 +1106,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
