@@ -1215,14 +1215,14 @@ color: #f9b116;
     width: 100%;
     float: left;
     padding: 90px 20px;
-    background-color: #fffbf0; /* Màu nền giống web */
+    background-color: #fffbf0;
     clear: both;
 }
 
 .tascus-process-title {
     font-family: 'FontCuaToi', sans-serif;
     font-size: 50px;
-    color: #962b2d; /* Đỏ brand */
+    color: #962b2d;
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
@@ -1254,7 +1254,163 @@ color: #f9b116;
 .tascus-step-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(150, 43, 45, 0.15);
-    border-color: #f9b116; /* Vàng brand */
+    border-color: #f9b116;
+}
+
+/* 🎯 ARCH LINE - Đường nối giữa các step */
+.tascus-arch-line {
+    position: absolute;
+    top: 30px;
+    right: -75px;
+    width: 150px;
+    height: 50px;
+    z-index: -1;
+}
+
+.tascus-arch-line.reverse {
+    top: 35px;
+}
+
+/* Ẩn arch line trên mobile */
+@media (max-width: 991px) {
+    .tascus-arch-line {
+        display: none;
+    }
+}
+
+/* Step Number */
+.tascus-step-number {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
+    color: #ffffff;
+    border-radius: 50%;
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(249, 177, 22, 0.3);
+}
+
+/* Step Title */
+.tascus-step-card h3 {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 22px;
+    color: #962b2d;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
+
+/* Step Description */
+.tascus-step-card p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .tascus-process-section {
+        padding: 60px 15px;
+    }
+    
+    .tascus-process-title {
+        font-size: 36px;
+    }
+    
+    .tascus-process-desc {
+        font-size: 16px;
+    }
+    
+    .tascus-step-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .tascus-step-number {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+    }
+    
+    .tascus-step-card h3 {
+        font-size: 20px;
+    }
+}
+/* ===================================================================
+  TASCUS PROCESS SECTION (HOW IT WORKS)
+=================================================================== */
+
+.tascus-process-section {
+    width: 100%;
+    float: left;
+    padding: 90px 20px;
+    background-color: #fffbf0;
+    clear: both;
+}
+
+.tascus-process-title {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 50px;
+    color: #962b2d;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.tascus-process-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: #232222;
+    text-align: center;
+    margin: 0 0 50px 0;
+    line-height: 1.6;
+}
+
+/* Step Cards */
+.tascus-step-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.tascus-step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(150, 43, 45, 0.15);
+    border-color: #f9b116;
+}
+
+/* 🎯 ARCH LINE - Đường nối giữa các step */
+.tascus-arch-line {
+    position: absolute;
+    top: 30px;
+    right: -75px;
+    width: 150px;
+    height: 50px;
+    z-index: -1;
+}
+
+.tascus-arch-line.reverse {
+    top: 35px;
+}
+
+/* Ẩn arch line trên mobile */
+@media (max-width: 991px) {
+    .tascus-arch-line {
+        display: none;
+    }
 }
 
 /* Step Number */
@@ -1523,6 +1679,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
