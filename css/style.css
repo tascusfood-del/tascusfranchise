@@ -994,7 +994,7 @@ body {
     background-image: url('https://i.postimg.cc/LXx7Pkyv/khoai.png'), url('https://i.postimg.cc/cHFj37Dh/burger.png');
 
     /* Vị trí của từng hình (Bạn có thể tự do điều chỉnh) */
-    background-position: left 750px, right 800px;
+    background-position: left 1000px, right 800px;
 
     /* Không lặp lại hình nền */
     background-repeat: no-repeat, no-repeat;
@@ -1032,6 +1032,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
