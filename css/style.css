@@ -959,24 +959,46 @@ color: #f9b116;
    FIX VIDEO BACKGROUND (VIMEO IFRAME) - BẢN FIX CUỐI
 =================================================================== */
 
+/* 🎯 VIDEO WRAPPER - CHẮC CHẮN FULL SECTION */
+.tascus-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* 🎯 VIDEO IFRAME - TÍNH TOÁN ĐỂ LUÔN FULL */
 .tascus-video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    /* 🎯 Buộc iframe phải LỚN HƠN hoặc BẰNG 100% cha */
-    min-width: 100%;
-    min-height: 100%;
-
-    /* 🎯 Ghi đè mọi thuộc tính HTML (dù ta đã xóa) */
-    width: auto !important; 
-    height: auto !important;
-
-    z-index: 0;
+    
+    /* Tính toán cho aspect ratio 16:9 */
+    width: 100vw;
+    height: 56.25vw; /* 100vw * 9/16 */
+    
+    /* Nếu section cao hơn chiều rộng */
+    min-width: 177.78vh; /* 100vh * 16/9 */
+    min-height: 100vh;
+    
     pointer-events: none;
     border: none;
 }
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .tascus-video-bg {
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
 .tascus-contact-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -1386,6 +1408,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
