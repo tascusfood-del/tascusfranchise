@@ -983,28 +983,56 @@ padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
 
+/* ==============================================
+   1. CÀI ĐẶT HÌNH NỀN CHO BODY (ĐÃ SỬA)
+   ============================================== */
 body {
-    /* Màu nền chính cho khu vực lề (nếu muốn) */
-    /* Tải 2 hình nền cùng lúc */
+    /* (Tùy chọn) Màu nền cho khu vực lề */
+    background-color: #f0f0f0;
+
+    /* Tải 2 hình nền */
     background-image: url('https://i.postimg.cc/LXx7Pkyv/khoai.png'), url('https://i.postimg.cc/cHFj37Dh/burger.png');
 
-    /* Vị trí của từng hình */
-    /* Hình 1: bên trái, cách top 150px */
-    /* Hình 2: bên phải, cách top 400px */
-    background-position: left 150px, right 700px;
+    /* Vị trí của từng hình (Bạn có thể tự do điều chỉnh) */
+    background-position: left 750px, right 800px;
 
     /* Không lặp lại hình nền */
     background-repeat: no-repeat, no-repeat;
 
-    /* Quan trọng: Giữ hình nền cố định khi cuộn trang */
-   
+    /* * SỬA LỖI 1: Thêm dòng này để giữ cố định hình khi cuộn 
+     */
+    background-attachment: fixed;
 
-/* Bạn vẫn cần căn giữa nội dung chính */
+    /* * SỬA LỖI 2: Chuyển 'background-size' từ .container-noi-dung lên đây
+     * Hình 1 (khoai) rộng 150px, Hình 2 (burger) rộng 180px
+     */
+    background-size: 200px, 250px;
+}
+
+
+/* ==============================================
+   2. CĂN GIỮA NỘI DUNG CHÍNH (TÁCH RIÊNG RA)
+   ============================================== */
 .container-noi-dung {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
+    max-width: 1200px; /* Chiều rộng nội dung */
+    margin: 0 auto;    /* Căn giữa */
+    background-color: #ffffff; /* Nền trắng cho nội dung */
     padding: 20px;
+    /* Dòng 'background-size' đã được xóa khỏi đây */
+}
+
+
+/* ==============================================
+   3. ẨN HÌNH NỀN TRÊN THIẾT BỊ DI ĐỘNG
+   ============================================== */
+@media (max-width: 1400px) { 
+    /* * Khi màn hình nhỏ hơn 1400px (bao gồm cả tablet và mobile)
+     * Bạn có thể thay đổi số 1400px này 
+     */
+    body {
+        /* Tắt cả 2 hình nền đi */
+        background-image: none;
+    }
 }
 
 
