@@ -955,28 +955,33 @@ color: #f9b116;
    FIX VIDEO BACKGROUND (VIMEO IFRAME)
 =================================================================== */
 
+/* ===================================================================
+   FIX VIDEO BACKGROUND (VIMEO IFRAME) - BẢN FIX CUỐI
+=================================================================== */
+
 .tascus-video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* 🎯 Căn giữa iframe */
 
-    /* Kỹ thuật ép iframe luôn to hơn thẻ cha
-       để lấp đầy (zoom) */
+    /* Đây là phần quan trọng nhất để "zoom" iframe 
+     Nó buộc iframe phải LỚN HƠN hoặc BẰNG 100% kích thước cha
+    */
     min-width: 100%;
     min-height: 100%;
-    
-    /* Để video tự giữ tỷ lệ, 
-       nó sẽ tự tính toán để lớn hơn min-width/min-height
+
+    /* Sử dụng !important để GHI ĐÈ 
+     thuộc tính width="1920" và height="1080" 
+     từ HTML của thẻ iframe.
+     Đây là mấu chốt của vấn đề!
     */
-    width: auto;
-    height: auto;
+    width: auto !important; 
+    height: auto !important;
 
     z-index: 0;
     pointer-events: none;
     border: none;
-    
-    /* ❌ Không dùng object-fit: cover; cho iframe */
 }
 .tascus-contact-container {
     max-width: 1100px;
@@ -1387,5 +1392,6 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
