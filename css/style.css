@@ -1076,7 +1076,7 @@ body {
     background-size: 230px, /* Kích thước ảnh 1 */
                     250px, /* Kích thước ảnh 2 */
                      250px, /* Kích thước ảnh 3 */
-                    270px; /* Kích thước ảnh 4 */
+                    350px; /* Kích thước ảnh 4 */
 
     /* 4. KHÔNG LẶP LẠI (Cần 4 giá trị) */
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -1106,6 +1106,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
