@@ -1687,6 +1687,104 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+/* ===================================================================
+  NÚT CALL ĐỘNG GHIM GÓC TRANG
+=================================================================== */
+
+.tascus-call-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(249, 177, 22, 0.4);
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    animation: tascus-bounce 2s infinite;
+}
+
+.tascus-call-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(249, 177, 22, 0.6);
+}
+
+.tascus-call-btn i {
+    font-size: 28px;
+    color: #ffffff;
+    animation: tascus-ring 1.5s infinite;
+}
+
+/* Hiệu ứng pulse (sóng) */
+.tascus-pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(249, 177, 22, 0.6);
+    animation: tascus-pulse 2s infinite;
+    z-index: -1;
+}
+
+/* Animation - Bounce */
+@keyframes tascus-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animation - Ring (lắc) */
+@keyframes tascus-ring {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(-15deg);
+    }
+    20%, 40% {
+        transform: rotate(15deg);
+    }
+}
+
+/* Animation - Pulse (sóng) */
+@keyframes tascus-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .tascus-call-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+    
+    .tascus-call-btn i {
+        font-size: 24px;
+    }
+}
+
 
 
 
