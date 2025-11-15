@@ -917,15 +917,14 @@ color: #f9b116;
   TASCUS CONTACT SECTION - ISOLATED CSS
   Không ảnh hưởng đến CSS của web chính
 =================================================================== */
-
 /* ===================================================================
-  TASCUS CONTACT SECTION - VIDEO ZOOM FULL WIDTH
+  TASCUS CONTACT SECTION - FIX KHÔNG PHÁ STYLE KHÁC
 =================================================================== */
 
-.tascus-contact-section,
-.tascus-contact-section * {
+/* 🎯 BỎ reset global này */
+/* .tascus-contact-section * {
     box-sizing: border-box;
-}
+} */
 
 .tascus-contact-section {
     width: 100vw !important;
@@ -939,18 +938,16 @@ color: #f9b116;
     min-height: 700px;
     background-color: #000;
     isolation: isolate;
+    box-sizing: border-box; /* 🎯 Chỉ cho section này */
 }
 
-/* 🎯 VIDEO ZOOM 150% ĐỂ CẮT PHẦN ĐEN */
 .tascus-video-bg {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 150% !important;
-    height: 150% !important;
-    min-width: 150%;
-    min-height: 150%;
-    transform: translate(-50%, -50%) scale(1.2) !important;
+    width: 120% !important;
+    height: 120% !important;
+    transform: translate(-50%, -50%) !important;
     z-index: 0;
     pointer-events: none;
     border: none;
@@ -966,11 +963,13 @@ color: #f9b116;
     align-items: flex-start;
     position: relative;
     z-index: 1;
+    box-sizing: border-box; /* 🎯 Riêng biệt */
 }
 
 .tascus-contact-info {
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
 }
 
 .tascus-contact-h2 {
@@ -981,6 +980,7 @@ color: #f9b116;
     padding: 0;
     line-height: 1.2;
     color: #ffffff;
+    box-sizing: border-box;
 }
 
 .tascus-contact-p {
@@ -990,12 +990,14 @@ color: #f9b116;
     margin: 0 0 30px 0;
     padding: 0;
     color: #ffffff;
+    box-sizing: border-box;
 }
 
 .tascus-info-item {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .tascus-info-icon {
@@ -1010,6 +1012,7 @@ color: #f9b116;
     justify-content: center;
     flex-shrink: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 .tascus-info-icon i {
@@ -1019,6 +1022,7 @@ color: #f9b116;
 .tascus-info-text {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .tascus-info-text strong {
@@ -1028,19 +1032,134 @@ color: #f9b116;
     margin: 0 0 5px 0;
     color: #f9b116;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .tascus-info-text span {
     font-family: 'Nunito', sans-serif;
     font-size: 0.95rem;
     color: #ffffff;
+    box-sizing: border-box;
 }
 
 .tascus-form-container {
     background: rgba(255, 255, 255, 0.98);
     padding: 40px;
     border-radius: 12px;
-    box-shadow:
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.tascus-form-h3 {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    padding: 0;
+    color: #962b2d;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.tascus-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.tascus-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.tascus-input:focus {
+    border-color: #f9b116;
+    background-color: #ffffff;
+}
+
+.tascus-input::placeholder {
+    color: #999;
+}
+
+.tascus-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.tascus-textarea {
+    min-height: 120px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.tascus-submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9b116;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.tascus-submit-btn:hover {
+    background-color: #efa425;
+}
+
+.tascus-form-status {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tascus-contact-section {
+        padding: 60px 0 !important;
+    }
+    
+    .tascus-contact-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    .tascus-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tascus-contact-h2 {
+        font-size: 2rem;
+    }
+
+    .tascus-form-container {
+        padding: 30px 25px;
+    }
+}
 
 
 /* ===================================================================
@@ -1240,6 +1359,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
