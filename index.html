@@ -328,12 +328,26 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
      
             
            <!-- ===== CONTACT SECTION - TASCUS ===== -->
+<!-- ===== CONTACT SECTION - VIDEO BACKGROUND ===== -->
 <section class="tascus-contact-section">
+    
+    <!-- Video Background -->
+    <video class="tascus-video-bg" autoplay muted loop playsinline>
+        <source src="videos/tascus-background.mp4" type="video/mp4">
+        <source src="videos/tascus-background.webm" type="video/webm">
+        <!-- Fallback image nếu video không load -->
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Overlay màu đỏ -->
+    <div class="tascus-video-overlay"></div>
+    
+    <!-- Nội dung form -->
     <div class="tascus-contact-container">
         <!-- Cột trái: Thông tin -->
         <div class="tascus-contact-info">
             <h2 class="tascus-contact-h2">Nhượng quyền Tascus Food<br>Sinh lời bền vững</h2>
-            <p class="tascus-contact-p">Tham gia hệ thống nhượng quyền thức ăn nhanh hàng đầu Việt Nam. Đội ngũ chuyên gia của Tascus sẵn sàng đồng hành cùng bạn.</p>
+            <p class="tascus-contact-p">Tham gia hệ thống nhượng quyền thức ăn nhanh hàng đầu Việt Nam.</p>
             
             <div class="tascus-info-item">
                 <span class="tascus-info-icon"><i class="fa fa-map-marker"></i></span> 
@@ -358,7 +372,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
             <form id="tascus-contact-form">
                 <div class="tascus-form-grid">
                     <input type="text" name="name" class="tascus-input" placeholder="Họ và tên" required>
-                    <input type="email" name="email" class="tascus-input" placeholder="Email của bạn" required>
+                    <input type="email" name="email" class="tascus-input" placeholder="Email" required>
                     <input type="tel" name="mobile" class="tascus-input" placeholder="Số điện thoại" required>
                     <select name="service" class="tascus-input tascus-select" required>
                         <option value="">Chọn mô hình quan tâm</option>
@@ -480,6 +494,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
 
    </body>
 </html>
+
 
 
 
