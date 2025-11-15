@@ -920,11 +920,6 @@ color: #f9b116;
 
 /* ===================================================================
   TASCUS CONTACT SECTION - VIDEO ZOOM FULL WIDTH
-  Container vẫn giữ max-width 1100px
-=================================================================== */
-
-/* ===================================================================
-  TASCUS CONTACT SECTION - FULL WIDTH TUYỆT ĐỐI
 =================================================================== */
 
 .tascus-contact-section,
@@ -932,36 +927,35 @@ color: #f9b116;
     box-sizing: border-box;
 }
 
-/* Section FULL WIDTH - Phá vỡ container cha */
 .tascus-contact-section {
-    width: 100vw !important; /* 🎯 FORCE full viewport */
+    width: 100vw !important;
     max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important; /* 🎯 Phá vỡ container cha */
+    margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
     padding: 90px 0 !important;
     position: relative;
     overflow: hidden;
     clear: both;
     min-height: 700px;
+    background-color: #000;
     isolation: isolate;
 }
 
-/* Video FULL WIDTH */
+/* 🎯 VIDEO ZOOM 150% ĐỂ CẮT PHẦN ĐEN */
 .tascus-video-bg {
     position: absolute;
-    top: 0;
-    left: 0; /* 🎯 ĐỔI từ 50% */
-    width: 100%; /* 🎯 100% của section */
-    height: 100%;
-    min-height: 100%;
-    transform: none; /* 🎯 BỎ transform */
+    top: 50%;
+    left: 50%;
+    width: 150% !important;
+    height: 150% !important;
+    min-width: 150%;
+    min-height: 150%;
+    transform: translate(-50%, -50%) scale(1.2) !important;
     z-index: 0;
     pointer-events: none;
     border: none;
-    object-fit: cover;
 }
 
-/* Container nội dung - giữ max-width */
 .tascus-contact-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -974,7 +968,6 @@ color: #f9b116;
     z-index: 1;
 }
 
-/* Info bên trái */
 .tascus-contact-info {
     color: #ffffff;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
@@ -1043,119 +1036,11 @@ color: #f9b116;
     color: #ffffff;
 }
 
-/* Form bên phải */
 .tascus-form-container {
     background: rgba(255, 255, 255, 0.98);
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-}
-
-.tascus-form-h3 {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 0 25px 0;
-    padding: 0;
-    color: #962b2d;
-    text-align: left;
-}
-
-.tascus-form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.tascus-input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.tascus-input:focus {
-    border-color: #f9b116;
-    background-color: #ffffff;
-}
-
-.tascus-input::placeholder {
-    color: #999;
-}
-
-.tascus-select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    padding-right: 40px;
-}
-
-.tascus-textarea {
-    min-height: 120px;
-    resize: vertical;
-    margin-bottom: 15px;
-}
-
-.tascus-submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #f9b116;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.tascus-submit-btn:hover {
-    background-color: #efa425;
-}
-
-.tascus-form-status {
-    display: none;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .tascus-contact-section {
-        padding: 60px 0 !important;
-    }
-    
-    .tascus-contact-container {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
-
-    .tascus-form-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tascus-contact-h2 {
-        font-size: 2rem;
-    }
-
-    .tascus-form-container {
-        padding: 30px 25px;
-    }
-}
+    box-shadow:
 
 
 /* ===================================================================
@@ -1355,6 +1240,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
