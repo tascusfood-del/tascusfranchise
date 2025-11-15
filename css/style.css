@@ -914,6 +914,217 @@ color: #f9b116;
 /* Cài đặt chung */
 
 /* ===================================================================
+  TASCUS CONTACT SECTION - ISOLATED CSS
+  Không ảnh hưởng đến CSS của web chính
+=================================================================== */
+
+/* Reset chỉ trong contact section */
+.tascus-contact-section,
+.tascus-contact-section * {
+    box-sizing: border-box;
+}
+
+/* Contact Section */
+.tascus-contact-section {
+    width: 100%;
+    background-image: url('your-background-image.jpg');
+    background-color: #962b2d;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    position: relative;
+    background-blend-mode: multiply;
+    clear: both;
+}
+
+.tascus-contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Cột thông tin bên trái */
+.tascus-contact-info {
+    color: #ffffff;
+}
+
+.tascus-contact-h2 {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    padding: 0;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.tascus-contact-p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+    padding: 0;
+    color: #f0f0f0;
+}
+
+.tascus-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tascus-info-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tascus-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.tascus-info-text strong {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+    color: #f9b116;
+    font-weight: bold;
+}
+
+.tascus-info-text span {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* Cột Form bên phải */
+.tascus-form-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.tascus-form-h3 {
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0 25px 0;
+    padding: 0;
+    color: #962b2d;
+    text-align: left;
+}
+
+/* Lưới cho các trường input */
+.tascus-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Input styles */
+.tascus-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.tascus-input:focus {
+    border-color: #f9b116;
+    background-color: #ffffff;
+}
+
+.tascus-input::placeholder {
+    color: #999;
+}
+
+/* Select */
+.tascus-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+/* Textarea */
+.tascus-textarea {
+    min-height: 120px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+.tascus-submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f9b116;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-family: 'FontCuaToi', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tascus-submit-btn:hover {
+    background-color: #efa425;
+}
+
+/* Form Status */
+.tascus-form-status {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .tascus-contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tascus-form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tascus-contact-h2 {
+        font-size: 2rem;
+    }
+
+    .tascus-form-container {
+        padding: 25px;
+    }
+}
+
+
+/* ===================================================================
 11. RESPONSIVE - MOBILE
 =================================================================== */
 
@@ -1110,6 +1321,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
