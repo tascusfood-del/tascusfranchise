@@ -1324,11 +1324,21 @@ color: #f9b116;
     
     .tascus-process-desc {
         font-size: 16px;
+        margin-bottom: 40px; /* 🎯 Tăng khoảng cách */
+    }
+    
+    /* 🎯 FIX - Thêm margin-bottom cho column mobile */
+    .tascus-process-section .row .col-md-6 {
+        margin-bottom: 30px; /* 🎯 Khoảng cách giữa các card */
+    }
+    
+    .tascus-process-section .row .col-md-6:last-child {
+        margin-bottom: 0; /* 🎯 Card cuối không cần margin */
     }
     
     .tascus-step-card {
         padding: 30px 20px;
-        margin-bottom: 20px;
+        margin-bottom: 0; /* 🎯 Bỏ margin-bottom ở card, chuyển sang column */
     }
     
     .tascus-step-number {
@@ -1342,6 +1352,7 @@ color: #f9b116;
         font-size: 20px;
     }
 }
+
 /* ===================================================================
   TASCUS PROCESS SECTION (HOW IT WORKS)
 =================================================================== */
@@ -1679,6 +1690,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
