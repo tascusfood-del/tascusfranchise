@@ -963,19 +963,13 @@ color: #f9b116;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* 🎯 Căn giữa iframe */
+    transform: translate(-50%, -50%);
 
-    /* Đây là phần quan trọng nhất để "zoom" iframe 
-     Nó buộc iframe phải LỚN HƠN hoặc BẰNG 100% kích thước cha
-    */
+    /* 🎯 Buộc iframe phải LỚN HƠN hoặc BẰNG 100% cha */
     min-width: 100%;
     min-height: 100%;
 
-    /* Sử dụng !important để GHI ĐÈ 
-     thuộc tính width="1920" và height="1080" 
-     từ HTML của thẻ iframe.
-     Đây là mấu chốt của vấn đề!
-    */
+    /* 🎯 Ghi đè mọi thuộc tính HTML (dù ta đã xóa) */
     width: auto !important; 
     height: auto !important;
 
@@ -1392,6 +1386,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
