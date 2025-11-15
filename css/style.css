@@ -945,7 +945,7 @@ color: #f9b116;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 120% !important;
+    width: 13o% !important;
     height: 120% !important;
     transform: translate(-50%, -50%) !important;
     z-index: 0;
@@ -1359,6 +1359,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
