@@ -918,25 +918,51 @@ color: #f9b116;
   Không ảnh hưởng đến CSS của web chính
 =================================================================== */
 
-/* Reset chỉ trong contact section */
+/* ===================================================================
+  TASCUS CONTACT SECTION - VIDEO BACKGROUND
+=================================================================== */
+
 .tascus-contact-section,
 .tascus-contact-section * {
     box-sizing: border-box;
 }
 
-/* Contact Section */
+/* Contact Section với video */
 .tascus-contact-section {
     width: 100%;
-    background-image: url('your-background-image.jpg');
-    background-color: #962b2d;
-    background-size: cover;
-    background-position: center;
     padding: 60px 20px;
     position: relative;
-    background-blend-mode: multiply;
+    overflow: hidden;
     clear: both;
+    min-height: 600px;
 }
 
+/* Video Background */
+.tascus-video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    object-fit: cover;
+}
+
+/* Overlay màu đỏ trên video */
+.tascus-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(150, 43, 45, 0.85) 0%, rgba(139, 0, 0, 0.85) 100%);
+    z-index: 1;
+}
+
+/* Container phải ở trên video */
 .tascus-contact-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -944,6 +970,8 @@ color: #f9b116;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: flex-start;
+    position: relative;
+    z-index: 2;
 }
 
 /* Cột thông tin bên trái */
@@ -1026,7 +1054,6 @@ color: #f9b116;
     text-align: left;
 }
 
-/* Lưới cho các trường input */
 .tascus-form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1034,7 +1061,6 @@ color: #f9b116;
     margin-bottom: 15px;
 }
 
-/* Input styles */
 .tascus-input {
     width: 100%;
     padding: 12px 15px;
@@ -1057,7 +1083,6 @@ color: #f9b116;
     color: #999;
 }
 
-/* Select */
 .tascus-select {
     cursor: pointer;
     appearance: none;
@@ -1067,14 +1092,12 @@ color: #f9b116;
     padding-right: 40px;
 }
 
-/* Textarea */
 .tascus-textarea {
     min-height: 120px;
     resize: vertical;
     margin-bottom: 15px;
 }
 
-/* Submit Button */
 .tascus-submit-btn {
     width: 100%;
     padding: 15px;
@@ -1094,7 +1117,6 @@ color: #f9b116;
     background-color: #efa425;
 }
 
-/* Form Status */
 .tascus-form-status {
     display: none;
     margin-top: 15px;
@@ -1121,8 +1143,13 @@ color: #f9b116;
     .tascus-form-container {
         padding: 25px;
     }
+    
+    /* Video vẫn full trên mobile */
+    .tascus-video-bg {
+        min-width: 100%;
+        min-height: 100%;
+    }
 }
-
 
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -1321,6 +1348,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
