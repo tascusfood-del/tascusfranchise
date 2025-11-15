@@ -942,7 +942,6 @@ font-size: 18px;
 width: 100%;
 }
 }
-
 @media (max-width: 991px) {
 .header_section .form-inline {
 width: 100%;
@@ -985,6 +984,30 @@ padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
 
+body {
+    /* Màu nền chính cho khu vực lề (nếu muốn) */
+    /* Tải 2 hình nền cùng lúc */
+    background-image: url('https://i.postimg.cc/LXx7Pkyv/khoai.png'), url('https://i.postimg.cc/cHFj37Dh/burger.png');
+
+    /* Vị trí của từng hình */
+    /* Hình 1: bên trái, cách top 150px */
+    /* Hình 2: bên phải, cách top 400px */
+    background-position: left 150px, right 400px;
+
+    /* Không lặp lại hình nền */
+    background-repeat: no-repeat, no-repeat;
+
+    /* Quan trọng: Giữ hình nền cố định khi cuộn trang */
+    background-attachment: fixed;
+}
+
+/* Bạn vẫn cần căn giữa nội dung chính */
+.container-noi-dung {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
 
 
 
