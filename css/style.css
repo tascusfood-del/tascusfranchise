@@ -356,7 +356,7 @@ float: left;
 background-color: #fffbf0;
 height: auto;
 /* Cần đảm bảo section này có padding-bottom để đẩy section sau ra */
-padding-bottom: 90px;
+padding-bottom: 50px;
 }
 
 /* =================================================
@@ -868,7 +868,7 @@ font-size: 18px;
 .about_section_2,
 .pricing-container,
 .content-wrapper {
-    padding-bottom: 60px; /* (Gốc 90px) */
+    padding-bottom: 40px; /* (Gốc 90px) */
 }
 
 } /* Kết thúc @media (max-width: 768px) */
@@ -921,4 +921,5 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
 
