@@ -1234,6 +1234,8 @@ color: #f9b116;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     color: #232222;
+  text-align: justify;
+text-align-last: left;
     text-align: center;
     margin: 0 0 50px 0;
     line-height: 1.6;
@@ -1690,6 +1692,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
