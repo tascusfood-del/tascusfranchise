@@ -1215,7 +1215,8 @@ color: #f9b116;
     width: 100%;
     float: left;
     padding: 90px 20px;
-    background-color: #fffbf0;
+    background: linear-gradient(90deg,rgba(255, 221, 0, 1) 0%, rgba(255, 128, 0, 1) 50%, rgba(237, 168, 83, 1) 100%);
+
     clear: both;
 }
 
@@ -1687,6 +1688,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
