@@ -307,6 +307,65 @@ border-color: #ff9f1c;
 transform: scale(1.3);
 }
 
+
+/* ===================================================================
+MENU STart
+=================================================================== */
+/* 1. Container chính của gallery */
+.gallery-container {
+  display: flex; /* Sử dụng Flexbox để xếp hàng */
+  flex-wrap: nowrap; /* Đảm bảo các ảnh luôn trên 1 hàng (desktop) */
+  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Từng mục ảnh (mỗi mục chiếm 1/3) */
+.gallery-item {
+  /* flex-grow: 1; (cho phép lớn lên)
+    flex-shrink: 1; (cho phép co lại)
+    flex-basis: 33.3333%; (chiều rộng cơ bản là 1/3)
+  */
+  flex: 1 1 33.3333%;
+  
+  /* Quan trọng: Ngăn ảnh bị tràn khi co giãn */
+  min-width: 0; 
+  
+  /* Xóa mọi khoảng cách */
+  margin: 0;
+  padding: 0;
+  
+  /* Xóa khoảng trắng thừa do font-size (nếu có) */
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 3. Thẻ <img> bên trong */
+.gallery-item img {
+  width: 100%; /* Luôn fill 100% chiều ngang của .gallery-item */
+  height: auto; /* Tự động tính chiều cao để giữ đúng tỉ lệ, KHÔNG crop */
+  
+  /* Xóa khoảng trắng thừa bên dưới ảnh */
+  display: block; 
+}
+
+/* 4. Cấu hình Responsive cho Mobile */
+@media (max-width: 768px) {
+  .gallery-container {
+    /* Chuyển layout từ hàng ngang (row) sang cột (column) */
+    flex-direction: column;
+  }
+  
+  /* Trên mobile, mỗi .gallery-item sẽ chiếm 100% chiều ngang */
+  .gallery-item {
+    flex-basis: 100%;
+    width: 100%;
+  }
+}
+/* ===================================================================
+MENU end
+=================================================================== */
+
 /* ===================================================================
 6. ABOUT SECTION
 =================================================================== */
@@ -925,6 +984,7 @@ margin-right: calc(50% - 50vw) !important;
 padding-left: calc(50vw - 50%) !important;
 padding-right: calc(50vw - 50%) !important;
 }
+
 
 
 
