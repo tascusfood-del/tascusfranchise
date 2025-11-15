@@ -919,7 +919,7 @@ color: #f9b116;
 =================================================================== */
 
 /* ===================================================================
-  TASCUS CONTACT SECTION - VIDEO BACKGROUND
+  TASCUS CONTACT SECTION - FULL WIDTH VIDEO BACKGROUND
 =================================================================== */
 
 .tascus-contact-section,
@@ -927,35 +927,37 @@ color: #f9b116;
     box-sizing: border-box;
 }
 
-/* Contact Section với video */
+/* Section full width - BỎ padding bên trái phải */
 .tascus-contact-section {
     width: 100%;
-    padding: 60px 20px;
+    margin-left: calc(50% - 50vw); /* 🎯 FULL WIDTH */
+    margin-right: calc(50% - 50vw); /* 🎯 FULL WIDTH */
+    padding: 90px 20px; /* Chỉ padding trên dưới */
     position: relative;
     overflow: hidden;
     clear: both;
-    min-height: 600px;
+    min-height: 700px;
+    background-color: #962b2d;
 }
 
-/* Video Background */
+/* Vimeo Video Background - FULL SCREEN */
 .tascus-video-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 0;
-    object-fit: cover;
+    pointer-events: none;
+    border: none;
 }
 
-/* Overlay màu đỏ trên video */
+/* Overlay màu đỏ */
 .tascus-video-overlay {
     position: absolute;
     top: 0;
     left: 0;
+  opacity:0%
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(150, 43, 45, 0.85) 0%, rgba(139, 0, 0, 0.85) 100%);
@@ -972,6 +974,7 @@ color: #f9b116;
     align-items: flex-start;
     position: relative;
     z-index: 2;
+    padding: 0 20px; /* Padding cho nội dung */
 }
 
 /* Cột thông tin bên trái */
@@ -1009,7 +1012,7 @@ color: #f9b116;
     margin-right: 15px;
     width: 50px;
     height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1039,9 +1042,10 @@ color: #f9b116;
 
 /* Cột Form bên phải */
 .tascus-form-container {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.98);
     padding: 40px;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .tascus-form-h3 {
@@ -1128,8 +1132,13 @@ color: #f9b116;
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    .tascus-contact-section {
+        padding: 60px 15px;
+    }
+    
     .tascus-contact-container {
         grid-template-columns: 1fr;
+        padding: 0 15px;
     }
 
     .tascus-form-grid {
@@ -1141,15 +1150,28 @@ color: #f9b116;
     }
 
     .tascus-form-container {
-        padding: 25px;
-    }
-    
-    /* Video vẫn full trên mobile */
-    .tascus-video-bg {
-        min-width: 100%;
-        min-height: 100%;
+        padding: 30px 25px;
     }
 }
+
+@media (max-width: 480px) {
+    .tascus-contact-section {
+        padding: 50px 10px;
+    }
+    
+    .tascus-contact-container {
+        padding: 0 10px;
+    }
+    
+    .tascus-contact-h2 {
+        font-size: 1.75rem;
+    }
+    
+    .tascus-form-container {
+        padding: 25px 20px;
+    }
+}
+
 
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -1348,6 +1370,7 @@ body {
         background-image: none;
     }
 }
+
 
 
 
