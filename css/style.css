@@ -1379,8 +1379,9 @@ text-align-last: left;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     color: #232222;
-    text-align: center;
-    margin: 0 0 50px 0;
+text-align: justify;
+text-align-last: left;    
+  margin: 0 0 50px 0;
     line-height: 1.6;
 }
 
@@ -1391,14 +1392,12 @@ text-align-last: left;
     border-radius: 15px;
     text-align: center;
     height: 100%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
 
 .tascus-step-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(150, 43, 45, 0.15);
     border-color: #f9b116;
 }
 
@@ -1436,7 +1435,6 @@ text-align-last: left;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(249, 177, 22, 0.3);
 }
 
 /* Step Title */
@@ -1689,6 +1687,7 @@ body {
 /* ==============================================
    3. fix video
    ============================================== */
+
 
 
 
