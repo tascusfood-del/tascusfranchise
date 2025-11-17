@@ -120,7 +120,10 @@ const artists = [
   {
     name: "CỬA HÀNG 3D",
     description: `Cửa hàng chuyên nghiệp hỗ trợ thiết kế & thi công đúng nhận diện Tascus`,
-    
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
     backgroundUrl: "https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg"
   },
   {
