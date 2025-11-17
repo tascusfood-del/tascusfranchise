@@ -1493,7 +1493,7 @@ text-align-last: left;
 
 .tascus-pricing-table-section {
     width: 100%;
-    padding: 90px 20px;
+    padding: 25px 20px;
     background-color: #fffbf0;
     clear: both;
 }
@@ -2159,6 +2159,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
