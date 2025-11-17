@@ -1822,6 +1822,96 @@ ul#artist-banner .bio {
   }
 }
 /* === HẾT CODE BANNER === */
+
+/* ----- CSS CHO SECTION MENU ----- */
+
+/* Lớp bọc ngoài cùng (wrapping) để căn giữa nội dung */
+.wrapping {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Lớp lưới giữ các cột (hhgrip) */
+.hhgrip {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép xuống hàng trên di động */
+    justify-content: center; /* Căn giữa các mục */
+    gap: 30px; /* Khoảng cách giữa 2 thẻ */
+}
+
+/* Mỗi cột (hcol) */
+.hcol {
+    flex: 1 1 400px; /* Thẻ sẽ co giãn nhưng có cơ sở là 400px */
+    max-width: 500px; /* Giới hạn độ rộng tối đa */
+}
+
+/* Thẻ (card) chính (itccinfohh) */
+.itccinfohh {
+    position: relative; /* Quan trọng để định vị banner */
+    border-radius: 12px; /* Bo góc như trong hình */
+    overflow: hidden; /* Ẩn phần ảnh thừa và bo góc ảnh */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    width: 100%;
+}
+
+/* Phần ảnh (thumb) */
+.itccinfohh .thumb {
+    width: 100%;
+}
+
+.itccinfohh .thumb img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1; /* Giữ tỷ lệ 1:1 (vuông) */
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy mà không méo */
+}
+
+/* Banner tiêu đề (decss) */
+.itccinfohh .decss {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Để padding không ảnh hưởng độ rộng */
+}
+
+/* Tiêu đề (dstitle) */
+.itccinfohh .dstitle h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.itccinfohh .dstitle h3 a {
+    font-family: 'Arial', sans-serif; /* Thay bằng font của bạn */
+    font-weight: bold;
+    font-size: 1.25rem; /* Cỡ chữ */
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* --- TÙY CHỈNH CHO TỪNG THẺ --- */
+
+/* Thẻ 1: Nước Ngon (Màu đỏ) */
+.hcol:nth-child(1) .itccinfohh .decss {
+    background-color: #8C2B31; /* Màu đỏ sậm */
+}
+
+.hcol:nth-child(1) .itccinfohh .dstitle h3 a {
+    color: #FFFFFF; /* Chữ màu trắng */
+}
+
+/* Thẻ 2: Bánh Ngon (Màu be) */
+.hcol:nth-child(2) .itccinfohh .decss {
+    background-color: #F9F4E9; /* Màu be/kem nhạt */
+}
+
+.hcol:nth-child(2) .itccinfohh .dstitle h3 a {
+    color: #333333; /* Chữ màu đen/tối */
+}
 /* ===================================================================
 11. RESPONSIVE - MOBILE
 =================================================================== */
@@ -2161,6 +2251,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
