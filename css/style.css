@@ -2127,7 +2127,6 @@ body {
 .tascus-image-section {
     width: 100%;
     padding: 30px 20px;
-    background-color: #fffbf0;
     clear: both;
     box-sizing: border-box; /* Thêm để padding không ảnh hưởng width */
 }
@@ -2159,6 +2158,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
