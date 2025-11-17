@@ -127,31 +127,31 @@ const artists = [
     backgroundUrl: "https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg"
   },
   {
-    name: "Allday",
-    description: `Tom Gaynor, better known by his stage name “Allday”...`,
+    name: "ĐỒNG PHỤC",
+    description: `Đồng phục nhân viên theo màu sắc và nhận diện của Tascus`,
     spotify: {
-      profileUrl: "https://open.spotify.com/artist/2Ltr0s15RyvsjqWzSmiSRs?si=uTbBZc32RhC75qp7tlOfzw",
-      embedUrl: "https://open.spotify.com/embed/artist/2Ltr0s15RyvsjqWzSmiSRs?utm_source=generator"
+      profileUrl: "#",
+      embedUrl: "#"
     },
-    backgroundUrl: "https://assets.codepen.io/152347/allday.jpg"
+    backgroundUrl: "https://i.postimg.cc/Y0npBnLV/do-ng-phu-c.jpg"
   },
   {
-    name: "Boo Seeka",
-    description: `Boo Seeka is the artist name of Australian electro-pop singer-songwriter...`,
+    name: "BRANDING GUIDELINE",
+    description: `Hệ thống guideline rõ ràng, đầy đủ`,
     spotify: {
-      profileUrl: "https://open.spotify.com/artist/1SFz3S9eSUTc49ysstadiO?si=C3KO89rcTbeJqZzsdedesA",
-      embedUrl: "https://open.spotify.com/embed/artist/1SFz3S9eSUTc49ysstadiO?utm_source=generator"
+      profileUrl: "#",
+      embedUrl: "#"
     },
-    backgroundUrl: "https://assets.codepen.io/152347/boo-seeka.jpg"
+    backgroundUrl: "https://i.postimg.cc/CLs25Bv5/branding_guideline.jpg"
   },
   {
-    name: "Running Touch",
-    description: `Running Touch is a triple threat singer, songwriter and producer...`,
+    name: "TÀI NGUYÊN",
+    description: `Ảnh chụp sản phẩm đầy đủ chuyên nghiệp`,
     spotify: {
-      profileUrl: "https://open.spotify.com/artist/5bdwzvp6eirvqh0TwOwjgE?si=89zOMpUxQ-yHGnDcYs0M_w",
-      embedUrl: "https://open.spotify.com/embed/artist/5bdwzvp6eirvqh0TwOwjgE?utm_source=generator"
+      profileUrl: "#",
+      embedUrl: "#"
     },
-    backgroundUrl: "https://assets.codepen.io/152347/running-touch.jpg"
+    backgroundUrl: "https://i.postimg.cc/k54dNFVG/a_nh_thu_c_te.jpg"
   }
 ];
 
@@ -197,10 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 class="artist-profile-link md:hidden"
               >
                 <img
-                  src="https://assets.codepen.io/152347/spotify-badge.svg"
-                  alt="Listen on Spotify"
-                  width="176"
-                  height="64"
+                  src="#"
+                  alt="#"
+                  width="0"
+                  height="0"
                   loading="lazy"
                 />
               </a>
