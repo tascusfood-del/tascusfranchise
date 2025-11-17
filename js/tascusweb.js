@@ -118,13 +118,10 @@ const artists = [
     backgroundUrl: "https://i.postimg.cc/dtc8X5jw/linh_va_t.jpg"
   },
   {
-    name: "Mallrat",
-    description: `Grace Kathleen Elizabeth Shaw, known professionally as Mallrat...`,
-    spotify: {
-      profileUrl: "https://open.spotify.com/artist/4OSArit7O2Jaj4mgf3YN7A?si=NBgyC_b_QNujIr2Ubd2fSw",
-      embedUrl: "https://open.spotify.com/embed/artist/4OSArit7O2Jaj4mgf3YN7A?utm_source=generator"
-    },
-    backgroundUrl: "https://assets.codepen.io/152347/mallrat.jpg"
+    name: "CỬA HÀNG 3D",
+    description: `Cửa hàng chuyên nghiệp hỗ trợ thiết kế & thi công đúng nhận diện Tascus`,
+    
+    backgroundUrl: "https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg"
   },
   {
     name: "Allday",
@@ -182,32 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.classList.add("active");
       }
 
-      li.innerHTML = `
-        <h3>${artist.name}</h3>
-        <div class="section-content">
-          <div class="inner">
-            <div class="bio">
-              <h2>${artist.name}</h2>
-              <p>
-                ${artist.description}
-              </p>
-              <a
-                href="${artist.spotify.profileUrl}"
-                target="_blank"
-                class="artist-profile-link md:hidden"
-              >
-                <img
-                  src="https://assets.codepen.io/152347/spotify-badge.svg"
-                  alt="Listen on Spotify"
-                  width="176"
-                  height="64"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
+    
 
       li.addEventListener("click", () => {
         setActiveSlide(index);
