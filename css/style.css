@@ -2169,6 +2169,8 @@ body {
   cursor: url('https://i.postimg.cc/WDYT0vCm/basic.png') 8 8, auto;
 }
 
+cursor: default: url('https://i.postimg.cc/WDYT0vCm/basic.png') 8 8, auto;
+}
 /* 2. TRẠNG THÁI HOVER (Khi di chuột vào) */
 /* Áp dụng cho các phần tử có thể nhấp */
 a:hover,
@@ -2184,5 +2186,6 @@ button:active,
 .my-element:active {
   /* Con trỏ này chỉ xuất hiện khi bạn NHẤN GIỮ nút chuột */
   cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 16 16, grabbing; 
+
 
 
