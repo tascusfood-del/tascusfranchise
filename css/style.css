@@ -1695,7 +1695,7 @@ ul#artist-banner li.active {
 }
 
 ul#artist-banner li.active:before {
-  background: linear-gradient(180deg, rgba(9, 0, 0, 0) 70%, #952c2e 100%);
+  background: linear-gradient(180deg, rgba(9, 0, 0, 0) 40%, #952c2e 100%);
 }
 
 ul#artist-banner h2 {
@@ -2118,4 +2118,5 @@ body {
         font-size: 24px;
     }
 }
+
 
