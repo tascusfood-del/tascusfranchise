@@ -1695,7 +1695,7 @@ ul#artist-banner li.active {
 }
 
 ul#artist-banner li.active:before {
-  background: linear-gradient(180deg, rgba(9, 0, 0, 0) 40%, #952c2e 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 0, 0) 50%, #952c2e 100%);
 }
 
 ul#artist-banner h2 {
@@ -2159,5 +2159,6 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
