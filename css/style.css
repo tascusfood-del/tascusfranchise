@@ -1732,6 +1732,7 @@ ul#artist-banner h3 {
   font-size: 24px;
   text-transform: uppercase;
   transform: translate(-50%, -50%) rotate(0deg);
+  color: #fca930
 }
 
 @media only screen and (min-width: 1280px) {
@@ -2116,6 +2117,7 @@ body {
         font-size: 24px;
     }
 }
+
 
 
 
