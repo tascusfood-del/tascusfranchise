@@ -181,7 +181,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index === activeIndex) {
         li.classList.add("active");
       }
-      
+
+    /* === SAO CHÉP VÀ DÁN TOÀN BỘ KHỐI NÀY === */
+
+li.innerHTML = `
+  <h3>${artist.name}</h3>
+  <div class="section-content">
+    <div class="inner">
+      <div class="bio">
+        <h2>${artist.name}</h2>
+        <p>
+          ${artist.description}
+        </p>
+        </div>
+    </div>
+  </div>
+`;
+
+/* === DỪNG SAO CHÉP TẠI ĐÂY === */
+
       li.addEventListener("click", () => {
         setActiveSlide(index);
       });
