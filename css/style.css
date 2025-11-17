@@ -2164,8 +2164,7 @@ body {
 /* cursor */
 /* cursor */
 /* Áp dụng cho toàn bộ trang (CẢ HTML VÀ BODY) */
-html,
-body {
+
   /* Đây là con trỏ 'bình thường' của bạn */
   cursor: url('https://i.postimg.cc/WDYT0vCm/basic.png') 8 8, auto;
 }
@@ -2185,4 +2184,5 @@ button:active,
 .my-element:active {
   /* Con trỏ này chỉ xuất hiện khi bạn NHẤN GIỮ nút chuột */
   cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 16 16, grabbing; 
-}
+
+
