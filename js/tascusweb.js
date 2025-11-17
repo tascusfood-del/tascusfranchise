@@ -181,34 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (index === activeIndex) {
         li.classList.add("active");
       }
-
-      li.innerHTML = `
-        <h3>${artist.name}</h3>
-        <div class="section-content">
-          <div class="inner">
-            <div class="bio">
-              <h2>${artist.name}</h2>
-              <p>
-                ${artist.description}
-              </p>
-              <a
-                href="${artist.spotify.profileUrl}"
-                target="_blank"
-                class="artist-profile-link md:hidden"
-              >
-                <img
-                  src="#"
-                  alt="#"
-                  width="0"
-                  height="0"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      `;
-
+      
       li.addEventListener("click", () => {
         setActiveSlide(index);
       });
