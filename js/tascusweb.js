@@ -102,7 +102,10 @@ const artists = [
   {
     name: "BAO BÌ",
     description: `Hệ thống nhận diện bao bì đầy đủ, chuyên nghiệp theo phong cách của thương hiệu`,
-   
+   spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
     backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
   },
   {
