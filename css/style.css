@@ -2148,8 +2148,7 @@ body {
     margin-right: auto;
 
     /* (Tùy chọn) Thêm bóng giống bảng giá của bạn */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-}
+  
 
 /*
  * 3. THẺ ẢNH (IMG)
@@ -2160,4 +2159,5 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
