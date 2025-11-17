@@ -1,5 +1,6 @@
 
 
+
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 
@@ -1963,7 +1964,43 @@ padding-right: calc(50vw - 50%) !important;
    1. CÀI ĐẶT HÌNH NỀN CHO BODY (ĐÃ SỬA)
    ============================================== */
 /* ==============================================
+   1. CÀI ĐẶT HÌNH NỀN CHO BODY (BẢN 4 ẢNH)
+   ============================================== */
+body {
+    /* (Tùy chọn) Màu nền cho khu vực lề */
+    background-color: #fffbf0;
 
+    /* 1. LIỆT KÊ 4 HÌNH ẢNH CỦA BẠN */
+    /* (Thay link/tên file vào đây) */
+    background-image: url('https://i.postimg.cc/LXx7Pkyv/khoai.png'),  /* Hình trái, ở trên */
+                      url('https://i.postimg.cc/SxvtmLZ8/nu-o-c.png'),  /* Hình trái, ở dưới */
+                      url('https://i.postimg.cc/cHFj37Dh/burger.png'),  /* Hình phải, ở trên */
+
+                      url('https://i.postimg.cc/52V8LX6R/sw.png');  /* Hình phải, ở dưới */
+  
+
+    /* 2. VỊ TRÍ TƯƠNG ỨNG CHO 4 ẢNH */
+    /* Bạn điều chỉnh các số 150px, 600px (khoảng cách từ trên xuống) */
+    background-position: left 1100px,  /* Vị trí ảnh 1 */
+                       left 4800px,  /* Vị trí ảnh 2 */
+                      right 1600px, /* Vị trí ảnh 3 */
+                       right 4500px; /* Vị trí ảnh 4 */
+
+    /* 3. KÍCH THƯỚC TƯƠNG ỨNG CHO 4 ẢNH */
+    /* (Bạn chỉnh 4 số này theo ý muốn) */
+    background-size: 230px, /* Kích thước ảnh 1 */
+                    250px, /* Kích thước ảnh 2 */
+                     250px, /* Kích thước ảnh 3 */
+                    350px; /* Kích thước ảnh 4 */
+
+    /* 4. KHÔNG LẶP LẠI (Cần 4 giá trị) */
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    
+    /* 5. GIỮ CỐ ĐỊNH (Chỉ cần 1 giá trị, áp dụng cho tất cả) */
+}
+
+
+/* ==============================================
    2. CĂN GIỮA NỘI DUNG CHÍNH (Giữ nguyên)
    ============================================== */
 .container-noi-dung {
@@ -2125,82 +2162,8 @@ padding-right: calc(50vw - 50%) !important;
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
 
-/* CSS CỐT LÕI ĐỂ TẠO HIỆU ỨNG VÔ CỰC */
-
-/* Định nghĩa animation cho hiệu ứng cuộn vô cực */
-@keyframes scrolling {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Cuộn 50% tổng chiều rộng */
-    }
-}
-
-.slide-track {
-    width: max-content; 
-    display: flex;
-    gap: 2rem; 
-    animation: scrolling 25s linear infinite; /* Tốc độ cuộn: 25 giây */
-    animation-play-state: running;
-}
-
-.slider-container {
-    overflow: hidden; 
-    /* Thêm mask-image nếu muốn hiệu ứng mờ ở hai bên */
-    mask-image: linear-gradient(to right, 
-        transparent, 
-        black 8%, 
-        black 92%, 
-        transparent);
-}
-
-.slider-container:hover .slide-track {
-    animation-play-state: paused; /* Dừng khi rê chuột qua */
-}
-
-.slide-item {
-    width: 300px; /* Chiều rộng thẻ sản phẩm */
-    flex-shrink: 0; 
-}
-
-   1. CÀI ĐẶT HÌNH NỀN CHO BODY (BẢN 4 ẢNH)
-   ============================================== */
-body {
-    /* (Tùy chọn) Màu nền cho khu vực lề */
-    background-color: #fffbf0;
-
-    /* 1. LIỆT KÊ 4 HÌNH ẢNH CỦA BẠN */
-    /* (Thay link/tên file vào đây) */
-    background-image: url('https://i.postimg.cc/LXx7Pkyv/khoai.png'),  /* Hình trái, ở trên */
-                      url('https://i.postimg.cc/SxvtmLZ8/nu-o-c.png'),  /* Hình trái, ở dưới */
-                      url('https://i.postimg.cc/cHFj37Dh/burger.png'),  /* Hình phải, ở trên */
-
-                      url('https://i.postimg.cc/52V8LX6R/sw.png');  /* Hình phải, ở dưới */
-  
-
-    /* 2. VỊ TRÍ TƯƠNG ỨNG CHO 4 ẢNH */
-    /* Bạn điều chỉnh các số 150px, 600px (khoảng cách từ trên xuống) */
-    background-position: left 1100px,  /* Vị trí ảnh 1 */
-                       left 4800px,  /* Vị trí ảnh 2 */
-                      right 1600px, /* Vị trí ảnh 3 */
-                       right 4500px; /* Vị trí ảnh 4 */
-
-    /* 3. KÍCH THƯỚC TƯƠNG ỨNG CHO 4 ẢNH */
-    /* (Bạn chỉnh 4 số này theo ý muốn) */
-    background-size: 230px, /* Kích thước ảnh 1 */
-                    250px, /* Kích thước ảnh 2 */
-                     250px, /* Kích thước ảnh 3 */
-                    350px; /* Kích thước ảnh 4 */
-
-    /* 4. KHÔNG LẶP LẠI (Cần 4 giá trị) */
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    
-    /* 5. GIỮ CỐ ĐỊNH (Chỉ cần 1 giá trị, áp dụng cho tất cả) */
-}
 
 
-/* ==============================================
 
 
 
