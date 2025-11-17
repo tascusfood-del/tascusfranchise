@@ -100,16 +100,16 @@
 // (Bạn có thể thay đổi nội dung, hình ảnh ở đây)
 const artists = [
   {
-    name: "Dom Dolla",
-    description: `Dom Dolla is one of the latest Australian DJ/Producers to break globally...`,
+    name: "BAO BÌ",
+    description: `Hệ thống nhận diện bao bì đầy đủ, chuyên nghiệp theo phong cách của thương hiệu`,
     spotify: {
       profileUrl: "https://open.spotify.com/artist/205i7E8fNVfojowcQSfK9m?si=HidnJ9jEQ5aK-dKZEZWdLw",
       embedUrl: "https://open.spotify.com/embed/artist/205i7E8fNVfojowcQSfK9m?utm_source=generator"
     },
-    backgroundUrl: "https://assets.codepen.io/152347/dom-dolla.jpg"
+    backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
   },
   {
-    name: "Crooked Colours",
+    name: "LINH VẬT",
     description: `Crooked Colours are a three-piece band formed in Perth, Western Australia...`,
     spotify: {
       profileUrl: "https://open.spotify.com/artist/0aA1GTrIMutjIh4GlPPUVN?si=N6CkDtcYQx-O4Zehl6CPag",
