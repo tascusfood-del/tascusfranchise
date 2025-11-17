@@ -1,3 +1,4 @@
+
 // js/tascusweb.js  (isolated banner module)
 (function () {
   'use strict';
@@ -235,74 +236,4 @@ li.innerHTML = `
   // 7. Tạo slide lần đầu
   createArtistSlides();
 });
-
-  <!-- SCRIPT TẢI VÀ NHÂN ĐÔI NỘI DUNG BẰNG JAVASCRIPT -->
-<script>
-    // 1. Dữ liệu sản phẩm (Bạn chỉnh sửa phần này)
-    const products = [
-        {
-            name: "Latte Classic",
-            price: "55.000 đ",
-            tag: "Món Mới Phải Thử",
-            imgColor: "D2B48C",
-            imgText: "Cà+Phê+1"
-        },
-        // Thêm các sản phẩm khác vào đây
-        {
-            name: "Trà Sữa Khoai Môn",
-            price: "49.000 đ",
-            tag: "Best Seller",
-            imgColor: "8B4513",
-            imgText: "Trà+Sữa+2"
-        },
-        // ...
-    ];
-
-    // 2. Hàm tạo HTML cho 1 item (giữ nguyên)
-    function createProductCard(product) {
-        // Lưu ý: Đang dùng Tailwind CSS classes (như bg-gray-50, shadow-lg...)
-        // Nếu web của bạn không dùng Tailwind, bạn cần thay thế các class này bằng CSS của riêng mình.
-        return `
-            <div class="slide-item">
-                <div class="bg-gray-50 p-4 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01]">
-                    <img src="https://placehold.co/300x400/${product.imgColor}/ffffff?text=${product.imgText}" 
-                         onerror="this.onerror=null;this.src='https://placehold.co/300x400/${product.imgColor}/ffffff?text=Sản+Phẩm'"
-                         alt="${product.name}" 
-                         class="w-full h-72 object-cover rounded-lg mb-4" />
-                    <p class="text-sm font-medium text-accent-orange">${product.tag}</p>
-                    <h3 class="text-xl font-semibold text-primary-dark mb-2">${product.name}</h3>
-                    <p class="text-2xl font-bold text-red-500">${product.price}</p>
-                </div>
-            </div>
-        `;
-    }
-
-    // 3. Hàm tải và nhân đôi nội dung
-    function initializeSlider() {
-        const slideTrack = document.getElementById('slide-track');
-        if (!slideTrack) return;
-
-        let contentHTML = '';
-        
-        products.forEach(product => {
-            contentHTML += createProductCard(product);
-        });
-
-        // Nhân đôi nội dung
-        let duplicatedContentHTML = '';
-        products.forEach(product => {
-            duplicatedContentHTML += createProductCard(product);
-        });
-
-        slideTrack.innerHTML = contentHTML + duplicatedContentHTML;
-
-        // Cập nhật tốc độ animation theo số lượng sản phẩm
-        const speed = products.length * 5; // 5 giây cho mỗi item
-        slideTrack.style.animationDuration = `${speed}s`;
-    }
-
-    // Chạy hàm khi trang đã tải xong
-    window.onload = initializeSlider;
-
-</script>
 })();
