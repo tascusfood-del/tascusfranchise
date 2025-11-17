@@ -2161,29 +2161,3 @@ body {
 }
 
 
-/* cursor */
-/* cursor */
-
-/* 1. TRẠNG THÁI BÌNH THƯỜNG (DÙNG !IMPORTANT) */
-/* Thêm !important để đảm bảo nó đè lên được code của theme */
-/* === CODE ĐỂ KIỂM TRA (DEBUG) === */
-
-/* 1. TRẠNG THÁI BÌNH THƯỜNG */
-/* Dùng tạm ảnh 'select.png' (ảnh đang chạy) để kiểm tra */
-
-  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 8 8, auto !important;
-}
-
-/* 2. TRẠNG THÁI HOVER */
-a:hover,
-button:hover,
-.my-element:hover {
-  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 8 8, pointer !important;
-}
-
-/* 3. TRẠNG THÁI ACTIVE */
-a:active,
-button:active,
-.my-element:active {
-  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 16 16, grabbing !important;
-}
