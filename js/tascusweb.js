@@ -102,10 +102,7 @@ const artists = [
   {
     name: "BAO BÌ",
     description: `Hệ thống nhận diện bao bì đầy đủ, chuyên nghiệp theo phong cách của thương hiệu`,
-    spotify: {
-      profileUrl: "#",
-      embedUrl: "#"
-    },
+   
     backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
   },
   {
@@ -182,7 +179,32 @@ document.addEventListener("DOMContentLoaded", () => {
         li.classList.add("active");
       }
 
-    
+      li.innerHTML = `
+        <h3>${artist.name}</h3>
+        <div class="section-content">
+          <div class="inner">
+            <div class="bio">
+              <h2>${artist.name}</h2>
+              <p>
+                ${artist.description}
+              </p>
+              <a
+                href="${artist.spotify.profileUrl}"
+                target="_blank"
+                class="artist-profile-link md:hidden"
+              >
+                <img
+                  src="https://assets.codepen.io/152347/spotify-badge.svg"
+                  alt="Listen on Spotify"
+                  width="176"
+                  height="64"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
 
       li.addEventListener("click", () => {
         setActiveSlide(index);
