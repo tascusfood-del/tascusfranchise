@@ -2165,7 +2165,7 @@ body {
 /* Áp dụng cho toàn bộ trang */
 
   /* Đây là con trỏ 'bình thường' của bạn */
-  cursor: url('https://i.postimg.cc/WDYT0vCm/basic.png') 8 8, auto;
+  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 8 8, auto;
 }
 
 /* 2. TRẠNG THÁI HOVER (Khi di chuột vào) */
@@ -2185,6 +2185,7 @@ button:active,
   /* Con trỏ này chỉ xuất hiện khi bạn NHẤN GIỮ nút chuột */
   cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 16 16, grabbing; 
   /* Dùng 'grabbing' làm dự phòng là một lựa chọn tốt */
+
 
 
 
