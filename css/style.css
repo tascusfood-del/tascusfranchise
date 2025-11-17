@@ -1628,6 +1628,197 @@ text-align-last: left;
     }
 }
 
+
+/* ========================================= */
+/* === CODE BANNER NHƯỢNG QUYỀN === */
+/* ========================================= */
+
+/* * Áp dụng font Nunito và các style cơ bản
+ * chỉ cho banner này để không ảnh hưởng đến
+ * phần còn lại của trang web.
+ */
+ul#artist-banner {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+  
+  /* Các thuộc tính gốc của ul */
+  display: flex;
+  min-height: 750px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  width: 100%;
+  min-width: 100%;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner {
+    flex-direction: row;
+  }
+}
+
+/* * Chỉ định rõ 'li' bên trong banner này 
+ * để tránh xung đột với các thẻ 'li' khác trên trang.
+ */
+ul#artist-banner li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+}
+
+ul#artist-banner li:before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.75);
+}
+
+ul#artist-banner li.active {
+  flex: 6;
+  cursor: default;
+}
+
+ul#artist-banner li.active:before {
+  background: linear-gradient(180deg, rgba(15, 15, 15, 0) 0%, #111111 100%);
+}
+
+ul#artist-banner h2 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  ul#artist-banner h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner h2 {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+ul#artist-banner h3 {
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 30;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: top 0.35s, opacity 0.15s;
+  transform-origin: 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner h3 {
+    top: 100%;
+    left: 50%;
+    font-size: 32px;
+    transform: translate(-20px, -50%) rotate(-90deg);
+  }
+}
+
+ul#artist-banner li.active h3 {
+  opacity: 0;
+  top: 200%;
+}
+
+ul#artist-banner .section-content {
+  position: relative;
+  z-index: 30;
+  opacity: 0;
+  align-self: flex-end;
+  width: 100%;
+  transition: all 0.35s 0.1s ease-out;
+}
+
+ul#artist-banner li.active .section-content {
+  opacity: 1;
+}
+
+ul#artist-banner .section-content .inner {
+  position: absolute;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  align-items: flex-end;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+  ul#artist-banner .section-content .inner {
+    grid-auto-flow: column;
+    grid-template-columns: calc(100% - 340px) 300px;
+    grid-column-gap: 40px;
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner .section-content .inner {
+    grid-auto-flow: column;
+    grid-template-columns: 460px 200px;
+    grid-column-gap: 40px;
+    padding: 40px;
+  }
+}
+
+ul#artist-banner li.active .section-content .inner {
+  opacity: 1;
+}
+
+ul#artist-banner .artist-profile-link {
+  pointer-events: none;
+}
+
+ul#artist-banner li.active .artist-profile-link {
+  pointer-events: all;
+}
+
+ul#artist-banner .bio {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
+  grid-gap: 24px;
+}
+
+/* Lớp 'md:hidden' (nếu bạn không dùng Tailwind) */
+@media (min-width: 768px) {
+  ul#artist-banner .md\:hidden {
+    display: none;
+  }
+}
+/* === HẾT CODE BANNER === */
 /* ===================================================================
 11. RESPONSIVE - MOBILE
 =================================================================== */
@@ -1925,6 +2116,7 @@ body {
         font-size: 24px;
     }
 }
+
 
 
 
