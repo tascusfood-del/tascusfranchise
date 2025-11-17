@@ -1982,10 +1982,10 @@ body {
     /* 2. VỊ TRÍ TƯƠNG ỨNG CHO 4 ẢNH */
     /* Bạn điều chỉnh các số 150px, 600px (khoảng cách từ trên xuống) */
     background-position: left 1100px,  /* Vị trí ảnh 1 */
-                       left 3000px,  /* Vị trí ảnh 2 */
-                      right 4000px, /* Vị trí ảnh 3 */
+                       left 4800px,  /* Vị trí ảnh 2 */
+                      right 5300px, /* Vị trí ảnh 3 */
                        right 1600px, /* Vị trí ảnh 3 */
-                       right 3500px; /* Vị trí ảnh 4 */
+                       right 4500px; /* Vị trí ảnh 4 */
 
     /* 3. KÍCH THƯỚC TƯƠNG ỨNG CHO 4 ẢNH */
     /* (Bạn chỉnh 4 số này theo ý muốn) */
@@ -2163,6 +2163,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
