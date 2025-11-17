@@ -103,19 +103,19 @@ const artists = [
     name: "BAO BÌ",
     description: `Hệ thống nhận diện bao bì đầy đủ, chuyên nghiệp theo phong cách của thương hiệu`,
     spotify: {
-      profileUrl: "https://open.spotify.com/artist/205i7E8fNVfojowcQSfK9m?si=HidnJ9jEQ5aK-dKZEZWdLw",
-      embedUrl: "https://open.spotify.com/embed/artist/205i7E8fNVfojowcQSfK9m?utm_source=generator"
+      profileUrl: "#",
+      embedUrl: "#"
     },
     backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
   },
   {
     name: "LINH VẬT",
-    description: `Crooked Colours are a three-piece band formed in Perth, Western Australia...`,
+    description: `Thiết kế nhân vật hoạt hình độc đáo, thân thiện, Tạo sự gần gũi, dễ nhớ với khách hàng`,
     spotify: {
-      profileUrl: "https://open.spotify.com/artist/0aA1GTrIMutjIh4GlPPUVN?si=N6CkDtcYQx-O4Zehl6CPag",
-      embedUrl: "https://open.spotify.com/embed/artist/0aA1GTrIMutjIh4GlPPUVN?utm_source=generator"
+      profileUrl: "#",
+      embedUrl: "#"
     },
-    backgroundUrl: "https://assets.codepen.io/152347/crooked-colours.jpg"
+    backgroundUrl: "https://i.postimg.cc/dtc8X5jw/linh_va_t.jpg"
   },
   {
     name: "Mallrat",
