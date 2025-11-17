@@ -1967,7 +1967,7 @@ padding-right: calc(50vw - 50%) !important;
    ============================================== */
 body {
     /* (Tùy chọn) Màu nền cho khu vực lề */
-    background-color: #f0f0f0;
+    background-color: #fffbf0;
 
     /* 1. LIỆT KÊ 4 HÌNH ẢNH CỦA BẠN */
     /* (Thay link/tên file vào đây) */
@@ -2159,6 +2159,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
