@@ -2161,6 +2161,31 @@ body {
 }
 
 
+/* cursor */
+/* Áp dụng cho toàn bộ trang */
+html {
+  /* Đây là con trỏ 'bình thường' của bạn */
+  cursor: url('https://i.postimg.cc/WDYT0vCm/basic.png') 8 8, auto;
+}
+
+/* 2. TRẠNG THÁI HOVER (Khi di chuột vào) */
+/* Áp dụng cho các phần tử có thể nhấp */
+a:hover,
+button:hover,
+.my-element:hover {
+  /* Thay đổi con trỏ khi di chuột LÊN trên phần tử */
+  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 8 8, pointer;
+}
+
+/* 3. TRẠNG THÁI ACTIVE (Khi nhấn giữ) */
+/* Đây là trạng thái bạn hỏi */
+a:active,
+button:active,
+.my-element:active {
+  /* Con trỏ này chỉ xuất hiện khi bạn NHẤN GIỮ nút chuột */
+  cursor: url('https://i.postimg.cc/cKk0fS2R/select.png') 16 16, grabbing; 
+  /* Dùng 'grabbing' làm dự phòng là một lựa chọn tốt */
+}
 
 
 
