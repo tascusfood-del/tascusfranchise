@@ -91,4 +91,157 @@
     if (document.hidden) stopAuto(); else startAuto();
   });
 
+
+
+
+  /* script.js */
+
+// 1. Dữ liệu artists
+// (Bạn có thể thay đổi nội dung, hình ảnh ở đây)
+const artists = [
+  {
+    name: "Dom Dolla",
+    description: `Dom Dolla is one of the latest Australian DJ/Producers to break globally...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/205i7E8fNVfojowcQSfK9m?si=HidnJ9jEQ5aK-dKZEZWdLw",
+      embedUrl: "https://open.spotify.com/embed/artist/205i7E8fNVfojowcQSfK9m?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/dom-dolla.jpg"
+  },
+  {
+    name: "Crooked Colours",
+    description: `Crooked Colours are a three-piece band formed in Perth, Western Australia...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/0aA1GTrIMutjIh4GlPPUVN?si=N6CkDtcYQx-O4Zehl6CPag",
+      embedUrl: "https://open.spotify.com/embed/artist/0aA1GTrIMutjIh4GlPPUVN?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/crooked-colours.jpg"
+  },
+  {
+    name: "Mallrat",
+    description: `Grace Kathleen Elizabeth Shaw, known professionally as Mallrat...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/4OSArit7O2Jaj4mgf3YN7A?si=NBgyC_b_QNujIr2Ubd2fSw",
+      embedUrl: "https://open.spotify.com/embed/artist/4OSArit7O2Jaj4mgf3YN7A?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/mallrat.jpg"
+  },
+  {
+    name: "Allday",
+    description: `Tom Gaynor, better known by his stage name “Allday”...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/2Ltr0s15RyvsjqWzSmiSRs?si=uTbBZc32RhC75qp7tlOfzw",
+      embedUrl: "https://open.spotify.com/embed/artist/2Ltr0s15RyvsjqWzSmiSRs?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/allday.jpg"
+  },
+  {
+    name: "Boo Seeka",
+    description: `Boo Seeka is the artist name of Australian electro-pop singer-songwriter...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/1SFz3S9eSUTc49ysstadiO?si=C3KO89rcTbeJqZzsdedesA",
+      embedUrl: "https://open.spotify.com/embed/artist/1SFz3S9eSUTc49ysstadiO?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/boo-seeka.jpg"
+  },
+  {
+    name: "Running Touch",
+    description: `Running Touch is a triple threat singer, songwriter and producer...`,
+    spotify: {
+      profileUrl: "https://open.spotify.com/artist/5bdwzvp6eirvqh0TwOwjgE?si=89zOMpUxQ-yHGnDcYs0M_w",
+      embedUrl: "https://open.spotify.com/embed/artist/5bdwzvp6eirvqh0TwOwjgE?utm_source=generator"
+    },
+    backgroundUrl: "https://assets.codepen.io/152347/running-touch.jpg"
+  }
+];
+
+// 2. Trạng thái
+let activeIndex = 0; 
+
+// 3. Chờ HTML tải xong
+document.addEventListener("DOMContentLoaded", () => {
+  // Tìm đúng <ul> ta đã đặt ID
+  const artistListElement = document.getElementById("artist-banner");
+
+  // Thoát nếu không tìm thấy element (để tránh lỗi)
+  if (!artistListElement) {
+    console.warn('Không tìm thấy phần tử #artist-banner trên trang này.');
+    return;
+  }
+
+  // 4. Hàm tạo các slide
+  function createArtistSlides() {
+    artistListElement.innerHTML = ""; 
+
+    artists.forEach((artist, index) => {
+      const li = document.createElement("li");
+      li.style.backgroundImage = `url(${artist.backgroundUrl})`;
+      li.setAttribute("role", "button");
+
+      if (index === activeIndex) {
+        li.classList.add("active");
+      }
+
+      li.innerHTML = `
+        <h3>${artist.name}</h3>
+        <div class="section-content">
+          <div class="inner">
+            <div class="bio">
+              <h2>${artist.name}</h2>
+              <p>
+                ${artist.description}
+              </p>
+              <a
+                href="${artist.spotify.profileUrl}"
+                target="_blank"
+                class="artist-profile-link md:hidden"
+              >
+                <img
+                  src="https://assets.codepen.io/152347/spotify-badge.svg"
+                  alt="Listen on Spotify"
+                  width="176"
+                  height="64"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+
+      li.addEventListener("click", () => {
+        setActiveSlide(index);
+      });
+
+      artistListElement.appendChild(li);
+    });
+  }
+
+  // 5. Hàm cập nhật slide 'active'
+  function setActiveSlide(index) {
+    activeIndex = index;
+    const allSlides = artistListElement.querySelectorAll("li");
+
+    allSlides.forEach((slide, i) => {
+      // Bật/tắt class 'active' tùy theo index
+      slide.classList.toggle('active', i === activeIndex);
+    });
+  }
+
+  // 6. Các hàm next/prev (nếu bạn cần dùng)
+  window.nextSlide = function() {
+    if (activeIndex < artists.length - 1) {
+      setActiveSlide(activeIndex + 1);
+    }
+  }
+
+  window.prevSlide = function() {
+    if (activeIndex > 0) {
+      setActiveSlide(activeIndex - 1);
+    }
+  }
+
+  // 7. Tạo slide lần đầu
+  createArtistSlides();
+});
 })();
