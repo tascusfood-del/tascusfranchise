@@ -1695,7 +1695,7 @@ ul#artist-banner li.active {
 }
 
 ul#artist-banner li.active:before {
-  background: linear-gradient(180deg, rgba(15, 0, 0, 0) 0%, #111111 100%);
+  background: linear-gradient(180deg, rgba(9, 0, 0, 0) 0%, #111111 100%);
 }
 
 ul#artist-banner h2 {
@@ -1703,6 +1703,7 @@ ul#artist-banner h2 {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  color: #fca930
 }
 
 @media only screen and (min-width: 768px) {
@@ -1732,7 +1733,7 @@ ul#artist-banner h3 {
   font-size: 24px;
   text-transform: uppercase;
   transform: translate(-50%, -50%) rotate(0deg);
-  color: #fca930
+  color: #ffffff
 }
 
 @media only screen and (min-width: 1280px) {
@@ -2117,6 +2118,7 @@ body {
         font-size: 24px;
     }
 }
+
 
 
 
