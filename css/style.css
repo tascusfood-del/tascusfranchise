@@ -2014,22 +2014,19 @@ ul#artist-banner .bio {
         height: 180px; 
     }
 
-    /* 2. Giảm khoảng cách trên của chữ (tên SP) */
+  /* 1. Giảm khoảng cách DƯỚI tên SP */
     .product-item-freeze h3 {
-        margin-top: 5px; /* Giảm từ 10px xuống 5px */
-        
-        /* Tùy chọn: Giảm khoảng cách dưới (với giá) và cỡ chữ */
-        margin-bottom: 5px;
-        font-size: 1.1rem; /* Giảm cỡ chữ một chút */
+        margin-top: 5px;
+        margin-bottom: 2px; /* Giảm xuống còn 2px */
+        font-size: 1.1rem; 
     }
 
-    /* Tùy chọn: Giảm cỡ chữ của giá */
+    /* 2. Giảm khoảng cách TRÊN giá */
     .product-item-freeze .product-price-freeze {
         font-size: 1rem;
-      white-space: nowrap; /* Thêm dòng này */
+        white-space: nowrap; 
+        margin-top: 2px; /* Thêm dòng này để giảm xuống còn 2px */
     }
-    }
-    /* --- KẾT THÚC PHẦN THÊM VÀO --- */
 }
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -2370,6 +2367,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
