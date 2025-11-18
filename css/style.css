@@ -1,6 +1,7 @@
 
 
 
+
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 
@@ -17,7 +18,7 @@ FILE: style.css - TASCUS FOOD WEBSITE
 IMPORT FONTS
 =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;600;700;800&display=swap');
 
 @font-face {
 font-family: 'FontCuaToi';
@@ -61,7 +62,7 @@ font-size: 14px;
 line-height: 1.80857;
 font-weight: normal;
 overflow-x: hidden;
-font-family: 'Nunito', sans-serif;
+font-family: 'Be Vietnam', sans-serif;
 background-color: #fffbf0;
 margin: 0;
 padding: 0;
@@ -655,7 +656,7 @@ line-height: 1.3;
 }
 
 .news-card__post-date {
-font-family: 'Nunito', sans-serif;
+font-family: 'Be Vietnam', sans-serif;
 font-size: 0.65rem;
 margin-bottom: 0.5rem;
 color: #CCC;
@@ -668,14 +669,14 @@ transition: max-height 1.5s ease, opacity 1s ease;
 }
 
 .news-card__excerpt {
-font-family: 'Nunito', sans-serif;
+font-family: 'Be Vietnam', sans-serif;
 font-weight: 300;
 font-size: 0.85rem;
 line-height: 1.5;
 }
 
 .news-card__read-more {
-font-family: 'Nunito', sans-serif;
+font-family: 'Be Vietnam', sans-serif;
 background: black;
 color: #bbb;
 display: block;
@@ -1026,7 +1027,7 @@ color: #f9b116;
 }
 
 .tascus-contact-p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     margin: 0 0 30px 0;
@@ -1078,7 +1079,7 @@ color: #f9b116;
 }
 
 .tascus-info-text span {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 0.95rem;
     color: #ffffff;
     box-sizing: border-box;
@@ -1118,7 +1119,7 @@ color: #f9b116;
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 0.9rem;
     color: #333;
     outline: none;
@@ -1176,7 +1177,7 @@ color: #f9b116;
     padding: 15px;
     border-radius: 5px;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     box-sizing: border-box;
 }
 
@@ -1233,7 +1234,7 @@ color: #f9b116;
 }
 
 .tascus-process-desc {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 18px;
     color: #232222;
   text-align: justify;
@@ -1306,7 +1307,7 @@ text-align-last: left;
 
 /* Step Description */
 .tascus-step-card p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
     color: #666666;
     line-height: 1.7;
@@ -1378,7 +1379,7 @@ text-align-last: left;
 }
 
 .tascus-process-desc {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 18px;
     color: #232222;
 text-align: justify;
@@ -1450,7 +1451,7 @@ text-align-last: left;
 
 /* Step Description */
 .tascus-step-card p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
     color: #666666;
     line-height: 1.7;
@@ -1519,7 +1520,7 @@ text-align-last: left;
     border-collapse: collapse;
     background: #ffffff;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Be Vietnam', sans-serif;
     min-width: 1200px;
 }
 
@@ -1639,7 +1640,7 @@ text-align-last: left;
  * phần còn lại của trang web.
  */
 ul#artist-banner {
-  font-family: "Nunito", sans-serif;
+  font-family: "Be Vietnam", sans-serif;
   color: #fff;
   line-height: 24px;
   font-size: 16px;
