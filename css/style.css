@@ -2000,9 +2000,34 @@ ul#artist-banner .bio {
     }
 
     .product-list-freeze {
-        gap: 15px; /* Giảm khoảng cách một chút cho đẹp hơn */
-        grid-template-columns: 1fr 1fr; /* Thêm dòng này */
+        gap: 15px; 
+        grid-template-columns: 1fr 1fr; /* Chia 2 cột */
     }
+
+    /* --- BẮT ĐẦU PHẦN THÊM VÀO --- */
+    
+    /* 1. Giảm khoảng cách dưới ảnh */
+    .product-item-freeze img {
+        margin-bottom: 8px; /* Giảm từ 15px xuống 8px */
+        
+        /* Tùy chọn: Giảm chiều cao ảnh để 2 cột cân đối hơn */
+        height: 180px; 
+    }
+
+    /* 2. Giảm khoảng cách trên của chữ (tên SP) */
+    .product-item-freeze h3 {
+        margin-top: 5px; /* Giảm từ 10px xuống 5px */
+        
+        /* Tùy chọn: Giảm khoảng cách dưới (với giá) và cỡ chữ */
+        margin-bottom: 5px;
+        font-size: 1.1rem; /* Giảm cỡ chữ một chút */
+    }
+
+    /* Tùy chọn: Giảm cỡ chữ của giá */
+    .product-item-freeze .product-price-freeze {
+        font-size: 1rem;
+    }
+    /* --- KẾT THÚC PHẦN THÊM VÀO --- */
 }
 /* ===================================================================
 11. RESPONSIVE - MOBILE
@@ -2343,6 +2368,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
