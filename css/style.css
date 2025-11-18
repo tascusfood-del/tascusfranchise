@@ -506,7 +506,7 @@ margin: 0 auto;
 padding: 20px;
 clear: both;
 /* THÊM: padding-bottom để tạo khoảng cách nhất quán */
-padding-bottom: 90px;
+padding-bottom: 80px;
 }
 
 .pricing-container .columns {
@@ -2104,8 +2104,8 @@ font-size: 18px;
 .about_taital {
     /* Sửa lại khoảng cách cho mobile để dễ nhìn hơn */
     margin-top: 40px; /* (Gốc 90px) */
-    margin-bottom: 20px; /* (Gốc 40px) */
-    font-size: 40px; /* Giảm cỡ chữ heading một chút */
+    margin-bottom: 30px; /* (Gốc 40px) */
+    font-size: 45px; /* Giảm cỡ chữ heading một chút */
 }
 
 /* Các section content cũng cần giảm padding-bottom
@@ -2368,6 +2368,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
