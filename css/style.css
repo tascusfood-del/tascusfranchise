@@ -2000,7 +2000,8 @@ ul#artist-banner .bio {
     }
 
     .product-list-freeze {
-        gap: 20px;
+        gap: 15px; /* Giảm khoảng cách một chút cho đẹp hơn */
+        grid-template-columns: 1fr 1fr; /* Thêm dòng này */
     }
 }
 /* ===================================================================
@@ -2342,6 +2343,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
