@@ -2026,6 +2026,8 @@ ul#artist-banner .bio {
     /* Tùy chọn: Giảm cỡ chữ của giá */
     .product-item-freeze .product-price-freeze {
         font-size: 1rem;
+      white-space: nowrap; /* Thêm dòng này */
+    }
     }
     /* --- KẾT THÚC PHẦN THÊM VÀO --- */
 }
@@ -2368,6 +2370,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
 
 
