@@ -2369,77 +2369,172 @@ body {
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
 
- <!-- 2. PHẦN CSS (Copy phần này vào file style.css) -->
-    <style>
-        /* --- CSS RIÊNG --- */
-        
-        /* Reset cơ bản nếu không dùng Tailwind */
+     /* --- CÀI ĐẶT CHUNG --- */
+        :root {
+            --font-main: 'Be Vietnam Pro', sans-serif;
+            --color-gold: #bfa15f;
+            --color-green: #006400;
+            --color-dark: #191919;
+            --color-text-gray: #cfcfcf;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: 'Be Vietnam Pro', sans-serif;
+            font-family: var(--font-main);
+            line-height: 1.6;
         }
 
-        /* Background cho section Cà phê */
-        .bg-coffee {
-            background-color: #000;
-            /* Ảnh nền khói mờ */
-            background-image: url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: soft-light;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
         }
 
-        /* Background cho section Freeze */
-        .bg-freeze {
-            /* Gradient từ trắng xuống xanh nhạt */
-            background: linear-gradient(180deg, #FFFFFF 0%, #E0F7FA 100%);
-        }
-
-        /* Hiệu ứng nút bấm */
-        .btn-custom {
+        /* --- UTILITIES --- */
+        .section-wrap {
+            padding: 80px 0;
             position: relative;
             overflow: hidden;
-            transition: all 0.4s ease;
+            width: 100%;
+        }
+
+        .flex-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap; /* Để responsive trên mobile */
+        }
+
+        .col-half {
+            flex: 1;
+            min-width: 300px; /* Đảm bảo không quá nhỏ trên mobile */
+        }
+
+        /* Typography */
+        h2.section-title {
+            font-size: 48px;
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        p.section-desc {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        /* Button Style */
+        .btn-view {
+            display: inline-block;
+            padding: 12px 35px;
+            text-decoration: none;
+            text-transform: uppercase;
             font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: 1px solid;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        /* Image Style */
+        .img-wrapper {
+            display: flex;
+            justify-content: center;
         }
         
-        .btn-custom:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        .product-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); /* Bóng đổ cho ảnh tách nền */
+            transition: transform 0.5s ease;
         }
 
-        /* Hiệu ứng ảnh sản phẩm */
-        .product-img {
-            transition: transform 0.5s ease, filter 0.5s ease;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
-        }
-
-        .product-img:hover {
+        .product-image:hover {
             transform: scale(1.05) rotate(2deg);
         }
-        
-        /* Responsive Utility (bổ sung nếu cần thiết ngoài tailwind) */
+
+        /* --- SECTION 1: CÀ PHÊ (Dark) --- */
+        .section-coffee {
+            background-color: var(--color-dark);
+            color: white;
+            /* Ảnh nền khói mờ - Tôi dùng link ổn định hơn hoặc gradient fallback */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section-coffee .section-desc {
+            color: var(--color-text-gray);
+        }
+
+        .section-coffee .btn-view {
+            color: white;
+            border-color: white;
+        }
+
+        .section-coffee .btn-view:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* --- SECTION 2: FREEZE (Light) --- */
+        .section-freeze {
+            /* Gradient xanh mát */
+            background: linear-gradient(180deg, #FFFFFF 0%, #e0f9f4 100%);
+            color: #333;
+        }
+
+        .section-freeze .section-title {
+            color: var(--color-green);
+        }
+
+        .section-freeze .section-desc {
+            color: #555;
+        }
+
+        .section-freeze .btn-view {
+            color: var(--color-green);
+            border-color: var(--color-green);
+        }
+
+        .section-freeze .btn-view:hover {
+            background-color: var(--color-green);
+            color: white;
+        }
+
+        /* --- RESPONSIVE (Mobile) --- */
         @media (max-width: 768px) {
-            .section-padding {
-                padding-top: 3rem;
-                padding-bottom: 3rem;
+            .flex-row {
+                flex-direction: column; /* Xếp chồng dọc */
+                text-align: center;
+                gap: 30px;
+            }
+
+            .flex-row.reverse-mobile {
+                flex-direction: column-reverse; /* Đảo ngược thứ tự cho phần Freeze */
+            }
+
+            .section-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            h2.section-title {
+                font-size: 36px;
             }
         }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
