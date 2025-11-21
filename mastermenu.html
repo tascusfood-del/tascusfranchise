@@ -19,53 +19,74 @@
       
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
- <style>
-    /* Mặc định (Mobile): Chiếm hết 100% chiều rộng */
+<style>
+    /* 1. QUY ĐỊNH HIỂN THỊ MOBILE/PC (Giữ nguyên để không bị lỗi giao diện) */
     .hl-col-responsive {
         flex: 0 0 100%;
         max-width: 100%;
         padding: 0 15px;
-        text-align: center; /* Trên mobile căn giữa cho đẹp */
+        text-align: center;
     }
 
-    /* Màn hình máy tính (PC > 768px): Chia đôi 50% */
     @media (min-width: 768px) {
         .hl-col-responsive {
             flex: 0 0 50%;
             max-width: 50%;
-            text-align: left; /* Trả lại căn trái cho PC */
+            text-align: left;
         }
-        /* Riêng ảnh trên PC thì căn giữa cột của nó */
-        .hl-col-img {
-            text-align: center !important;
-        }
-        /* Riêng phần Freeze trên PC thì căn phải */
-        .hl-text-pc-right {
-            text-align: right !important;
-        }
+        .hl-col-img { text-align: center !important; }
+        .hl-text-pc-right { text-align: right !important; }
     }
 
-    /* Setup chung cho Section */
-    .hl-section {
-        padding: 60px 0;
+    /* 2. QUY ĐỊNH NÚT BẤM & HIỆU ỨNG HOVER (PHẦN MỚI THÊM) */
+    .hl-btn {
+        display: inline-block;
+        padding: 12px 35px; /* Nút to hơn xíu cho đẹp */
+        text-transform: uppercase;
+        font-weight: 800; /* Chữ đậm hơn */
+        text-decoration: none !important;
+        transition: all 0.3s ease-in-out; /* Hiệu ứng mượt 0.3s */
+        letter-spacing: 1px;
         position: relative;
-        overflow: hidden;
-        display: block;
-        width: 100%;
+        z-index: 20;
     }
 
-    /* Chữ tiêu đề */
+    /* Style cho nút Cà phê (Trắng) */
+    .hl-btn-coffee {
+        border: 2px solid white;
+        color: white !important;
+        background: transparent;
+    }
+    .hl-btn-coffee:hover {
+        background-color: white;
+        color: #3E2723 !important; /* Chữ chuyển màu nâu */
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Phát sáng nhẹ */
+        transform: translateY(-3px); /* Nẩy lên nhẹ */
+    }
+
+    /* Style cho nút Freeze (Xanh) */
+    .hl-btn-freeze {
+        border: 2px solid #006400;
+        color: #006400 !important;
+        background: transparent;
+    }
+    .hl-btn-freeze:hover {
+        background-color: #006400;
+        color: white !important; /* Chữ chuyển trắng */
+        box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3); /* Bóng đổ xanh */
+        transform: translateY(-3px);
+    }
+
+    /* Font tiêu đề */
     .hl-heading {
         font-family: 'Montserrat', sans-serif;
         font-weight: 800;
-        font-size: 35px; /* Giảm xíu cho vừa mobile */
+        font-size: 35px;
         text-transform: uppercase;
         margin-bottom: 15px;
         line-height: 1.2;
     }
-    @media (min-width: 768px) {
-        .hl-heading { font-size: 40px; } /* PC thì to hơn */
-    }
+    @media (min-width: 768px) { .hl-heading { font-size: 40px; } }
 </style>
 </head>
    <body>
@@ -106,7 +127,7 @@
 
 <div style="background-color: white; width: 100%;">
 
-    <section class="hl-section" style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important;">
+    <section style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
         
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
 
@@ -121,7 +142,7 @@
                         Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng. Highlands Coffee tự hào mang đến hương vị đậm đà và tinh tế.
                     </p>
                     <div>
-                        <a href="#" style="display: inline-block; padding: 10px 25px; border: 2px solid white; color: white !important; text-transform: uppercase; font-weight: bold; text-decoration: none;">
+                        <a href="#" class="hl-btn hl-btn-coffee">
                             Khám phá thêm
                         </a>
                     </div>
@@ -132,10 +153,38 @@
                          alt="Ly Cà Phê" 
                          style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
                 </div>
-
             </div>
         </div>
     </section>
+
+    <section style="background: linear-gradient(to bottom, #ffffff, #e0f7fa) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive hl-col-img" style="margin-bottom: 30px;">
+                    <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=687&auto=format&fit=crop" 
+                         alt="Ly Freeze" 
+                         style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); display: inline-block;">
+                </div>
+
+                <div class="hl-col-responsive hl-text-pc-right">
+                    <h2 class="hl-heading" style="color: #006400 !important;">
+                        FREEZE
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px;">
+                        Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh từ nguyên liệu thuần túy.
+                    </p>
+                    <div>
+                        <a href="#" class="hl-btn hl-btn-freeze">
+                            Khám phá thêm
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
 
     <section class="hl-section" style="background: linear-gradient(to bottom, #ffffff, #e0f7fa) !important;">
         <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
@@ -224,6 +273,7 @@
 
    </body>
 </html>
+
 
 
 
