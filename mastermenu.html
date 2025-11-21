@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
  <head>
@@ -21,73 +22,34 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <style>
-    /* 1. LOAD FONT (Giữ nguyên font của bạn) */
+    /* 1. KHAI BÁO FONT CHỮ MỚI */
     @font-face {
         font-family: 'FontCuaToi';
-        src: url('fonts/kenyan.ttf') format('truetype');
+        /* Lưu ý: Kiểm tra kỹ đường dẫn file font */
+        src: url('fonts/kenyan.ttf') format('truetype'); 
         font-weight: normal;
         font-style: normal;
     }
 
-    /* 2. QUY ĐỊNH CỘT CHỨA NỘI DUNG */
+    /* 2. QUY ĐỊNH HIỂN THỊ MOBILE/PC */
     .hl-col-responsive {
         flex: 0 0 100%;
         max-width: 100%;
         padding: 0 15px;
-        
-        /* QUAN TRỌNG: Ép căn trái toàn bộ để thẳng hàng */
-        text-align: left !important; 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Căn mọi thứ về bên trái */
+        text-align: center;
     }
 
     @media (min-width: 768px) {
         .hl-col-responsive {
             flex: 0 0 50%;
             max-width: 50%;
+            text-align: left;
         }
-        .hl-col-img { align-items: center !important; text-align: center !important; }
-        
-        /* Riêng phần Freeze bên phải thì căn phải cho đẹp (nếu muốn) */
-        /* Nếu bạn muốn Freeze cũng căn trái thì xóa dòng align-items: flex-end đi */
-        .hl-text-pc-right { 
-            align-items: flex-end !important; 
-            text-align: right !important; 
-        }
+        .hl-col-img { text-align: center !important; }
+        .hl-text-pc-right { text-align: right !important; }
     }
 
-    /* 3. ĐOẠN VĂN (SỬA LỖI THỤT ĐẦU DÒNG) */
-    .hl-desc {
-        font-family: 'Roboto', sans-serif; 
-        font-size: 16px; 
-        line-height: 1.6; 
-        color: #f0f0f0 !important; 
-        margin-bottom: 20px;
-        
-        /* QUAN TRỌNG: Xóa margin/padding thừa */
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-        text-align: left !important;
-    }
-
-    /* 4. TIÊU ĐỀ */
-    .hl-heading {
-        font-family: 'FontCuaToi', 'Montserrat', sans-serif !important;
-        font-weight: normal;
-        font-size: 45px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        line-height: 1.1;
-        letter-spacing: 1px;
-        
-        /* QUAN TRỌNG: Căn trái */
-        text-align: left !important;
-        margin-left: 0 !important;
-    }
-    @media (min-width: 768px) { .hl-heading { font-size: 55px; } }
-
-    /* 5. NÚT BẤM */
+    /* 3. QUY ĐỊNH NÚT BẤM & HIỆU ỨNG HOVER */
     .hl-btn {
         display: inline-block;
         padding: 12px 35px;
@@ -98,9 +60,10 @@
         letter-spacing: 1px;
         position: relative;
         z-index: 20;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif; /* Nút bấm giữ font dễ đọc */
     }
 
+    /* Style cho nút Cà phê */
     .hl-btn-coffee {
         border: 2px solid white;
         color: white !important;
@@ -113,6 +76,7 @@
         transform: translateY(-3px);
     }
 
+    /* Style cho nút Freeze */
     .hl-btn-freeze {
         border: 2px solid #006400;
         color: #006400 !important;
@@ -124,6 +88,20 @@
         box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
         transform: translateY(-3px);
     }
+
+    /* 4. TIÊU ĐỀ DÙNG FONT KENYAN (FontCuaToi) */
+    .hl-heading {
+        /* ÁP DỤNG FONT TẠI ĐÂY */
+        font-family: 'FontCuaToi', 'Montserrat', sans-serif !important; 
+        
+        font-weight: normal; /* Font Kenyan thường đã đậm sẵn, để normal cho đẹp */
+        font-size: 45px; /* Tăng size lên chút vì font Kenyan thường hiển thị nhỏ hơn */
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+    @media (min-width: 768px) { .hl-heading { font-size: 55px; } }
 </style>
 </head>
    <body>
@@ -165,6 +143,7 @@
 <div style="background-color: white; width: 100%;">
 
     <section style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
 
         <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
@@ -174,11 +153,9 @@
                     <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
                         CÀ PHÊ
                     </h2>
-                    
-                    <p class="hl-desc">
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; text-align: left !important; margin-left: 0 !important;">
                         Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng. Highlands Coffee tự hào mang đến hương vị đậm đà và tinh tế.
                     </p>
-                    
                     <div>
                         <a href="#" class="hl-btn hl-btn-coffee">
                             Khám phá thêm
@@ -209,7 +186,7 @@
                     <h2 class="hl-heading" style="color: #006400 !important;">
                         FREEZE
                     </h2>
-                    <p class="hl-desc" style="color: #333 !important;">
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px;">
                         Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh từ nguyên liệu thuần túy.
                     </p>
                     <div>
@@ -281,5 +258,4 @@
 
    </body>
 </html>
-
 
