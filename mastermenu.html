@@ -210,62 +210,53 @@
          </div>
       <!-- footer section start -->
 
- <!-- === SECTION 1: CÀ PHÊ === -->
-    <section class="bg-coffee text-white relative overflow-hidden py-16 md:py-24">
-        <!-- Lớp phủ tối màu để chữ dễ đọc hơn -->
-        <div class="absolute inset-0 bg-black/70 z-0"></div>
-
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                
-                <!-- Text Column -->
-                <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left">
-                    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight">
-                        Cà Phê
-                    </h2>
-                    <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light mb-8 max-w-xl mx-auto md:mx-0">
+  <!-- SECTION 1: CÀ PHÊ -->
+    <section class="section-wrap section-coffee">
+        <div class="container">
+            <div class="flex-row">
+                <!-- Cột chữ -->
+                <div class="col-half">
+                    <h2 class="section-title">Cà Phê</h2>
+                    <p class="section-desc">
                         Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ. Highlands Coffee tự hào mang đến hương vị đậm đà và tinh tế.
                     </p>
-                    <button class="btn-custom border border-white px-8 py-3 hover:bg-white hover:text-black">
-                        Khám phá thêm
-                    </button>
+                    <a href="#" class="btn-view">Khám phá thêm</a>
                 </div>
 
-                <!-- Image Column -->
-                <div class="w-full md:w-1/2 order-1 md:order-2 flex justify-center md:justify-end">
-                    <img src="https://images.unsplash.com/photo-1517701604599-bb29b5dd7359?q=80&w=687&auto=format&fit=crop" 
-                         alt="Ly Cà Phê" 
-                         class="product-img w-64 md:w-80 lg:w-96 object-contain">
+                <!-- Cột ảnh -->
+                <div class="col-half img-wrapper">
+                    <!-- Tôi đã thay link ảnh mới ổn định hơn -->
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/04_2023/PHIN_SUA_DA_1.png" 
+                         onerror="this.src='https://placehold.co/300x400/png?text=Ly+Ca+Phe'"
+                         alt="Ly Cà Phê Highlands" 
+                         class="product-image">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- === SECTION 2: FREEZE === -->
-    <section class="bg-freeze text-gray-800 relative overflow-hidden py-16 md:py-24">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                
-                <!-- Image Column (Bên trái ở desktop) -->
-                <div class="w-full md:w-1/2 order-1 flex justify-center md:justify-start">
-                    <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=687&auto=format&fit=crop" 
+    <!-- SECTION 2: FREEZE -->
+    <section class="section-wrap section-freeze">
+        <div class="container">
+            <!-- Class reverse-mobile giúp đảo ngược thứ tự trên điện thoại -->
+            <div class="flex-row reverse-mobile">
+                <!-- Cột ảnh -->
+                <div class="col-half img-wrapper">
+                     <!-- Tôi đã thay link ảnh mới ổn định hơn -->
+                    <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/04_2023/FREEZE_TRA_XANH_1.png" 
+                         onerror="this.src='https://placehold.co/300x400/png?text=Ly+Freeze'"
                          alt="Ly Freeze Trà Xanh" 
-                         class="product-img w-64 md:w-80 lg:w-96 object-contain">
+                         class="product-image">
                 </div>
 
-                <!-- Text Column (Bên phải ở desktop) -->
-                <div class="w-full md:w-1/2 order-2 text-center md:text-right">
-                    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 uppercase tracking-tight text-brand-green">
-                        Freeze
-                    </h2>
-                    <p class="text-gray-600 text-base md:text-lg leading-relaxed font-light mb-8 max-w-xl mx-auto md:ml-auto">
+                <!-- Cột chữ -->
+                <div class="col-half" style="text-align: right;">
+                    <h2 class="section-title">Freeze</h2>
+                    <p class="section-desc" style="margin-left: auto; margin-right: 0;">
                         Sảng khoái với thức uống đá xay phong cách Việt. Freeze là sự hòa quyện mát lạnh từ những nguyên liệu thuần túy nhất của Việt Nam, mang lại cảm giác bùng nổ.
                     </p>
-                    <button class="btn-custom border border-brand-green text-brand-green px-8 py-3 hover:bg-brand-green hover:text-white">
-                        Khám phá thêm
-                    </button>
+                    <a href="#" class="btn-view">Khám phá thêm</a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -343,3 +334,4 @@
 
    </body>
 </html>
+
