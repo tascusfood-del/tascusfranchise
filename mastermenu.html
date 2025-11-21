@@ -24,33 +24,46 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
       
-      <!-- 2. CSS BỔ SUNG (SỬA LỖI MENU MẤT MÀU) -->
+      <!-- 2. CSS BỔ SUNG (ĐÃ CẬP NHẬT) -->
       <style>
          /* --- SỬA LỖI NAVBAR --- */
          .header_section {
              position: relative; 
              z-index: 9999 !important;
-             /* Đã đổi từ trắng sang màu cam thương hiệu */
-             background-color: #fab908 !important; 
+             background-color: #fab908 !important; /* Nền cam thương hiệu */
              box-shadow: 0 2px 5px rgba(0,0,0,0.1);
          }
 
-         /* Đảm bảo chữ trên menu hiển thị rõ (nếu bị trùng màu nền) */
-         .navbar-nav .nav-link {
-             color: #333 !important; /* Màu chữ đen đậm cho dễ đọc */
-             font-weight: 700;
-         }
-         .navbar-nav .nav-item.active .nav-link {
-             color: #bf2e1a !important; /* Màu đỏ cho mục đang chọn (Trang chủ) */
+         /* --- CSS BUTTON NAVBAR MỚI --- */
+         .navbar-nav .nav-item {
+             margin: 0 5px; /* Khoảng cách giữa các nút */
          }
 
-         /* CSS cho phần Menu mới */
+         /* Trạng thái Non-active */
+         .navbar-nav .nav-link {
+             color: #ffffff !important; /* Chữ trắng */
+             font-weight: 700;
+             border: 2px solid #ffffff; /* Viền trắng */
+             padding: 8px 15px !important;
+             transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+             border-radius: 4px; /* Bo góc nhẹ */
+         }
+
+         /* Trạng thái Hover và Active */
+         .navbar-nav .nav-link:hover,
+         .navbar-nav .nav-item.active .nav-link {
+             color: #bf2e1a !important; /* Chữ đỏ */
+             border-color: #bf2e1a !important; /* Viền đỏ */
+             background-color: #ffffff; /* Nền trắng cho nổi bật */
+         }
+
+         /* --- CSS BACKGROUND BURGER MỚI --- */
          .bg-coffee {
-            background-color: #1a1a1a;
-            background-image: url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?q=80&w=2070&auto=format&fit=crop');
+            /* Gradient nâu cà phê đậm đà kết hợp ảnh nền */
+            background: linear-gradient(to right bottom, rgba(77, 47, 15, 0.9), rgba(153, 61, 28, 0.8)), url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?q=80&w=2070&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            background-blend-mode: overlay;
+            background-blend-mode: multiply; /* Hòa trộn gradient vào ảnh */
          }
          
          .bg-freeze {
@@ -85,7 +98,6 @@
       <!-- MENU -->
       <div class="header_section">
          <div class="container">
-            <!-- Thêm class để đảm bảo background trong suốt để lấy màu của header_section -->
             <nav class="navbar navbar-expand-lg navbar-light" style="background: transparent !important;">
                <a class="navbar-brand" href="index.html">
                <img src="https://i.postimg.cc/xdsRnXdF/logo.png" alt="logo" style="max-height: 50px;">
@@ -93,7 +105,7 @@
                <button class="navbar-toggler" type="button" data-toggle="collapse"
                   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                   aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
+               <span class="navbar-toggler-icon" style="color: white;"></span>
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
@@ -110,8 +122,8 @@
                         <a class="nav-link" href="nhuongquyen.html">NHƯỢNG QUYỀN</a>
                      </li>
                   </ul>
-                  <form class="form-inline my-2 my-lg-0">
-                     <a href="#form" class="btn btn-tu-van my-2 my-sm-0">NHẬN TƯ VẤN NGAY</a>
+                  <form class="form-inline my-2 my-lg-0 ml-3">
+                     <a href="#form" class="btn btn-tu-van my-2 my-sm-0" style="border: 2px solid white; color: white; font-weight: 700;">NHẬN TƯ VẤN NGAY</a>
                   </form>
                </div>
             </nav>
@@ -134,7 +146,8 @@
       
       <!-- SECTION 1: BURGER TASCUS -->
       <section class="tw-relative bg-coffee tw-text-white tw-overflow-hidden">
-         <div class="tw-absolute tw-inset-0 tw-bg-black/80 tw-z-0"></div>
+         <!-- Đã loại bỏ lớp phủ đen cũ để hiển thị gradient nâu mới -->
+         <!-- <div class="tw-absolute tw-inset-0 tw-bg-black/80 tw-z-0"></div> -->
          
          <div class="container tw-mx-auto tw-px-6 tw-py-16 md:tw-py-24 tw-relative tw-z-10">
              <div class="tw-flex tw-flex-col md:tw-flex-row tw-items-center tw-gap-10">
@@ -144,7 +157,7 @@
                      <h2 class="tw-text-4xl md:tw-text-6xl tw-font-extrabold tw-uppercase tw-tracking-wider tw-text-white">
                         Burger Tascus
                      </h2>
-                     <p class="tw-text-gray-300 tw-text-sm md:tw-text-base tw-leading-relaxed tw-max-w-lg tw-mx-auto md:tw-mx-0 tw-font-light">
+                     <p class="tw-text-gray-100 tw-text-sm md:tw-text-base tw-leading-relaxed tw-max-w-lg tw-mx-auto md:tw-mx-0 tw-font-light">
                         Sự bùng nổ vị giác với lớp vỏ bánh nướng mềm thơm ôm trọn phần nhân thịt bò thượng hạng mọng nước, kết hợp cùng phô mai tan chảy và rau xanh tươi mát.
                      </p>
                      <div class="tw-pt-4">
