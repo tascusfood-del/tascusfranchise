@@ -19,6 +19,136 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+  <style>
+        /* Cấu hình màu sắc */
+        :root {
+            --hl-brown-light: #5D4037; /* Nâu sáng */
+            --hl-brown-dark: #3E2723;  /* Nâu đậm */
+            --hl-green: #006400;       /* Xanh lá */
+        }
+
+        /* --- SECTION CÀ PHÊ (Màu Nâu) --- */
+        section.section-coffee {
+            background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important; /* Dùng !important để ép màu */
+            padding: 80px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Lớp phủ mờ trên nền nâu */
+        section.section-coffee::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        /* Đảm bảo chữ màu trắng */
+        section.section-coffee .hl-title,
+        section.section-coffee .hl-desc {
+            color: white !important;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* --- SECTION FREEZE (Màu Sáng) --- */
+        section.section-freeze {
+            background: linear-gradient(to bottom, #ffffff, #e0f7fa);
+            padding: 80px 0;
+            color: #333;
+        }
+        
+        section.section-freeze .hl-title {
+            color: #006400 !important;
+        }
+
+        /* --- BỐ CỤC CHUNG --- */
+        .hl-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Flexbox để chia cột */
+        .hl-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hl-col {
+            flex: 1;
+            min-width: 300px; /* Xuống dòng nếu màn hình nhỏ */
+        }
+
+        /* Tiêu đề */
+        .hl-title {
+            font-family: 'Montserrat', sans-serif; /* Nếu không có font này sẽ dùng font mặc định */
+            font-weight: 800;
+            font-size: 48px; /* Tăng cỡ chữ */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Đoạn văn */
+        .hl-desc {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Ảnh */
+        .hl-image-box img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+        }
+
+        /* Nút bấm */
+        .hl-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 1px solid white;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .hl-btn:hover {
+            background: white;
+            color: #3E2723;
+        }
+
+        /* Nút bấm riêng cho phần Freeze */
+        .section-freeze .hl-btn {
+            border-color: #006400;
+            color: #006400;
+        }
+        .section-freeze .hl-btn:hover {
+            background: #006400;
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hl-title { font-size: 32px; text-align: center; }
+            .hl-desc { text-align: center; }
+            .hl-btn-wrapper { text-align: center; }
+            .hl-row.reverse-mobile { flex-direction: column-reverse; }
+            .hl-row { justify-content: center; }
+        }
+    </style>
 </head>
    <body>
       <div class="header_section">
@@ -159,6 +289,7 @@
 
    </body>
 </html>
+
 
 
 
