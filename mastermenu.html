@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -11,7 +12,6 @@
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
-          <link rel="stylesheet" href="css/style.css"> 
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" href="css/responsive.css">
@@ -27,7 +27,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    
+    <style>
+        /* CSS Bổ sung cho hình nền */
+        .bg-coffee {
+            background: linear-gradient(90deg,rgba(59, 18, 18, 1) 0%, rgba(77, 47, 15, 1) 50%, rgba(153, 61, 28, 1) 100%);
+            
+            background-size: cover;
+            background-position: center;
+
+        }
+        
+        .bg-freeze {
+            background: linear-gradient(to bottom, #ffffff 0%, #e0f7fa 100%);
+        }
+    </style>
     <!-- 2. TAILWIND CSS (Chạy trực tiếp không cần file css riêng) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -50,20 +63,7 @@
         }
     </script>
 
-    <style>
-        /* CSS Bổ sung cho hình nền */
-        .bg-coffee {
-            background: linear-gradient(90deg,rgba(59, 18, 18, 1) 0%, rgba(77, 47, 15, 1) 50%, rgba(153, 61, 28, 1) 100%);
-            
-            background-size: cover;
-            background-position: center;
-
-        }
-        
-        .bg-freeze {
-            background: linear-gradient(to bottom, #ffffff 0%, #e0f7fa 100%);
-        }
-    </style>
+    
    </head>
    <body>
       <div class="header_section">
@@ -100,6 +100,47 @@
          </div>
       </div>
 
+      <section id="tascus-banner-widget" class="tascus-fullbleed" aria-roledescription="carousel">
+         <div class="tascus-inner">
+            <div class="tascus-slide">
+               <picture>
+                  <source media="(max-width: 768px)" 
+                     srcset="https://i.postimg.cc/fTwKhLQ1/MOBI-E.jpg">
+                  <img class="tascus-img" 
+                     src="https://i.postimg.cc/gj0PCpz6/MI-Y.png" 
+                     alt="Slide 1">
+               </picture>
+            </div>
+
+            <div class="tascus-slide">
+               <picture>
+                  <source media="(max-width: 768px)" 
+                     srcset="https://i.postimg.cc/xTHtRHRP/BANNE_MOBILE_11.png">
+                  <img class="tascus-img" 
+                     src="https://i.postimg.cc/PqZXfSzz/BANER-22.png" 
+                     alt="Slide 2">
+               </picture>
+            </div>
+
+            <div class="tascus-slide">
+               <picture>
+                  <source media="(max-width: 768px)" 
+                     srcset="https://i.postimg.cc/9X4pmSDR/BANNER-3-MOBILE.jpg">
+                  <img class="tascus-img" 
+                     src="https://i.postimg.cc/Y243rVvQ/BANNER-3.jpg" 
+                     alt="Slide 3">
+               </picture>
+            </div>
+         </div>
+
+         <button class="tascus-arrow tascus-prev" type="button">‹</button>
+         <button class="tascus-arrow tascus-next" type="button">›</button>
+
+         <div class="tascus-dots" role="tablist">
+            <button class="tascus-dot" role="tab"></button>
+            <button class="tascus-dot" role="tab"></button>
+            <button class="tascus-dot" role="tab"></button>
+         </div>
 
    <!-- SECTION 1: CÀ PHÊ -->
     <section class="relative bg-coffee text-white overflow-hidden">
@@ -227,12 +268,3 @@
 
    </body>
 </html>
-
-
-
-
-
-
-
-
-
