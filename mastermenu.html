@@ -21,13 +21,7 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-      <!-- 1. IMPORT FONT BE VIETNAM PRO -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-    
-    <!-- 2. TAILWIND CSS (Chạy trực tiếp không cần file css riêng) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+     
     
     <!-- Cấu hình Tailwind -->
    </head>
@@ -66,76 +60,51 @@
          </div>
       </div>
 
-     <!-- SECTION 1: CÀ PHÊ -->
-    <section class="relative bg-coffee text-white overflow-hidden">
-        <div class="absolute inset-0 bg-black/80 z-0"></div>
-        
-        <div class="container mx-auto px-6 py-16 md:py-24 relative z-10">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                
-                <!-- Text -->
-                <div class="w-full md:w-1/2 text-center md:text-left space-y-6 order-2 md:order-1">
-                    <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-wider text-white">
-                        CÀ PHÊ
-                    </h2>
-                    <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-lg mx-auto md:mx-0 font-light">
-                        Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ, Highlands Coffee tự hào mang đến hương vị đậm đà và tinh tế.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#" class="inline-block border border-white text-white px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300">
-                            Khám phá thêm
-                        </a>
-                    </div>
-                </div>
+    <div class="hl-wrapper">
 
-                <!-- Image -->
-                <div class="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
-                    <div class="relative w-64 md:w-80 lg:w-96 aspect-[3/4]">
-                        <img 
-                            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80" 
-                            alt="Ly Cà Phê Highlands" 
-                            class="object-contain w-full h-full drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
-                        >
+        <section class="section-coffee">
+            <div class="hl-container">
+                <div class="hl-row">
+                    <div class="hl-col">
+                        <h2 class="hl-title">CÀ PHÊ</h2>
+                        <p class="hl-desc">
+                            Sự kết hợp hoàn hảo giữa hạt cà phê Robusta & Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ. Highlands Coffee tự hào mang đến hương vị đậm đà và tinh tế.
+                        </p>
+                        <div class="hl-btn-wrapper">
+                            <a href="#" class="hl-btn">Khám phá thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="hl-col">
+                        <div class="hl-image-box">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=687&auto=format&fit=crop" alt="Ly Cà Phê">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION 2: FREEZE -->
-    <section class="relative bg-freeze text-gray-800 overflow-hidden">
-        <div class="container mx-auto px-6 py-16 md:py-24">
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                
-                <!-- Image (Đảo ngược thứ tự trên Desktop) -->
-                <div class="w-full md:w-1/2 flex justify-center md:justify-start order-1">
-                    <div class="relative w-64 md:w-80 lg:w-96 aspect-[3/4]">
-                        <img 
-                            src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=600&q=80" 
-                            alt="Ly Freeze Trà Xanh Highlands" 
-                            class="object-contain w-full h-full drop-shadow-xl transform hover:scale-105 transition-transform duration-500"
-                        >
+        <section class="section-freeze">
+            <div class="hl-container">
+                <div class="hl-row reverse-mobile">
+                    <div class="hl-col">
+                        <div class="hl-image-box">
+                            <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?q=80&w=687&auto=format&fit=crop" alt="Ly Freeze">
+                        </div>
+                    </div>
+
+                    <div class="hl-col" style="text-align: right;"> <h2 class="hl-title">FREEZE</h2>
+                        <p class="hl-desc" style="margin-left: auto;"> Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.
+                        </p>
+                        <div class="hl-btn-wrapper">
+                            <a href="#" class="hl-btn">Khám phá thêm</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Text -->
-                <div class="w-full md:w-1/2 text-center md:text-right space-y-6 order-2">
-                    <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-wider text-highlands-green">
-                        FREEZE
-                    </h2>
-                    <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-lg mx-auto md:ml-auto font-light">
-                        Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#" class="inline-block border border-highlands-green text-highlands-green px-8 py-3 text-sm font-bold uppercase tracking-widest hover:bg-highlands-green hover:text-white transition-colors duration-300">
-                            Khám phá thêm
-                        </a>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
            
           <div class="footer_section">
          <div class="container">
@@ -195,4 +164,5 @@
 
    </body>
 </html>
+
 
