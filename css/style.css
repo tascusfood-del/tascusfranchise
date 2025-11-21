@@ -2,6 +2,7 @@
 
 
 
+
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 
@@ -2369,4 +2370,213 @@ body {
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
 
-    
+     /* --- CÀI ĐẶT CHUNG --- */
+        :root {
+            --font-main: 'Be Vietnam Pro', sans-serif;
+            --color-gold: #bfa15f;
+            --color-green: #006400;
+            --color-dark: #191919;
+            --color-text-gray: #cfcfcf;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+
+        /* --- UTILITIES --- */
+        .section-wrap {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .flex-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            flex-wrap: wrap; /* Để responsive trên mobile */
+        }
+
+        .col-half {
+            flex: 1;
+            min-width: 300px; /* Đảm bảo không quá nhỏ trên mobile */
+        }
+
+        /* Typography */
+        h2.section-title {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        p.section-desc {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            max-width: 500px;
+        }
+
+        /* Button Style */
+        .btn-view {
+            display: inline-block;
+            padding: 12px 35px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: 1px solid;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        /* Image Style */
+        .img-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .product-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); /* Bóng đổ cho ảnh tách nền */
+            transition: transform 0.5s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+         /* --- CẤU HÌNH CƠ BẢN --- */
+        :root {
+            --font-main: 'Be Vietnam Pro', sans-serif;
+            --color-gold: #bfa15f;
+            --color-green: #006400;
+            --color-dark: #191919;
+            --color-gray-text: #cfcfcf;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            background-color: #f5f5f5; /* Màu nền dự phòng */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- SECTION CHUNG --- */
+        .section-wrap {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flex-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .col-content { flex: 1; }
+        .col-image { flex: 1; display: flex; justify-content: center; }
+
+        /* --- TYPOGRAPHY (CHỮ) --- */
+        h2.title {
+            font-size: 48px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        p.desc {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            max-width: 90%;
+        }
+
+        /* --- NÚT BẤM (BUTTON) --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            border: 1px solid;
+            transition: all 0.3s;
+        }
+
+        /* --- HÌNH ẢNH SẢN PHẨM --- */
+        .product-img {
+            width: 100%;
+            max-width: 320px; /* Giới hạn chiều rộng ảnh */
+            height: auto;
+            filter: drop-shadow(0 15px 20px rgba(0,0,0,0.3));
+            transition: transform 0.5s;
+        }
+        .product-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* --- SECTION 1: CÀ PHÊ (DARK) --- */
+        .bg-coffee {
+            background-color: var(--color-dark);
+            color: white;
+            /* Ảnh nền tối */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?auto=format&fit=crop&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-coffee .desc { color: var(--color-gray-text); }
+        .bg-coffee .btn { color: white; border-color: white; }
+        .bg-coffee .btn:hover { background: white; color: black; }
+
+        /* --- SECTION 2: FREEZE (LIGHT) --- */
+        .bg-freeze {
+            background: linear-gradient(180deg, #ffffff 0%, #e0f7fa 100%);
+            color: #333;
+        }
+        .bg-freeze .title { color: var(--color-green); }
+        .bg-freeze .btn { color: var(--color-green); border-color: var(--color-green); }
+        .bg-freeze .btn:hover { background: var(--color-green); color: white; }
+
+        /* --- RESPONSIVE (MOBILE) --- */
+        @media (max-width: 768px) {
+            .flex-row { flex-direction: column; text-align: center; gap: 30px; }
+            .flex-row.reverse { flex-direction: column-reverse; }
+            .title { font-size: 36px; }
+            .desc { margin: 0 auto 30px auto; }
+        }
