@@ -2452,32 +2452,12 @@ p.desc {
     transform: scale(1.05) rotate(2deg);
 }
 
-/* --- SECTION 1: CÀ PHÊ (DARK) --- */
-.bg-coffee {
-    background-color: var(--color-dark);
-    color: white;
-    /* Ảnh nền tối */
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?auto=format&fit=crop&w=2000');
-    background-size: cover;
-    background-position: center;
-}
-.bg-coffee .desc { color: var(--color-gray-text); }
-.bg-coffee .btn { color: white; border-color: white; }
-.bg-coffee .btn:hover { background: white; color: black; }
-
-/* --- SECTION 2: FREEZE (LIGHT) --- */
-.bg-freeze {
-    background: linear-gradient(180deg, #ffffff 0%, #e0f7fa 100%);
-    color: #333;
-}
-.bg-freeze .title { color: var(--color-green); }
-.bg-freeze .btn { color: var(--color-green); border-color: var(--color-green); }
-.bg-freeze .btn:hover { background: var(--color-green); color: white; }
-
-/* --- RESPONSIVE (MOBILE) --- */
-@media (max-width: 768px) {
-    .flex-row { flex-direction: column; text-align: center; gap: 30px; }
-    .flex-row.reverse { flex-direction: column-reverse; }
-    .title { font-size: 36px; }
-    .desc { margin: 0 auto 30px auto; }
-}
+        
+        /* CSS Bổ sung cho hình nền cũ của bạn */
+        .bg-coffee {
+            background-color: #000;
+        }
+        
+        .bg-freeze {
+            background: linear-gradient(to bottom, #ffffff 0%, #e0f7fa 100%);
+        }
