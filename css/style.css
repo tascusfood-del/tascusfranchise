@@ -2369,6 +2369,64 @@ body {
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
 
+ <!-- 2. PHẦN CSS (Copy phần này vào file style.css) -->
+    <style>
+        /* --- CSS RIÊNG --- */
+        
+        /* Reset cơ bản nếu không dùng Tailwind */
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+
+        /* Background cho section Cà phê */
+        .bg-coffee {
+            background-color: #000;
+            /* Ảnh nền khói mờ */
+            background-image: url('https://images.unsplash.com/photo-1503265892747-2a44b3027573?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: soft-light;
+        }
+
+        /* Background cho section Freeze */
+        .bg-freeze {
+            /* Gradient từ trắng xuống xanh nhạt */
+            background: linear-gradient(180deg, #FFFFFF 0%, #E0F7FA 100%);
+        }
+
+        /* Hiệu ứng nút bấm */
+        .btn-custom {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Hiệu ứng ảnh sản phẩm */
+        .product-img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+        }
+
+        .product-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+        
+        /* Responsive Utility (bổ sung nếu cần thiết ngoài tailwind) */
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
 
 
 
