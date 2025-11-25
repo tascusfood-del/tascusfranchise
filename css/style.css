@@ -2369,36 +2369,28 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
-
-/* Container chứa các icon app */
+/* === Code thêm nút Food App === */
 .food-app-container {
     display: flex;
-    flex-direction: row; /* Xếp theo hàng ngang */
+    flex-direction: row;
     gap: 10px; /* Khoảng cách giữa các nút */
-    margin-top: 20px;
-    flex-wrap: nowrap; /* QUAN TRỌNG: Không cho phép xuống dòng trên mobile */
+    margin-top: 15px;
+    flex-wrap: nowrap; /* Bắt buộc nằm trên 1 hàng */
+    align-items: center;
 }
 
-/* Style cho từng nút icon */
 .app-btn img {
-    width: 45px;  /* Kích thước chiều rộng */
-    height: 45px; /* Kích thước chiều cao */
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
-    border-radius: 8px; /* Bo tròn góc giống hình mẫu */
-    transition: transform 0.2s ease; /* Hiệu ứng mượt khi di chuột */
-    background-color: #fff; /* Nền trắng nhẹ nếu ảnh png trong suốt */
+    width: 45px !important;      /* Dùng !important để ghi đè responsive.css */
+    height: 45px !important;     /* Dùng !important để ghi đè responsive.css */
+    max-width: 45px !important;  /* Chặn không cho giãn ra */
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 2px;
 }
 
-/* Hiệu ứng khi di chuột vào logo */
 .app-btn:hover img {
-    transform: scale(1.1); /* Phóng to nhẹ khi hover */
-    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
 }
-
-/* Tùy chỉnh riêng cho Mobile nếu cần thiết (thường đoạn trên đã đủ) */
-@media (max-width: 576px) {
-    .food-app-container {
-        justify-content: flex-start; /* Căn trái hoặc center tùy bạn */
-        overflow-x: auto; /* Nếu màn hình quá bé, cho phép vuốt ngang thay vì vỡ layout */
-    }
-}
+/* === Hết đoạn code === */
