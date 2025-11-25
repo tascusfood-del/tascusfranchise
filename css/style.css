@@ -2370,3 +2370,35 @@ body {
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
 
+/* Container chứa các icon app */
+.food-app-container {
+    display: flex;
+    flex-direction: row; /* Xếp theo hàng ngang */
+    gap: 10px; /* Khoảng cách giữa các nút */
+    margin-top: 20px;
+    flex-wrap: nowrap; /* QUAN TRỌNG: Không cho phép xuống dòng trên mobile */
+}
+
+/* Style cho từng nút icon */
+.app-btn img {
+    width: 45px;  /* Kích thước chiều rộng */
+    height: 45px; /* Kích thước chiều cao */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 8px; /* Bo tròn góc giống hình mẫu */
+    transition: transform 0.2s ease; /* Hiệu ứng mượt khi di chuột */
+    background-color: #fff; /* Nền trắng nhẹ nếu ảnh png trong suốt */
+}
+
+/* Hiệu ứng khi di chuột vào logo */
+.app-btn:hover img {
+    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    cursor: pointer;
+}
+
+/* Tùy chỉnh riêng cho Mobile nếu cần thiết (thường đoạn trên đã đủ) */
+@media (max-width: 576px) {
+    .food-app-container {
+        justify-content: flex-start; /* Căn trái hoặc center tùy bạn */
+        overflow-x: auto; /* Nếu màn hình quá bé, cho phép vuốt ngang thay vì vỡ layout */
+    }
+}
