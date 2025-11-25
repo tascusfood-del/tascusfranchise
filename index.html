@@ -22,15 +22,15 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
       
-      <style>
-         /* CSS cho Food App Buttons */
+       <style>
+         /* CSS cho Food App Buttons - ĐÃ SỬA FIX LỖI XUỐNG DÒNG */
          .food-app-buttons {
             display: flex;
-            gap: 10px;
+            gap: 18px !important;
             justify-content: flex-start;
             align-items: center;
             margin-top: 20px;
-            flex-wrap: nowrap;
+            flex-wrap: nowrap !important;
          }
 
          .food-app-btn {
@@ -39,9 +39,10 @@
             height: 60px;
             background-color: #fff;
             border-radius: 8px;
-            padding: 8px;
+            padding: 15px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
          }
 
          .food-app-btn:hover {
@@ -55,28 +56,58 @@
             object-fit: contain;
          }
 
-         @media (max-width: 768px) {
+         /* Màn hình tablet/trung bình */
+         @media (max-width: 991px) and (min-width: 768px) {
+            .food-app-buttons {
+               gap: 6px;
+               flex-wrap: nowrap !important;
+            }
+            
+            .food-app-btn {
+               width: 48px;
+               height: 48px;
+               padding: 5px;
+            }
+         }
+
+         /* Mobile */
+         @media (max-width: 767px) {
             .food-app-buttons {
                gap: 8px;
                justify-content: center;
+               flex-wrap: nowrap !important;
             }
             
             .food-app-btn {
                width: 50px;
                height: 50px;
-               padding: 6px;
+               padding: 8px;
             }
          }
 
          @media (max-width: 480px) {
             .food-app-buttons {
-               gap: 6px;
+               gap: 5px;
+               flex-wrap: nowrap !important;
             }
             
             .food-app-btn {
                width: 45px;
                height: 45px;
                padding: 5px;
+            }
+         }
+
+         /* Màn hình rất nhỏ */
+         @media (max-width: 360px) {
+            .food-app-buttons {
+               gap: 4px;
+            }
+            
+            .food-app-btn {
+               width: 40px;
+               height: 40px;
+               padding: 6px;
             }
          }
       </style>
@@ -301,7 +332,10 @@
                   <div class="col-lg-4 col-md-4">
                      <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
                      <!-- THAY ĐỔI: 4 nút Food App thay vì input email -->
-                     <div class="food-app-buttons">
+                   <div class="col-lg-4 col-md-4">
+                     <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
+                     <!-- THAY ĐỔI: 4 nút Food App thay vì input email -->
+                     <div class="food-app-buttons; margin-left: 0 !important;">
                         <a href="https://shopeefood.vn/thuong-hieu/ut-mau" target="_blank" rel="noopener noreferrer" class="food-app-btn">
                            <img src="https://comthoanhnguyen.com.vn/upload/photo/artboard-254x-2705.png" alt=" tascus shopeeFood">
                         </a>
@@ -320,6 +354,8 @@
             </div>
          </div>
       </div>
+
+
 
       <div class="copyright_section">
          <div class="container">
@@ -388,4 +424,5 @@
 
    </body>
 </html>
+
 
