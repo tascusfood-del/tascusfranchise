@@ -98,6 +98,65 @@
             </nav>
          </div>
       </div>
+
+        <style>
+         /* CSS cho Food App Buttons */
+         .food-app-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: nowrap;
+         }
+
+         .food-app-btn {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+         }
+
+         .food-app-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+         }
+
+         .food-app-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+
+         @media (max-width: 768px) {
+            .food-app-buttons {
+               gap: 8px;
+               justify-content: center;
+            }
+            
+            .food-app-btn {
+               width: 50px;
+               height: 50px;
+               padding: 6px;
+            }
+         }
+
+         @media (max-width: 480px) {
+            .food-app-buttons {
+               gap: 6px;
+            }
+            
+            .food-app-btn {
+               width: 45px;
+               height: 45px;
+               padding: 5px;
+            }
+         }
+      </style>
       <!-- header section end -->
    </header>      
       <!-- Tiếp tục phần còn lại như HTML cũ của bạn -->
@@ -735,16 +794,29 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
                         </ul>
                      </div>
                   </div>
-                  <div class="col-lg-4 col-md-4">
-                     <h3 class="useful_text">ĐẶT MÓN ONLINE</h3>
-                     <form aria-label="Đăng ký nhận tin">
-                        <input type="email" class="Enter_text" placeholder="Nhập Email của bạn" name="Enter Your Email" aria-label="Nhập email">
-                        <div class="subscribe_bt"><button type="submit">Đăng ký</button></div>
-                     </form>
+                   <div class="col-lg-4 col-md-4">
+                     <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
+                     <!-- THAY ĐỔI: 4 nút Food App thay vì input email -->
+                     <div class="food-app-buttons">
+                        <a href="https://shopeefood.vn/thuong-hieu/ut-mau" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://comthoanhnguyen.com.vn/upload/photo/artboard-254x-2705.png" alt=" tascus shopeeFood">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://comthoanhnguyen.com.vn/upload/photo/artboard-214x-2619.png" alt="GrabFood">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://comthoanhnguyen.com.vn/upload/photo/artboard-214x-2619.png" alt="Baemin">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://comthoanhnguyen.com.vn/upload/photo/artboard-214x-2619.png" alt="ShopeeFood">
+                        </a>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+      </div>
+
       </footer>
 
       <!-- Copyright Section -->
@@ -833,5 +905,6 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       </style>
    </body>
 </html>
+
 
 
