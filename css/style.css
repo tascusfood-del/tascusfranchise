@@ -2369,28 +2369,45 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
-/* === Code thêm nút Food App === */
+/* CSS cho phần Food App */
 .food-app-container {
     display: flex;
-    flex-direction: row;
-    gap: 10px; /* Khoảng cách giữa các nút */
-    margin-top: 15px;
-    flex-wrap: nowrap; /* Bắt buộc nằm trên 1 hàng */
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-start;
 }
 
-.app-btn img {
-    width: 45px !important;      /* Dùng !important để ghi đè responsive.css */
-    height: 45px !important;     /* Dùng !important để ghi đè responsive.css */
-    max-width: 45px !important;  /* Chặn không cho giãn ra */
+.food-app-container .app-btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.food-app-container .app-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.food-app-container .app-btn img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 2px;
+    display: block;
 }
 
-.app-btn:hover img {
-    transform: scale(1.1);
-    transition: 0.2s;
+@media (max-width: 768px) {
+    .food-app-container {
+        justify-content: center;
+    }
+    .food-app-container .app-btn {
+        width: 70px;
+        height: 70px;
+    }
 }
-/* === Hết đoạn code === */
