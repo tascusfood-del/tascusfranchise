@@ -1,21 +1,22 @@
 /* =====================================================================
-   FILE: style.css - TASCUS FOOD WEBSITE (OPTIMIZED)
+   FILE: style.css - TASCUS FOOD WEBSITE (REVERTED & FIXED)
    
    MỤC LỤC:
    1.  Imports & Fonts
-   2.  Global Reset & Base Styles (Body, H1-H6, Common Classes)
+   2.  Global Reset & Base Styles
    3.  Header & Navigation
-   4.  Banner & Marquee (Slider)
-   5.  About Section (Giới thiệu)
-   6.  Menu Gallery (Hình ảnh món ăn)
-   7.  Pricing Models (Mô hình cửa hàng - 2 cột)
-   8.  Financial Table (Bảng chi phí)
-   9.  Process Section (Quy trình)
+   4.  Banner & Marquee
+   5.  About Section
+   6.  Menu Gallery
+   7.  Pricing Models
+   8.  Financial Table
+   9.  Process Section
    10. News/Card Section
-   11. Contact Section (Form & Video)
+   11. Contact Section
    12. Footer & Copyright
-   13. Floating Widgets (Call button, Scroll top)
-   14. Responsive Global Fixes
+   13. Floating Widgets (Call, Scroll Top)
+   14. Food App Buttons (NEW FIX)
+   15. Responsive Fixes
 ===================================================================== */
 
 /* ===================================================================
@@ -23,7 +24,7 @@
 =================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;600;700;800&display=swap');
 
-/* Các file thư viện (Giữ nguyên thứ tự ưu tiên) */
+/* Các file thư viện */
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
@@ -66,8 +67,8 @@ body {
     background-color: #fffbf0;
     margin: 0;
     padding: 0;
-
-    /* Background Images Setup */
+    
+    /* Background Images */
     background-image: url('https://tascusfood.com/function/khoai%20edge.webp'),
                       url('https://tascusfood.com/function/burger%20edge.webp');
     background-position: left 1100px, right 1600px;
@@ -75,7 +76,6 @@ body {
     background-repeat: no-repeat, no-repeat;
 }
 
-/* Typography Defaults */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'FontCuaToi', sans-serif;
     letter-spacing: 0;
@@ -94,11 +94,7 @@ h4 { font-size: 16px; }
 h5 { font-size: 14px; }
 h6 { font-size: 13px; }
 
-ul, li, ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+ul, li, ol { margin: 0; padding: 0; list-style: none; }
 
 p {
     margin: 20px;
@@ -114,32 +110,23 @@ a {
     transition: all .3s ease-in-out;
 }
 
-a:hover {
-    cursor: url("https://tascusfood.com/function/select.png"), auto;
-}
+a:hover { cursor: url("https://tascusfood.com/function/select.png"), auto; }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-
+img { max-width: 100%; height: auto; }
+button { border: 0; margin: 0; padding: 0; cursor: pointer; }
 button:focus { outline: none; }
 
-/* Utility Classes */
 .full { float: left; width: 100%; }
-.layout_padding { padding-top: 40px; padding-bottom: 25px; }
 .padding_0 { padding: 0px; }
 .bg-light { background-color: transparent !important; }
 .ml-auto, .mx-auto { margin: 0 auto !important; }
 
-/* Wrapper cho hình ảnh căn giữa */
+/* --- KHÔI PHỤC KHOẢNG CÁCH CHUẨN --- */
+.layout_padding {
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
 .tascus-image-section {
     width: 100%;
     padding: 30px 20px;
@@ -171,17 +158,8 @@ button:focus { outline: none; }
 
 .navbar { padding: 15px 0px; }
 
-.navbar-brand {
-    width: auto;
-    padding: 5px 0;
-    transition: all 0.3s ease;
-}
-
-.navbar-brand img {
-    max-height: 50px;
-    width: auto;
-    transition: max-height 0.3s ease;
-}
+.navbar-brand { width: auto; padding: 5px 0; }
+.navbar-brand img { max-height: 50px; width: auto; }
 
 .navbar-expand-lg .navbar-nav .nav-link {
     font-family: 'FontCuaToi', sans-serif;
@@ -199,7 +177,6 @@ button:focus { outline: none; }
     color: #962b2d;
 }
 
-/* Button Tư Vấn */
 .btn-tu-van {
     font-family: 'FontCuaToi', sans-serif;
     background-color: #8B0000;
@@ -214,10 +191,7 @@ button:focus { outline: none; }
     transition: all 0.3s ease;
 }
 
-.btn-tu-van:hover {
-    background-color: #ffffff;
-    color: #8B0000;
-}
+.btn-tu-van:hover { background-color: #ffffff; color: #8B0000; }
 
 /* ===================================================================
    4. BANNER & MARQUEE SLIDER
@@ -229,29 +203,12 @@ button:focus { outline: none; }
     overflow: hidden;
 }
 
-#tascus-banner-widget .tascus-inner {
-    width: 100%;
-    display: block;
-    position: relative;
-}
-
-#tascus-banner-widget .tascus-slide {
-    display: none;
-    width: 100%;
-    position: relative;
-}
-
+#tascus-banner-widget .tascus-inner { width: 100%; display: block; position: relative; }
+#tascus-banner-widget .tascus-slide { display: none; width: 100%; position: relative; }
 #tascus-banner-widget .tascus-slide.tascus-active { display: block; }
 #tascus-banner-widget .tascus-slide picture { width: 100%; display: block; }
-#tascus-banner-widget .tascus-img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    vertical-align: middle;
-}
+#tascus-banner-widget .tascus-img { display: block; width: 100%; height: auto; margin: 0; }
 
-/* Banner Controls */
 #tascus-banner-widget .tascus-arrow {
     position: absolute;
     top: 50%;
@@ -273,7 +230,6 @@ button:focus { outline: none; }
 
 #tascus-banner-widget .tascus-arrow:hover {
     background: rgba(249, 177, 22, 0.95);
-    border-color: rgba(249, 177, 22, 0.9);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -297,12 +253,6 @@ button:focus { outline: none; }
     border: 2px solid rgba(255,255,255,0.9);
     background: rgba(255,255,255,0.85);
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#tascus-banner-widget .tascus-dot:hover {
-    background: rgba(249, 177, 22, 0.7);
-    transform: scale(1.2);
 }
 
 #tascus-banner-widget .tascus-dot.tascus-active {
@@ -311,7 +261,7 @@ button:focus { outline: none; }
     transform: scale(1.3);
 }
 
-/* Marquee (Chạy chữ liên tục) */
+/* Marquee */
 .marquee-container-v2 {
     width: 100%;
     background-color: #f9b116;
@@ -343,17 +293,12 @@ button:focus { outline: none; }
     100% { transform: translateX(-50%); }
 }
 
-.marquee-container-v2:hover .marquee-track { animation-play-state: paused; }
-
 /* ===================================================================
    5. ABOUT SECTION
 =================================================================== */
-.about_section {
-    width: 100%;
-    float: left;
-    clear: both;
-}
+.about_section { width: 100%; float: left; clear: both; }
 
+/* --- KHÔI PHỤC KHOẢNG CÁCH CHUẨN --- */
 .about_taital {
     width: 100%;
     float: left;
@@ -364,22 +309,17 @@ button:focus { outline: none; }
     text-transform: uppercase;
     font-family: 'FontCuaToi', sans-serif !important;
     position: relative;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    /* Margin rộng rãi của bản cũ */
+    margin-top: 40px; 
+    margin-bottom: 30px; 
     padding-bottom: 0;
 }
 
-.about_taital span { font-family: 'FontCuaToi', sans-serif !important; }
 .about_taital::after { display: none; }
 
-.about_section_2 {
-    width: 100%;
-    float: left;
-    height: auto;
-    padding-bottom: 0px;
-}
+.about_section_2 { width: 100%; float: left; padding-bottom: 0px; }
 
-/* QUY TẮC VÀNG: Xóa khoảng cách thừa sau heading */
+/* Rule override spacing */
 h1.about_taital + .layout_padding,
 h1.about_taital + .about_section_2,
 h1.about_taital + .pricing-container,
@@ -389,10 +329,7 @@ h1.about_taital + p {
     margin-top: 0 !important;
 }
 
-.about_taital_main, .slightly_text, .lorem_text {
-    width: 100%;
-    float: left;
-}
+.about_taital_main, .slightly_text, .lorem_text { width: 100%; float: left; }
 
 .slightly_text {
     font-size: 30px;
@@ -410,11 +347,7 @@ h1.about_taital + p {
     text-align-last: left;
 }
 
-.readmore_btn {
-    width: 170px;
-    float: left;
-    padding-top: 30px;
-}
+.readmore_btn { width: 170px; float: left; padding-top: 30px; }
 
 .readmore_btn a {
     font-family: 'FontCuaToi', sans-serif;
@@ -429,44 +362,18 @@ h1.about_taital + p {
     font-weight: bold;
 }
 
-.readmore_btn a:hover {
-    color: #ffffff;
-    background-color: #972c2d;
-}
-
-.about_img img {
-    width: 100%;
-    float: left;
-}
+.readmore_btn a:hover { color: #ffffff; background-color: #972c2d; }
+.about_img img { width: 100%; float: left; }
 
 /* ===================================================================
    6. MENU / GALLERY SECTION
 =================================================================== */
-.gallery-container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.gallery-item {
-    flex: 1 1 33.3333%;
-    min-width: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    line-height: 0;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+.gallery-container { display: flex; flex-wrap: nowrap; width: 100%; }
+.gallery-item { flex: 1 1 33.3333%; min-width: 0; font-size: 0; line-height: 0; }
+.gallery-item img { width: 100%; height: auto; display: block; }
 
 /* ===================================================================
-   7. PRICING SECTION (Mô hình cửa hàng)
+   7. PRICING SECTION
 =================================================================== */
 .pricing-container {
     max-width: 1000px;
@@ -476,17 +383,8 @@ h1.about_taital + p {
     padding-bottom: 80px;
 }
 
-.pricing-container::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.pricing-container .columns {
-    float: left;
-    width: 50%;
-    padding: 20px;
-}
+.pricing-container::after { content: ""; display: table; clear: both; }
+.pricing-container .columns { float: left; width: 50%; padding: 20px; }
 
 .price {
     list-style-type: none;
@@ -500,7 +398,6 @@ h1.about_taital + p {
 }
 
 .price:hover { box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2); }
-
 .price .header {
     background-color: #efa425;
     color: white;
@@ -519,12 +416,7 @@ h1.about_taital + p {
     font-weight: 600;
 }
 
-.price .grey {
-    background-color: #f5f5f5;
-    font-size: 24px;
-    font-weight: 700;
-}
-
+.price .grey { background-color: #f5f5f5; font-size: 24px; font-weight: 700; }
 .price .button {
     background-color: #efa425;
     border: none;
@@ -535,19 +427,16 @@ h1.about_taital + p {
     font-size: 22px;
     font-weight: 700;
     border-radius: 20px;
-    transition: 0.3s;
     display: inline-block;
-    cursor: pointer;
 }
-
 .price .button:hover { background-color: #e38f00; }
 
 /* ===================================================================
-   8. FINANCIAL TABLE SECTION (Bảng Chi Phí)
+   8. FINANCIAL TABLE
 =================================================================== */
 .tascus-pricing-table-section {
     width: 100%;
-    padding: 25px 20px;
+    padding: 25px 20px; /* Khôi phục padding cũ */
     background-color: #fffbf0;
     clear: both;
 }
@@ -558,15 +447,11 @@ h1.about_taital + p {
     color: #962b2d;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 0 40px 0;
+    margin: 0 0 40px 0; /* Khôi phục margin cũ */
     font-weight: bold;
 }
 
-.tascus-table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-}
-
+.tascus-table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .tascus-pricing-table {
     width: 100%;
     border-collapse: collapse;
@@ -576,7 +461,6 @@ h1.about_taital + p {
     min-width: 1200px;
 }
 
-/* Table Header */
 .tascus-pricing-table thead th {
     background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
     color: #ffffff;
@@ -590,49 +474,25 @@ h1.about_taital + p {
 .tascus-th-main { background: #962b2d !important; }
 .tascus-th-note { background: #efa425 !important; }
 .tascus-th-sub { background: #f9b116 !important; font-size: 12px; }
-
-/* Table Body */
-.tascus-pricing-table tbody td {
-    padding: 12px 10px;
-    text-align: center;
-    font-size: 13px;
-    border: 1px solid #e0e0e0;
-    color: #333;
-}
-
-.tascus-td-label {
-    text-align: left !important;
-    font-weight: 600;
-    background: #fff8e6;
-    color: #962b2d;
-}
-
-.tascus-td-note {
-    text-align: left !important;
-    font-size: 12px;
-    color: #666;
-    padding-left: 15px !important;
-}
-
-/* Table Row Highlights */
+.tascus-pricing-table tbody td { padding: 12px 10px; text-align: center; font-size: 13px; border: 1px solid #e0e0e0; color: #333; }
+.tascus-td-label { text-align: left !important; font-weight: 600; background: #fff8e6; color: #962b2d; }
+.tascus-td-note { text-align: left !important; font-size: 12px; color: #666; padding-left: 15px !important; }
 .tascus-tr-highlight { background: #fff4d9; }
 .tascus-tr-highlight .tascus-td-label { background: #ffe8a3; font-weight: bold; }
 .tascus-tr-indent .tascus-td-label { padding-left: 30px !important; background: #fffef9; }
-
 .tascus-tr-total { background: #f9e8cc; font-weight: bold; }
 .tascus-tr-total td { font-weight: bold; color: #962b2d; }
-
 .tascus-tr-final { background: linear-gradient(135deg, #962b2d 0%, #8B0000 100%); }
 .tascus-tr-final td { color: #ffffff !important; font-weight: bold; font-size: 14px; }
 
 /* ===================================================================
-   9. PROCESS SECTION (Quy trình)
+   9. PROCESS SECTION
 =================================================================== */
 .tascus-process-section {
     width: 100%;
     float: left;
-    padding: 90px 20px;
-    background-color: #fffbf0; /* Ưu tiên định nghĩa sau cùng */
+    padding: 90px 20px; /* Khôi phục padding cũ */
+    background-color: #fffbf0;
     clear: both;
 }
 
@@ -643,7 +503,7 @@ h1.about_taital + p {
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 0; /* Khôi phục margin cũ */
     padding: 0;
 }
 
@@ -667,10 +527,7 @@ h1.about_taital + p {
     border: 2px solid transparent;
 }
 
-.tascus-step-card:hover {
-    transform: translateY(-10px);
-    border-color: #f9b116;
-}
+.tascus-step-card:hover { transform: translateY(-10px); border-color: #f9b116; }
 
 .tascus-step-number {
     width: 70px;
@@ -702,20 +559,11 @@ h1.about_taital + p {
     margin: 0;
 }
 
-/* Arch Line (Đường nối) */
-.tascus-arch-line {
-    position: absolute;
-    top: 30px;
-    right: -75px;
-    width: 150px;
-    height: 50px;
-    z-index: -1;
-}
-
+.tascus-arch-line { position: absolute; top: 30px; right: -75px; width: 150px; height: 50px; z-index: -1; }
 .tascus-arch-line.reverse { top: 35px; }
 
 /* ===================================================================
-   10. NEWS CARD / CONTENT WRAPPER
+   10. NEWS CARD
 =================================================================== */
 .content-wrapper {
     margin: 0 auto;
@@ -750,63 +598,12 @@ h1.about_taital + p {
     z-index: 0;
 }
 
-.news-card__card-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.news-card__image {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    transition: transform 3s ease;
-    position: relative;
-    z-index: -1;
-}
-
-.news-card__text-wrapper {
-    position: absolute;
-    bottom: 0rem;
-    padding: 1rem;
-    color: white;
-    transition: background-color 1.5s ease;
-}
-
-.news-card__title {
-    font-family: 'FontCuaToi', sans-serif;
-    transition: color 1s ease;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    line-height: 1.3;
-}
-
-.news-card__post-date {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 0.65rem;
-    margin-bottom: 0.5rem;
-    color: #CCC;
-}
-
-.news-card__details-wrapper {
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 1.5s ease, opacity 1s ease;
-}
-
-.news-card__excerpt {
-    font-family: 'Be Vietnam', sans-serif;
-    font-weight: 300;
-    font-size: 0.85rem;
-    line-height: 1.5;
-}
-
+.news-card__image { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 3s ease; position: relative; z-index: -1; }
+.news-card__text-wrapper { position: absolute; bottom: 0; padding: 1rem; color: white; transition: background-color 1.5s ease; }
+.news-card__title { font-family: 'FontCuaToi', sans-serif; transition: color 1s ease; margin-bottom: 0.5rem; font-size: 1.2rem; font-weight: 700; color: #ffffff; line-height: 1.3; }
+.news-card__post-date { font-family: 'Be Vietnam', sans-serif; font-size: 0.65rem; margin-bottom: 0.5rem; color: #CCC; }
+.news-card__details-wrapper { max-height: 0; opacity: 0; transition: max-height 1.5s ease, opacity 1s ease; }
+.news-card__excerpt { font-family: 'Be Vietnam', sans-serif; font-weight: 300; font-size: 0.85rem; line-height: 1.5; }
 .news-card__read-more {
     font-family: 'Be Vietnam', sans-serif;
     background: black;
@@ -824,18 +621,8 @@ h1.about_taital + p {
     z-index: 5;
     text-align: center;
 }
-
-.news-card__read-more i {
-    position: relative;
-    left: 0.2rem;
-    color: #888;
-    transition: left 0.5s ease, color 0.6s ease;
-}
-
-.news-card__read-more:hover i {
-    left: 0.5rem;
-    color: #f9b116;
-}
+.news-card__read-more i { position: relative; left: 0.2rem; color: #888; transition: left 0.5s ease, color 0.6s ease; }
+.news-card__read-more:hover i { left: 0.5rem; color: #f9b116; }
 
 /* ===================================================================
    11. CONTACT SECTION
@@ -845,7 +632,7 @@ h1.about_taital + p {
     max-width: 100vw !important;
     margin-left: calc(50% - 50vw) !important;
     margin-right: calc(50% - 50vw) !important;
-    padding: 90px 0 !important;
+    padding: 90px 0 !important; /* Khôi phục padding cũ */
     position: relative;
     overflow: hidden;
     clear: both;
@@ -855,27 +642,11 @@ h1.about_taital + p {
     box-sizing: border-box;
 }
 
-.tascus-video-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
+.tascus-video-wrapper { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 0; }
 .tascus-video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 56.25vw;
-    min-width: 177.78vh;
-    min-height: 100vh;
-    pointer-events: none;
-    border: none;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 100vw; height: 56.25vw; min-width: 177.78vh; min-height: 100vh;
+    pointer-events: none; border: none;
 }
 
 .tascus-contact-container {
@@ -891,17 +662,15 @@ h1.about_taital + p {
     box-sizing: border-box;
 }
 
-.tascus-contact-info { color: #ffffff; box-sizing: border-box; }
-
+.tascus-contact-info { color: #ffffff; }
 .tascus-contact-h2 {
     font-family: 'FontCuaToi', sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 0; /* Khôi phục margin cũ */
     padding: 0;
     line-height: 1.2;
     color: #ffffff;
-    box-sizing: border-box;
 }
 
 .tascus-contact-p {
@@ -910,60 +679,24 @@ h1.about_taital + p {
     line-height: 1.6;
     margin: 0 0 30px 0;
     color: #ffffff;
-    box-sizing: border-box;
 }
 
-.tascus-info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    box-sizing: border-box;
-}
-
+.tascus-info-item { display: flex; align-items: center; margin-bottom: 20px; }
 .tascus-info-icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-sizing: border-box;
+    font-size: 1.5rem; margin-right: 15px; width: 50px; height: 50px;
+    background: rgba(255, 255, 255, 0.2); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-
 .tascus-info-icon i { color: #ffffff; }
+.tascus-info-text { display: flex; flex-direction: column; }
+.tascus-info-text strong { font-family: 'FontCuaToi', sans-serif; font-size: 1rem; text-transform: uppercase; margin: 0 0 5px 0; color: #f9b116; font-weight: bold; }
+.tascus-info-text span { font-family: 'Be Vietnam', sans-serif; font-size: 0.95rem; color: #ffffff; }
 
-.tascus-info-text {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-}
-
-.tascus-info-text strong {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin: 0 0 5px 0;
-    color: #f9b116;
-    font-weight: bold;
-}
-
-.tascus-info-text span {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 0.95rem;
-    color: #ffffff;
-}
-
-/* Contact Form Styles */
 .tascus-form-container {
     background: rgba(255, 255, 255, 0.98);
     padding: 40px;
     border-radius: 12px;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-    box-sizing: border-box;
 }
 
 .tascus-form-h3 {
@@ -976,76 +709,27 @@ h1.about_taital + p {
     text-align: left;
 }
 
-.tascus-form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
-
+.tascus-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px; }
 .tascus-input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-    outline: none;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+    width: 100%; padding: 12px 15px; background-color: #f8f8f8;
+    border: 1px solid #ddd; border-radius: 4px; font-family: 'Be Vietnam', sans-serif;
+    font-size: 0.9rem; color: #333; outline: none; transition: all 0.3s ease;
 }
-
-.tascus-input:focus {
-    border-color: #f9b116;
-    background-color: #ffffff;
-}
-
-.tascus-input::placeholder { color: #999; }
-
+.tascus-input:focus { border-color: #f9b116; background-color: #ffffff; }
 .tascus-select {
-    cursor: pointer;
-    appearance: none;
+    cursor: pointer; appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    padding-right: 40px;
+    background-repeat: no-repeat; background-position: right 15px center; padding-right: 40px;
 }
-
-.tascus-textarea {
-    min-height: 120px;
-    resize: vertical;
-    margin-bottom: 15px;
-}
-
+.tascus-textarea { min-height: 120px; resize: vertical; margin-bottom: 15px; }
 .tascus-submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #f9b116;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+    width: 100%; padding: 15px; background-color: #f9b116; color: #ffffff;
+    border: none; border-radius: 4px; font-family: 'FontCuaToi', sans-serif;
+    font-size: 1rem; font-weight: bold; text-transform: uppercase;
+    cursor: pointer; transition: background-color 0.3s ease;
 }
-
 .tascus-submit-btn:hover { background-color: #efa425; }
-
-.tascus-form-status {
-    display: none;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: 'Be Vietnam', sans-serif;
-}
+.tascus-form-status { display: none; margin-top: 15px; padding: 15px; border-radius: 5px; text-align: center; }
 
 /* ===================================================================
    12. FOOTER SECTION
@@ -1065,40 +749,15 @@ h1.about_taital + p {
     clear: both;
 }
 
-.useful_text {
-    width: 100%;
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.footer_text {
-    width: 68%;
-    float: left;
-    font-size: 16px;
-    color: #f8f8f8;
-    margin: 0px;
-    padding-top: 10px;
-}
-
+.useful_text { width: 100%; font-size: 24px; color: #ffffff; margin-bottom: 15px; font-weight: bold; }
+.footer_text { width: 68%; float: left; font-size: 16px; color: #f8f8f8; margin: 0px; padding-top: 10px; }
 .footer_menu { width: 100%; float: left; }
-.footer_menu ul { margin: 0px; padding: 0px; }
 .footer_menu li { font-size: 16px; color: #f8f8f8; }
 .footer_menu li a { color: #f8f8f8; }
 .footer_menu li a:hover { color: #f9b116; }
-
 .social_icon { width: 100%; float: left; }
-.social_icon ul { margin: 0px; padding: 0px; }
 .social_icon li { float: left; }
-
-.social_icon li a {
-    float: left;
-    padding: 20px 30px 0px 0px;
-    color: #f8f8f8;
-    font-size: 22px;
-}
-
+.social_icon li a { float: left; padding: 20px 30px 0px 0px; color: #f8f8f8; font-size: 22px; }
 .social_icon li a:hover { color: #f9b116; }
 
 .copyright_section {
@@ -1112,108 +771,107 @@ h1.about_taital + p {
     background-color: #efa425;
     height: auto;
 }
-
-.copyright_text {
-    width: 100%;
-    color: #f8f8f8;
-    text-align: center;
-    font-size: 16px;
-    margin: 20px 0px;
-}
-
+.copyright_text { width: 100%; color: #f8f8f8; text-align: center; font-size: 16px; margin: 20px 0px; }
 .copyright_text a { color: #f8f8f8; }
-.copyright_text a:hover { color: #f9b116; }
 
 /* ===================================================================
    13. FLOATING WIDGETS
 =================================================================== */
 .tascus-call-btn {
+    position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 25px rgba(249, 177, 22, 0.4); z-index: 9999;
+    cursor: pointer; transition: all 0.3s ease; text-decoration: none;
+    animation: tascus-bounce 2s infinite;
+}
+.tascus-call-btn:hover { transform: scale(1.1); box-shadow: 0 12px 35px rgba(249, 177, 22, 0.6); }
+.tascus-call-btn i { font-size: 28px; color: #ffffff; animation: tascus-ring 1.5s infinite; }
+
+/* 🎯 FIX: Scroll To Top (Thêm vào đây để sửa lỗi hiển thị) */
+.scroll-to-top-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 150px;
     right: 30px;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
+    background-color: #962c2d;
+    color: #fff;
+    border: none;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 25px rgba(249, 177, 22, 0.4);
-    z-index: 9999;
+    font-size: 20px;
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.3s ease;
-    text-decoration: none;
-    animation: tascus-bounce 2s infinite;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+.scroll-to-top-btn:hover { background-color: #f9b116; transform: translateY(-5px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); }
+.scroll-to-top-btn.show { opacity: 1; visibility: visible; }
 
-.tascus-call-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 35px rgba(249, 177, 22, 0.6);
-}
-
-.tascus-call-btn i {
-    font-size: 28px;
-    color: #ffffff;
-    animation: tascus-ring 1.5s infinite;
-}
-
+/* Animations */
 .tascus-pulse {
-    position: absolute;
+    position: absolute; width: 100%; height: 100%; border-radius: 50%;
+    background: rgba(249, 177, 22, 0.6); animation: tascus-pulse 2s infinite; z-index: -1;
+}
+@keyframes tascus-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes tascus-ring { 0%, 100% { transform: rotate(0deg); } 10%, 30% { transform: rotate(-15deg); } 20%, 40% { transform: rotate(15deg); } }
+@keyframes tascus-pulse { 0% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.3); opacity: 0.4; } 100% { transform: scale(1.6); opacity: 0; } }
+
+/* ===================================================================
+   14. FOOD APP BUTTONS (NEW FIX - SỬA LỖI TRANG CHỦ)
+=================================================================== */
+/* 🎯 FIX: Food App Buttons (Thêm vào đây để sửa lỗi hiển thị nút bị vỡ/mất) */
+.food-app-buttons {
+    display: flex;
+    gap: 18px !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: nowrap !important;
+}
+
+.food-app-btn {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.food-app-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.food-app-btn img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    background: rgba(249, 177, 22, 0.6);
-    animation: tascus-pulse 2s infinite;
-    z-index: -1;
-}
-
-@keyframes tascus-bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes tascus-ring {
-    0%, 100% { transform: rotate(0deg); }
-    10%, 30% { transform: rotate(-15deg); }
-    20%, 40% { transform: rotate(15deg); }
-}
-
-@keyframes tascus-pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.3); opacity: 0.4; }
-    100% { transform: scale(1.6); opacity: 0; }
+    object-fit: contain;
 }
 
 /* ===================================================================
-   14. RESPONSIVE GLOBAL FIXES
+   15. RESPONSIVE GLOBAL FIXES
 =================================================================== */
-
-/* Tablet & Mobile Menu/Header */
 @media (max-width: 991px) {
-    .header_section .form-inline {
-        width: 100%;
-        padding-top: 15px;
-        padding-bottom: 10px;
-    }
-    .btn-tu-van {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-        padding: 12px 20px;
-    }
+    .header_section .form-inline { width: 100%; padding-top: 15px; padding-bottom: 10px; }
+    .btn-tu-van { width: 100%; text-align: center; margin-left: 0; padding: 12px 20px; }
     .navbar-brand img { max-height: 40px; }
-    .header_section .navbar-nav {
-        margin-left: 0 !important;
-        align-items: flex-start;
-        width: 100%;
-    }
+    .header_section .navbar-nav { margin-left: 0 !important; align-items: flex-start; width: 100%; }
     .header_section .navbar-nav .nav-item { width: 100%; }
     .header_section .navbar-nav .nav-link { padding: 10px 0px; }
-    
     .tascus-arch-line { display: none; }
+    
+    /* Food App Tablet */
+    .food-app-buttons { gap: 6px; flex-wrap: nowrap !important; }
+    .food-app-btn { width: 48px; height: 48px; padding: 5px; }
 }
 
-/* Tablet Layouts */
 @media (min-width: 600px) and (max-width: 899px) {
     .news-card { width: calc(33.333% - 0.67rem); }
     .news-card__title { font-size: 1.3rem; }
@@ -1222,40 +880,26 @@ h1.about_taital + p {
 /* Mobile Layouts (Under 768px) */
 @media (max-width: 768px) {
     /* Fonts & Spacing */
-    h1, h2, h3, h4, h5, h6 {
-        line-height: 1.3 !important;
-        padding-bottom: 5px !important;
-    }
-    p {
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-    }
+    h1, h2, h3, h4, h5, h6 { line-height: 1.3 !important; padding-bottom: 5px !important; }
+    p { line-height: 1.5 !important; margin-bottom: 15px !important; }
 
-    /* Header & Banner */
-    #tascus-banner-widget .tascus-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 18px;
-    }
-    #tascus-banner-widget .tascus-prev { left: 8px; }
-    #tascus-banner-widget .tascus-next { right: 8px; }
-    .marquee-item { font-size: 20px; }
-
-    /* About Section Mobile */
+    /* --- KHÔI PHỤC KHOẢNG CÁCH CHUẨN CỦA MOBILE --- */
     .about_taital {
         margin-top: 40px;
         margin-bottom: 30px;
         font-size: 45px;
     }
-    .about_section_2, .pricing-container, .content-wrapper {
-        padding-bottom: 40px;
-    }
+    .about_section_2, .pricing-container, .content-wrapper { padding-bottom: 40px; }
+
+    /* Header & Banner */
+    #tascus-banner-widget .tascus-arrow { width: 36px; height: 36px; font-size: 18px; }
+    #tascus-banner-widget .tascus-prev { left: 8px; }
+    #tascus-banner-widget .tascus-next { right: 8px; }
+    .marquee-item { font-size: 20px; }
 
     /* Pricing Table Mobile */
     .tascus-pricing-title { font-size: 28px; }
-    .tascus-pricing-table, 
-    .tascus-pricing-table thead th, 
-    .tascus-pricing-table tbody td { font-size: 11px; }
+    .tascus-pricing-table, .tascus-pricing-table thead th, .tascus-pricing-table tbody td { font-size: 11px; }
 
     /* Process Section Mobile */
     .tascus-process-section { padding: 60px 15px; }
@@ -1277,37 +921,38 @@ h1.about_taital + p {
     .gallery-container { flex-direction: column; }
     .gallery-item { flex-basis: 100%; width: 100%; }
     
-    /* Call Button Mobile */
-    .tascus-call-btn {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-    }
+    /* Call & Scroll Button Mobile */
+    .tascus-call-btn { bottom: 20px; right: 20px; width: 55px; height: 55px; }
     .tascus-call-btn i { font-size: 24px; }
+    .scroll-to-top-btn { bottom: 130px; right: 15px; width: 45px; height: 45px; font-size: 18px; }
+    
+    /* Food App Mobile */
+    .food-app-buttons { gap: 8px; justify-content: center; flex-wrap: nowrap !important; }
+    .food-app-btn { width: 50px; height: 50px; padding: 6px; }
 }
 
-/* Small Mobile (Under 650px) */
 @media (max-width: 650px) {
     .pricing-container .columns { width: 100%; }
 }
 
-/* Extra Small Mobile (Under 480px) */
 @media (max-width: 480px) {
     .marquee-item { font-size: 16px; }
     .marquee-container-v2 { padding: 12px 0; }
-    
     .news-card { width: calc(50% - 0.5rem); }
     .news-card__title { font-size: 1rem; }
     .news-card__text-wrapper { padding: 0.75rem; }
-}
- 
-/* Background Disable on large screens if needed (Giữ nguyên logic cũ) */
-@media (max-width: 1280px) { 
-    body { background-image: none; }
+    
+    .food-app-buttons { gap: 5px; }
+    .food-app-btn { width: 45px; height: 45px; padding: 5px; }
 }
 
-/* Desktop Hover Effects for Cards */
+@media (max-width: 360px) {
+    .food-app-buttons { gap: 4px; }
+    .food-app-btn { width: 40px; height: 40px; padding: 6px; }
+}
+ 
+@media (max-width: 1280px) { body { background-image: none; } }
+
 @media (min-width: 900px) {
     .news-card { width: calc(25% - 0.75rem); }
     .news-card__title { font-size: 1.4rem; }
@@ -1316,7 +961,3 @@ h1.about_taital + p {
     .news-card:hover .news-card__title { color: #f9b116; }
     .news-card:hover .news-card__image { transform: scale(1.2); }
 }
-
-/* ===================================================================
-   END OF FILE
-=================================================================== */
