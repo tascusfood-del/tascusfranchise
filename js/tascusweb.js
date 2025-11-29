@@ -1,1 +1,239 @@
-function _0x2b5b(_0x4af949,_0x10d0f4){var _0x323165=_0x3231();return _0x2b5b=function(_0x2b5b41,_0xcf28ea){_0x2b5b41=_0x2b5b41-0x1ab;var _0x44fdc2=_0x323165[_0x2b5b41];return _0x44fdc2;},_0x2b5b(_0x4af949,_0x10d0f4);}function _0x3231(){var _0x514936=['appendChild','setAttribute','https://i.postimg.cc/k54dNFVG/a_nh_thu_c_te.jpg','innerHTML','role','hidden','Đồng\x20phục\x20nhân\x20viên\x20theo\x20màu\x20sắc\x20và\x20nhận\x20diện\x20của\x20Tascus','name','76363qTIPFr','backgroundImage','186rKFXfu','artist-banner','\x0a\x20\x20<h3>','https://i.postimg.cc/dtc8X5jw/linh_va_t.jpg','2632324cpcWRo','tascus-active','changedTouches','call','toString','add','querySelectorAll','Cửa\x20hàng\x20chuyên\x20nghiệp\x20hỗ\x20trợ\x20thiết\x20kế\x20&\x20thi\x20công\x20đúng\x20nhận\x20diện\x20Tascus','keydown','ArrowRight','https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg','https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg','3066867tAvcoc','slice','active','touchend','aria-selected','addEventListener','16kSldGe','.tascus-prev','key','TÀI\x20NGUYÊN','10805OOslyR','11207330UTDtJT','description','prototype','tabIndex','classList','CỬA\x20HÀNG\x203D','3LZdePf','querySelector','https://i.postimg.cc/CLs25Bv5/branding_guideline.jpg','touchstart','getElementById','url(','2493125BAACeX','LINH\x20VẬT','false','toggle','Hệ\x20thống\x20nhận\x20diện\x20bao\x20bì\x20đầy\x20đủ,\x20chuyên\x20nghiệp\x20theo\x20phong\x20cách\x20của\x20thương\x20hiệu','nextSlide','</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Hệ\x20thống\x20guideline\x20rõ\x20ràng,\x20đầy\x20đủ','touches','click','.tascus-dot','true','length','ArrowLeft','ĐỒNG\x20PHỤC','https://i.postimg.cc/Y0npBnLV/do-ng-phu-c.jpg','1204604msjlVm','forEach','warn','aria-hidden'];_0x3231=function(){return _0x514936;};return _0x3231();}(function(_0x332155,_0x317ea7){var _0x43d554=_0x2b5b,_0x45187d=_0x332155();while(!![]){try{var _0x409102=-parseInt(_0x43d554(0x1b2))/0x1+parseInt(_0x43d554(0x1cf))/0x2*(-parseInt(_0x43d554(0x1b9))/0x3)+-parseInt(_0x43d554(0x1e1))/0x4+-parseInt(_0x43d554(0x1bf))/0x5+parseInt(_0x43d554(0x1dd))/0x6*(parseInt(_0x43d554(0x1db))/0x7)+-parseInt(_0x43d554(0x1ae))/0x8*(-parseInt(_0x43d554(0x1ed))/0x9)+parseInt(_0x43d554(0x1b3))/0xa;if(_0x409102===_0x317ea7)break;else _0x45187d['push'](_0x45187d['shift']());}catch(_0x45b898){_0x45187d['push'](_0x45187d['shift']());}}}(_0x3231,0x5a7c1),(function(){'use strict';var _0x1b4ab4=_0x2b5b;var _0x434c00=0xbb8,_0x234478=document[_0x1b4ab4(0x1bd)]('tascus-banner-widget');if(!_0x234478)return;var _0x52bcea=Array[_0x1b4ab4(0x1b5)][_0x1b4ab4(0x1ee)][_0x1b4ab4(0x1e4)](_0x234478[_0x1b4ab4(0x1e7)]('.tascus-slide')),_0x487dc8=_0x234478[_0x1b4ab4(0x1ba)](_0x1b4ab4(0x1af)),_0x2f2f18=_0x234478[_0x1b4ab4(0x1ba)]('.tascus-next'),_0x4bc376=Array['prototype'][_0x1b4ab4(0x1ee)][_0x1b4ab4(0x1e4)](_0x234478[_0x1b4ab4(0x1e7)](_0x1b4ab4(0x1c9))),_0x33c714=0x0,_0x354791=null,_0xca88cd=![],_0x11151c=![],_0x279efc=0x0;function _0x3d415d(_0xbc7500){var _0x305998=_0x1b4ab4;_0xbc7500=(_0xbc7500+_0x52bcea[_0x305998(0x1cb)])%_0x52bcea[_0x305998(0x1cb)],_0x52bcea[_0x305998(0x1d0)](function(_0x3ffc65,_0x3d1093){var _0x5e0946=_0x305998;_0x3ffc65[_0x5e0946(0x1b7)][_0x5e0946(0x1c2)](_0x5e0946(0x1e2),_0x3d1093===_0xbc7500),_0x3ffc65[_0x5e0946(0x1d4)](_0x5e0946(0x1d2),_0x3d1093===_0xbc7500?_0x5e0946(0x1c1):_0x5e0946(0x1ca));}),_0x4bc376[_0x305998(0x1d0)](function(_0x329f80,_0x3644db){var _0x5570dd=_0x305998;_0x329f80[_0x5570dd(0x1b7)][_0x5570dd(0x1c2)](_0x5570dd(0x1e2),_0x3644db===_0xbc7500),_0x329f80[_0x5570dd(0x1d4)](_0x5570dd(0x1ac),(_0x3644db===_0xbc7500)[_0x5570dd(0x1e5)]());}),_0x33c714=_0xbc7500;}function _0x4328fc(){_0x3d415d(_0x33c714+0x1);}function _0x10f2e5(){_0x3d415d(_0x33c714-0x1);}function _0x12ac5c(){_0x2e4904(),_0x354791=setInterval(function(){if(!_0xca88cd&&!_0x11151c)_0x4328fc();},_0x434c00);}function _0x2e4904(){_0x354791&&(clearInterval(_0x354791),_0x354791=null);}if(_0x2f2f18)_0x2f2f18[_0x1b4ab4(0x1ad)](_0x1b4ab4(0x1c8),function(){_0x4328fc(),_0x12ac5c();});if(_0x487dc8)_0x487dc8[_0x1b4ab4(0x1ad)](_0x1b4ab4(0x1c8),function(){_0x10f2e5(),_0x12ac5c();});_0x4bc376['forEach'](function(_0x4dd798,_0x479820){var _0x1d0976=_0x1b4ab4;_0x4dd798['addEventListener'](_0x1d0976(0x1c8),function(){_0x3d415d(_0x479820),_0x12ac5c();});}),_0x234478['addEventListener']('mouseenter',function(){_0xca88cd=!![];}),_0x234478[_0x1b4ab4(0x1ad)]('mouseleave',function(){_0xca88cd=![];}),_0x234478[_0x1b4ab4(0x1ad)](_0x1b4ab4(0x1bc),function(_0x28433f){var _0xdbde39=_0x1b4ab4;_0x11151c=!![];if(_0x28433f[_0xdbde39(0x1c7)]&&_0x28433f[_0xdbde39(0x1c7)][0x0])_0x279efc=_0x28433f[_0xdbde39(0x1c7)][0x0]['clientX'];},{'passive':!![]}),_0x234478[_0x1b4ab4(0x1ad)](_0x1b4ab4(0x1ab),function(_0x337b3e){var _0x1067a2=_0x1b4ab4,_0xbf03b7=_0x337b3e[_0x1067a2(0x1e3)]&&_0x337b3e['changedTouches'][0x0]?_0x337b3e['changedTouches'][0x0]['clientX']:_0x279efc,_0x5a2275=_0xbf03b7-_0x279efc,_0x4761d9=0x28;if(_0x5a2275>_0x4761d9)_0x10f2e5();else{if(_0x5a2275<-_0x4761d9)_0x4328fc();}_0x11151c=![],_0x12ac5c();},{'passive':!![]}),_0x234478[_0x1b4ab4(0x1b6)]=0x0,_0x234478[_0x1b4ab4(0x1ad)](_0x1b4ab4(0x1e9),function(_0x5ca6e3){var _0x58f880=_0x1b4ab4;if(_0x5ca6e3['key']===_0x58f880(0x1cc))_0x10f2e5();if(_0x5ca6e3[_0x58f880(0x1b0)]===_0x58f880(0x1ea))_0x4328fc();}),_0x3d415d(0x0),_0x12ac5c(),document[_0x1b4ab4(0x1ad)]('visibilitychange',function(){var _0x5edf89=_0x1b4ab4;if(document[_0x5edf89(0x1d8)])_0x2e4904();else _0x12ac5c();});const _0xa29392=[{'name':'BAO\x20BÌ','description':_0x1b4ab4(0x1c3),'spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1ec)},{'name':_0x1b4ab4(0x1c0),'description':'Thiết\x20kế\x20nhân\x20vật\x20hoạt\x20hình\x20độc\x20đáo,\x20thân\x20thiện,\x20Tạo\x20sự\x20gần\x20gũi,\x20dễ\x20nhớ\x20với\x20khách\x20hàng','spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1e0)},{'name':_0x1b4ab4(0x1b8),'description':_0x1b4ab4(0x1e8),'spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1eb)},{'name':_0x1b4ab4(0x1cd),'description':_0x1b4ab4(0x1d9),'spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1ce)},{'name':'BRANDING\x20GUIDELINE','description':_0x1b4ab4(0x1c6),'spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1bb)},{'name':_0x1b4ab4(0x1b1),'description':'Ảnh\x20chụp\x20sản\x20phẩm\x20đầy\x20đủ\x20chuyên\x20nghiệp','spotify':{'profileUrl':'#','embedUrl':'#'},'backgroundUrl':_0x1b4ab4(0x1d5)}];let _0x290691=0x0;document[_0x1b4ab4(0x1ad)]('DOMContentLoaded',()=>{var _0x3ef381=_0x1b4ab4;const _0x331f6f=document['getElementById'](_0x3ef381(0x1de));if(!_0x331f6f){console[_0x3ef381(0x1d1)]('Không\x20tìm\x20thấy\x20phần\x20tử\x20#artist-banner\x20trên\x20trang\x20này.');return;}function _0x4b4d7f(){var _0x15d6d2=_0x3ef381;_0x331f6f[_0x15d6d2(0x1d6)]='',_0xa29392['forEach']((_0x4b213f,_0x538264)=>{var _0xe56798=_0x15d6d2;const _0x34fd9b=document['createElement']('li');_0x34fd9b['style'][_0xe56798(0x1dc)]=_0xe56798(0x1be)+_0x4b213f['backgroundUrl']+')',_0x34fd9b[_0xe56798(0x1d4)](_0xe56798(0x1d7),'button'),_0x538264===_0x290691&&_0x34fd9b['classList'][_0xe56798(0x1e6)](_0xe56798(0x1ef)),_0x34fd9b[_0xe56798(0x1d6)]=_0xe56798(0x1df)+_0x4b213f['name']+'</h3>\x0a\x20\x20<div\x20class=\x22section-content\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22inner\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22bio\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h2>'+_0x4b213f[_0xe56798(0x1da)]+_0xe56798(0x1c5)+_0x4b213f[_0xe56798(0x1b4)]+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a',_0x34fd9b[_0xe56798(0x1ad)](_0xe56798(0x1c8),()=>{_0x306b93(_0x538264);}),_0x331f6f[_0xe56798(0x1d3)](_0x34fd9b);});}function _0x306b93(_0xc3b78f){_0x290691=_0xc3b78f;const _0x3dcfa9=_0x331f6f['querySelectorAll']('li');_0x3dcfa9['forEach']((_0xe57af4,_0x512fd2)=>{var _0x27add5=_0x2b5b;_0xe57af4[_0x27add5(0x1b7)][_0x27add5(0x1c2)](_0x27add5(0x1ef),_0x512fd2===_0x290691);});}window[_0x3ef381(0x1c4)]=function(){var _0x312f56=_0x3ef381;_0x290691<_0xa29392[_0x312f56(0x1cb)]-0x1&&_0x306b93(_0x290691+0x1);},window['prevSlide']=function(){_0x290691>0x0&&_0x306b93(_0x290691-0x1);},_0x4b4d7f();});}()));
+
+// js/tascusweb.js  (isolated banner module)
+(function () {
+  'use strict';
+
+  var AUTO_INTERVAL = 3000; // ms
+
+  var root = document.getElementById('tascus-banner-widget');
+  if (!root) return;
+
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.tascus-slide'));
+  var prevBtn = root.querySelector('.tascus-prev');
+  var nextBtn = root.querySelector('.tascus-next');
+  var dots = Array.prototype.slice.call(root.querySelectorAll('.tascus-dot'));
+
+  var index = 0;
+  var timer = null;
+  var isHover = false;
+  var isTouching = false;
+  var startX = 0;
+
+  function setActive(i) {
+    i = (i + slides.length) % slides.length;
+    slides.forEach(function (s, idx) {
+      s.classList.toggle('tascus-active', idx === i);
+      s.setAttribute('aria-hidden', (idx === i) ? 'false' : 'true');
+    });
+    dots.forEach(function (d, idx) {
+      d.classList.toggle('tascus-active', idx === i);
+      d.setAttribute('aria-selected', (idx === i).toString());
+    });
+    index = i;
+  }
+
+  function next() { setActive(index + 1); }
+  function prev() { setActive(index - 1); }
+
+  function startAuto() {
+    stopAuto();
+    timer = setInterval(function () {
+      if (!isHover && !isTouching) next();
+    }, AUTO_INTERVAL);
+  }
+  function stopAuto() {
+    if (timer) { clearInterval(timer); timer = null; }
+  }
+
+  // bind controls
+  if (nextBtn) nextBtn.addEventListener('click', function () { next(); startAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAuto(); });
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      setActive(i);
+      startAuto();
+    });
+  });
+
+  // pause on hover
+  root.addEventListener('mouseenter', function () { isHover = true; });
+  root.addEventListener('mouseleave', function () { isHover = false; });
+
+  // touch / swipe
+  root.addEventListener('touchstart', function (e) {
+    isTouching = true;
+    if (e.touches && e.touches[0]) startX = e.touches[0].clientX;
+  }, { passive: true });
+
+  root.addEventListener('touchend', function (e) {
+    var endX = (e.changedTouches && e.changedTouches[0]) ? e.changedTouches[0].clientX : startX;
+    var dx = endX - startX;
+    var threshold = 40;
+    if (dx > threshold) prev();
+    else if (dx < -threshold) next();
+    isTouching = false;
+    startAuto();
+  }, { passive: true });
+
+  // keyboard accessible
+  root.tabIndex = 0;
+  root.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // init
+  setActive(0);
+  startAuto();
+
+  // pause/resume on tab visibility
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) stopAuto(); else startAuto();
+  });
+
+
+
+
+  /* script.js */
+
+// 1. Dữ liệu artists
+// (Bạn có thể thay đổi nội dung, hình ảnh ở đây)
+const artists = [
+  {
+    name: "BAO BÌ",
+    description: `Hệ thống nhận diện bao bì đầy đủ, chuyên nghiệp theo phong cách của thương hiệu`,
+   spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
+  },
+  {
+    name: "LINH VẬT",
+    description: `Thiết kế nhân vật hoạt hình độc đáo, thân thiện, Tạo sự gần gũi, dễ nhớ với khách hàng`,
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/dtc8X5jw/linh_va_t.jpg"
+  },
+  {
+    name: "CỬA HÀNG 3D",
+    description: `Cửa hàng chuyên nghiệp hỗ trợ thiết kế & thi công đúng nhận diện Tascus`,
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg"
+  },
+  {
+    name: "ĐỒNG PHỤC",
+    description: `Đồng phục nhân viên theo màu sắc và nhận diện của Tascus`,
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/Y0npBnLV/do-ng-phu-c.jpg"
+  },
+  {
+    name: "BRANDING GUIDELINE",
+    description: `Hệ thống guideline rõ ràng, đầy đủ`,
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/CLs25Bv5/branding_guideline.jpg"
+  },
+  {
+    name: "TÀI NGUYÊN",
+    description: `Ảnh chụp sản phẩm đầy đủ chuyên nghiệp`,
+    spotify: {
+      profileUrl: "#",
+      embedUrl: "#"
+    },
+    backgroundUrl: "https://i.postimg.cc/k54dNFVG/a_nh_thu_c_te.jpg"
+  }
+];
+
+// 2. Trạng thái
+let activeIndex = 0; 
+
+// 3. Chờ HTML tải xong
+document.addEventListener("DOMContentLoaded", () => {
+  // Tìm đúng <ul> ta đã đặt ID
+  const artistListElement = document.getElementById("artist-banner");
+
+  // Thoát nếu không tìm thấy element (để tránh lỗi)
+  if (!artistListElement) {
+    console.warn('Không tìm thấy phần tử #artist-banner trên trang này.');
+    return;
+  }
+
+  // 4. Hàm tạo các slide
+  function createArtistSlides() {
+    artistListElement.innerHTML = ""; 
+
+    artists.forEach((artist, index) => {
+      const li = document.createElement("li");
+      li.style.backgroundImage = `url(${artist.backgroundUrl})`;
+      li.setAttribute("role", "button");
+
+      if (index === activeIndex) {
+        li.classList.add("active");
+      }
+
+    /* === SAO CHÉP VÀ DÁN TOÀN BỘ KHỐI NÀY === */
+
+li.innerHTML = `
+  <h3>${artist.name}</h3>
+  <div class="section-content">
+    <div class="inner">
+      <div class="bio">
+        <h2>${artist.name}</h2>
+        <p>
+          ${artist.description}
+        </p>
+        </div>
+    </div>
+  </div>
+`;
+
+/* === DỪNG SAO CHÉP TẠI ĐÂY === */
+
+      li.addEventListener("click", () => {
+        setActiveSlide(index);
+      });
+
+      artistListElement.appendChild(li);
+    });
+  }
+
+  // 5. Hàm cập nhật slide 'active'
+  function setActiveSlide(index) {
+    activeIndex = index;
+    const allSlides = artistListElement.querySelectorAll("li");
+
+    allSlides.forEach((slide, i) => {
+      // Bật/tắt class 'active' tùy theo index
+      slide.classList.toggle('active', i === activeIndex);
+    });
+  }
+
+  // 6. Các hàm next/prev (nếu bạn cần dùng)
+  window.nextSlide = function() {
+    if (activeIndex < artists.length - 1) {
+      setActiveSlide(activeIndex + 1);
+    }
+  }
+
+  window.prevSlide = function() {
+    if (activeIndex > 0) {
+      setActiveSlide(activeIndex - 1);
+    }
+  }
+
+  // 7. Tạo slide lần đầu
+  createArtistSlides();
+});
+})();
