@@ -1,37 +1,49 @@
-
-
-
-
-
-
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
-
-Đã sắp xếp theo thứ tự: Fonts → Imports → Global → Sections
-
-Đã xóa code thừa và duplicate
-
-Đã comment rõ ràng từng section
-
+- Fonts → Imports → Global → Sections
+- Đã loại bỏ code trùng lặp
+- Sử dụng CSS Variables cho màu sắc
 =====================================================================*/
 
 /* ===================================================================
+1. CSS VARIABLES (TIỆN LỢI & DỄ BẢO TRỒNG)
+=================================================================== */
 
-IMPORT FONTS
+:root {
+  --color-primary: #f9b116;
+  --color-primary-dark: #efa425;
+  --color-accent: #962b2d;
+  --color-accent-dark: #8B0000;
+  --color-dark: #232222;
+  --color-text: #666666;
+  --color-light: #f8f8f8;
+  --color-white: #ffffff;
+  --color-bg: #fffbf0;
+  --color-border: #eee;
+  
+  --font-heading: 'FontCuaToi', sans-serif;
+  --font-body: 'Be Vietnam', sans-serif;
+  
+  --radius-default: 5px;
+  --radius-medium: 12px;
+  --radius-large: 25px;
+  
+  --transition-fast: 0.3s ease;
+  --transition-normal: 0.5s ease;
+  --box-shadow-light: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================================================
+2. IMPORT FONTS & FILES
 =================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;600;700;800&display=swap');
 
 @font-face {
-font-family: 'FontCuaToi';
-src: url('../fonts/kenyan.ttf') format('truetype');
-font-weight: normal;
-font-style: normal;
+  font-family: 'FontCuaToi';
+  src: url('../fonts/kenyan.ttf') format('truetype');
 }
-
-/* ===================================================================
-2. IMPORT CSS FILES
-=================================================================== */
 
 @import url(animate.min.css);
 @import url(normalize.css);
@@ -46,46 +58,46 @@ font-style: normal;
 @import url(nice-select.css);
 
 /* ===================================================================
-3. GLOBAL STYLES (Skeleton)
+3. GLOBAL STYLES
 =================================================================== */
 
-* { /* Thêm dấu * thay vì để trống */
-box-sizing: border-box !important;
-transition: ease all 0.5s;
+* {
+  box-sizing: border-box !important;
+  transition: ease all var(--transition-normal);
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-color: #666666;
-font-size: 14px;
-line-height: 1.80857;
-font-weight: normal;
-overflow-x: hidden;
-font-family: 'Be Vietnam', sans-serif;
-background-color: #fffbf0;
-margin: 0;
-padding: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.80857;
+  font-weight: normal;
+  overflow-x: hidden;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  margin: 0;
+  padding: 0;
 }
 
 a {
-color: #1f1f1f;
-text-decoration: none !important;
-outline: none !important;
-transition: all .3s ease-in-out;
+  color: #1f1f1f;
+  text-decoration: none !important;
+  outline: none !important;
+  transition: all var(--transition-fast);
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'FontCuaToi', sans-serif;
-letter-spacing: 0;
-font-weight: normal;
-position: relative;
-padding: 0 0 10px 0;
-line-height: normal;
-color: #111111;
-margin: 0;
+  font-family: var(--font-heading);
+  letter-spacing: 0;
+  font-weight: normal;
+  position: relative;
+  padding: 0 0 10px 0;
+  line-height: normal;
+  color: var(--color-dark);
+  margin: 0;
 }
 
 h1 { font-size: 32px; }
@@ -96,46 +108,46 @@ h5 { font-size: 14px; }
 h6 { font-size: 13px; }
 
 ul, li, ol {
-margin: 0px;
-padding: 0px;
-list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 p {
-margin: 20px;
-font-weight: 300;
-font-size: 15px;
-line-height: 24px;
+  margin: 20px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 img {
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
-border: 0;
-margin: 0;
-padding: 0;
-cursor: pointer;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 button:focus {
-outline: none;
+  outline: none;
 }
 
 .full {
-float: left;
-width: 100%;
+  float: left;
+  width: 100%;
 }
 
 .layout_padding {
-padding-top: 40px;
-padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 .padding_0 {
-padding: 0px;
+  padding: 0;
 }
 
 /* ===================================================================
@@ -143,139 +155,136 @@ padding: 0px;
 =================================================================== */
 
 .header_section {
-width: 100%;
-float: left;
-background-color: #f9b116;
-height: auto;
+  width: 100%;
+  float: left;
+  background-color: var(--color-primary);
+  height: auto;
 }
 
 .bg-light {
-background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .navbar {
-padding: 15px 0px;
+  padding: 15px 0;
 }
 
 .navbar-brand {
-width: auto;
-padding: 5px 0;
-transition: all 0.3s ease;
+  width: auto;
+  padding: 5px 0;
+  transition: all var(--transition-fast);
 }
 
 .navbar-brand img {
-max-height: 50px;
-width: auto;
-transition: max-height 0.3s ease;
+  max-height: 50px;
+  width: auto;
+  transition: max-height var(--transition-fast);
 }
 
 .ml-auto, .mx-auto {
-margin: 0 auto !important;
+  margin: 0 auto !important;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-font-family: 'FontCuaToi', sans-serif;
-padding: 3px 20px;
-font-size: 25px;
-color: #fefefd;
-border-radius: 5px;
-text-transform: uppercase;
+  font-family: var(--font-heading);
+  padding: 3px 20px;
+  font-size: 25px;
+  color: #fefefd;
+  border-radius: var(--radius-default);
+  text-transform: uppercase;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-color: #962b2d;
-}
-
-.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active {
-color: #962b2d;
+  color: var(--color-accent);
 }
 
-/* Nút Tư Vấn */
 .btn-tu-van {
-font-family: 'FontCuaToi', sans-serif;
-background-color: #8B0000;
-color: #ffffff;
-border: 2px solid #8B0000;
-border-radius: 25px;
-padding: 8px 20px;
-font-weight: bold;
-text-transform: uppercase;
-font-size: 22px;
-margin-left: 20px;
-transition: all 0.3s ease;
+  font-family: var(--font-heading);
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent-dark);
+  border-radius: var(--radius-large);
+  padding: 8px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-left: 20px;
+  transition: all var(--transition-fast);
 }
 
 .btn-tu-van:hover {
-background-color: #ffffff;
-color: #8B0000;
+  background-color: var(--color-white);
+  color: var(--color-accent-dark);
 }
 
 /* ===================================================================
-5. TASCUS BANNER SLIDER
+5. BANNER SLIDER
 =================================================================== */
 
 #tascus-banner-widget.tascus-fullbleed {
-position: relative;
-width: 100%;
-background: transparent;
-overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
 }
 
 #tascus-banner-widget .tascus-inner {
-width: 100%;
-display: block;
-position: relative;
+  width: 100%;
+  display: block;
+  position: relative;
 }
 
 #tascus-banner-widget .tascus-slide {
-display: none;
-width: 100%;
-position: relative;
+  display: none;
+  width: 100%;
+  position: relative;
 }
 
-#tascus-banner-widget .tascus-slide.tascus-active {
-display: block;
-}
-
+#tascus-banner-widget .tascus-slide.tascus-active,
 #tascus-banner-widget .tascus-slide picture {
-width: 100%;
-display: block;
+  display: block;
+  width: 100%;
 }
 
 #tascus-banner-widget .tascus-img {
-display: block;
-width: 100%;
-height: auto;
-margin: 0;
-vertical-align: middle;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  vertical-align: middle;
 }
 
-/* Banner Arrows */
+/* Banner Arrows & Dots */
+#tascus-banner-widget .tascus-arrow,
+#tascus-banner-widget .tascus-dot {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
 #tascus-banner-widget .tascus-arrow {
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-z-index: 60;
-width: 48px;
-height: 48px;
-border-radius: 50%;
-border: 2px solid rgba(255,255,255,0.9);
-background: rgba(255,255,255,0.95);
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 22px;
-cursor: pointer;
-box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: var(--box-shadow-medium);
 }
 
 #tascus-banner-widget .tascus-arrow:hover {
-background: rgba(249, 177, 22, 0.95);
-border-color: rgba(249, 177, 22, 0.9);
-transform: translateY(-50%) scale(1.1);
+  background: rgba(249, 177, 22, 0.95);
+  border-color: rgba(249, 177, 22, 0.9);
+  transform: translateY(-50%) scale(1.1);
 }
 
 #tascus-banner-widget .tascus-prev { left: 12px; }
@@ -283,1398 +292,1284 @@ transform: translateY(-50%) scale(1.1);
 
 /* Banner Dots */
 #tascus-banner-widget .tascus-dots {
-position: absolute;
-left: 50%;
-transform: translateX(-50%);
-bottom: -10px;
-z-index: 70;
-display: flex;
-gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  z-index: 70;
+  display: flex;
+  gap: 10px;
 }
 
 #tascus-banner-widget .tascus-dot {
-width: 9px;
-height: 9px;
-border-radius: 50%;
-border: 2px solid rgba(255,255,255,0.9);
-background: rgba(255,255,255,0.85);
-cursor: pointer;
-transition: all 0.3s ease;
+  width: 9px;
+  height: 9px;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 #tascus-banner-widget .tascus-dot:hover {
-background: rgba(249, 177, 22, 0.7);
-transform: scale(1.2);
+  background: rgba(249, 177, 22, 0.7);
+  transform: scale(1.2);
 }
 
 #tascus-banner-widget .tascus-dot.tascus-active {
-background: #ff9f1c;
-border-color: #ff9f1c;
-transform: scale(1.3);
+  background: #ff9f1c;
+  border-color: #ff9f1c;
+  transform: scale(1.3);
 }
-
 
 /* ===================================================================
-MENU STart
+6. GALLERY SECTION
 =================================================================== */
-/* 1. Container chính của gallery */
+
 .gallery-container {
-  display: flex; /* Sử dụng Flexbox để xếp hàng */
-  flex-wrap: nowrap; /* Đảm bảo các ảnh luôn trên 1 hàng (desktop) */
-  width: 100%; /* Chiếm toàn bộ chiều ngang */
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* 2. Từng mục ảnh (mỗi mục chiếm 1/3) */
 .gallery-item {
-  /* flex-grow: 1; (cho phép lớn lên)
-    flex-shrink: 1; (cho phép co lại)
-    flex-basis: 33.3333%; (chiều rộng cơ bản là 1/3)
-  */
   flex: 1 1 33.3333%;
-  
-  /* Quan trọng: Ngăn ảnh bị tràn khi co giãn */
-  min-width: 0; 
-  
-  /* Xóa mọi khoảng cách */
+  min-width: 0;
   margin: 0;
   padding: 0;
-  
-  /* Xóa khoảng trắng thừa do font-size (nếu có) */
   font-size: 0;
   line-height: 0;
 }
 
-/* 3. Thẻ <img> bên trong */
 .gallery-item img {
-  width: 100%; /* Luôn fill 100% chiều ngang của .gallery-item */
-  height: auto; /* Tự động tính chiều cao để giữ đúng tỉ lệ, KHÔNG crop */
-  
-  /* Xóa khoảng trắng thừa bên dưới ảnh */
-  display: block; 
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* 4. Cấu hình Responsive cho Mobile */
 @media (max-width: 768px) {
   .gallery-container {
-    /* Chuyển layout từ hàng ngang (row) sang cột (column) */
     flex-direction: column;
   }
-  
-  /* Trên mobile, mỗi .gallery-item sẽ chiếm 100% chiều ngang */
+
   .gallery-item {
     flex-basis: 100%;
     width: 100%;
   }
 }
-/* ===================================================================
-MENU end
-=================================================================== */
 
 /* ===================================================================
-6. ABOUT SECTION
+7. ABOUT SECTION
 =================================================================== */
 
 .about_section {
-width: 100%;
-float: left;
-clear: both;
-/* XÓA: margin-top: 25px; */
-/* XÓA: margin-bottom: 25px; */
+  width: 100%;
+  float: left;
+  clear: both;
 }
 
 .about_taital {
-width: 100%;
-float: left;
-font-size: 50px;
-color: #232222;
-font-weight: 800;
-text-align: center;
-text-transform: uppercase;
-font-family: 'FontCuaToi', sans-serif !important;
-position: relative;
-
-/* === SỬA ĐỔI KHOẢNG CÁCH THEO QUY TẮC MỚI === */
-/* Nguyên tắc: Heading sẽ tự quyết định khoảng cách.
-   1. margin-top để tạo khoảng cách với section phía TRÊN. 
-      Dùng 90px để đồng bộ với .layout_padding.
-   2. margin-bottom để tạo khoảng cách với content phía DƯỚI.
-*/
-margin-top: 40px; /* (Gốc là 40px) - Tạo khoảng cách RÕ RÀNG bên trên. */
-margin-bottom: 30px; /* (Gốc là 30px) - Khoảng cách vừa phải TỚI content. */
-padding-bottom: 0; /* (Gốc là 10px) - Xóa padding, dùng margin là đủ. */
-/* === KẾT THÚC SỬA ĐỔI === */
+  width: 100%;
+  float: left;
+  font-size: 50px;
+  color: var(--color-dark);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-heading) !important;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  padding-bottom: 0;
 }
 
 .about_taital span {
-font-family: 'FontCuaToi', sans-serif !important;
+  font-family: var(--font-heading) !important;
 }
 
 .about_taital::after {
-display: none; 
+  display: none;
 }
 
 .about_section_2 {
-width: 100%;
-float: left;
-height: auto;
-/* Cần đảm bảo section này có padding-bottom để đẩy section sau ra */
-padding-bottom: 0px;
+  width: 100%;
+  float: left;
+  height: auto;
+  padding-bottom: 0;
 }
 
-/* =================================================
-   🎯 QUY TẮC VÀNG ĐỂ SỬA LỖI KHOẢNG CÁCH 🎯
-   =================================================
-   Bất cứ content block nào (.layout_padding, .pricing-container, v.v.)
-   nằm "ngay sau" (toán tử +) heading .about_taital 
-   ĐỀU PHẢI bỏ khoảng cách bên trên của nó đi (vì heading đã lo việc đó).
-*/
 h1.about_taital + .layout_padding,
 h1.about_taital + .about_section_2,
 h1.about_taital + .pricing-container,
 h1.about_taital + .content-wrapper,
-h1.about_taital + p { /* Thêm p vì có 1 thẻ p mồ côi */
-    padding-top: 0 !important; /* Ghi đè padding-top: 90px của .layout_padding */
-    margin-top: 0 !important; /* Ghi đè margin-top: 50px của .pricing-container */
+h1.about_taital + p {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
-
 .about_taital_main {
-width: 100%;
-float: left;
+  width: 100%;
+  float: left;
 }
 
 .slightly_text {
-width: 100%;
-float: left;
-font-size: 30px;
-color: #232222;
-font-weight: bold;
-margin-top: 25px;
+  width: 100%;
+  float: left;
+  font-size: 30px;
+  color: var(--color-dark);
+  font-weight: bold;
+  margin-top: 25px;
 }
 
 .lorem_text {
-width: 100%;
-float: left;
-font-size: 19px;
-font-weight: 300;
-color: #232222;
-margin: 30px 0px;
-text-align: justify;
-text-align-last: left;
-
+  width: 100%;
+  float: left;
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--color-dark);
+  margin: 30px 0;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .readmore_btn {
-width: 170px;
-float: left;
-padding-top: 30px;
+  width: 170px;
+  float: left;
+  padding-top: 30px;
 }
 
 .readmore_btn a {
-font-family: 'FontCuaToi', sans-serif;
-width: 100%;
-float: left;
-font-size: 22px;
-color: #fcfcfd;
-background-color: #f9b116;
-text-align: center;
-padding: 12px 0px;
-border-radius: 5px;
-font-weight: bold;
+  font-family: var(--font-heading);
+  width: 100%;
+  float: left;
+  font-size: 22px;
+  color: #fcfcfd;
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 12px 0;
+  border-radius: var(--radius-default);
+  font-weight: bold;
+  transition: all var(--transition-fast);
 }
 
 .readmore_btn a:hover {
-color: #ffffff;
-background-color: #972c2d;
+  color: var(--color-white);
+  background-color: var(--color-accent);
 }
 
 .about_img img {
-width: 100%;
-float: left;
+  width: 100%;
+  float: left;
 }
 
 /* ===================================================================
-7. PRICING SECTION (Mô hình cửa hàng)
+8. PRICING SECTION
 =================================================================== */
 
 .pricing-container {
-max-width: 1000px;
-/* SỬA ĐỔI: Xóa margin-top: 50px. 
-   Đã bị quy tắc (h1.about_taital + .pricing-container) ghi đè, 
-   nhưng chúng ta set lại cho rõ ràng */
-margin: 0 auto;
-padding: 20px;
-clear: both;
-/* THÊM: padding-bottom để tạo khoảng cách nhất quán */
-padding-bottom: 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  clear: both;
+  padding-bottom: 80px;
 }
 
 .pricing-container .columns {
-float: left;
-width: 50%;
-padding: 20px;
+  float: left;
+  width: 50%;
+  padding: 20px;
 }
 
 .price {
-list-style-type: none;
-border: 1px solid #eee;
-margin: 0;
-padding: 0;
-border-radius: 25px;
-overflow: hidden;
-transition: 0.3s;
-background-color: #ffffff;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  margin: 0;
+  padding: 0;
+  border-radius: var(--radius-large);
+  overflow: hidden;
+  transition: var(--transition-fast);
+  background-color: var(--color-white);
 }
 
 .price:hover {
-box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
+  box-shadow: var(--box-shadow-medium);
 }
 
 .price .header {
-background-color: #efa425;
-color: white;
-font-size: 45px;
-font-weight: 700;
-border-top-left-radius: 20px;
-border-top-right-radius: 20px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  font-size: 45px;
+  font-weight: 700;
+  border-radius: var(--radius-large) var(--radius-large) 0 0;
 }
 
 .price li {
-border-bottom: 1px solid #eee;
-padding: 20px;
-text-align: center;
-background-color: #ffffff;
-font-size: 19px;
-font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px;
+  text-align: center;
+  background-color: var(--color-white);
+  font-size: 19px;
+  font-weight: 600;
 }
 
 .price .grey {
-background-color: #f5f5f5;
-font-size: 24px;
-font-weight: 700;
+  background-color: #f5f5f5;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .button {
-background-color: #efa425;
-border: none;
-color: white;
-padding: 12px 30px;
-text-align: center;
-text-decoration: none;
-font-size: 22px;
-font-weight: 700;
-border-radius: 20px;
-transition: 0.3s;
-display: inline-block;
-cursor: pointer;
+  background-color: var(--color-primary-dark);
+  border: none;
+  color: var(--color-white);
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: var(--radius-large);
+  transition: var(--transition-fast);
+  display: inline-block;
+  cursor: pointer;
 }
 
 .button:hover {
-background-color: #e38f00;
+  background-color: #e38f00;
 }
 
 .pricing-container::after {
-content: "";
-display: table;
-clear: both;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 650px) {
+  .pricing-container .columns {
+    width: 100%;
+  }
 }
 
 /* ===================================================================
-8. NEWS CARD SECTION (Menu Food)
+9. NEWS CARD SECTION
 =================================================================== */
 
 .content-wrapper {
-/* SỬA ĐỔI: Xóa margin-top: 50px. */
-margin: 0 auto;
-max-width: 1200px;
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-padding: 0.5rem;
-gap: 1rem;
-clear: both;
-/* THÊM: padding-bottom để tạo khoảng cách nhất quán */
-padding-bottom: 90px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  clear: both;
+  padding-bottom: 90px;
 }
 
 .news-card {
-margin: 0;
-position: relative;
-width: calc(50% - 0.5rem);
-aspect-ratio: 4.5 / 5;
-overflow: hidden;
-border-radius: 0.5rem;
-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  margin: 0;
+  position: relative;
+  width: calc(50% - 0.5rem);
+  aspect-ratio: 4.5 / 5;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow-medium);
 }
 
 .news-card::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
-z-index: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 80%);
+  z-index: 0;
 }
 
 .news-card__card-link {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .news-card__image {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
-transition: transform 3s ease;
-position: relative;
-z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 3s ease;
+  position: relative;
+  z-index: -1;
 }
 
 .news-card__text-wrapper {
-position: absolute;
-bottom: 0rem;
-padding: 1rem;
-color: white;
-transition: background-color 1.5s ease;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  color: var(--color-white);
+  transition: background-color 1.5s ease;
 }
 
 .news-card__title {
-font-family: 'FontCuaToi', sans-serif;
-transition: color 1s ease;
-margin-bottom: 0.5rem;
-font-size: 1.2rem;
-font-weight: 700;
-color: #ffffff;
-line-height: 1.3;
+  font-family: var(--font-heading);
+  transition: color 1s ease;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.3;
 }
 
 .news-card__post-date {
-font-family: 'Be Vietnam', sans-serif;
-font-size: 0.65rem;
-margin-bottom: 0.5rem;
-color: #CCC;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  margin-bottom: 0.5rem;
+  color: #CCC;
 }
 
 .news-card__details-wrapper {
-max-height: 0;
-opacity: 0;
-transition: max-height 1.5s ease, opacity 1s ease;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 1.5s ease, opacity 1s ease;
 }
 
 .news-card__excerpt {
-font-family: 'Be Vietnam', sans-serif;
-font-weight: 300;
-font-size: 0.85rem;
-line-height: 1.5;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .news-card__read-more {
-font-family: 'Be Vietnam', sans-serif;
-background: black;
-color: #bbb;
-display: block;
-padding: 0.4rem 0.6rem;
-border-radius: 0.3rem;
-margin-top: 1rem;
-border: 1px solid #444;
-font-size: 0.75rem;
-text-decoration: none;
-width: 6rem;
-margin-left: auto;
-position: relative;
-z-index: 5;
-text-align: center;
+  font-family: var(--font-body);
+  background: black;
+  color: #bbb;
+  display: block;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: 1px solid #444;
+  font-size: 0.75rem;
+  text-decoration: none;
+  width: 6rem;
+  margin-left: auto;
+  position: relative;
+  z-index: 5;
+  text-align: center;
 }
 
 .news-card__read-more i {
-position: relative;
-left: 0.2rem;
-color: #888;
-transition: left 0.5s ease, color 0.6s ease;
+  position: relative;
+  left: 0.2rem;
+  color: #888;
+  transition: left var(--transition-fast), color 0.6s ease;
 }
 
 .news-card__read-more:hover i {
-left: 0.5rem;
-color: #f9b116;
+  left: 0.5rem;
+  color: var(--color-primary);
+}
+
+/* Responsive News Cards */
+@media (max-width: 479px) {
+  .news-card {
+    width: calc(50% - 0.5rem);
+  }
+  .news-card__title {
+    font-size: 1rem;
+  }
+  .news-card__text-wrapper {
+    padding: 0.75rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 599px) {
+  .news-card {
+    width: calc(50% - 0.5rem);
+  }
+  .news-card__title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .news-card {
+    width: calc(33.333% - 0.67rem);
+  }
+  .news-card__title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .news-card {
+    width: calc(25% - 0.75rem);
+  }
+  .news-card__title {
+    font-size: 1.4rem;
+  }
+  .news-card:hover .news-card__details-wrapper {
+    max-height: 500px;
+    opacity: 1;
+  }
+  .news-card:hover .news-card__text-wrapper {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .news-card:hover .news-card__title {
+    color: var(--color-primary);
+  }
+  .news-card:hover .news-card__image {
+    transform: scale(1.2);
+  }
 }
 
 /* ===================================================================
-9. FOOTER SECTION
-=================================================================== */
-
-.footer_section {
-width: 100%;
-float: left;
-background-color: #962b2d;
-height: auto;
-padding: 90px 0px;
-clear: both;
-/* XÓA: margin-top: 90px; (Không cần thiết vì content-wrapper đã có padding-bottom) */
-}
-
-.useful_text {
-width: 100%;
-font-size: 24px;
-color: #ffffff;
-margin-bottom: 15px;
-font-weight: bold;
-}
-
-.footer_text {
-width: 68%;
-float: left;
-font-size: 16px;
-color: #f8f8f8;
-margin: 0px;
-padding-top: 10px;
-}
-
-.footer_menu {
-width: 100%;
-float: left;
-}
-
-.footer_menu ul {
-margin: 0px;
-padding: 0px;
-}
-
-.footer_menu li {
-font-size: 16px;
-color: #f8f8f8;
-}
-
-.footer_menu li a {
-color: #f8f8f8;
-}
-
-.footer_menu li a:hover {
-color: #f9b116;
-}
-
-.Enter_text {
-width: 100%;
-float: left;
-font-size: 18px;
-color: #f8f8f8;
-background-color: transparent;
-padding: 8px 15px;
-margin-top: 10px;
-border: 1px solid #f8f8f8;
-}
-
-input.Enter_text::placeholder {
-color: #f8f8f8;
-}
-
-.subscribe_bt {
-width: 190px;
-float: left;
-margin-top: 20px;
-}
-
-.subscribe_bt a {
-width: 100%;
-float: left;
-font-size: 18px;
-color: #f8f8f8;
-background-color: #f9b116;
-text-align: center;
-padding: 12px 0px;
-text-transform: uppercase;
-border-radius: 4px;
-}
-
-.subscribe_bt a:hover {
-color: #962b2d;
-background-color: #ffffff;
-}
-
-.social_icon {
-width: 100%;
-float: left;
-}
-
-.social_icon ul {
-margin: 0px;
-padding: 0px;
-}
-
-.social_icon li {
-float: left;
-}
-
-.social_icon li a {
-float: left;
-padding: 20px 30px 0px 0px;
-color: #f8f8f8;
-font-size: 22px;
-}
-
-.social_icon li a:hover {
-color: #f9b116;
-}
-
-/* ===================================================================
-10. COPYRIGHT SECTION
-=================================================================== */
-
-.copyright_section {
-width: 100%;
-float: left;
-background-color: #efa425;
-height: auto;
-}
-
-.copyright_text {
-width: 100%;
-color: #f8f8f8;
-text-align: center;
-font-size: 16px;
-margin: 20px 0px;
-}
-
-.copyright_text a {
-color: #f8f8f8;
-}
-
-.copyright_text a:hover {
-color: #f9b116;
-}
-
-
-
-
-
-/* ===================================================================
-  MARQUEE V2 - CHẠY LIÊN TỤC KHÔNG KHOẢNG TRỐNG
+10. MARQUEE SECTION
 =================================================================== */
 
 .marquee-container-v2 {
-    width: 100%;
-    background-color: #f9b116;
-    overflow: hidden;
-    position: relative;
-    padding: 15px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  background-color: var(--color-primary);
+  overflow: hidden;
+  position: relative;
+  padding: 15px 0;
+  box-shadow: var(--box-shadow-light);
 }
 
 .marquee-track {
-    display: flex;
-    width: 200%; /* Gấp đôi để chạy liên tục */
-    animation: scroll-left 15s linear infinite;
+  display: flex;
+  width: 200%;
+  animation: scroll-left 15s linear infinite;
 }
 
 .marquee-item {
-    flex: 0 0 50%;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: #962b2d;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    white-space: nowrap;
+  flex: 0 0 50%;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
 }
 
 @keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .marquee-container-v2:hover .marquee-track {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .marquee-item {
-        font-size: 20px;
-    }
+  .marquee-item {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-    .marquee-item {
-        font-size: 16px;
-    }
-    
-    .marquee-container-v2 {
-        padding: 12px 0;
-    }
+  .marquee-item {
+    font-size: 16px;
+  }
+  .marquee-container-v2 {
+    padding: 12px 0;
+  }
 }
 
-
-
-/* Cài đặt chung */
-
 /* ===================================================================
-  TASCUS CONTACT SECTION - ISOLATED CSS
-  Không ảnh hưởng đến CSS của web chính
-=================================================================== */
-/* ===================================================================
-  TASCUS CONTACT SECTION - FIX KHÔNG PHÁ STYLE KHÁC
-=================================================================== */
-
-/* 🎯 BỎ reset global này */
-/* .tascus-contact-section * {
-    box-sizing: border-box;
-} */
-
-.tascus-contact-section {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    padding: 90px 0 !important;
-    position: relative;
-    overflow: hidden;
-    clear: both;
-    min-height: 700px;
-    background-color: #000;
-    isolation: isolate;
-    box-sizing: border-box;
-}
-
-
-/* ===================================================================
-  TASCUS CONTACT SECTION - DESKTOP VIDEO, MOBILE GRADIENT
+11. CONTACT SECTION
 =================================================================== */
 
 .tascus-contact-section {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(50% - 50vw) !important;
-    margin-right: calc(50% - 50vw) !important;
-    padding: 90px 0 !important;
-    position: relative;
-    overflow: hidden;
-    clear: both;
-    min-height: 700px;
-    
-    /* 🎯 NỀN ĐỎ GRADIENT (dự phòng + mobile) */
-    background: linear-gradient(135deg, #962b2d 0%, #8B0000 100%);
-    
-    isolation: isolate;
-    box-sizing: border-box;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  padding: 90px 0 !important;
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  min-height: 700px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  isolation: isolate;
+  box-sizing: border-box;
 }
 
-/* Video Wrapper */
 .tascus-video-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
 }
 
-/* Video Background */
 .tascus-video-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 56.25vw;
-    min-width: 177.78vh;
-    min-height: 100vh;
-    pointer-events: none;
-    border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw;
+  min-width: 177.78vh;
+  min-height: 100vh;
+  pointer-events: none;
+  border: none;
 }
 
-/* Container */
 .tascus-contact-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: flex-start;
-    position: relative;
-    z-index: 1;
-    box-sizing: border-box;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-/* Info bên trái */
 .tascus-contact-info {
-    color: #ffffff;
-    /* text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8); */ /* 🎯 TẮT */
-    box-sizing: border-box;
+  color: var(--color-white);
+  box-sizing: border-box;
 }
-
 
 .tascus-contact-h2 {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0 0 20px 0;
-    padding: 0;
-    line-height: 1.2;
-    color: #ffffff;
-    box-sizing: border-box;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1.2;
+  color: var(--color-white);
+  box-sizing: border-box;
 }
 
 .tascus-contact-p {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 30px 0;
-    padding: 0;
-    color: #ffffff;
-    box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+  padding: 0;
+  color: var(--color-white);
+  box-sizing: border-box;
 }
 
 .tascus-info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  box-sizing: border-box;
 }
 
 .tascus-info-icon {
-    font-size: 1.5rem;
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.2); /* 🎯 ĐỔI về trắng mờ */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */ /* 🎯 TẮT shadow */
-    box-sizing: border-box;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .tascus-info-icon i {
-    color: #ffffff; /* 🎯 ĐỔI về trắng */
+  color: var(--color-white);
 }
 
 .tascus-info-text {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .tascus-info-text strong {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin: 0 0 5px 0;
-    color: #f9b116;
-    font-weight: bold;
-    box-sizing: border-box;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+  color: var(--color-primary);
+  font-weight: bold;
+  box-sizing: border-box;
 }
 
 .tascus-info-text span {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 0.95rem;
-    color: #ffffff;
-    box-sizing: border-box;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-white);
+  box-sizing: border-box;
 }
 
 /* Form */
 .tascus-form-container {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-    box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.98);
+  padding: 40px;
+  border-radius: var(--radius-medium);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
 }
 
 .tascus-form-h3 {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 0 25px 0;
-    padding: 0;
-    color: #962b2d;
-    text-align: left;
-    box-sizing: border-box;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 25px 0;
+  padding: 0;
+  color: var(--color-accent);
+  text-align: left;
+  box-sizing: border-box;
 }
 
 .tascus-form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
 .tascus-input {
-    width: 100%;
-    padding: 12px 15px;
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 0.9rem;
-    color: #333;
-    outline: none;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #f8f8f8;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-default);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .tascus-input:focus {
-    border-color: #f9b116;
-    background-color: #ffffff;
+  border-color: var(--color-primary);
+  background-color: var(--color-white);
 }
 
 .tascus-input::placeholder {
-    color: #999;
+  color: #999;
 }
 
 .tascus-select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    padding-right: 40px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  padding-right: 40px;
 }
 
 .tascus-textarea {
-    min-height: 120px;
-    resize: vertical;
-    margin-bottom: 15px;
+  min-height: 120px;
+  resize: vertical;
+  margin-bottom: 15px;
 }
 
 .tascus-submit-btn {
-    width: 100%;
-    padding: 15px;
-    background-color: #f9b116;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-default);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  box-sizing: border-box;
 }
 
 .tascus-submit-btn:hover {
-    background-color: #efa425;
+  background-color: var(--color-primary-dark);
 }
 
 .tascus-form-status {
-    display: none;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-    font-family: 'Be Vietnam', sans-serif;
-    box-sizing: border-box;
+  display: none;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-family: var(--font-body);
+  box-sizing: border-box;
 }
 
-/* 🎯 RESPONSIVE - ẨN VIDEO TRÊN MOBILE */
 @media (max-width: 768px) {
-    .tascus-video-wrapper {
-        display: none !important; /* 🎯 Ẩn video */
-    }
-    
-    .tascus-contact-section {
-        padding: 60px 0 !important;
-    }
-    
-    .tascus-contact-container {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-    }
+  .tascus-video-wrapper {
+    display: none !important;
+  }
 
-    .tascus-form-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .tascus-contact-h2 {
-        font-size: 2rem;
-    }
+  .tascus-contact-section {
+    padding: 60px 0 !important;
+  }
 
-    .tascus-form-container {
-        padding: 30px 25px;
-    }
-}
+  .tascus-contact-container {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
 
+  .tascus-form-grid {
+    grid-template-columns: 1fr;
+  }
 
-/* ===================================================================
-  TASCUS PROCESS SECTION (HOW IT WORKS)
-=================================================================== */
+  .tascus-contact-h2 {
+    font-size: 2rem;
+  }
 
-.tascus-process-section {
-    width: 100%;
-    float: left;
-    padding: 90px 20px;
-    background: linear-gradient(90deg,rgba(255, 221, 171, 1) 0%, rgba(252, 238, 212, 1) 50%, rgba(255, 239, 191, 1) 77%, rgba(255, 203, 120, 1) 100%);
-    clear: both;
-}
-
-.tascus-process-title {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 50px;
-    color: #962b2d;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
-    padding: 0;
-}
-
-.tascus-process-desc {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 18px;
-    color: #232222;
-  text-align: justify;
-text-align-last: left;
-    text-align: center;
-    margin: 0 0 50px 0;
-    line-height: 1.6;
-}
-
-/* Step Cards */
-.tascus-step-card {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    height: 100%;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.tascus-step-card:hover {
-    transform: translateY(-10px);
-    border-color: #f9b116;
-}
-
-/* 🎯 ARCH LINE - Đường nối giữa các step */
-.tascus-arch-line {
-    position: absolute;
-    top: 30px;
-    right: -75px;
-    width: 150px;
-    height: 50px;
-    z-index: -1;
-}
-
-.tascus-arch-line.reverse {
-    top: 35px;
-}
-
-/* Ẩn arch line trên mobile */
-@media (max-width: 991px) {
-    .tascus-arch-line {
-        display: none;
-    }
-}
-
-/* Step Number */
-.tascus-step-number {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
-    color: #ffffff;
-    border-radius: 50%;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-/* Step Title */
-.tascus-step-card h3 {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 22px;
-    color: #962b2d;
-    margin: 0 0 15px 0;
-    font-weight: bold;
-}
-
-/* Step Description */
-.tascus-step-card p {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 16px;
-    color: #666666;
-    line-height: 1.7;
-    margin: 0;
-}
-
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    .tascus-process-section {
-        padding: 60px 15px;
-    }
-    
-    .tascus-process-title {
-        font-size: 36px;
-    }
-    
-    .tascus-process-desc {
-        font-size: 16px;
-        margin-bottom: 40px; /* 🎯 Tăng khoảng cách */
-    }
-    
-    /* 🎯 FIX - Thêm margin-bottom cho column mobile */
-    .tascus-process-section .row .col-md-6 {
-        margin-bottom: 30px; /* 🎯 Khoảng cách giữa các card */
-    }
-    
-    .tascus-process-section .row .col-md-6:last-child {
-        margin-bottom: 0; /* 🎯 Card cuối không cần margin */
-    }
-    
-    .tascus-step-card {
-        padding: 30px 20px;
-        margin-bottom: 0; /* 🎯 Bỏ margin-bottom ở card, chuyển sang column */
-    }
-    
-    .tascus-step-number {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 28px;
-    }
-    
-    .tascus-step-card h3 {
-        font-size: 20px;
-    }
+  .tascus-form-container {
+    padding: 30px 25px;
+  }
 }
 
 /* ===================================================================
-  TASCUS PROCESS SECTION (HOW IT WORKS)
+12. PROCESS SECTION
 =================================================================== */
 
 .tascus-process-section {
-    width: 100%;
-    float: left;
-    padding: 90px 20px;
-    background-color: #fffbf0;
-    clear: both;
+  width: 100%;
+  float: left;
+  padding: 90px 20px;
+  background-color: var(--color-bg);
+  clear: both;
 }
 
 .tascus-process-title {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 50px;
-    color: #962b2d;
-    font-weight: 800;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0 0 20px 0;
-    padding: 0;
+  font-family: var(--font-heading);
+  font-size: 50px;
+  color: var(--color-accent);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
 
 .tascus-process-desc {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 18px;
-    color: #232222;
-text-align: justify;
-text-align-last: left;    
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--color-dark);
+  text-align: center;
+  text-align-last: left;
   margin: 0 0 50px 0;
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
-/* Step Cards */
 .tascus-step-card {
-    background-color: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    height: 100%;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+  background-color: var(--color-white);
+  padding: 40px 30px;
+  border-radius: var(--radius-medium);
+  text-align: center;
+  height: 100%;
+  transition: all var(--transition-fast);
+  border: 2px solid transparent;
 }
 
 .tascus-step-card:hover {
-    transform: translateY(-10px);
-    border-color: #f9b116;
+  transform: translateY(-10px);
+  border-color: var(--color-primary);
 }
 
-/* 🎯 ARCH LINE - Đường nối giữa các step */
 .tascus-arch-line {
-    position: absolute;
-    top: 30px;
-    right: -75px;
-    width: 150px;
-    height: 50px;
-    z-index: -1;
+  position: absolute;
+  top: 30px;
+  right: -75px;
+  width: 150px;
+  height: 50px;
+  z-index: -1;
 }
 
 .tascus-arch-line.reverse {
-    top: 35px;
+  top: 35px;
 }
 
-/* Ẩn arch line trên mobile */
 @media (max-width: 991px) {
-    .tascus-arch-line {
-        display: none;
-    }
+  .tascus-arch-line {
+    display: none;
+  }
 }
 
-/* Step Number */
 .tascus-step-number {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    display: inline-block;
-    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
-    color: #ffffff;
-    border-radius: 50%;
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 25px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 25px;
 }
 
-/* Step Title */
 .tascus-step-card h3 {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 22px;
-    color: #962b2d;
-    margin: 0 0 15px 0;
-    font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: var(--color-accent);
+  margin: 0 0 15px 0;
+  font-weight: bold;
 }
 
-/* Step Description */
 .tascus-step-card p {
-    font-family: 'Be Vietnam', sans-serif;
-    font-size: 16px;
-    color: #666666;
-    line-height: 1.7;
-    margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* Responsive Mobile */
 @media (max-width: 768px) {
-    .tascus-process-section {
-        padding: 60px 15px;
-    }
-    
-    .tascus-process-title {
-        font-size: 36px;
-    }
-    
-    .tascus-process-desc {
-        font-size: 16px;
-    }
-    
-    .tascus-step-card {
-        padding: 30px 20px;
-        margin-bottom: 20px;
-    }
-    
-    .tascus-step-number {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 28px;
-    }
-    
-    .tascus-step-card h3 {
-        font-size: 20px;
-    }
+  .tascus-process-section {
+    padding: 60px 15px;
+  }
+
+  .tascus-process-title {
+    font-size: 36px;
+  }
+
+  .tascus-process-desc {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .tascus-process-section .row .col-md-6 {
+    margin-bottom: 30px;
+  }
+
+  .tascus-process-section .row .col-md-6:last-child {
+    margin-bottom: 0;
+  }
+
+  .tascus-step-card {
+    padding: 30px 20px;
+  }
+
+  .tascus-step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+  }
+
+  .tascus-step-card h3 {
+    font-size: 20px;
+  }
 }
 
 /* ===================================================================
-  BẢNG CHI PHÍ NHƯỢNG QUYỀN TASCUS
+13. PRICING TABLE SECTION
 =================================================================== */
 
 .tascus-pricing-table-section {
-    width: 100%;
-    padding: 25px 20px;
-    background-color: #fffbf0;
-    clear: both;
+  width: 100%;
+  padding: 25px 20px;
+  background-color: var(--color-bg);
+  clear: both;
 }
 
 .tascus-pricing-title {
-    font-family: 'FontCuaToi', sans-serif;
-    font-size: 40px;
-    color: #962b2d;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 0 0 40px 0;
-    font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 40px;
+  color: var(--color-accent);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  font-weight: bold;
 }
 
 .tascus-table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .tascus-pricing-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    font-family: 'Be Vietnam', sans-serif;
-    min-width: 1200px;
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-body);
+  min-width: 1200px;
 }
 
-/* Header */
 .tascus-pricing-table thead th {
-    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
-    color: #ffffff;
-    padding: 15px 10px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    border: 1px solid #ffffff;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid var(--color-white);
 }
 
 .tascus-th-main {
-    background: #962b2d !important;
+  background: var(--color-accent) !important;
 }
 
 .tascus-th-note {
-    background: #efa425 !important;
+  background: var(--color-primary-dark) !important;
 }
 
 .tascus-th-sub {
-    background: #f9b116 !important;
-    font-size: 12px;
+  background: var(--color-primary) !important;
+  font-size: 12px;
 }
 
-/* Body */
 .tascus-pricing-table tbody td {
-    padding: 12px 10px;
-    text-align: center;
-    font-size: 13px;
-    border: 1px solid #e0e0e0;
-    color: #333;
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  color: #333;
 }
 
 .tascus-td-label {
-    text-align: left !important;
-    font-weight: 600;
-    background: #fff8e6;
-    color: #962b2d;
+  text-align: left !important;
+  font-weight: 600;
+  background: #fff8e6;
+  color: var(--color-accent);
 }
 
 .tascus-td-note {
-    text-align: left !important;
-    font-size: 12px;
-    color: #666;
-    padding-left: 15px !important;
+  text-align: left !important;
+  font-size: 12px;
+  color: #666;
+  padding-left: 15px !important;
 }
 
-/* Highlight rows */
 .tascus-tr-highlight {
-    background: #fff4d9;
+  background: #fff4d9;
 }
 
 .tascus-tr-highlight .tascus-td-label {
-    background: #ffe8a3;
-    font-weight: bold;
+  background: #ffe8a3;
+  font-weight: bold;
 }
 
-/* Indent rows */
 .tascus-tr-indent .tascus-td-label {
-    padding-left: 30px !important;
-    background: #fffef9;
+  padding-left: 30px !important;
+  background: #fffef9;
 }
 
-/* Total rows */
 .tascus-tr-total {
-    background: #f9e8cc;
-    font-weight: bold;
+  background: #f9e8cc;
+  font-weight: bold;
 }
 
 .tascus-tr-total td {
-    font-weight: bold;
-    color: #962b2d;
+  font-weight: bold;
+  color: var(--color-accent);
 }
 
-/* Final row */
 .tascus-tr-final {
-    background: linear-gradient(135deg, #962b2d 0%, #8B0000 100%);
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
 }
 
 .tascus-tr-final td {
-    color: #ffffff !important;
-    font-weight: bold;
-    font-size: 14px;
+  color: var(--color-white) !important;
+  font-weight: bold;
+  font-size: 14px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .tascus-pricing-title {
-        font-size: 28px;
-    }
-    
-    .tascus-pricing-table {
-        font-size: 11px;
-    }
-    
-    .tascus-pricing-table thead th {
-        padding: 10px 5px;
-        font-size: 11px;
-    }
-    
-    .tascus-pricing-table tbody td {
-        padding: 8px 5px;
-        font-size: 11px;
-    }
+  .tascus-pricing-title {
+    font-size: 28px;
+  }
+
+  .tascus-pricing-table {
+    font-size: 11px;
+  }
+
+  .tascus-pricing-table thead th {
+    padding: 10px 5px;
+    font-size: 11px;
+  }
+
+  .tascus-pricing-table tbody td {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
 }
 
+/* ===================================================================
+14. FOOTER SECTION
+=================================================================== */
 
-/* ========================================= */
-/* === CODE BANNER NHƯỢNG QUYỀN === */
-/* ========================================= */
+.footer_section {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  float: left;
+  background-color: var(--color-accent);
+  height: auto;
+  padding: 90px calc(50vw - 50%) !important;
+  clear: both;
+}
 
-/* * Áp dụng font Nunito và các style cơ bản
- * chỉ cho banner này để không ảnh hưởng đến
- * phần còn lại của trang web.
- */
+.useful_text {
+  width: 100%;
+  font-size: 24px;
+  color: var(--color-white);
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer_text,
+.footer_menu li,
+.footer_menu li a {
+  color: var(--color-light);
+}
+
+.footer_menu li a:hover {
+  color: var(--color-primary);
+}
+
+.footer_text {
+  width: 68%;
+  float: left;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.footer_menu {
+  width: 100%;
+  float: left;
+}
+
+.footer_menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer_menu li {
+  font-size: 16px;
+}
+
+.Enter_text {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: var(--color-light);
+  background-color: transparent;
+  padding: 8px 15px;
+  margin-top: 10px;
+  border: 1px solid var(--color-light);
+  box-sizing: border-box;
+}
+
+input.Enter_text::placeholder {
+  color: var(--color-light);
+}
+
+.subscribe_bt {
+  width: 190px;
+  float: left;
+  margin-top: 20px;
+}
+
+.subscribe_bt a {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: var(--color-accent);
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 12px 0;
+  text-transform: uppercase;
+  border-radius: var(--radius-default);
+  transition: all var(--transition-fast);
+  display: block;
+}
+
+.subscribe_bt a:hover {
+  color: var(--color-accent);
+  background-color: var(--color-white);
+}
+
+.social_icon {
+  width: 100%;
+  float: left;
+}
+
+.social_icon ul {
+  margin: 0;
+  padding: 0;
+}
+
+.social_icon li {
+  float: left;
+}
+
+.social_icon li a {
+  float: left;
+  padding: 20px 30px 0 0;
+  color: var(--color-light);
+  font-size: 22px;
+  transition: color var(--transition-fast);
+}
+
+.social_icon li a:hover {
+  color: var(--color-primary);
+}
+
+/* ===================================================================
+15. COPYRIGHT SECTION
+=================================================================== */
+
+.copyright_section {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  float: left;
+  background-color: var(--color-primary);
+  height: auto;
+  padding: 20px calc(50vw - 50%) !important;
+}
+
+.copyright_text {
+  width: 100%;
+  color: var(--color-light);
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 0;
+}
+
+.copyright_text a {
+  color: var(--color-light);
+  transition: color var(--transition-fast);
+}
+
+.copyright_text a:hover {
+  color: var(--color-primary);
+}
+
+/* ===================================================================
+16. CALL BUTTON
+=================================================================== */
+
+.tascus-call-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(249, 177, 22, 0.4);
+  z-index: 9999;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  animation: tascus-bounce 2s infinite;
+}
+
+.tascus-call-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(249, 177, 22, 0.6);
+}
+
+.tascus-call-btn i {
+  font-size: 28px;
+  color: var(--color-white);
+  animation: tascus-ring 1.5s infinite;
+}
+
+.tascus-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(249, 177, 22, 0.6);
+  animation: tascus-pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes tascus-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes tascus-ring {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(-15deg); }
+  20%, 40% { transform: rotate(15deg); }
+}
+
+@keyframes tascus-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .tascus-call-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .tascus-call-btn i {
+    font-size: 24px;
+  }
+}
+
+/* ===================================================================
+17. ADDITIONAL SECTIONS
+=================================================================== */
+
+/* Banner Section */
 ul#artist-banner {
-  font-family: "Be Vietnam", sans-serif;
-  color: #fff;
+  font-family: var(--font-body);
+  color: var(--color-white);
   line-height: 24px;
   font-size: 16px;
-  
-  /* Các thuộc tính gốc của ul */
   display: flex;
   min-height: 750px;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  list-style-type: none;
+  list-style: none;
   width: 100%;
-  min-width: 100%;
   flex-direction: column;
 }
 
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   ul#artist-banner {
     flex-direction: row;
   }
 }
 
-/* * Chỉ định rõ 'li' bên trong banner này 
- * để tránh xung đột với các thẻ 'li' khác trên trang.
- */
 ul#artist-banner li {
   flex: 1;
   display: flex;
   align-items: stretch;
   cursor: pointer;
-  transition: all 0.35s ease;
+  transition: all var(--transition-fast);
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1690,7 +1585,7 @@ ul#artist-banner li:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(239, 164, 37, 0.75); 
+  background: rgba(239, 164, 37, 0.75);
 }
 
 ul#artist-banner li.active {
@@ -1699,7 +1594,7 @@ ul#artist-banner li.active {
 }
 
 ul#artist-banner li.active:before {
-  background: linear-gradient(180deg, rgba(50, 50, 0, 0) 50%, #952c2e 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 0, 0) 50%, var(--color-accent) 100%);
 }
 
 ul#artist-banner h2 {
@@ -1707,17 +1602,17 @@ ul#artist-banner h2 {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fca930
+  color: #fca930;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   ul#artist-banner h2 {
     font-size: 48px;
     line-height: 48px;
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   ul#artist-banner h2 {
     font-size: 64px;
     line-height: 64px;
@@ -1732,15 +1627,15 @@ ul#artist-banner h3 {
   opacity: 1;
   top: 50%;
   left: 50%;
-  transition: top 0.35s, opacity 0.15s;
+  transition: top var(--transition-fast), opacity 0.15s;
   transform-origin: 0 0;
   font-size: 24px;
   text-transform: uppercase;
   transform: translate(-50%, -50%) rotate(0deg);
-  color: #ffffff
+  color: var(--color-white);
 }
 
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   ul#artist-banner h3 {
     top: 100%;
     left: 50%;
@@ -1760,7 +1655,7 @@ ul#artist-banner .section-content {
   opacity: 0;
   align-self: flex-end;
   width: 100%;
-  transition: all 0.35s 0.1s ease-out;
+  transition: all var(--transition-fast);
 }
 
 ul#artist-banner li.active .section-content {
@@ -1781,7 +1676,7 @@ ul#artist-banner .section-content .inner {
   transition: opacity 0.25s ease-out;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   ul#artist-banner .section-content .inner {
     grid-auto-flow: column;
     grid-template-columns: calc(100% - 340px) 300px;
@@ -1790,7 +1685,7 @@ ul#artist-banner .section-content .inner {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media (min-width: 1280px) {
   ul#artist-banner .section-content .inner {
     grid-auto-flow: column;
     grid-template-columns: 460px 200px;
@@ -1803,14 +1698,6 @@ ul#artist-banner li.active .section-content .inner {
   opacity: 1;
 }
 
-ul#artist-banner .artist-profile-link {
-  pointer-events: none;
-}
-
-ul#artist-banner li.active .artist-profile-link {
-  pointer-events: all;
-}
-
 ul#artist-banner .bio {
   display: grid;
   grid-auto-flow: row;
@@ -1818,579 +1705,308 @@ ul#artist-banner .bio {
   grid-gap: 24px;
 }
 
-/* Lớp 'md:hidden' (nếu bạn không dùng Tailwind) */
-@media (min-width: 768px) {
-  ul#artist-banner .md\:hidden {
-    display: none;
-  }
-}
-/* === HẾT CODE BANNER === */
-
-/* ----- CSS CHO SECTION MENU ----- */
-
-/* Lớp bọc ngoài cùng (wrapping) để căn giữa nội dung */
+/* Menu Section */
 .wrapping {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Lớp lưới giữ các cột (hhgrip) */
 .hhgrip {
-    display: flex;
-    flex-wrap: wrap; /* Cho phép xuống hàng trên di động */
-    justify-content: center; /* Căn giữa các mục */
-    gap: 30px; /* Khoảng cách giữa 2 thẻ */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-/* Mỗi cột (hcol) */
 .hcol {
-    flex: 1 1 400px; /* Thẻ sẽ co giãn nhưng có cơ sở là 400px */
-    max-width: 500px; /* Giới hạn độ rộng tối đa */
+  flex: 1 1 400px;
+  max-width: 500px;
 }
 
-/* Thẻ (card) chính (itccinfohh) */
 .itccinfohh {
-    position: relative; /* Quan trọng để định vị banner */
-    border-radius: 12px; /* Bo góc như trong hình */
-    overflow: hidden; /* Ẩn phần ảnh thừa và bo góc ảnh */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
-    width: 100%;
+  position: relative;
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-light);
+  width: 100%;
 }
 
-/* Phần ảnh (thumb) */
 .itccinfohh .thumb {
-    width: 100%;
+  width: 100%;
 }
 
 .itccinfohh .thumb img {
-    width: 100%;
-    height: auto;
-    display: block;
-    aspect-ratio: 1 / 1; /* Giữ tỷ lệ 1:1 (vuông) */
-    object-fit: cover; /* Đảm bảo ảnh lấp đầy mà không méo */
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
-/* Banner tiêu đề (decss) */
 .itccinfohh .decss {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box; /* Để padding không ảnh hưởng độ rộng */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Tiêu đề (dstitle) */
 .itccinfohh .dstitle h3 {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 .itccinfohh .dstitle h3 a {
-    font-family: 'Arial', sans-serif; /* Thay bằng font của bạn */
-    font-weight: bold;
-    font-size: 1.25rem; /* Cỡ chữ */
-    text-decoration: none;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-/* --- TÙY CHỈNH CHO TỪNG THẺ --- */
-
-/* Thẻ 1: Nước Ngon (Màu đỏ) */
 .hcol:nth-child(1) .itccinfohh .decss {
-    background-color: #8C2B31; /* Màu đỏ sậm */
+  background-color: #8C2B31;
 }
 
 .hcol:nth-child(1) .itccinfohh .dstitle h3 a {
-    color: #FFFFFF; /* Chữ màu trắng */
+  color: var(--color-white);
 }
 
-/* Thẻ 2: Bánh Ngon (Màu be) */
 .hcol:nth-child(2) .itccinfohh .decss {
-    background-color: #F9F4E9; /* Màu be/kem nhạt */
+  background-color: #F9F4E9;
 }
 
 .hcol:nth-child(2) .itccinfohh .dstitle h3 a {
-    color: #333333; /* Chữ màu đen/tối */
+  color: #333333;
 }
 
-/* --- CSS CHO KHỐI MENU FREEZE --- */
-
-/* Cài đặt chung cho cả khối */
+/* Menu Freeze Section */
 .menu-section-freeze {
-    font-family: Arial, Helvetica, sans-serif; /* Bạn có thể xoá dòng này nếu muốn dùng font chung của web */
-    max-width: 1200px;
-    margin: 40px auto; /* Tự động căn giữa */
-    padding: 20px;
-    background-color: #ffffff; /* Màu nền cho section */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--color-white);
 }
 
-/* Phần tiêu đề */
 .menu-header-freeze {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .menu-header-freeze h2 {
-    font-size: 2.5rem;
-    color: #6B4F4B;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    /* Đảm bảo style này không bị CSS khác ghi đè */
-    margin-top: 0; 
-    line-height: 1.2;
+  font-size: 2.5rem;
+  color: #6B4F4B;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .menu-header-freeze p {
-    font-size: 1rem;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* Danh sách sản phẩm (CSS Grid) */
 .product-list-freeze {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-/* Chi tiết một sản phẩm */
 .product-item-freeze {
-    text-align: center;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    transition: box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-default);
+  padding: 20px;
+  transition: box-shadow var(--transition-fast);
 }
 
 .product-item-freeze:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
 .product-item-freeze img {
-    max-width: 100%;
-    height: 250px;
-    object-fit: contain;
-    margin-bottom: 15px;
+  max-width: 100%;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
 .product-item-freeze h3 {
-    font-size: 1.25rem;
-    color: #333;
-    margin: 10px 0;
+  font-size: 1.25rem;
+  color: #333;
+  margin: 10px 0;
 }
 
 .product-item-freeze .product-price-freeze {
-    font-size: 1.1rem;
-    color: #555;
-    font-weight: 600;
-    margin-bottom: 0;
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 600;
+  margin: 0;
 }
 
-/* Responsive cho di động */
-@media (max-width: 600px) {
-    .menu-header-freeze h2 {
-        font-size: 2rem;
-    }
-
-    .menu-section-freeze {
-        padding: 10px;
-    }
-
-    .product-list-freeze {
-        gap: 15px; 
-        grid-template-columns: 1fr 1fr; /* Chia 2 cột */
-    }
-
-    /* --- BẮT ĐẦU PHẦN THÊM VÀO --- */
-    
-    /* 1. Giảm khoảng cách dưới ảnh */
-    .product-item-freeze img {
-        margin-bottom: 8px; /* Giảm từ 15px xuống 8px */
-        
-        /* Tùy chọn: Giảm chiều cao ảnh để 2 cột cân đối hơn */
-        height: 180px; 
-    }
-
-  /* 1. Giảm khoảng cách DƯỚI tên SP */
-    .product-item-freeze h3 {
-        margin-top: 5px;
-        margin-bottom: 2px; /* Giảm xuống còn 2px */
-        font-size: 1.1rem; 
-    }
-
-    /* 2. Giảm khoảng cách TRÊN giá */
-    .product-item-freeze .product-price-freeze {
-        font-size: 1rem;
-        white-space: nowrap; 
-        margin-top: 2px; /* Thêm dòng này để giảm xuống còn 2px */
-    }
-}
-/* ===================================================================
-11. RESPONSIVE - MOBILE
-=================================================================== */
-
-@media (max-width: 479px) {
-.news-card {
-width: calc(50% - 0.5rem);
-}
-.news-card__title {
-font-size: 1rem;
-}
-.news-card__text-wrapper {
-padding: 0.75rem;
-}
-}
-
-@media (min-width: 480px) and (max-width: 599px) {
-.news-card {
-width: calc(50% - 0.5rem);
-}
-.news-card__title {
-font-size: 1.1rem;
-}
-}
-
-@media (min-width: 600px) and (max-width: 899px) {
-.news-card {
-width: calc(33.333% - 0.67rem);
-}
-.news-card__title {
-font-size: 1.3rem;
-}
-}
-
-@media (min-width: 900px) {
-.news-card {
-width: calc(25% - 0.75rem);
-}
-.news-card__title {
-font-size: 1.4rem;
-}
-.news-card:hover .news-card__details-wrapper {
-max-height: 500px;
-opacity: 1;
-}
-.news-card:hover .news-card__text-wrapper {
-background-color: rgba(0, 0, 0, 0.6);
-}
-.news-card:hover .news-card__title {
-color: #f9b116;
-}
-.news-card:hover .news-card__image {
-transform: scale(1.2);
-}
-}
-
-@media (max-width: 768px) {
-  /* --- FIX KHOẢNG CÁCH DÒNG HEADING MOBILE --- */
-    h1, h2, h3, h4, h5, h6 {
-        line-height: 1.3 !important; /* Thu hẹp khoảng cách dòng */
-        padding-bottom: 5px !important;
-    }
-
-    /* Fix riêng cho tiêu đề to như "Tại sao nên chọn Tascus" */
-    .about_taital, .tascus-process-title {
-        line-height: 1.2 !important; 
-        margin-top: 30px !important;
-        margin-bottom: 20px !important;
-    }
-    
-    /* Fix khoảng cách đoạn văn */
-    p {
-        line-height: 1.5 !important;
-        margin-bottom: 15px !important;
-    }
-    /* ------------------------------------------- */
-#tascus-banner-widget .tascus-arrow {
-width: 36px;
-height: 36px;
-font-size: 18px;
-}
-#tascus-banner-widget .tascus-prev { left: 8px; }
-#tascus-banner-widget .tascus-next { right: 8px; }
-
-/* =================================================
-   🎯 SỬA LỖI KHOẢNG CÁCH HEADING MOBILE
-   ================================================= */
-.about_section {
-    /* Xóa margin */
-}
-
-.about_taital {
-    /* Sửa lại khoảng cách cho mobile để dễ nhìn hơn */
-    margin-top: 40px; /* (Gốc 90px) */
-    margin-bottom: 30px; /* (Gốc 40px) */
-    font-size: 45px; /* Giảm cỡ chữ heading một chút */
-}
-
-/* Các section content cũng cần giảm padding-bottom
-   để đồng bộ với heading
-*/
-.about_section_2,
-.pricing-container,
-.content-wrapper {
-    padding-bottom: 40px; /* (Gốc 90px) */
-}
-
-} /* Kết thúc @media (max-width: 768px) */
-
-
-@media (max-width: 650px) {
-.pricing-container .columns {
-width: 100%;
-}
-}
-@media (max-width: 991px) {
-.header_section .form-inline {
-width: 100%;
-padding-top: 15px;
-padding-bottom: 10px;
-}
-.btn-tu-van {
-width: 100%;
-text-align: center;
-margin-left: 0;
-padding: 12px 20px;
-}
-.navbar-brand img {
-max-height: 40px;
-}
-.header_section .navbar-nav {
-margin-left: 0 !important;
-align-items: flex-start;
-width: 100%;
-}
-.header_section .navbar-nav .nav-item {
-width: 100%;
-}
-.header_section .navbar-nav .nav-link {
-padding: 10px 0px;
-}
-}
-/* 🎯 FIX NHANH - FOOTER FULL WIDTH */
-/* Đoạn code này có vẻ là một "hack" để sửa lỗi layout.
-   Nó có thể không cần thiết sau khi đã sửa lỗi HTML, 
-   nhưng tôi sẽ giữ lại phòng trường hợp nó giải quyết vấn đề khác.
-*/
-.footer_section,
-.copyright_section {
-width: 100vw !important;
-max-width: 100vw !important;
-margin-left: calc(50% - 50vw) !important;
-margin-right: calc(50% - 50vw) !important;
-padding-left: calc(50vw - 50%) !important;
-padding-right: calc(50vw - 50%) !important;
-}
-
-/* ==============================================
-   1. CÀI ĐẶT HÌNH NỀN CHO BODY (ĐÃ SỬA)
-   ============================================== */
-/* ==============================================
-   1. CÀI ĐẶT HÌNH NỀN CHO BODY (BẢN 4 ẢNH)
-   ============================================== */
-body {
-    /* (Tùy chọn) Màu nền cho khu vực lề */
-    background-color: #fffbf0;
-
-    /* 1. LIỆT KÊ 4 HÌNH ẢNH CỦA BẠN */
-    /* (Thay link/tên file vào đây) */
-    background-image: url('https://tascusfood.com/function/khoai%20edge.webp'),  /* Hình trái, ở trên */
-                     
-                      url('https://tascusfood.com/function/burger%20edge.webp'),  /* Hình phải, ở trên */
-
-  
-
-    /* 2. VỊ TRÍ TƯƠNG ỨNG CHO 4 ẢNH */
-    /* Bạn điều chỉnh các số 150px, 600px (khoảng cách từ trên xuống) */
-    background-position: left 1100px,  /* Vị trí ảnh 1 */
-                       
-                      right 1600px, /* Vị trí ảnh 3 */
-                     
-
-    /* 3. KÍCH THƯỚC TƯƠNG ỨNG CHO 4 ẢNH */
-    /* (Bạn chỉnh 4 số này theo ý muốn) */
-    background-size: 230px, /* Kích thước ảnh 1 */
-                    
-                     250px, /* Kích thước ảnh 3 */
-                  
-    /* 4. KHÔNG LẶP LẠI (Cần 4 giá trị) */
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    
-    /* 5. GIỮ CỐ ĐỊNH (Chỉ cần 1 giá trị, áp dụng cho tất cả) */
-}
-
-
-/* ==============================================
-   2. CĂN GIỮA NỘI DUNG CHÍNH (Giữ nguyên)
-   ============================================== */
-.container-noi-dung {
-    max-width: 1200px; /* Chiều rộng nội dung */
-    margin: 0 auto;    /* Căn giữa */
-    background-color: #ffffff; /* Nền trắng cho nội dung */
-    padding: 20px;
-}
-
-
-/* ==============================================
-   3. ẨN HÌNH NỀN TRÊN DI ĐỘNG (Giữ nguyên)
-   ============================================== */
-@media (max-width: 1280px) { 
-    /* Đoạn mã này không cần sửa, nó vẫn sẽ 
-       tắt toàn bộ background-image khi màn hình nhỏ */
-    body {
-        background-image: none;
-    }
-}
-/* ==============================================
-   3. fix video
-   ============================================== */
-/* ===================================================================
-  NÚT CALL ĐỘNG GHIM GÓC TRANG
-=================================================================== */
-
-.tascus-call-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #f9b116 0%, #efa425 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 25px rgba(249, 177, 22, 0.4);
-    z-index: 9999;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    animation: tascus-bounce 2s infinite;
-}
-
-.tascus-call-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 12px 35px rgba(249, 177, 22, 0.6);
-}
-
-.tascus-call-btn i {
-    font-size: 28px;
-    color: #ffffff;
-    animation: tascus-ring 1.5s infinite;
-}
-
-/* Hiệu ứng pulse (sóng) */
-.tascus-pulse {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: rgba(249, 177, 22, 0.6);
-    animation: tascus-pulse 2s infinite;
-    z-index: -1;
-}
-
-/* Animation - Bounce */
-@keyframes tascus-bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Animation - Ring (lắc) */
-@keyframes tascus-ring {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    10%, 30% {
-        transform: rotate(-15deg);
-    }
-    20%, 40% {
-        transform: rotate(15deg);
-    }
-}
-
-/* Animation - Pulse (sóng) */
-@keyframes tascus-pulse {
-    0% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.3);
-        opacity: 0.4;
-    }
-    100% {
-        transform: scale(1.6);
-        opacity: 0;
-    }
-}
-
-/* Responsive Mobile */
-@media (max-width: 768px) {
-    .tascus-call-btn {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-    }
-    
-    .tascus-call-btn i {
-        font-size: 24px;
-    }
-}
-
-/*
- * 1. SECTION CONTAINER
- * Style giống hệt .tascus-pricing-table-section của bạn
- * để đảm bảo đồng bộ về nền và khoảng cách.
-*/
+/* Image Section */
 .tascus-image-section {
-    width: 100%;
-    padding: 30px 20px;
-    clear: both;
-    box-sizing: border-box; /* Thêm để padding không ảnh hưởng width */
+  width: 100%;
+  padding: 30px 20px;
+  clear: both;
+  box-sizing: border-box;
 }
 
-/* * 2. IMAGE WRAPPER (Đây là phần chính)
- * Container này sẽ căn giữa và giới hạn chiều rộng của ảnh.
-*/
 .image-wrapper {
-    /* * Đặt chiều rộng tối đa là 1200px 
-     * (giống như min-width của bảng bạn)
-    */
-    max-width: 1200px;
-    
-    /* * Đây là cách căn giữa wrapper (và ảnh bên trong) 
-     * ra giữa màn hình theo chiều ngang.
-    */
-    margin-left: auto;
-    margin-right: auto;
-
-    /* (Tùy chọn) Thêm bóng giống bảng giá của bạn */
-  
-
-/*
- * 3. THẺ ẢNH (IMG)
- * Làm cho ảnh tự động co giãn theo wrapper.
-*/
-.image-wrapper img {
-    display: block; /* Xóa khoảng trắng thừa bên dưới ảnh */
-    width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
-    height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
+/* ===================================================================
+18. RESPONSIVE MOBILE FIXES
+=================================================================== */
 
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3 !important;
+    padding-bottom: 5px !important;
+  }
 
+  .about_taital,
+  .tascus-process-title {
+    line-height: 1.2 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
 
+  p {
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+  }
 
+  #tascus-banner-widget .tascus-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 
+  #tascus-banner-widget .tascus-prev { left: 8px; }
+  #tascus-banner-widget .tascus-next { right: 8px; }
+
+  .about_taital {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 45px;
+  }
+
+  .about_section_2,
+  .pricing-container,
+  .content-wrapper {
+    padding-bottom: 40px;
+  }
+
+  .product-item-freeze img {
+    margin-bottom: 8px;
+    height: 180px;
+  }
+
+  .product-item-freeze h3 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 1.1rem;
+  }
+
+  .product-item-freeze .product-price-freeze {
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .menu-header-freeze h2 {
+    font-size: 2rem;
+  }
+
+  .menu-section-freeze {
+    padding: 10px;
+  }
+
+  .product-list-freeze {
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 991px) {
+  .header_section .form-inline {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .btn-tu-van {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    padding: 12px 20px;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .header_section .navbar-nav {
+    margin-left: 0 !important;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .header_section .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .header_section .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+/* ===================================================================
+19. BACKGROUND IMAGE (BODY)
+=================================================================== */
+
+body {
+  background-image: url('https://tascusfood.com/function/khoai%20edge.webp'),
+                    url('https://tascusfood.com/function/burger%20edge.webp');
+  background-position: left 1100px, right 1600px;
+  background-size: 230px, 250px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+@media (max-width: 1280px) {
+  body {
+    background-image: none;
+  }
+}
+
+.container-noi-dung {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--color-white);
+  padding: 20px;
+}
+
+/* ===================================================================
+20. UTILITIES
+=================================================================== */
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}
