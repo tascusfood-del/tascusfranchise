@@ -3,6 +3,7 @@
 
 
 
+
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 
@@ -45,49 +46,48 @@ font-style: normal;
 @import url(nice-select.css);
 
 /* ===================================================================
-3. GLOBAL STYLES (ĐÃ TỐI ƯU CHO MOBILE)
+3. GLOBAL STYLES (Skeleton)
 =================================================================== */
 
-* {
-    box-sizing: border-box !important;
-    /* Đã xóa transition all 0.5s để web mượt hơn trên mobile */
+* { /* Thêm dấu * thay vì để trống */
+box-sizing: border-box !important;
+transition: ease all 0.5s;
 }
 
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-    color: #666666;
-    font-size: 14px;
-    line-height: 1.6; /* Giảm line-height một chút cho dễ đọc */
-    font-weight: normal;
-    overflow-x: hidden;
-    font-family: 'Be Vietnam', sans-serif;
-    background-color: #fffbf0;
-    margin: 0;
-    padding: 0;
+color: #666666;
+font-size: 14px;
+line-height: 1.80857;
+font-weight: normal;
+overflow-x: hidden;
+font-family: 'Be Vietnam', sans-serif;
+background-color: #fffbf0;
+margin: 0;
+padding: 0;
 }
 
 a {
-    color: #1f1f1f;
-    text-decoration: none !important;
-    outline: none !important;
-    transition: all .3s ease-in-out; /* Chỉ transition cho thẻ a */
+color: #1f1f1f;
+text-decoration: none !important;
+outline: none !important;
+transition: all .3s ease-in-out;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'FontCuaToi', sans-serif;
-    letter-spacing: 0;
-    font-weight: normal;
-    position: relative;
-    padding: 0 0 10px 0;
-    line-height: 1.3;
-    color: #111111;
-    margin: 0;
+font-family: 'FontCuaToi', sans-serif;
+letter-spacing: 0;
+font-weight: normal;
+position: relative;
+padding: 0 0 10px 0;
+line-height: normal;
+color: #111111;
+margin: 0;
 }
 
-/* Kích thước font chữ responsive */
 h1 { font-size: 32px; }
 h2 { font-size: 22px; }
 h3 { font-size: 18px; }
@@ -96,76 +96,48 @@ h5 { font-size: 14px; }
 h6 { font-size: 13px; }
 
 ul, li, ol {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+margin: 0px;
+padding: 0px;
+list-style: none;
 }
 
-/* --- SỬA LỖI KHOẢNG CÁCH --- */
 p {
-    /* Thay margin: 20px bằng dòng dưới đây */
-    margin: 0 0 15px 0; /* Chỉ cách dưới 15px, bỏ cách trên/trái/phải */
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 1.6; /* Giãn dòng vừa phải */
+margin: 20px;
+font-weight: 300;
+font-size: 15px;
+line-height: 24px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+max-width: 100%;
+height: auto;
 }
 
 button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+border: 0;
+margin: 0;
+padding: 0;
+cursor: pointer;
 }
 
 button:focus {
-    outline: none;
+outline: none;
 }
 
 .full {
-    float: left;
-    width: 100%;
+float: left;
+width: 100%;
 }
 
-/* Padding mặc định cho Desktop */
 .layout_padding {
-    padding-top: 50px;
-    padding-bottom: 50px;
+padding-top: 40px;
+padding-bottom: 25px;
 }
 
 .padding_0 {
-    padding: 0px;
+padding: 0px;
 }
 
-/* --- QUAN TRỌNG: CODE RIÊNG CHO MOBILE --- */
-/* Dán đoạn này ngay dưới các dòng trên để ghi đè khi vào bằng điện thoại */
-@media (max-width: 768px) {
-    /* 1. Giảm padding của các section xuống còn 25px */
-    .layout_padding {
-        padding-top: 25px !important;
-        padding-bottom: 25px !important;
-    }
-
-    /* 2. Giảm cỡ chữ tiêu đề trên mobile */
-    h1 { font-size: 28px; }
-    h2 { font-size: 24px; }
-
-    /* 3. Giảm khoảng cách của thẻ P trên mobile */
-    p {
-        margin-bottom: 10px;
-        font-size: 14px;
-        text-align: justify; /* Căn đều 2 bên cho đẹp */
-    }
-    
-    /* 4. Chỉnh lại header padding */
-    .header_section {
-        padding-bottom: 10px;
-    }
-}
 /* ===================================================================
 4. HEADER SECTION
 =================================================================== */
@@ -2417,7 +2389,6 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
-
 
 
 
