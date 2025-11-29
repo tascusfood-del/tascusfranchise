@@ -2087,6 +2087,25 @@ transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
+  /* --- FIX KHOẢNG CÁCH DÒNG HEADING MOBILE --- */
+    h1, h2, h3, h4, h5, h6 {
+        line-height: 1.3 !important; /* Thu hẹp khoảng cách dòng */
+        padding-bottom: 5px !important;
+    }
+
+    /* Fix riêng cho tiêu đề to như "Tại sao nên chọn Tascus" */
+    .about_taital, .tascus-process-title {
+        line-height: 1.2 !important; 
+        margin-top: 30px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    /* Fix khoảng cách đoạn văn */
+    p {
+        line-height: 1.5 !important;
+        margin-bottom: 15px !important;
+    }
+    /* ------------------------------------------- */
 #tascus-banner-widget .tascus-arrow {
 width: 36px;
 height: 36px;
@@ -2369,3 +2388,4 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
