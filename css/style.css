@@ -16,7 +16,8 @@
    12. Footer & Copyright
    13. Floating Widgets (Call, Scroll Top)
    14. Food App Buttons (NEW FIX)
-   15. Responsive Fixes
+   15. Missing Sections Restored (Artist Banner, Freeze Menu, Wrapping)
+   16. Responsive Fixes
 ===================================================================== */
 
 /* ===================================================================
@@ -856,7 +857,194 @@ h1.about_taital + p {
 }
 
 /* ===================================================================
-   15. RESPONSIVE GLOBAL FIXES
+   15. MISSING SECTIONS RESTORED (ARTIST BANNER, FREEZE MENU, WRAPPING)
+=================================================================== */
+
+/* 🎯 FIX: ARTIST BANNER (Hệ thống nhận diện - Slider accordion) */
+ul#artist-banner {
+  font-family: "Be Vietnam", sans-serif;
+  color: #fff;
+  line-height: 24px;
+  font-size: 16px;
+  display: flex;
+  min-height: 750px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  width: 100%;
+  min-width: 100%;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner { flex-direction: row; }
+}
+
+ul#artist-banner li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+}
+
+ul#artist-banner li:before {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(239, 164, 37, 0.75); 
+}
+
+ul#artist-banner li.active { flex: 6; cursor: default; }
+ul#artist-banner li.active:before { background: linear-gradient(180deg, rgba(50, 50, 0, 0) 50%, #952c2e 100%); }
+
+ul#artist-banner h2 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fca930
+}
+
+@media only screen and (min-width: 768px) {
+  ul#artist-banner h2 { font-size: 48px; line-height: 48px; }
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner h2 { font-size: 64px; line-height: 64px; }
+}
+
+ul#artist-banner h3 {
+  font-weight: bold;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 30;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: top 0.35s, opacity 0.15s;
+  transform-origin: 0 0;
+  font-size: 24px;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%) rotate(0deg);
+  color: #ffffff
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner h3 {
+    top: 100%;
+    left: 50%;
+    font-size: 32px;
+    transform: translate(-20px, -50%) rotate(-90deg);
+  }
+}
+
+ul#artist-banner li.active h3 { opacity: 0; top: 200%; }
+
+ul#artist-banner .section-content {
+  position: relative;
+  z-index: 30;
+  opacity: 0;
+  align-self: flex-end;
+  width: 100%;
+  transition: all 0.35s 0.1s ease-out;
+}
+
+ul#artist-banner li.active .section-content { opacity: 1; }
+
+ul#artist-banner .section-content .inner {
+  position: absolute;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr;
+  grid-column-gap: 20px;
+  align-items: flex-end;
+  left: 0;
+  bottom: 0;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+@media only screen and (min-width: 768px) {
+  ul#artist-banner .section-content .inner {
+    grid-auto-flow: column;
+    grid-template-columns: calc(100% - 340px) 300px;
+    grid-column-gap: 40px;
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  ul#artist-banner .section-content .inner {
+    grid-auto-flow: column;
+    grid-template-columns: 460px 200px;
+    grid-column-gap: 40px;
+    padding: 40px;
+  }
+}
+
+ul#artist-banner li.active .section-content .inner { opacity: 1; }
+ul#artist-banner .artist-profile-link { pointer-events: none; }
+ul#artist-banner li.active .artist-profile-link { pointer-events: all; }
+ul#artist-banner .bio { display: grid; grid-auto-flow: row; grid-template-rows: min-content; grid-gap: 24px; }
+@media (min-width: 768px) { ul#artist-banner .md\:hidden { display: none; } }
+
+/* 🎯 FIX: WRAPPING / GRID MENU */
+.wrapping { max-width: 1200px; margin: 0 auto; padding: 20px; box-sizing: border-box; }
+.hhgrip { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
+.hcol { flex: 1 1 400px; max-width: 500px; }
+.itccinfohh { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; }
+.itccinfohh .thumb { width: 100%; }
+.itccinfohh .thumb img { width: 100%; height: auto; display: block; aspect-ratio: 1 / 1; object-fit: cover; }
+.itccinfohh .decss { position: absolute; bottom: 0; left: 0; width: 100%; padding: 20px; box-sizing: border-box; }
+.itccinfohh .dstitle h3 { margin: 0; text-align: center; }
+.itccinfohh .dstitle h3 a { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 1.25rem; text-decoration: none; text-transform: uppercase; }
+.hcol:nth-child(1) .itccinfohh .decss { background-color: #8C2B31; }
+.hcol:nth-child(1) .itccinfohh .dstitle h3 a { color: #FFFFFF; }
+.hcol:nth-child(2) .itccinfohh .decss { background-color: #F9F4E9; }
+.hcol:nth-child(2) .itccinfohh .dstitle h3 a { color: #333333; }
+
+/* 🎯 FIX: FREEZE MENU */
+.menu-section-freeze {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px; margin: 40px auto; padding: 20px; background-color: #ffffff;
+}
+.menu-header-freeze { text-align: center; margin-bottom: 40px; }
+.menu-header-freeze h2 {
+    font-size: 2.5rem; color: #6B4F4B; font-weight: 800; margin-bottom: 10px;
+    text-transform: uppercase; margin-top: 0; line-height: 1.2;
+}
+.menu-header-freeze p { font-size: 1rem; color: #555; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+.product-list-freeze { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.product-item-freeze { text-align: center; border: 1px solid #eee; border-radius: 8px; padding: 20px; transition: box-shadow 0.3s ease; }
+.product-item-freeze:hover { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05); }
+.product-item-freeze img { max-width: 100%; height: 250px; object-fit: contain; margin-bottom: 15px; }
+.product-item-freeze h3 { font-size: 1.25rem; color: #333; margin: 10px 0; }
+.product-item-freeze .product-price-freeze { font-size: 1.1rem; color: #555; font-weight: 600; margin-bottom: 0; }
+
+@media (max-width: 600px) {
+    .menu-header-freeze h2 { font-size: 2rem; }
+    .menu-section-freeze { padding: 10px; }
+    .product-list-freeze { gap: 15px; grid-template-columns: 1fr 1fr; }
+    .product-item-freeze img { margin-bottom: 8px; height: 180px; }
+    .product-item-freeze h3 { margin-top: 5px; margin-bottom: 2px; font-size: 1.1rem; }
+    .product-item-freeze .product-price-freeze { font-size: 1rem; white-space: nowrap; margin-top: 2px; }
+}
+
+/* ===================================================================
+   16. RESPONSIVE GLOBAL FIXES
 =================================================================== */
 @media (max-width: 991px) {
     .header_section .form-inline { width: 100%; padding-top: 15px; padding-bottom: 10px; }
