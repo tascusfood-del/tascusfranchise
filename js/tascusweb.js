@@ -107,7 +107,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "hhttps://tascusfood.com/franchise%20page/BANER-BAO-BI.webp"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/BANER-BAO-BI.webp"
   },
   {
     name: "LINH VẬT",
