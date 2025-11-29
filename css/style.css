@@ -129,7 +129,7 @@ width: 100%;
 }
 
 .layout_padding {
-padding-top: 90px;
+padding-top: 40px;
 padding-bottom: 40px;
 }
 
@@ -2388,4 +2388,5 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+
 
