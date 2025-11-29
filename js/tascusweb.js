@@ -107,7 +107,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/GtYHKjsD/BANER-BAO-BI.jpg"
+    backgroundUrl: "hhttps://tascusfood.com/franchise%20page/BANER-BAO-BI.webp"
   },
   {
     name: "LINH VẬT",
@@ -116,7 +116,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/dtc8X5jw/linh_va_t.jpg"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/linh-va-t.webp"
   },
   {
     name: "CỬA HÀNG 3D",
@@ -125,7 +125,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/bvJj0HGJ/cu_a_ha_ng.jpgg"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/cu-a-ha-ng.webp"
   },
   {
     name: "ĐỒNG PHỤC",
@@ -134,7 +134,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/Y0npBnLV/do-ng-phu-c.jpg"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/do-ng-phu-c.webp"
   },
   {
     name: "BRANDING GUIDELINE",
@@ -143,7 +143,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/CLs25Bv5/branding_guideline.jpg"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/branding-guideline.webp"
   },
   {
     name: "TÀI NGUYÊN",
@@ -152,7 +152,7 @@ const artists = [
       profileUrl: "#",
       embedUrl: "#"
     },
-    backgroundUrl: "https://i.postimg.cc/k54dNFVG/a_nh_thu_c_te.jpg"
+    backgroundUrl: "https://tascusfood.com/franchise%20page/anh.webp"
   }
 ];
 
