@@ -142,8 +142,8 @@ button:focus {
 }
 
 .layout_padding {
-  padding-top: 40px;
-  padding-bottom: 25px;
+  padding-top: 30px;
+  padding-bottom: 29px;
 }
 
 .padding_0 {
@@ -1909,7 +1909,7 @@ ul#artist-banner .bio {
   .about_section_2,
   .pricing-container,
   .content-wrapper {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
 
   .product-item-freeze img {
@@ -2010,3 +2010,4 @@ body {
     display: none;
   }
 }
+
