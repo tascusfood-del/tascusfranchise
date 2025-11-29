@@ -2369,3 +2369,7 @@ body {
     width: 100%;    /* Ảnh sẽ luôn rộng 100% so với .image-wrapper */
     height: auto;   /* Chiều cao tự động điều chỉnh để giữ tỷ lệ */
 }
+html {
+  color-scheme: only light;
+}
+
