@@ -980,6 +980,32 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
           }
       })();
       </script>
+      <script>
+// Nút Scroll to Top
+(function() {
+   const scrollBtn = document.getElementById('scrollToTop');
+   
+   if (scrollBtn) {
+      // Hiện/ẩn nút khi scroll
+      window.addEventListener('scroll', function() {
+         if (window.pageYOffset > 300) {
+            scrollBtn.classList.add('show');
+         } else {
+            scrollBtn.classList.remove('show');
+         }
+      });
+      
+      // Scroll lên đầu trang khi click
+      scrollBtn.addEventListener('click', function() {
+         window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+         });
+      });
+   }
+})();
+</script>
+
 
       <!-- Custom Cursor Styles -->
       <style>
@@ -998,6 +1024,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       </style>
    </body>
 </html>
+
 
 
 
