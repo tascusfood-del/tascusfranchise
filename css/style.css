@@ -1882,8 +1882,8 @@ ul#artist-banner .bio {
   .about_taital,
   .tascus-process-title {
     line-height: 1.2 !important;
-    margin-top: 30px !important;
-    margin-bottom: 20px !important;
+    margin-top: 18px !important;
+    margin-bottom: 15px !important;
   }
 
   p {
@@ -1901,9 +1901,9 @@ ul#artist-banner .bio {
   #tascus-banner-widget .tascus-next { right: 8px; }
 
   .about_taital {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    font-size: 45px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 55px;
   }
 
   .about_section_2,
@@ -2010,4 +2010,5 @@ body {
     display: none;
   }
 }
+
 
