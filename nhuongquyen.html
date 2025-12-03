@@ -1,41 +1,33 @@
-
-
 <!DOCTYPE html>
 <html lang="vi">
    <head>
-    <!-- Basic Meta Tags -->
-      <meta charset="utf-8">
+    <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
       
-      <!-- SEO Meta Tags -->
       <title>Nhượng Quyền Tascus Food - Thương Hiệu Thức Ăn Nhanh Hàng Đầu Việt Nam</title>
       <meta name="description" content="Nhượng quyền Tascus Food - Thương hiệu thức ăn nhanh uy tín với 7 cơ sở thành công. Chi phí từ 290 triệu, lợi nhuận 20-24%/tháng. Hỗ trợ toàn diện từ setup đến vận hành. Hotline: 1900 998 879">
       <meta name="keywords" content="nhượng quyền tascus, nhượng quyền thức ăn nhanh, nhượng quyền F&B, kinh doanh đồ ăn nhanh, mô hình tascus station, tascus house, nhượng quyền ăn uống">
       <meta name="author" content="Tascus Food">
       <meta name="robots" content="index, follow">
       
-      <!-- Canonical URL -->
       <link rel="canonical" href="https://tascusfood.com.vn/nhuongquyen">
       
-      <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website">
       <meta property="og:url" content="https://www.tascusfood.vn/nhuong-quyen">
       <meta property="og:title" content="Nhượng Quyền Tascus Food - Sinh Lời Bền Vững">
       <meta property="og:description" content="Tham gia hệ thống nhượng quyền thức ăn nhanh hàng đầu Việt Nam. Lợi nhuận 20-24%/tháng, hỗ trợ toàn diện.">
       <meta property="og:image" content="https://i.postimg.cc/xdsRnXdF/logo.png">
       
-      <!-- Favicon -->
       <link rel="icon" href="https://tascusfood.com/logo.webp" type="image/png">
       
-      <!-- Preconnect -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       
-      <!-- CSS Files - GIỮ NGUYÊN THỨ TỰ -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
       <link rel="stylesheet" href="css/responsive.css">
+            <link rel="stylesheet" href="css/tascus.css">
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
@@ -44,7 +36,6 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css">
       
-      <!-- Structured Data - Organization Schema -->
       <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -63,155 +54,14 @@
         ]
       }
       </script>
-       <style>
-         /* CSS cho Food App Buttons - ĐÃ SỬA FIX LỖI XUỐNG DÒNG */
-         .food-app-buttons {
-            display: flex;
-            gap: 18px !important;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: nowrap !important;
-         }
-
-         .food-app-btn {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
-         }
-
-         .food-app-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-         }
-
-         .food-app-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-         }
-
-         /* Màn hình tablet/trung bình */
-         @media (max-width: 991px) and (min-width: 768px) {
-            .food-app-buttons {
-               gap: 6px;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 48px;
-               height: 48px;
-               padding: 5px;
-            }
-         }
-
-         /* Mobile */
-         @media (max-width: 767px) {
-            .food-app-buttons {
-               gap: 8px;
-               justify-content: center;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 50px;
-               height: 50px;
-               padding: 8px;
-            }
-         }
-
-         @media (max-width: 480px) {
-            .food-app-buttons {
-               gap: 5px;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 45px;
-               height: 45px;
-               padding: 5px;
-            }
-         }
-
-         /* Màn hình rất nhỏ */
-         @media (max-width: 360px) {
-            .food-app-buttons {
-               gap: 4px;
-            }
-            
-            .food-app-btn {
-               width: 40px;
-               height: 40px;
-               padding: 6px;
-            }
-         }
-         /* Nút Scroll to Top */
-.scroll-to-top-btn {
-   position: fixed;
-   bottom: 150px; /* TĂNG TỪ 80px LÊN 150px */
-   right: 30px;
-   width: 60px;
-   height: 60px;
-   background-color: #962c2d;
-   color: #fff;
-   border: none;
-   border-radius: 50%;
-   font-size: 20px;
-   cursor: pointer;
-   opacity: 0;
-   visibility: hidden;
-   transition: all 0.3s ease;
-   z-index: 999;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.scroll-to-top-btn:hover {
-   background-color: #f9b116;
-   transform: translateY(-5px);
-   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.scroll-to-top-btn.show {
-   opacity: 1;
-   visibility: visible;
-}
-
-/* Responsive - Điều chỉnh cho mobile */
-@media (max-width: 768px) {
-   .scroll-to-top-btn {
-      bottom: 130px; /* TĂNG TỪ 70px LÊN 130px */
-      right: 15px;
-      width: 45px;
-      height: 45px;
-      font-size: 18px;
-   }
-}
-
-      </style>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L81GSMRWMW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L81GSMRWMW');
-</script>
+      
    </head>
-   <body>
-      <!-- GIỮ NGUYÊN CẤU TRÚC HTML CŨ TỪ ĐÂY -->
-      <!-- header section start -->
-      <div class="header_section">
+   <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+      <div class="header_section" style="position: sticky; top: 0; z-index: 999;">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <a class="navbar-brand" href="index.html">
-               <img src="https://tascusfood.com/function/logo.webp" alt="Logo Tascus Food">
+               <img src="https://i.postimg.cc/xdsRnXdF/logo.png" alt="logo">
                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse"
                   data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -220,17 +70,17 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="mastermenu.html">MENU</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="shop.html">CỬA HÀNG</a>
+                     </li>
                      <li class="nav-item active">
-                        <a class="nav-link" href="nhuongquyen.html">GIỚI THIỆU</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#prices">MÔ HÌNH</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#camket">CAM KẾT TỪ THƯƠNG HIỆU</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#quytrinh">QUY TRÌNH NHƯỢNG QUYỀN</a>
+                        <a class="nav-link" href="nhuongquyen.html">NHƯỢNG QUYỀN</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
@@ -241,83 +91,10 @@
          </div>
       </div>
 
-        <style>
-         /* CSS cho Food App Buttons */
-         .food-app-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: nowrap;
-         }
 
-         .food-app-btn {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-         }
-
-         .food-app-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-         }
-
-         .food-app-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-         }
-
-         @media (max-width: 768px) {
-            .food-app-buttons {
-               gap: 8px;
-               justify-content: center;
-            }
-            
-            .food-app-btn {
-               width: 50px;
-               height: 50px;
-               padding: 6px;
-            }
-         }
-
-         @media (max-width: 480px) {
-            .food-app-buttons {
-               gap: 6px;
-            }
-            
-            .food-app-btn {
-               width: 45px;
-               height: 45px;
-               padding: 5px;
-            }
-         }
-      </style>
-      <!-- header section end -->
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L81GSMRWMW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-L81GSMRWMW');
-</script>
-   </header>      
-      <!-- Tiếp tục phần còn lại như HTML cũ của bạn -->
-
-      <!-- Main Content -->
       <main>
-         <!-- Banner Section -->
          <section id="tascus-banner-widget" class="tascus-fullbleed" aria-roledescription="carousel" aria-label="Banner nhượng quyền Tascus">
             <div class="tascus-inner">
-               <!-- SLIDE 1 -->
                <div class="tascus-slide">
                   <picture>
                      <source media="(max-width: 768px)" 
@@ -328,7 +105,6 @@
                         width="1920" height="823" loading="eager">
                   </picture>
                </div>
-               <!-- SLIDE 2 -->
                <div class="tascus-slide">
                   <picture>
                      <source media="(max-width: 768px)" 
@@ -339,7 +115,6 @@
                         width="1920" height="823" loading="lazy">
                   </picture>
                </div>
-               <!-- SLIDE 3 -->
                <div class="tascus-slide">
                   <picture>
                      <source media="(max-width: 768px)" 
@@ -370,77 +145,118 @@
                </div>
             </div>
          </section>
+         <section class="tascus-feature-section">
+            <div class="container">
+               <div class="tascus-feature-row">
+                  <div class="tascus-feature-col tascus-feature-text">
+                     <h1 class="tascus-feature-title">LỢI ÍCH KHI NHƯỢNG QUYỀN TASCUS FOOD</h1>
+                     
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Thương Hiệu Uy Tín - Tệp Khách Hàng Sẵn Có</h3>
+                           <p class="tascus-feature-desc">Được sử dụng thương hiệu Tascus Food đã được bảo hộ, kèm theo<strong> fanpage 4,200+ followers</strong> và tệp khách hàng trung sẵn có.</p>
+                        </div>
+                     </div>
 
-         <!-- About Section -->
-         <article class="about_section layout_padding">
-            <h1 class="about_taital" style="color: #962c2d;">
-               Giới thiệu
-               <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">thương hiệu</span>
-            </h1>
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Nguồn Nguyên Vật Liệu Chất Lượng - Giá Ổn Định</h3>
+                           <p class="tascus-feature-desc">Nguyên vật liệu được sản xuất tại nhà xưởng riêng, đảm bảo chất lượng đồng nhất, giá ổn định</p>
+                        </div>
+                     </div>
+
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Truyền Thông & Marketing Liên Tục</h3>
+                           <p class="tascus-feature-desc">Chạy chiến dịch marketing tập trung, không phân biệt cửa hàng nhượng quyền hay trực thuộc</p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="tascus-feature-col tascus-feature-image">
+                     <img src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/banner%20(1).webp" alt="Giao diện website chuyên nghiệp" class="tascus-feature-img">
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h1 class="about_taital" style="color: #f9b116; margin-top: 40px !important;">
+           5 Lý do nên nhượng quyền
+            <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;"> TASCUS FOOD </span>
+         </h1>
+         
+ <section class="feature-section">
+    <div class="visual-wrapper">
+            <div class="bg-blob"></div>
+            <img src="https://tascusfood.com/BANNER.webp" alt="Streamer" class="main-img">
             
-            <section class="about_section_2">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="about_taital_main">
-                           <h2 class="slightly_text">Tại sao nên chọn Tascus</h2>
-                           <p class="lorem_text">Tascus không phải là thương hiệu "mới toanh" chưa kiểm chứng. <br>Với 7 cơ sở đang hoạt động thành công, hàng trăm đơn hàng mỗi ngày và hàng nghìn khách hàng trung thành, Tascus đã chứng tỏ sức hút và khả năng sinh lời bền vững trong ngành F&B cạnh tranh<br><strong> Điểm khác biệt:</strong> <br>✓ Món ăn được chế biến tươi ngay tại chỗ, khách hàng nhìn thấy quy trình minh bạch, <br>✓ Menu "hợp trend" với Gen Z, liên tục cập nhật món mới.</p>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="about_img">
-                           <img src="https://tascusfood.com/franchise%20page/banne-12.webp" alt="Cửa hàng Tascus Food - Không gian hiện đại" width="600" height="400" loading="lazy">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+        </div>
+        <div class="accordion-wrapper">
+         
+            
+            <div class="acc-item active">
+                <div class="acc-header">
+                    <span> Thương Hiệu Được Bảo Hộ & Uy Tín</span>
+                    <span class="acc-icon"></span>
+                </div>
+                <div class="acc-body">
+                   ✔ Nhãn hiệu đã được đăng ký bảo hộ, đảm bảo quyền lợi pháp lý cho đối tác nhượng quyền​<br>✔ Chứng nhận ISO 22000:2018 về hệ thống quản lý an toàn thực phẩm, cam kết chất lượng vệ sinh<br>✔ Hàng trăm đánh giá tích cực từ khách hàng, xây dựng lòng tin vững chắc trên thị trường
+                </div>
+            </div>
 
-            <section class="about_section_2 layout_padding">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="about_img">
-                           <img src="https://tascusfood.com/franchise%20page/be%CC%82%CC%81p.webp" alt="Nguyên vật liệu tươi ngon của Tascus" width="600" height="400" loading="lazy">
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="about_taital_main">
-                           <h2 class="slightly_text">Nguyên vật liệu & phát triển sản phẩm tại Tascus</h2>
-                           <p class="lorem_text">Nguyên vật liệu của Tascus được đồng bộ về chất lượng, sản xuất trong nhà xưởng chuyên nghiệp với quy trình kiểm soát nghiêm ngặt. Đội ngũ R&D giàu kinh nghiệm không ngừng nghiên cứu, thử nghiệm và cải tiến để cho ra đời những sản phẩm mới, bắt nhịp xu hướng ẩm thực hiện đại.<br><br>
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span> Hệ Thống Sản Xuất Khép Kín - Công Nghệ Hiện Đại</span>
+                    <span class="acc-icon"></span>
+                </div>
+                <div class="acc-body">
+                    ✔ <strong>Nhà xưởng 1,500m²</strong> trang bị máy móc tiên tiến, đảm bảo sản xuất ổn định, Năng lực cung ứng cho 250-300 cửa hàng toàn quốc<br>✔ Quy trình QA/QC chặt chẽ từ sản xuất, trung chuyển đến phân phối, đảm bảo chất lượng đồng đều<br>✔ Đội ngũ R&D giàu kinh nghiệm không ngừng nghiên cứu, cập nhật menu theo xu hướng ẩm thực
+                </div>
+            </div>
 
-Trong lộ trình phát triển menu, Tascus sẽ sớm bổ sung những dòng sản phẩm như taco – xu hướng ẩm thực toàn cầu, nhằm mang đến nhiều trải nghiệm phong phú hơn cho khách hàng.<br><br>
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span>
+                        Menu Đa Dạng - Phù Hợp Mọi Khách hàng 
+                     
+                    </span>
+                    <span class="acc-icon"></span>
+                </div>
+                <div class="acc-body">
+                    ✔ 20+ món chính: Burger, bánh mì, crepe, sandwich, bánh mì chảo với nhiều lựa chọn sốt và nhân<br>✔ Đồ uống tươi mát: Trà, nước ép, thức uống sáng tạo<br>✔ Menu được thiết kế phù hợp cho học sinh, sinh viên, nhân viên văn phòng, gia đình - phục vụ từ sáng đến tối​
+                </div>
+            </div>
 
-Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, với công thức chế biến độc quyền, đảm bảo tuân thủ đầy đủ các tiêu chuẩn khắt khe về an toàn vệ sinh thực phẩm (ATVSTP) và mang lại chất lượng ổn định cho toàn bộ hệ thống.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span>Chi Phí Đầu Tư Hợp Lý - Lợi Nhuận Hấp Dẫn</span>
+                    <span class="acc-icon"></span>
+                </div>
+                <div class="acc-body">
+                    ✔ Đầu tư ban đầu: Từ 290-540 triệu VNĐ tùy mô hình (chưa bao gồm phí nhượng quyền)<br>✔ Tỷ suất lợi nhuận: 20-25% doanh thu, được tính toán minh bạch, chứng minh bằng số liệu thực tế vận hành
+                </div>
+            </div>
 
-            <section class="about_section_2 layout_padding">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-6">
-                        <div class="about_taital_main">
-                           <h2 class="slightly_text">Năng lực sản xuất của Tascus</h2>
-                           <p class="lorem_text">Tascus vận hành hệ thống sản xuất khép kín, tuân thủ các tiêu chuẩn nghiêm ngặt, đạt chứng nhận ISO cùng đầy đủ các chứng chỉ an toàn vệ sinh thực phẩm. Nhà xưởng hiện đại với<strong> quy mô 1.500m²</strong>, trang bị đầy đủ máy móc tiên tiến, cho phép chúng tôi sản xuất ổn định và đồng bộ. Với năng lực này, Tascus tự tin đáp ứng cho<strong> 250 – 300 cửa hàng trên toàn quốc</strong>, đảm bảo chất lượng đồng đều và nguồn cung bền vững cho toàn hệ thống</p>
-                        </div>
-                     </div>
-                     <div class="col-md-6">
-                        <div class="about_img">
-                           <img src="https://tascusfood.com/franchise%20page/gia%CC%82%CC%81y%20to%CC%9B%CC%80%201.webp" alt="Nhà máy sản xuất Tascus Food đạt chuẩn ISO" width="600" height="400" loading="lazy">
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-         </article>
+            <div class="acc-item">
+                <div class="acc-header">
+                    <span>
+                         Quy Trình Vận Hành Chuẩn Hóa - Dễ Dàng Kinh Doanh 
+                        
+                    </span>
+                    <span class="acc-icon"></span>
+                </div>
+                <div class="acc-body">
+                    ✔ Quy trình phục vụ chuẩn hóa từ A-Z, dễ đào tạo nhân viên mới<br>✔ Bất cứ ai cũng có thể làm được, không yêu cầu kinh nghiệm F&B trước đó<br>✔ Tài liệu hướng dẫn chi tiết, hỗ trợ liên tục từ đội ngũ Tascus
+                </div>
+            </div>
+        </div>
 
-         <!-- Trademark Section -->
-         <section class="trademark_section layout_padding">
+       
+    </section>
+    <!-- Trademark Section -->
+    <section class="trademark_section layout_padding">
             <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
+               <h2 class="about_taital" style="color: #f9b116;">
                   thương hiệu đã được  
                   <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">đăng ký bảo hộ</span>
                </h2>
@@ -452,417 +268,363 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
                </div>
             </div>
          </section>
-
-         <!-- Brand Identity Section -->
-         <section class="brand_section layout_padding">
-            <h2 class="about_taital" style="color: #962c2d;">
-               HỆ THỐNG NHẬN DIỆN 
-               <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">ĐẦY ĐỦ</span>
-            </h2>
-            <ul id="artist-banner"></ul>
-         </section>
-
          <!-- Menu Section -->
-         <section class="menu_section layout_padding">
-            <h2 class="about_taital" style="color: #962c2d;">
-               Menu
-               <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">tascus</span>
-            </h2>
-
-            <div class="gallery-container">
-               <div class="gallery-item">
-                  <img src="https://tascusfood.com/franchise%20page/menu%201.webp" alt="Menu Tascus - Món ăn số 1" width="400" height="400" loading="lazy">
+          
+     
+  <section id="tascus-banner-widget" class="tascus-fullbleed" style="max-width: 1200px; margin: 0 auto;" aria-roledescription="carousel" aria-label="Banner nhượng quyền Tascus">
+            <div class="tascus-inner">
+               <div class="tascus-slide">
+                  <picture>
+                     <source media="(max-width: 768px)" 
+                        srcset="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/No%CC%A3%CC%82i%20dung%20%C4%91oa%CC%A3n%20va%CC%86n%20ba%CC%89n%20cu%CC%89a%20ba%CC%A3n%20(1).gif">
+                     <img class="tascus-img" 
+                        src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/No%CC%A3%CC%82i%20dung%20%C4%91oa%CC%A3n%20va%CC%86n%20ba%CC%89n%20cu%CC%89a%20ba%CC%A3n%20(1).gif" 
+                        alt="Nhượng quyền Tascus Food - Mô hình kinh doanh thức ăn nhanh hiệu quả"
+                        width="1920" height="823" loading="eager">
+                  </picture>
                </div>
-               <div class="gallery-item">
-                  <img src="https://tascusfood.com/franchise%20page/menu%202.webp" alt="Menu Tascus - Món ăn số 2" width="400" height="400" loading="lazy">
-               </div>
-               <div class="gallery-item">
-                  <img src="https://tascusfood.com/franchise%20page/menu%203.webp" alt="Menu Tascus - Món ăn số 3" width="400" height="400" loading="lazy">
-               </div>
-            </div>
          </section>
-
-         <!-- Pricing Models Section -->
-         <section id="prices" class="pricing_section layout_padding">
-            <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
-                  Mô hình 
-                  <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">Cửa hàng</span>
-               </h2>
-            </div>
-
-            <div class="pricing-container">
-               <div class="columns">
-                  <ul class="price">
-                     <li class="header" style="background-color:#efa425">
-                        <h3 style="color: white">Tascus Station</h3>
-                     </li>
-                     <li class="grey">290,000,000 VNĐ</li>
-                     <li><strong>Diện tích</strong><br>25m² – 35m², mặt tiền tối thiểu 6m</li>
-                     <li><strong>Phù hợp</strong><br>khu dân cư, phố ăn uống, trường học, văn phòng Tuyến phố giao thông đông đúc.</li>
-                     <li><strong>Công năng</strong><br>phục vụ cả khách mang đi & ngồi lại (12 – 16 ghế, 5 - 6 bàn)</li>
-                     <li><strong>Trang thiết bị</strong><br>đầy đủ theo tiêu chuẩn Tascus, thiết kế hiện đại, đẹp mắt, tiện lợi</li>
-                     <li><strong>Vật liệu</strong><br> inox + alu, chất lượng cao, độ bền tốt, trang trí theo tiêu chuẩn nhận diện tascus.</li>
-                     <li class="grey"><a href="#form" class="button">Xem cửa hàng mẫu</a></li>
-                  </ul>
-               </div>
-               <div class="columns">
-                  <ul class="price">
-                     <li class="header" style="background-color:#efa425">
-                        <h3 style="color: white">Tascus House</h3>
-                     </li>
-                     <li class="grey">540,000,000 VNĐ</li>
-                     <li><strong>Diện tích</strong><br>70m² – 120m², mặt tiền tối thiểu 10m</li>
-                     <li><strong>Phù hợp</strong><br>trung tâm thương mại, phố lớn, khu đông dân cư, tuyến phố ăn uống.</li>
-                     <li><strong>Công năng</strong><br>phục vụ đa dạng sản phẩm, nhiều chỗ ngồi, trải nghiệm như nhà hàng hiện đại.</li>
-                     <li><strong>Trang thiết bị</strong><br>đồng bộ, tiêu chuẩn cao cấp, hỗ trợ setup đa dạng menu</li>
-                     <li><strong>Vật liệu</strong><br> inox – alu – trang trí nội thất nổi bật theo nhận diện Tascus</li>
-                     <li class="grey"><a href="#form" class="button">Xem cửa hàng mẫu</a></li>
-                  </ul>
-               </div>
-            </div>
-         </section>
-
-         <!-- Financial Table Section -->
-         <section class="tascus-pricing-table-section layout_padding">
+         <section class="tascus-feature-section" style="background-color: white;">
             <div class="container">
-               <h2 class="tascus-pricing-title">Bảng dự tính doanh thu & chi phí</h2>
-               
-               <div class="tascus-table-responsive">
-                  <table class="tascus-pricing-table">
-                     <thead>
-                        <tr>
-                           <th rowspan="2" class="tascus-th-main">Hạng mục</th>
-                           <th colspan="2" class="tascus-th-sale">Sale: 180tr/tháng</th>
-                           <th colspan="2" class="tascus-th-sale">Sale: 250tr/tháng</th>
-                           <th colspan="2" class="tascus-th-sale">Sale: 300tr/tháng</th>
-                           <th colspan="2" class="tascus-th-sale">Sale: 350tr/tháng</th>
-                           <th rowspan="2" class="tascus-th-note">Ghi chú</th>
-                        </tr>
-                        <tr>
-                           <th class="tascus-th-sub">Số tiền (Triệu)</th>
-                           <th class="tascus-th-sub">%</th>
-                           <th class="tascus-th-sub">Số tiền (Triệu)</th>
-                           <th class="tascus-th-sub">%</th>
-                           <th class="tascus-th-sub">Số tiền (Triệu)</th>
-                           <th class="tascus-th-sub">%</th>
-                           <th class="tascus-th-sub">Số tiền (Triệu)</th>
-                           <th class="tascus-th-sub">%</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr class="tascus-tr-highlight">
-                           <td class="tascus-td-label">Doanh thu</td>
-                           <td>180</td>
-                           <td>100,00%</td>
-                           <td>250</td>
-                           <td>100,00%</td>
-                           <td>300</td>
-                           <td>100,00%</td>
-                           <td>350</td>
-                           <td>100,00%</td>
-                           <td></td>
-                        </tr>
-                        <tr>
-                           <td class="tascus-td-label">Giá vốn hàng hóa</td>
-                           <td>81</td>
-                           <td>45,00%</td>
-                           <td>112,5</td>
-                           <td>45,00%</td>
-                           <td>135</td>
-                           <td>45,00%</td>
-                           <td>157,5</td>
-                           <td>45,00%</td>
-                           <td class="tascus-td-note">Bao gồm tỷ lệ hỏng hủy thất thoát và không tính tồn kho chưa sử dụng.</td>
-                        </tr>
-                        <tr class="tascus-tr-highlight">
-                           <td class="tascus-td-label">Chi phí nhân công</td>
-                           <td>28,4</td>
-                           <td>15,80%</td>
-                           <td>35,4</td>
-                           <td>14,20%</td>
-                           <td>40,4</td>
-                           <td>13,50%</td>
-                           <td>44,4</td>
-                           <td>12,70%</td>
-                           <td></td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Lương quản lý</td>
-                           <td>8,4</td>
-                           <td>4,70%</td>
-                           <td>8,4</td>
-                           <td>3,40%</td>
-                           <td>8,4</td>
-                           <td>2,80%</td>
-                           <td>8,4</td>
-                           <td>2,40%</td>
-                           <td class="tascus-td-note">Quản lý 1 người, ca gãy hoặc ca thẳng lương 30k/h + phụ cấp</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Lương nhân viên</td>
-                           <td>20</td>
-                           <td>11,10%</td>
-                           <td>27</td>
-                           <td>10,80%</td>
-                           <td>32</td>
-                           <td>10,70%</td>
-                           <td>36</td>
-                           <td>10,30%</td>
-                           <td class="tascus-td-note">NV partime, fulltime, sắp xếp ca làm việc theo tỷ lệ doanh thu.</td>
-                        </tr>
-                        <tr class="tascus-tr-highlight">
-                           <td class="tascus-td-label">Chi phí cửa hàng</td>
-                           <td>36</td>
-                           <td>20,30%</td>
-                           <td>46</td>
-                           <td>18,40%</td>
-                           <td>56</td>
-                           <td>18,70%</td>
-                           <td>66</td>
-                           <td>19,00%</td>
-                           <td></td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Tiền thuê nhà</td>
-                           <td>15</td>
-                           <td>8,30%</td>
-                           <td>20</td>
-                           <td>17,80%</td>
-                           <td>25</td>
-                           <td>18,50%</td>
-                           <td>30</td>
-                           <td>19,00%</td>
-                           <td class="tascus-td-note">Tiền thuê mặt bằng kinh doanh.</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Khấu hao</td>
-                           <td>3,6</td>
-                           <td>2,00%</td>
-                           <td>3,6</td>
-                           <td>10,10%</td>
-                           <td>3,6</td>
-                           <td>8,80%</td>
-                           <td>3,6</td>
-                           <td>8,00%</td>
-                           <td class="tascus-td-note">Chi phí đầu tư ban đầu khấu hao 84 tháng (trên dự toán 300)</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Dịch vụ tiện ích</td>
-                           <td>10</td>
-                           <td>5,60%</td>
-                           <td>12</td>
-                           <td>4,80%</td>
-                           <td>14</td>
-                           <td>4,70%</td>
-                           <td>16</td>
-                           <td>4,60%</td>
-                           <td class="tascus-td-note">Điện, nước, internet, gas, vệ sinh, bảo trì.</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Marketing</td>
-                           <td>4</td>
-                           <td>2,20%</td>
-                           <td>5</td>
-                           <td>2,00%</td>
-                           <td>6</td>
-                           <td>2,00%</td>
-                           <td>7</td>
-                           <td>2,00%</td>
-                           <td class="tascus-td-note">Chi phí thiết kế, in ấn, chăm sóc page, ads, mkt, phát voucher.</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Lobby</td>
-                           <td>1,5</td>
-                           <td>0,80%</td>
-                           <td>2</td>
-                           <td>0,80%</td>
-                           <td>2,7</td>
-                           <td>0,90%</td>
-                           <td>3,2</td>
-                           <td>0,90%</td>
-                           <td class="tascus-td-note">CA phường + thuế khoán hkd + đóng góp quỹ cho tổ dân phố (nếu có)</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Chi phí phục vụ</td>
-                           <td>1,2</td>
-                           <td>0,70%</td>
-                           <td>1,7</td>
-                           <td>0,70%</td>
-                           <td>2,5</td>
-                           <td>0,80%</td>
-                           <td>3,5</td>
-                           <td>1,00%</td>
-                           <td class="tascus-td-note">Giấy ăn, túi rác, dụng dịch tẩy rửa, công cụ dụng cụ tiêu hao.</td>
-                        </tr>
-                        <tr class="tascus-tr-indent">
-                           <td class="tascus-td-label">• Chi phí khác</td>
-                           <td>1,2</td>
-                           <td>0,70%</td>
-                           <td>1,8</td>
-                           <td>0,70%</td>
-                           <td>2,3</td>
-                           <td>0,80%</td>
-                           <td>3,1</td>
-                           <td>0,90%</td>
-                           <td class="tascus-td-note">Văn phòng phẩm, trang trí, sửa chữa, bảo trì (nếu có)</td>
-                        </tr>
-                        <tr class="tascus-tr-total">
-                           <td class="tascus-td-label">Lợi nhuận kinh doanh</td>
-                           <td>34,13</td>
-                           <td>19,00%</td>
-                           <td>56,03</td>
-                           <td>22,40%</td>
-                           <td>68,53</td>
-                           <td>22,80%</td>
-                           <td>81,73</td>
-                           <td>23,40%</td>
-                           <td></td>
-                        </tr>
-                        <tr class="tascus-tr-final">
-                           <td class="tascus-tr-final">Lợi nhuận (cộng chi phí đầu tư)</td>
-                           <td>37,7</td>
-                           <td>20,90%</td>
-                           <td>59,6</td>
-                           <td>23,80%</td>
-                           <td>72,1</td>
-                           <td>24,00%</td>
-                           <td>85,3</td>
-                           <td>24,40%</td>
-                           <td></td>
-                        </tr>
-                     </tbody>
-                  </table>
-               </div>
-            </div>
-         </section>
+               <div class="tascus-feature-row">
+                  <div class="tascus-feature-col tascus-feature-text">
+                     <h1 class="tascus-feature-title">THỰC ĐƠN NHÀ TASCUS FOOD</h1>
+                     
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Sản phẩm chủ đạo của nhà Tascus</h3>
+                           <p class="tascus-feature-desc">Là các dòng bánh hiện đại mang phong cách, đa dạng về sốt và phong phú trong từng loại bánh. Menu được thiết kế phù hợp cho mọi bữa ăn trong ngày, chạm đến nhiều nhóm khách hàng khác nhau.</p>
+                        </div>
+                     </div>
 
-         <!-- Revenue Sources Section -->
-         <section class="revenue_section layout_padding">
-            <div class="tascus-image-section">
-               <div class="image-wrapper">
-                  <img src="https://tascusfood.com/franchise%20page/solieu.webp" alt="Dự tính lợi nhuận kinh doanh nhượng quyền Tascus" width="1200" height="800" loading="lazy">
-               </div>
-            </div>
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Sản phẩm chủ lực:</h3>
+                           <p class="tascus-feature-desc">Bánh mì, Burger, Sandwich hiện đại với sốt độc quyền, chuẩn vị quốc tế.</p>
+                        </div>
+                     </div>
 
-            <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
-                  3 nguồn 
-                  <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">doanh thu chính</span>
-               </h2>
-            </div>
-
-            <div class="tascus-image-section">
-               <div class="image-wrapper">
-                  <img src="https://tascusfood.com/franchise%20page/nguonthu.webp" alt="3 nguồn doanh thu chính của mô hình Tascus" width="1200" height="800" loading="lazy">
-               </div>
-            </div>
-         </section>
-
-         <!-- Operating Costs Section -->
-         <section class="operating_section layout_padding">
-            <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
-                  Chi phí vận hành  
-                  <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">hàng tháng</span>
-               </h2>
-            </div>
-
-            <div class="tascus-image-section">
-               <div class="image-wrapper">
-                  <img src="https://tascusfood.com/franchise%20page/chiphi.webp" alt="Chi phí vận hành hàng tháng cửa hàng Tascus" width="1200" height="800" loading="lazy">
-               </div>
-            </div>
-         </section>
-
-         <!-- Commitments Section -->
-         <section id="camket" class="commitment_section layout_padding">
-            <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
-                  Cam kết từ  
-                  <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">thương hiệu</span>
-               </h2>
-            </div>
-
-            <div class="tascus-image-section">
-               <div class="image-wrapper">
-                  <img src="https://tascusfood.com/franchise%20page/quyenloi.webp" alt="Cam kết từ thương hiệu Tascus Food" width="1200" height="800" loading="lazy">
-               </div>
-            </div>
-         </section>
-
-         <!-- Benefits Section -->
-         <section class="benefits_section layout_padding">
-            <div class="about_taital_wrapper">
-               <h2 class="about_taital" style="color: #962c2d;">
-                  quyền lợi  
-                  <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;">nhận được</span>
-               </h2>
-            </div>
-
-            <div class="tascus-image-section">
-               <div class="image-wrapper">
-                  <img src="https://tascusfood.com/franchise%20page/quyenloinhanduoc.webp" alt="Quyền lợi nhà đầu tư nhận được khi nhượng quyền Tascus" width="1200" height="800" loading="lazy">
-               </div>
-            </div>
-         </section>
-
-         <!-- Process Section -->
-         <section id="quytrinh" class="tascus-process-section layout_padding">
-            <div class="container">
-               <div class="row mb-5">
-                  <div class="col-md-8 text-center mx-auto">
-                     <h2 class="tascus-process-title">Quy trình nhượng quyền</h2>
-                  </div>
-               </div>
-               
-               <div class="row g-4">
-                  <div class="col-md-6 col-lg-3">
-                     <div class="tascus-step-card position-relative">
-                        <svg class="tascus-arch-line" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                           <path d="M 0 25 Q 75 0, 150 25" stroke="#f9b116" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
-                        </svg>
-                        <span class="tascus-step-number">1</span>
-                        <h3>Tìm hiểu</h3>
-                        <p>1.Tìm hiểu thông tin tổng quan về thương hiệu và mô hình kinh doanh. <br>2.Giải đáp mọi thắc mắc từ phía đối tác.</p>
+                     <div class="tascus-feature-item">
+                        <div class="tascus-feature-content">
+                           <h3 class="tascus-feature-subtitle">Tích hợp đồ uống:</h3>
+                           <p class="tascus-feature-desc">Menu trà & thức uống sáng tạo đi kèm, giúp tăng giá trị đơn hàng (AOV).</p>
+                        </div>
                      </div>
                   </div>
-                  
-                  <div class="col-md-6 col-lg-3">
-                     <div class="tascus-step-card position-relative">
-                        <svg class="tascus-arch-line reverse" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                           <path d="M 0 25 Q 75 50, 150 25" stroke="#f9b116" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
-                        </svg>
-                        <span class="tascus-step-number">2</span>
-                        <h3>Thẩm định & Ký kết</h3>
-                        <p>3.Đặt cọc & ký kết hợp đồng nhượng quyền.<br> 4.Cùng tìm kiếm mặt bằng trong trường hợp khách hàng chưa có mặt bằng, khảo sát & xét duyệt mặt bằng phù hợp.<br>5.Chốt mặt bằng và hoàn tất hợp đồng thuê mặt bằng.</p>
-                     </div>
-                  </div>
-                  
-                  <div class="col-md-6 col-lg-3">
-                     <div class="tascus-step-card position-relative">
-                        <svg class="tascus-arch-line" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                           <path d="M 0 25 Q 75 0, 150 25" stroke="#f9b116" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
-                        </svg>
-                        <span class="tascus-step-number">3</span>
-                        <h3>Đào tạo & Thi công</h3>
-                        <p>6.Thiết kế Tiến hành đo đạc, kiểm tra chi tiết hiện trạng mặt bằng.<br>7. Lập bản vẽ thiết kế & lịch trình thi công theo diện tích thực tế.<br>8. Triển khai thi công cửa hàng theo chuẩn thương hiệu.<br>9. Chủ thương hiệu và nv tới trực tiếp cơ sở để học tay nghề và vận hành.</p>
-                     </div>
-                  </div>
-                  
-                  <div class="col-md-6 col-lg-3">
-                     <div class="tascus-step-card">
-                        <span class="tascus-step-number">4</span>
-                        <h3>Khai trương</h3>
-                        <p>10. CDT Kiểm tra tổng thể trang thiết bị & quy trình vận hành.<br>11. CDT chạy thử và vận hành thử 1 ngày trước khai trương<br>12.Tổ chức khai trương cửa hàng và bán hàng</p>
-                     </div>
+
+                  <div class="tascus-feature-col tascus-feature-image">
+                     <img src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/menu%201.webp" alt="Giao diện website chuyên nghiệp" class="tascus-feature-img" >
                   </div>
                </div>
             </div>
          </section>
+          <section class="pricing-section">
+        <div class="pricing-wrapper">
+            <div class="content-side">
+                <span class="model-tag">Mô hình</span>
+                
+                <h2 class="title" style="margin-bottom: -25px;">Tascus Station</h2>
+                
+                <p class="subtitle">Mô hình tiêu chuẩn – Vừa mang đi vừa ngồi lại</p>
+                
+                <div class="price-box">
+                    <span class="price-label">Chi phí đầu tư từ:</span>
+                    <span class="price-number">290.000.000 VNĐ</span>
+                </div>
 
-         <!-- Contact Section -->
-         <section class="tascus-contact-section">
+                <ul class="specs-list">
+                    <li>
+                        <span class="icon">📐</span>
+                        <div class="text">
+                            <strong>Diện tích & Mặt tiền</strong>
+                            25m² – 35m² (Mặt tiền tối thiểu 6m)
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">📍</span>
+                        <div class="text">
+                            <strong>Vị trí phù hợp</strong>
+                            Khu dân cư, trường học, văn phòng, tuyến phố đông đúc.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">⚙️</span>
+                        <div class="text">
+                            <strong>Công năng tối ưu</strong>
+                            Phục vụ khách mang đi & ngồi lại (12–16 ghế, 5–6 bàn).
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🥄</span>
+                        <div class="text">
+                            <strong>Trang thiết bị & Vật liệu</strong>
+                            Tiêu chuẩn Tascus, Inox + Alu cao cấp, bền đẹp.
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🏪</span>
+                        <div class="text">
+                            <strong>Cửa hàng mẫu tham quan</strong>
+                            Thái Thịnh, Khương Trung, Mỹ Đình, Yên Hòa.
+                        </div>
+                    </li>
+                </ul>
+
+                <a href="#lien-he" class="cta-btn">Đăng ký tư vấn ngay</a>
+            </div>
+
+            <div class="image-side">
+                <img src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/pricing.webp" alt="Mô hình quán cafe Tascus Station">
+            </div>
+        </div>
+    </section>
+     <section class="ts1-section">
+        <div class="ts1-table-wrapper">
+            <table class="ts1-data-table">
+                <thead>
+                    <tr class="ts1-thead-primary">
+                        <th rowspan="2" style="width: 150px;">Hạng mục</th>
+                        <th colspan="2">Sale: 180tr/tháng</th>
+                        <th colspan="2">Sale: 250tr/tháng</th>
+                        <th colspan="2">Sale: 300tr/tháng</th>
+                        <th colspan="2">Sale: 350tr/tháng</th>
+                        <th rowspan="2">Ghi chú</th>
+                    </tr>
+                    <tr class="ts1-thead-secondary">
+                        <th>Số tiền (Triệu)</th>
+                        <th>%</th>
+                        <th>Số tiền (Triệu)</th>
+                        <th>%</th>
+                        <th>Số tiền (Triệu)</th>
+                        <th>%</th>
+                        <th>Số tiền (Triệu)</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <body>
+                    <tr>
+                        <td class="ts1-row-header">Doanh thu</td>
+                        <td class="ts1-col-money">180</td><td class="ts1-col-percent">100%</td>
+                        <td class="ts1-col-money">250</td><td class="ts1-col-percent">100%</td>
+                        <td class="ts1-col-money">300</td><td class="ts1-col-percent">100%</td>
+                        <td class="ts1-col-money">350</td><td class="ts1-col-percent">100%</td>
+                        <td class="ts1-col-note"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="ts1-row-header">Giá vốn hàng hóa</td>
+                        <td class="ts1-col-money">81</td><td class="ts1-col-percent">45,00%</td>
+                        <td class="ts1-col-money">112,5</td><td class="ts1-col-percent">45,00%</td>
+                        <td class="ts1-col-money">135</td><td class="ts1-col-percent">45,00%</td>
+                        <td class="ts1-col-money">157,5</td><td class="ts1-col-percent">45,00%</td>
+                        <td class="ts1-col-note">Bao gồm tỷ lệ hỏng hủy thất thoát và không tính tồn kho chưa sử dụng.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="ts1-row-header">Chi phí nhân công</td>
+                        <td class="ts1-col-money">28,4</td><td class="ts1-col-percent">15,80%</td>
+                        <td class="ts1-col-money">35,4</td><td class="ts1-col-percent">14,20%</td>
+                        <td class="ts1-col-money">40,4</td><td class="ts1-col-percent">13,50%</td>
+                        <td class="ts1-col-money">44,4</td><td class="ts1-col-percent">12,70%</td>
+                        <td class="ts1-col-note"></td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Lương quản lý</td>
+                        <td class="ts1-col-money">8,4</td><td class="ts1-col-percent">4,70%</td>
+                        <td class="ts1-col-money">8,4</td><td class="ts1-col-percent">3,40%</td>
+                        <td class="ts1-col-money">8,4</td><td class="ts1-col-percent">2,80%</td>
+                        <td class="ts1-col-money">8,4</td><td class="ts1-col-percent">2,40%</td>
+                        <td class="ts1-col-note">Quản lý 1 người, ca gãy hoặc ca thẳng lương 30k/h + phụ cấp</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Lương nhân viên</td>
+                        <td class="ts1-col-money">20</td><td class="ts1-col-percent">11,10%</td>
+                        <td class="ts1-col-money">27</td><td class="ts1-col-percent">10,80%</td>
+                        <td class="ts1-col-money">32</td><td class="ts1-col-percent">10,70%</td>
+                        <td class="ts1-col-money">36</td><td class="ts1-col-percent">10,30%</td>
+                        <td class="ts1-col-note">Nv partime, fulltime, sắp xếp ca làm việc theo tỷ lệ doanh thu.</td>
+                    </tr>
+
+                    <tr>
+                        <td class="ts1-row-header">Chi phí cửa hàng</td>
+                        <td class="ts1-col-money">36</td><td class="ts1-col-percent">20,30%</td>
+                        <td class="ts1-col-money">46</td><td class="ts1-col-percent">18,40%</td>
+                        <td class="ts1-col-money">56</td><td class="ts1-col-percent">18,70%</td>
+                        <td class="ts1-col-money">66</td><td class="ts1-col-percent">19,00%</td>
+                        <td class="ts1-col-note"></td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Tiền thuê nhà</td>
+                        <td class="ts1-col-money">15</td><td class="ts1-col-percent">8,30%</td>
+                        <td class="ts1-col-money">20</td><td class="ts1-col-percent">17,80%</td>
+                        <td class="ts1-col-money">25</td><td class="ts1-col-percent">18,50%</td>
+                        <td class="ts1-col-money">30</td><td class="ts1-col-percent">19,00%</td>
+                        <td class="ts1-col-note">Tiền thuê mặt bằng kinh doanh.</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Khấu hao</td>
+                        <td class="ts1-col-money">3,6</td><td class="ts1-col-percent">2,00%</td>
+                        <td class="ts1-col-money">3,6</td><td class="ts1-col-percent">10,10%</td>
+                        <td class="ts1-col-money">3,6</td><td class="ts1-col-percent">8,80%</td>
+                        <td class="ts1-col-money">3,6</td><td class="ts1-col-percent">8,00%</td>
+                        <td class="ts1-col-note">Chi phí đầu tư ban đầu khấu hao 84 tháng (trên dự toán 300)</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Dịch vụ tiện ích</td>
+                        <td class="ts1-col-money">10</td><td class="ts1-col-percent">5,60%</td>
+                        <td class="ts1-col-money">12</td><td class="ts1-col-percent">4,80%</td>
+                        <td class="ts1-col-money">14</td><td class="ts1-col-percent">4,70%</td>
+                        <td class="ts1-col-money">16</td><td class="ts1-col-percent">4,60%</td>
+                        <td class="ts1-col-note">Điện, nước, internet, gas, vệ sinh, bảo trì.</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Marketing</td>
+                        <td class="ts1-col-money">4</td><td class="ts1-col-percent">2,20%</td>
+                        <td class="ts1-col-money">5</td><td class="ts1-col-percent">2,00%</td>
+                        <td class="ts1-col-money">6</td><td class="ts1-col-percent">2,00%</td>
+                        <td class="ts1-col-money">7</td><td class="ts1-col-percent">2,00%</td>
+                        <td class="ts1-col-note">Chi phí thiết kế, in ấn, chăm sóc page, ads, mkt, phát voucher.</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Lobby</td>
+                        <td class="ts1-col-money">1,5</td><td class="ts1-col-percent">0,80%</td>
+                        <td class="ts1-col-money">2</td><td class="ts1-col-percent">0,80%</td>
+                        <td class="ts1-col-money">2,7</td><td class="ts1-col-percent">0,90%</td>
+                        <td class="ts1-col-money">3,2</td><td class="ts1-col-percent">0,90%</td>
+                        <td class="ts1-col-note">CA phường + thuế khoán hkd + đóng góp quỹ cho tổ dân phố (nếu có)</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Chi phí phục vụ</td>
+                        <td class="ts1-col-money">1,2</td><td class="ts1-col-percent">0,70%</td>
+                        <td class="ts1-col-money">1,7</td><td class="ts1-col-percent">0,70%</td>
+                        <td class="ts1-col-money">2,5</td><td class="ts1-col-percent">0,80%</td>
+                        <td class="ts1-col-money">3,5</td><td class="ts1-col-percent">1,00%</td>
+                        <td class="ts1-col-note">Giấy ăn, túi rác, dung dịch tẩy rửa, công cụ dụng cụ tiêu hao.</td>
+                    </tr>
+                    <tr>
+                        <td class="ts1-row-sub">• Chi phí khác</td>
+                        <td class="ts1-col-money">1,2</td><td class="ts1-col-percent">0,70%</td>
+                        <td class="ts1-col-money">1,8</td><td class="ts1-col-percent">0,70%</td>
+                        <td class="ts1-col-money">2,3</td><td class="ts1-col-percent">0,80%</td>
+                        <td class="ts1-col-money">3,1</td><td class="ts1-col-percent">0,90%</td>
+                        <td class="ts1-col-note">Văn phòng phẩm, trang trí, sửa chữa, bảo trì (nếu có)</td>
+                    </tr>
+
+                    <tr class="ts1-row-header">
+                        <td>Lợi nhuận kinh doanh</td>
+                        <td class="ts1-col-money">34,13</td><td class="ts1-col-percent">19,00%</td>
+                        <td class="ts1-col-money">56,03</td><td class="ts1-col-percent">22,40%</td>
+                        <td class="ts1-col-money">68,53</td><td class="ts1-col-percent">22,80%</td>
+                        <td class="ts1-col-money">81,73</td><td class="ts1-col-percent">23,40%</td>
+                        <td class="ts1-col-note"></td>
+                    </tr>
+
+                    <tr class="ts1-row-total">
+                        <td>Lợi nhuận (cộng chi phí đầu tư)</td>
+                        <td class="ts1-col-money">37,7</td><td class="ts1-col-percent">20,90%</td>
+                        <td class="ts1-col-money">59,6</td><td class="ts1-col-percent">23,80%</td>
+                        <td class="ts1-col-money">72,1</td><td class="ts1-col-percent">24,00%</td>
+                        <td class="ts1-col-money">85,3</td><td class="ts1-col-percent">24,40%</td>
+                        <td class="ts1-col-note"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ts1-highlights">
+            <div class="ts1-card">
+                <h3>Kiểm Soát Giá Vốn</h3>
+                <p>Tỷ lệ giá vốn hàng hóa luôn được kiểm soát ở mức <span class="ts1-bold">45% doanh thu</span> – một con số an toàn để duy trì lợi nhuận ổn định, ngay cả khi thị trường biến động.</p>
+            </div>
+            <div class="ts1-card" style="border-left-color: #f1c40f;">
+                <h3 style="color: #f39c12;">Lợi Nhuận Ròng</h3>
+                <p>Lợi nhuận ròng được cân đối theo nhiều kịch bản doanh thu, dao động <span class="ts1-bold">20% – 25%</span>, minh chứng cho khả năng sinh lời bền vững.</p>
+            </div>
+        </div>
+
+        
+            
+            <div class="ts1-legend">
+                <div class="ts1-legend-item">
+                    <div class="ts1-dot ts1-cost"></div> <span>Chi phí</span>
+                </div>
+                <div class="ts1-legend-item">
+                    <div class="ts1-dot ts1-profit"></div> <span>Lợi nhuận</span>
+                </div>
+            </div>
+
+            <div class="ts1-scenario-row">
+                <div class="ts1-scenario-label">
+                    <span>Doanh thu: 180 Triệu</span>
+                    <span class="ts1-bold" style="color:#27ae60">Lãi: 37,7 Tr</span>
+                </div>
+                <div class="ts1-bar-wrapper">
+                    <div class="ts1-bar" style="width: 51.4%;">
+                        <div class="ts1-segment-cost" style="width: 79.1%;">142,3 Tr</div>
+                        <div class="ts1-segment-profit" style="width: 20.9%;">20.9%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts1-scenario-row">
+                <div class="ts1-scenario-label">
+                    <span>Doanh thu: 250 Triệu</span>
+                    <span class="ts1-bold" style="color:#27ae60">Lãi: 59,6 Tr</span>
+                </div>
+                <div class="ts1-bar-wrapper">
+                    <div class="ts1-bar" style="width: 71.4%;">
+                        <div class="ts1-segment-cost" style="width: 76.2%;">190,4 Tr</div>
+                        <div class="ts1-segment-profit" style="width: 23.8%;">23.8%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts1-scenario-row">
+                <div class="ts1-scenario-label">
+                    <span>Doanh thu: 300 Triệu</span>
+                    <span class="ts1-bold" style="color:#27ae60">Lãi: 72,1 Tr</span>
+                </div>
+                <div class="ts1-bar-wrapper">
+                    <div class="ts1-bar" style="width: 85.7%;">
+                        <div class="ts1-segment-cost" style="width: 76.0%;">227,9 Tr</div>
+                        <div class="ts1-segment-profit" style="width: 24.0%;">24.0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ts1-scenario-row">
+                <div class="ts1-scenario-label">
+                    <span>Doanh thu: 350 Triệu</span>
+                    <span class="ts1-bold" style="color:#27ae60">Lãi: 85,3 Tr</span>
+                </div>
+                <div class="ts1-bar-wrapper">
+                    <div class="ts1-bar" style="width: 100%;">
+                        <div class="ts1-segment-cost" style="width: 75.6%;">264,7 Tr</div>
+                        <div class="ts1-segment-profit" style="width: 24.4%;">24.4%</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+         <section id="tascus-banner-widget" class="tascus-fullbleed" style="max-width: 1200px; margin: 0 auto;padding: 20px; border-radius: 15px;" aria-roledescription="carousel" aria-label="Banner nhượng quyền Tascus">
+            <div class="tascus-inner">
+                <h1 class="about_taital" style="color: #f9b116; margin-top: 40px !important;">
+          QUY TRÌNH
+            <span style="color: #f9b116; font-family: 'FontCuaToi', sans-serif !important;"> NHƯỢNG QUYỀN</span>
+         </h1>
+               <div class="tascus-slide">
+                  <picture>
+                     <source media="(max-width: 768px)" 
+                        srcset="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/quytrinhnhuongquyen.svg">
+                     <img class="tascus-img" 
+                        src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/deskto%201%402x.webp" 
+                        alt="Nhượng quyền Tascus Food - Mô hình kinh doanh thức ăn nhanh hiệu quả"
+                        width="1920" height="823" loading="eager">
+                  </picture>
+               </div>
+         </section>
+
+          <section class="tascus-contact-section">
             <div class="tascus-video-wrapper">
                <iframe 
                   class="tascus-video-bg" 
@@ -876,7 +638,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
             
             <div id="form" class="tascus-contact-container">
                <div class="tascus-contact-info">
-                  <h2 class="tascus-contact-h2">Nhượng quyền Tascus Food<br>Sinh lời bền vững</h2>
+                  <h2 class="tascus-contact-h2">NHƯỢNG QUYỀN TASCUS FOOD<br>SINH LỜI BỀN VỮNG</h2>
                   <p class="tascus-contact-p">Tham gia hệ thống nhượng quyền thức ăn nhanh hàng đầu Việt Nam.</p>
                   
                   <div class="tascus-info-item">
@@ -904,9 +666,8 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
                         <input type="email" name="email" class="tascus-input" placeholder="Email" required aria-label="Email">
                         <input type="tel" name="mobile" class="tascus-input" placeholder="Số điện thoại" required aria-label="Số điện thoại">
                         <select name="service" class="tascus-input tascus-select" required aria-label="Chọn mô hình quan tâm">
-                           <option value="">Chọn mô hình quan tâm</option>
                            <option value="Tascus Station">Tascus Station</option>
-                           <option value="Tascus House">Tascus House</option>
+                           <option value="Tascus Station">Tôi muốn tư vấn thêm</option>
                         </select>
                      </div>
                      <textarea name="message" class="tascus-input tascus-textarea" placeholder="Nội dung tư vấn" aria-label="Nội dung tư vấn"></textarea>
@@ -917,15 +678,16 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
                </div>
             </div>
          </section>
+
+       
       </main>
 
-      <!-- Footer Section -->
       <footer class="footer_section">
          <div class="container">
             <div class="footer_sectio_2">
                <div class="row">
                   <div class="col-lg-4 col-md-4">
-                     <h3 class="useful_text">Quick Links</h3>
+                     <h3 class="useful_text"> Lối tắt</h3>
                      <nav class="footer_menu" aria-label="Footer navigation">
                         <ul>
                            <li class="active"><a href="index.html">Trang chủ</a></li>
@@ -947,8 +709,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
                   </div>
                   <div class="col-lg-4 col-md-4">
                      <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
-                     <!-- THAY ĐỔI: 4 nút Food App thay vì input email -->
-                     <div class="food-app-buttons; margin-left: 0 !important;">
+                     <div class="food-app-buttons" style="margin-left: 0 !important;">
                         <a href="https://shopeefood.vn/thuong-hieu/ut-mau" target="_blank" rel="noopener noreferrer" class="food-app-btn">
                            <img src="https://tascusfood.com/foodapp%20logo/shopee.webp" alt=" tascus shopeeFood">
                         </a>
@@ -972,20 +733,17 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
 
       </footer>
 
-      <!-- Copyright Section -->
       <div class="copyright_section">
          <div class="container">
             <p class="copyright_text">© 2025 Tascus Food. All rights reserved</p>
          </div>
       </div>
 
-      <!-- Call Button -->
       <a href="tel:1900998879" class="tascus-call-btn" id="tascusCallBtn" aria-label="Gọi hotline 1900 998 879">
          <i class="fa fa-phone" aria-hidden="true"></i>
          <span class="tascus-pulse"></span>
       </a>
 
-      <!-- JavaScript Files -->
       <script src="js/jquery.min.js" defer></script>
       <script src="js/popper.min.js" defer></script>
       <script src="js/bootstrap.bundle.min.js" defer></script>
@@ -994,7 +752,6 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
       <script src="js/custom.js" defer></script>
       <script src="js/tascusweb.js" defer></script>
       
-      <!-- Contact Form Script -->
       <script>
       (function() {
           const scriptURL = 'https://script.google.com/macros/s/AKfycbwCcV7v3CCZtA212GXs5_QQCiChATcNiRNvz5PxNUrC6jsy4KT6zmWJDXfDIatsLyNswA/exec';
@@ -1040,8 +797,7 @@ Chúng tôi tự tin sở hữu một hệ thống sản xuất bài bản, vớ
           }
       })();
       </script>
-      <!-- Nút Scroll to Top -->
-<button id="scrollToTop" class="scroll-to-top-btn">
+      <button id="scrollToTop" class="scroll-to-top-btn">
    <i class="fa fa-arrow-up"></i>
 </button>
 
@@ -1073,40 +829,3 @@ window.addEventListener('DOMContentLoaded', function() {
 
    </body>
 </html>
-
-      <!-- Custom Cursor Styles -->
-      <style>
-         html,body{cursor:url("https://tascusfood.com/function/poiter.png"), auto;}
-         a:hover{cursor:url("https://tascusfood.com/function/select.png"), auto;}
-         a:active,
-         button:active,
-         .my-element:active {
-           cursor: url('https://tascusfood.com/function/select.png') 16 16, grabbing;
-         }
-         a:hover,
-         button:hover,
-         .my-element:hover {
-           cursor: url('https://tascusfood.com/function/select.png') 8 8, pointer ;
-         }
-      </style>
-      <!-- Nút Scroll to Top -->
-<button id="scrollToTop" class="scroll-to-top-btn">
-   <i class="fa fa-arrow-up"></i>
-</button>
-
-   </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
