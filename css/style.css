@@ -157,7 +157,7 @@ button:focus {
 .header_section {
   width: 100%;
   float: left;
-  background-color: var(--color-primary);
+  background-color: #fca930;
   height: auto;
 }
 
@@ -166,7 +166,7 @@ button:focus {
 }
 
 .navbar {
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .navbar-brand {
@@ -205,7 +205,6 @@ button:focus {
   font-family: var(--font-heading);
   background-color: var(--color-accent-dark);
   color: var(--color-white);
-  border: 2px solid var(--color-accent-dark);
   border-radius: var(--radius-large);
   padding: 8px 20px;
   font-weight: bold;
@@ -243,7 +242,11 @@ button:focus {
   position: relative;
 }
 
-#tascus-banner-widget .tascus-slide.tascus-active,
+#tascus-banner-widget .tascus-slide.tascus-active {
+  display: block;
+  width: 100%;
+}
+
 #tascus-banner-widget .tascus-slide picture {
   display: block;
   width: 100%;
@@ -254,7 +257,6 @@ button:focus {
   width: 100%;
   height: auto;
   margin: 0;
-  vertical-align: middle;
 }
 
 /* Banner Arrows & Dots */
@@ -369,16 +371,16 @@ button:focus {
 .about_taital {
   width: 100%;
   float: left;
-  font-size: 50px;
+  font-size: 45px;
   color: var(--color-dark);
   font-weight: 800;
   text-align: center;
   text-transform: uppercase;
   font-family: var(--font-heading) !important;
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  padding-bottom: 0;
+  margin-top: 24px;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
 }
 
 .about_taital span {
@@ -460,93 +462,225 @@ h1.about_taital + p {
   float: left;
 }
 
-/* ===================================================================
-8. PRICING SECTION
-=================================================================== */
+:root {
+            --primary-color: #962b2d;
+            --accent-color: #f9b116;
+            --text-color: #333;
+            --body-font: 'Be Vietnam Pro', sans-serif;
+            --heading-font: 'FontCuaToi', sans-serif; 
+        }
 
-.pricing-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  clear: both;
-  padding-bottom: 80px;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.pricing-container .columns {
-  float: left;
-  width: 50%;
-  padding: 20px;
-}
+        body {
+            font-family: var(--body-font);
+            line-height: 1.2;
+            color: var(--text-color);
+            font-size: 18px;
+        }
 
-.price {
-  list-style: none;
-  border: 1px solid var(--color-border);
-  margin: 0;
-  padding: 0;
-  border-radius: var(--radius-large);
-  overflow: hidden;
-  transition: var(--transition-fast);
-  background-color: var(--color-white);
-}
+        .pricing-section {
+            padding: 60px 20px;
+            background-color: #fff4dc;
+            display: flex;
+            justify-content: center;
+        }
 
-.price:hover {
-  box-shadow: var(--box-shadow-medium);
-}
+        .pricing-wrapper {
+            display: flex;
+            flex-wrap: wrap; 
+            max-width: 1150px;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            overflow: hidden; 
+        }
 
-.price .header {
-  background-color: var(--color-primary-dark);
-  color: var(--color-white);
-  font-size: 45px;
-  font-weight: 700;
-  border-radius: var(--radius-large) var(--radius-large) 0 0;
-}
+        /* --- Cột bên trái: Nội dung Text --- */
+        .content-side {
+            flex: 1; 
+            min-width: 0; /* Quan trọng để flex-item co giãn được */
+            padding: 50px 40px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.price li {
-  border-bottom: 1px solid var(--color-border);
-  padding: 20px;
-  text-align: center;
-  background-color: var(--color-white);
-  font-size: 19px;
-  font-weight: 600;
-}
+        .model-tag {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 6px 16px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
 
-.price .grey {
-  background-color: #f5f5f5;
-  font-size: 24px;
-  font-weight: 700;
-}
+        /* --- XỬ LÝ TIÊU ĐỀ KHÔNG BỊ CẮT --- */
+        h2.title {
+            font-family: var(--heading-font);
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            line-height: 0.9;
+            letter-spacing: 0.5px;
+            white-space: nowrap; /* Giữ 1 dòng nếu muốn, hoặc bỏ dòng này để tự xuống dòng */
+            
+            /* CÔNG THỨC QUAN TRỌNG: 
+               Dùng 3.2rem làm chuẩn. 
+               Nếu màn hình nhỏ, dùng 9% chiều rộng màn hình (9vw).
+               Hàm min sẽ chọn cái nào NHỎ HƠN => Không bao giờ bị tràn.
+            */
+            font-size: min(3.2rem, 9vw); 
+        }
 
-.button {
-  background-color: var(--color-primary-dark);
-  border: none;
-  color: var(--color-white);
-  padding: 12px 30px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 700;
-  border-radius: var(--radius-large);
-  transition: var(--transition-fast);
-  display: inline-block;
-  cursor: pointer;
-}
+        .subtitle {
+            font-style: bold;
+            color: #666;
+            margin-bottom: 30px;
+            margin-left: 0px;
+            font-weight: 800;
+            font-size: 20px;
+        }
 
-.button:hover {
-  background-color: #e38f00;
-}
+        .price-box {
+            margin-bottom: 35px;
+            border-bottom: 2px dashed #e0e0e0;
+            padding-bottom: 25px;
+            width: 100%; 
+        }
 
-.pricing-container::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        .price-label {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
 
-@media (max-width: 650px) {
-  .pricing-container .columns {
-    width: 100%;
-  }
-}
+        /* --- XỬ LÝ GIÁ TIỀN KHÔNG BỊ KHUYẾT --- */
+        .price-number {
+            font-family: var(--heading-font);
+            color: var(--accent-color);
+            line-height: 1;
+            display: block;
+            white-space: nowrap; /* Bắt buộc 1 dòng */
+            
+            /* CÔNG THỨC QUAN TRỌNG:
+               - Desktop: 3.8rem (khoảng 60px).
+               - Mobile: 10vw (10% chiều rộng màn hình).
+               => Khi màn hình 320px, font sẽ tự giảm xuống còn 32px để vừa khít.
+            */
+            font-size: min(3.8rem, 10vw);
+        }
 
+        .specs-list {
+            list-style: none;
+        }
+
+        .specs-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .specs-list li .icon {
+            color: var(--primary-color);
+            font-size: 22px;
+            margin-right: 18px;
+            min-width: 25px;
+            padding-top: 3px;
+        }
+
+        .specs-list li .text strong {
+            color: var(--primary-color);
+            display: block;
+            font-weight: 700;
+            margin-bottom: 4px;
+            font-size: 1.05rem;
+        }
+
+        .cta-btn {
+            margin-top: 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 18px 36px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            display: inline-block;
+            width: 100%;
+
+        }
+
+        .cta-btn:hover {
+            background-color: #efa425;
+            color: var(--primary-color);
+        }
+
+        /* --- Cột bên phải: Hình ảnh --- */
+        .image-side {
+            flex: 1; 
+            min-width: 350px; 
+            position: relative;
+        }
+
+        .image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* --- RESPONSIVE --- */
+        
+        /* Breakpoint tại 1024px để chuyển layout sớm */
+        @media (max-width: 1024px) {
+            .pricing-wrapper {
+                flex-direction: column-reverse; /* Ảnh trên, Chữ dưới */
+            }
+
+            .content-side {
+                /* Giảm padding trên mobile để có nhiều đất cho chữ hơn */
+                padding: 40px 20px; 
+                width: 100%; 
+            }
+            
+            .image-side {
+                width: 100%;
+                height: 350px; 
+                max-height: 300px;
+                min-width: unset;
+            
+            }
+            
+        }
+
+        @media (max-width: 480px) {
+            .image-side {
+                height: 250px;
+            }
+            /* Ở màn hình rất nhỏ, ta cho phép font nhỏ hơn nữa nếu cần */
+            h2.title {
+                font-size: min(3.2rem, 11vw);
+            }
+            .price-number {
+                /* 11vw có thể hơi to với màn hình bé xíu, giảm xuống 10vw để an toàn */
+                font-size: min(3.8rem, 10vw);
+            }
+        }
 /* ===================================================================
 9. NEWS CARD SECTION
 =================================================================== */
@@ -774,7 +908,7 @@ h1.about_taital + p {
     font-size: 16px;
   }
   .marquee-container-v2 {
-    padding: 12px 0;
+    padding: 8px 0;
   }
 }
 
@@ -853,7 +987,7 @@ h1.about_taital + p {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
-  margin: 0 0 30px 0;
+  margin: -20px 0 30px 0;
   padding: 0;
   color: var(--color-white);
   box-sizing: border-box;
@@ -1432,7 +1566,7 @@ input.Enter_text::placeholder {
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
   float: left;
-  background-color: var(--color-primary);
+  background-color: #efa425;
   height: auto;
   padding: 20px calc(50vw - 50%) !important;
 }
@@ -1443,6 +1577,7 @@ input.Enter_text::placeholder {
   text-align: center;
   font-size: 16px;
   margin: 20px 0;
+  font-weight: 600;
 }
 
 .copyright_text a {
@@ -1799,10 +1934,11 @@ ul#artist-banner .bio {
   font-size: 2.5rem;
   color: #6B4F4B;
   font-weight: 800;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
   text-transform: uppercase;
   line-height: 1.2;
 }
+
 
 .menu-header-freeze p {
   font-size: 1rem;
@@ -1853,7 +1989,7 @@ ul#artist-banner .bio {
 /* Image Section */
 .tascus-image-section {
   width: 100%;
-  padding: 30px 20px;
+  padding: 5px 20px;
   clear: both;
   box-sizing: border-box;
 }
@@ -1882,13 +2018,13 @@ ul#artist-banner .bio {
   .about_taital,
   .tascus-process-title {
     line-height: 1.2 !important;
-    margin-top: 18px !important;
-    margin-bottom: 15px !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
   }
 
   p {
     line-height: 1.5 !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 12px !important;
   }
 
   #tascus-banner-widget .tascus-arrow {
@@ -1901,9 +2037,9 @@ ul#artist-banner .bio {
   #tascus-banner-widget .tascus-next { right: 8px; }
 
   .about_taital {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 15px;
-    font-size: 55px;
+    font-size: 45px;
   }
 
   .about_section_2,
@@ -1980,15 +2116,15 @@ ul#artist-banner .bio {
 19. BACKGROUND IMAGE (BODY)
 =================================================================== */
 
-body {
+/*body {
   background-image: url('https://tascusfood.com/function/khoai%20edge.webp'),
                     url('https://tascusfood.com/function/burger%20edge.webp');
-  background-position: left 1100px, right 1600px;
-  background-size: 230px, 250px;
+  background-position: left 1300px, right 1600px;
+  background-size: 250px, 210px;
   background-repeat: no-repeat, no-repeat;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1650px) {
   body {
     background-image: none;
   }
@@ -2011,4 +2147,131 @@ body {
   }
 }
 
+         /* CSS cho Food App Buttons - ĐÃ SỬA FIX LỖI XUỐNG DÒNG */
+         .food-app-buttons {
+            display: flex;
+            gap: 18px !important;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+            flex-wrap: nowrap !important;
+         }
 
+         .food-app-btn {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+         }
+
+         .food-app-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+         }
+
+         .food-app-btn img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+         }
+
+         /* Màn hình tablet/trung bình */
+         @media (max-width: 991px) and (min-width: 768px) {
+            .food-app-buttons {
+               gap: 6px;
+               flex-wrap: nowrap !important;
+            }
+            
+            .food-app-btn {
+               width: 48px;
+               height: 48px;
+               padding: 5px;
+            }
+         }
+
+         /* Mobile */
+         @media (max-width: 767px) {
+            .food-app-buttons {
+               gap: 8px;
+               justify-content: center;
+               flex-wrap: nowrap !important;
+            }
+            
+            .food-app-btn {
+               width: 50px;
+               height: 50px;
+               padding: 8px;
+            }
+         }
+
+         @media (max-width: 480px) {
+            .food-app-buttons {
+               gap: 5px;
+               flex-wrap: nowrap !important;
+            }
+            
+            .food-app-btn {
+               width: 45px;
+               height: 45px;
+               padding: 5px;
+            }
+         }
+
+         /* Màn hình rất nhỏ */
+         @media (max-width: 360px) {
+            .food-app-buttons {
+               gap: 4px;
+            }
+            
+            .food-app-btn {
+               width: 40px;
+               height: 40px;
+               padding: 6px;
+            }
+         }
+         /* Nút Scroll to Top */
+.scroll-to-top-btn {
+   position: fixed;
+   bottom: 150px; /* TĂNG TỪ 80px LÊN 150px */
+   right: 30px;
+   width: 60px;
+   height: 60px;
+   background-color: #962c2d;
+   color: #fff;
+   border: none;
+   border-radius: 50%;
+   font-size: 20px;
+   cursor: pointer;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+   z-index: 999;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top-btn:hover {
+   background-color: #f9b116;
+   transform: translateY(-5px);
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top-btn.show {
+   opacity: 1;
+   visibility: visible;
+}
+
+/* Responsive - Điều chỉnh cho mobile */
+@media (max-width: 768px) {
+   .scroll-to-top-btn {
+      bottom: 130px; /* TĂNG TỪ 70px LÊN 130px */
+      right: 15px;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+   }
+}
