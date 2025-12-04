@@ -174,7 +174,7 @@
         line-height: 60px;
     }
     .about_taital {
-        font-size: 40px;
+        font-size: 36px;
     }
     .slightly_text {
         font-size: 24px;
@@ -245,7 +245,7 @@
         text-align: center;
     }
     .about_taital {
-        font-size: 34px;
+        font-size: 36px;
     }
     .slightly_text {
         font-size: 32px;
@@ -304,7 +304,7 @@
     }
     .banner_taital {
         font-size: 38px;
-        padding-top: 50px;
+        padding-top: 30px;
         line-height: 50px;
     }
     #main_slider a.carousel-control-prev {
@@ -334,7 +334,7 @@
         position: absolute;
         right: -60px;
         left: 0px;
-        top: 105%;
+        top: 90%;
     }
     #my_slider .carousel-control-prev,
     #my_slider .carousel-control-next {
@@ -356,7 +356,7 @@
     }
     .about_taital {
         width: 100%;
-        font-size: 27px;
+        font-size: 32px;
     }
     .slightly_text {
         font-size: 28px;
@@ -526,9 +526,9 @@
         font-size: 40px;
     }
     .about_taital {
-        width: 100%;
-        font-size: 22px;
-    }
+text-wrap: balance;
+        font-size: 32px;
+    padding: 0 20px;    }
     .slightly_text {
         font-size: 20px;
     }
@@ -544,6 +544,7 @@
     }
     .about_taital_main {
         width: 100%;
+        
     }
     .testimonial_taital {
         font-size: 26px;
