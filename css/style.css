@@ -1680,23 +1680,37 @@ input.Enter_text::placeholder {
 ul#artist-banner {
   font-family: var(--font-body);
   color: var(--color-white);
-  line-height: 24px;
-  font-size: 16px;
+  line-height: 16px;
+  font-size: 18px;
   display: flex;
-  min-height: 750px;
+  min-height: 700px;
   height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
   list-style: none;
   width: 100%;
-  flex-direction: column;
+  flex-direction: column; 
 }
+
+ul#artist-banner .bio p  {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: min-content;
+  grid-gap: 14px;
+  fonT-family: var(--font-body);
+  font-size: 16PX;
+  font-weight: 400;
+  padding-top: 13px;
+  margin-bottom: -10px;
+}
+
 
 @media (min-width: 1280px) {
   ul#artist-banner {
     flex-direction: row;
   }
+  
 }
 
 ul#artist-banner li {
@@ -1720,7 +1734,7 @@ ul#artist-banner li:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(239, 164, 37, 0.75);
+  background: rgba(249, 166, 22, 0.75);
 }
 
 ul#artist-banner li.active {
@@ -1729,21 +1743,26 @@ ul#artist-banner li.active {
 }
 
 ul#artist-banner li.active:before {
-  background: linear-gradient(180deg, rgba(50, 50, 0, 0) 50%, var(--color-accent) 100%);
+  background: linear-gradient(180deg, rgba(50, 50, 0, 0) 70%, var(--color-accent) 0%);
 }
 
 ul#artist-banner h2 {
-  font-size: 36px;
+  font-size: 20px;
   line-height: 36px;
   font-weight: 700;
+  margin-bottom: -40px;
+  padding: 20px;
   text-transform: uppercase;
-  color: #fca930;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
   ul#artist-banner h2 {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 38px;
+  }
+  ul#artist-banner {
+    min-height: 800px;
   }
 }
 
@@ -1752,6 +1771,7 @@ ul#artist-banner h2 {
     font-size: 64px;
     line-height: 64px;
   }
+
 }
 
 ul#artist-banner h3 {
@@ -1795,6 +1815,7 @@ ul#artist-banner .section-content {
 
 ul#artist-banner li.active .section-content {
   opacity: 1;
+  
 }
 
 ul#artist-banner .section-content .inner {
@@ -1802,7 +1823,7 @@ ul#artist-banner .section-content .inner {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: 1fr;
-  grid-column-gap: 20px;
+  grid-column-gap: 0px;
   align-items: flex-end;
   left: 0;
   bottom: 0;
@@ -1818,8 +1839,9 @@ ul#artist-banner .section-content .inner {
     grid-column-gap: 40px;
     padding: 40px;
   }
-}
+  
 
+}
 @media (min-width: 1280px) {
   ul#artist-banner .section-content .inner {
     grid-auto-flow: column;
@@ -1833,12 +1855,6 @@ ul#artist-banner li.active .section-content .inner {
   opacity: 1;
 }
 
-ul#artist-banner .bio {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: min-content;
-  grid-gap: 24px;
-}
 
 /* Menu Section */
 .wrapping {
@@ -1902,7 +1918,7 @@ ul#artist-banner .bio {
 }
 
 .hcol:nth-child(1) .itccinfohh .decss {
-  background-color: #8C2B31;
+  background-color: #8c532b;
 }
 
 .hcol:nth-child(1) .itccinfohh .dstitle h3 a {
@@ -2112,30 +2128,6 @@ ul#artist-banner .bio {
   }
 }
 
-/* ===================================================================
-19. BACKGROUND IMAGE (BODY)
-=================================================================== */
-
-/*body {
-  background-image: url('https://tascusfood.com/function/khoai%20edge.webp'),
-                    url('https://tascusfood.com/function/burger%20edge.webp');
-  background-position: left 1300px, right 1600px;
-  background-size: 250px, 210px;
-  background-repeat: no-repeat, no-repeat;
-}
-
-@media (max-width: 1650px) {
-  body {
-    background-image: none;
-  }
-}
-
-.container-noi-dung {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: var(--color-white);
-  padding: 20px;
-}
 
 /* ===================================================================
 20. UTILITIES
