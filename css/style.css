@@ -42,7 +42,7 @@ FILE: style.css - TASCUS FOOD WEBSITE
 
 @font-face {
   font-family: 'FontCuaToi';
-  src: url('../fonts/kenyan.ttf') format('truetype');
+  src: url('../fonts/kenyan.woff2') format('truetype');
 }
 
 @import url(animate.min.css);
@@ -2471,4 +2471,5 @@ ul#artist-banner li.active .section-content .inner {
     #toc-toggle-btn.hidden-by-active {
         transform: translate(-100%, 0) !important;
     }
+
 }
