@@ -42,8 +42,11 @@ FILE: style.css - TASCUS FOOD WEBSITE
 
 @font-face {
   font-family: 'FontCuaToi';
-  /* Sửa format thành woff2 */
-  src: url('../fonts/KenyanCoffeeRg-Bold.woff2') format('woff2');
+  src: url('../fonts/KenyanCoffeeRg-Bold.woff2') format('woff2'), /* Ưu tiên 1: Nhẹ nhất */
+       url('../fonts/KenyanCoffeeRg-Bold.woff') format('woff'),   /* Ưu tiên 2: Hỗ trợ rộng */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Giúp hiện text dự phòng trước khi font tải xong */
 }
 
 @import url(animate.min.css);
@@ -2474,5 +2477,6 @@ ul#artist-banner li.active .section-content .inner {
     }
 
 }
+
 
 
