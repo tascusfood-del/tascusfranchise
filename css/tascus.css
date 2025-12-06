@@ -819,7 +819,7 @@ body {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: be Vietnam Pro, sans-serif;
         }
 
         .ts1-section {
@@ -958,7 +958,7 @@ body {
             margin-bottom: 10px;
         }
 
-        .ts1-card p {
+        .ts1-card  {
             font-size: 18px;
             font-weight: 300;
             color: #1a0101;
@@ -1220,6 +1220,7 @@ body {
     font-family: 'Be Vietnam', sans-serif;
     font-size: 15px;
     line-height: 1.6;
+    font-weight: 200;
     color: #444;
     font-style: italic;
     margin: 0;

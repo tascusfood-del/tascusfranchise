@@ -1,3 +1,14 @@
+@import url(animate.min.css);
+@import url(normalize.css);
+@import url(icomoon.css);
+@import url(css/font-awesome.min.css);
+@import url(meanmenu.css);
+@import url(owl.carousel.min.css);
+@import url(swiper.min.css);
+@import url(slick.css);
+@import url(jquery.fancybox.min.css);
+@import url(jquery-ui.css);
+@import url(nice-select.css);
 /*=====================================================================
 FILE: style.css - TASCUS FOOD WEBSITE
 - Fonts → Imports → Global → Sections
@@ -42,6 +53,7 @@ FILE: style.css - TASCUS FOOD WEBSITE
    LOCAL FONT IMPORT: BE VIETNAM PRO
    Path: /fonts/
    ======================================================= */
+
 
 /* 1. Thin (Mỏng nhất) - Weight 100 */
 @font-face {
@@ -125,22 +137,9 @@ FILE: style.css - TASCUS FOOD WEBSITE
   font-family: 'FontCuaToi';
   src: url('../fonts/KenyanCoffeeRg-Bold.woff2') format('woff2'), /* Ưu tiên 1: Nhẹ nhất */
        url('../fonts/KenyanCoffeeRg-Bold.woff') format('woff'),   /* Ưu tiên 2: Hỗ trợ rộng */
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; /* Giúp hiện text dự phòng trước khi font tải xong */
+  
 }
 
-@import url(animate.min.css);
-@import url(normalize.css);
-@import url(icomoon.css);
-@import url(css/font-awesome.min.css);
-@import url(meanmenu.css);
-@import url(owl.carousel.min.css);
-@import url(swiper.min.css);
-@import url(slick.css);
-@import url(jquery.fancybox.min.css);
-@import url(jquery-ui.css);
-@import url(nice-select.css);
 
 /* ===================================================================
 3. GLOBAL STYLES
@@ -1080,6 +1079,7 @@ h1.about_taital + p {
   line-height: 1.6;
   margin: -20px 0 30px 0;
   padding: 0;
+  font-weight: 200;
   color: var(--color-white);
   box-sizing: border-box;
 }
