@@ -38,8 +38,89 @@ FILE: style.css - TASCUS FOOD WEBSITE
 2. IMPORT FONTS & FILES
 =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;500;600;700;800&display=swap');
+/* =======================================================
+   LOCAL FONT IMPORT: BE VIETNAM PRO
+   Path: /fonts/
+   ======================================================= */
 
+/* 1. Thin (Mỏng nhất) - Weight 100 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Thin.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Thin.woff') format('woff');
+}
+
+/* 2. Regular (Thường) - Weight 400 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Regular.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Regular.woff') format('woff');
+}
+
+/* 3. Medium (Vừa) - Weight 500 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Medium.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Medium.woff') format('woff');
+}
+
+/* 4. SemiBold (Hơi đậm) - Weight 600 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-SemiBold.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-SemiBold.woff') format('woff');
+}
+
+/* 5. Bold (Đậm) - Weight 700 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Bold.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Bold.woff') format('woff');
+}
+
+/* 6. ExtraBold (Rất đậm) - Weight 800 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-ExtraBold.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-ExtraBold.woff') format('woff');
+}
+
+/* 7. Black (Siêu đậm) - Weight 900 */
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Black.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Be Vietnam';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/BeVietnamPro-Black.woff2') format('woff2'),
+         url('/fonts/BeVietnamPro-Black.woff') format('woff');
+}
 @font-face {
   font-family: 'FontCuaToi';
   src: url('../fonts/KenyanCoffeeRg-Bold.woff2') format('woff2'), /* Ưu tiên 1: Nhẹ nhất */
@@ -2477,6 +2558,7 @@ ul#artist-banner li.active .section-content .inner {
     }
 
 }
+
 
 
 
