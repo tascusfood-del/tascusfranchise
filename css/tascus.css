@@ -464,8 +464,8 @@ body {
             width: 100%;
             margin: 50px auto;
             border-radius: 35px;
-    padding: 40px 0;
-    background-color: #fefaf4;
+    padding: 40px 60px;
+    background-color: #fcf4e8;
 }
 
 .tascus-feature-row {
@@ -538,8 +538,7 @@ body {
     width: 100%;
     max-width: 550px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 3%;
     object-fit: cover;
 }
 
@@ -585,6 +584,7 @@ body {
     }
      .tascus-feature-desc {
         font-size: 16px;
+
     }
 
     .tascus-feature-subtitle {
@@ -597,6 +597,13 @@ body {
                         border-radius: 0px 0px 25px 25px;
 
 }
+    .tascus-feature-content {
+            border-bottom: 1px solid var(--border-color);
+
+}
+  
+
+
 }
 /* Reset cơ bản cho section này để không ảnh hưởng bên ngoài */
         .ts1-section * {
@@ -1258,8 +1265,9 @@ body {
 }
 
 .ts-gallery-header h2 {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 700;
+    font-family: font 'FontCuaToi', sans-serif;
     color: #3c1e15a9;
     margin-bottom: 10px;
 }
@@ -1267,9 +1275,9 @@ body {
 .ts-gallery-header p {
     font-size: 18px;
     text-wrap: pretty;
+    padding-bottom: 30px;
     font-weight: 350;
-
-    color: #2d1203a5;
+    color: #ffffff00;
 }
 
 /* Grid Layout (Lưới ảnh) */
@@ -1484,7 +1492,6 @@ body {
 /* --- Cột trái: Tiêu đề --- */
 .faq-header {
     flex: 0 0 30%;
-    position: sticky; /* Giữ tiêu đề cố định khi cuộn danh sách dài */
     top: 40px;
 }
 
@@ -1493,7 +1500,7 @@ body {
     font-size: 40px;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
     text-transform: uppercase;
 }
 
@@ -1594,13 +1601,15 @@ details[open] summary .icon {
 @media (max-width: 768px) {
     .faq-wrapper {
         flex-direction: column;
-        gap: 30px;
+        gap: 10px;
+        
     }
 
     .faq-header {
         width: 100%;
         position: static; /* Bỏ sticky trên mobile */
-        margin-bottom: 10px;
+        margin-bottom: -10px;
+        margin-top: -25px;
     }
 
     .faq-header h2 {
