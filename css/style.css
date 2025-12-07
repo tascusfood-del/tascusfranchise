@@ -2351,6 +2351,15 @@ ul#artist-banner li.active .section-content .inner {
                width: 60px;
                height: 60px;
                padding: 5px;
+               body {
+        overflow-x: hidden !important; /* Ngăn trang cuộn ngang */
+    }
+
+    /* FIX LỆCH PHẢI (Mặc dù do overflow, nhưng vẫn cần phòng thủ) */
+    /* Nhắm vào cột thứ 3 chứa "ĐẶT MÓN ONLINE" */
+    .footer_section .row .col-md-4:nth-child(3) {
+        text-align: left !important; 
+    }
             }
          }
 
