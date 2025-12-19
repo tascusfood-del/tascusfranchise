@@ -1,0 +1,498 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicon -->
+      <link rel="icon" href="https://tascusfood.com/logo.webp" type="image/png">
+      <title>Tascus Food-Menu</title>
+      
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css"> 
+      <link rel="stylesheet" href="css/responsive.css">
+      
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+                  <link rel="stylesheet" href="css/tascus.css">
+
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+<style>
+    /* 1. KHAI BÁO FONT CHỮ MỚI */
+    @font-face {
+        font-family: 'FontCuaToi';
+        /* Lưu ý: Kiểm tra kỹ đường dẫn file font */
+        src: url('fonts/kenyan.ttf') format('truetype'); 
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* 2. QUY ĐỊNH HIỂN THỊ MOBILE/PC */
+    .hl-col-responsive {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    @media (min-width: 768px) {
+        .hl-col-responsive {
+            flex: 0 0 50%;
+            max-width: 50%;
+            text-align: left;
+        }
+        .hl-col-img { text-align: center !important; }
+        .hl-text-pc-right { text-align: right !important; }
+    }
+
+    /* 3. QUY ĐỊNH NÚT BẤM & HIỆU ỨNG HOVER */
+    .hl-btn {
+        display: inline-block;
+        padding: 12px 35px;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-decoration: none !important;
+        transition: all 0.3s ease-in-out;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 20;
+        font-family: 'Roboto', sans-serif; /* Nút bấm giữ font dễ đọc */
+    }
+
+    /* Style cho nút Cà phê */
+    .hl-btn-coffee {
+        border: 2px solid white;
+        color: white !important;
+        background: transparent;
+    }
+    .hl-btn-coffee:hover {
+        background-color: white;
+        color: #3E2723 !important;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        transform: translateY(-3px);
+    }
+
+    /* Style cho nút Freeze */
+    .hl-btn-freeze {
+        border: 2px solid #006400;
+        color: #006400 !important;
+        background: transparent;
+    }
+    .hl-btn-freeze:hover {
+        background-color: #006400;
+        color: white !important;
+        box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+        transform: translateY(-3px);
+    }
+
+    /* 4. TIÊU ĐỀ DÙNG FONT KENYAN (FontCuaToi) */
+    .hl-heading {
+        /* ÁP DỤNG FONT TẠI ĐÂY */
+        font-family: 'FontCuaToi', 'Montserrat', sans-serif !important; 
+        
+        font-weight: normal; /* Font Kenyan thường đã đậm sẵn, để normal cho đẹp */
+        font-size: 45px; /* Tăng size lên chút vì font Kenyan thường hiển thị nhỏ hơn */
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+    @media (min-width: 768px) { .hl-heading { font-size: 55px; } }
+</style>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L81GSMRWMW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L81GSMRWMW');
+</script>
+</head>
+  <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+      <div class="header_section" style="position: sticky; top: 0; z-index: 999;">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand" href="index.html">
+               <img src="https://i.postimg.cc/xdsRnXdF/logo.png" alt="logo">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                  aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" href="mastermenu.html">MENU</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="shop.html">CỬA HÀNG</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="nhuongquyen.html">NHƯỢNG QUYỀN</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <a href="#form" class="btn btn-tu-van my-2 my-sm-0">NHẬN TƯ VẤN NGAY</a>
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+
+
+<div style="height: 60px; width: 100%; clear: both;"></div>
+
+<div style="background-color: white; width: 100%;">
+
+    <section style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div id="banh" class="hl-col-responsive" style="margin-bottom: 30px;">
+                    <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        TASCUS BURGER
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; margin-left: 0 !important;">
+                        Sự bùng nổ vị giác với lớp vỏ bánh nướng mềm thơm ôm trọn phần nhân thịt bò thượng hạng mọng nước, kết hợp cùng phô mai tan chảy và rau xanh tươi mát. Điểm nhấn độc đáo nằm ở nước sốt Tascus bí truyền,
+                    </p>
+                    <div>
+                        <a href="menu.html#burger" class="hl-btn hl-btn-coffee">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hl-col-responsive hl-col-img">
+                    <img src="https://tascusfood.com/menu/master%20menu/burger-main.webp" 
+                         alt="burger tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(to bottom, #ffffff, #e0f7fa) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive hl-col-img" style="margin-bottom: 30px;">
+                    <img src="https://tascusfood.com/menu/master%20menu/crepemain.webp" 
+                         alt="crepe tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); display: inline-block;">
+                </div>
+
+                <div class="hl-col-responsive hl-text-pc-right">
+                    <h2 class="hl-heading" style="color: #006400 !important;">
+                        CREPE
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px; margin-right: 0 !important;">
+                        Món bánh Pháp tinh tế với lớp vỏ mỏng tang, mềm mại thơm mùi bơ sữa. Bạn có thể chiều chuộng bản thân với Crepe ngọt ngào nhân kem tươi, trái cây, sốt socola hoặc đổi vị với Crepe mặn nhân thịt xông khói và phô mai tan chảy đầy hấp dẫn.
+                    </p>
+                    <div>
+                        <a href="menu.html#crepe" class="hl-btn hl-btn-freeze">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section style="background: linear-gradient(179deg,rgba(255, 97, 97, 1) 0%, rgba(140, 13, 13, 1) 92%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive" style="margin-bottom: 30px;">
+                    <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        BÁNH MÌ
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; margin-left: 0 !important;">
+                       Hương vị đường phố Việt Nam được nâng tầm với chiếc bánh mì nóng hổi, vỏ giòn rụm vàng ươm. Bên trong là sự hòa quyện của pate béo ngậy, thịt nướng thơm lừng, chả lụa truyền thống cùng đồ chua giòn tan, tạo nên bản giao hưởng hương vị đầy lôi cuốn.
+                    </p>
+                    <div>
+                        <a href="menu.html#bm" class="hl-btn hl-btn-coffee">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hl-col-responsive hl-col-img">
+                    <img src="https://tascusfood.com/menu/master%20menu/BANHMIMAIN%20copy.webp" 
+                         alt="BÁNH MÌ tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(179deg,rgba(170, 222, 124, 1) 0%, rgba(13, 140, 24, 1) 92%)!important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive hl-col-img" style="margin-bottom: 30px;">
+                    <img src="https://tascusfood.com/menu/master%20menu/sandwich-main.webp" 
+                         alt="SANDWICH tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); display: inline-block;">
+                </div>
+
+                <div class="hl-col-responsive hl-text-pc-right">
+                    <h2 class="hl-heading" style="color: #006400 !important;">
+                        SANDWICH
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px; margin-right: 0 !important;">
+                        Lựa chọn hoàn hảo cho bữa ăn nhanh gọn nhưng đầy đủ dinh dưỡng. Những lát bánh mì sandwich tươi mềm kẹp giữa các lớp nhân dăm bông, phô mai tươi ngon. Một sự cân bằng hoàn hảo giữa hương vị thanh nhẹ và năng lượng cho ngày dài.
+                    </p>
+                    <div>
+                        <a href="menu.html#sw" class="hl-btn hl-btn-freeze">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section style="background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive" style="margin-bottom: 30px;">
+                    <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        BÁNH MÌ CHẢO
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; margin-left: 0 !important;">
+                        Thưởng thức bữa ăn nóng hổi ngay trên chảo gang xèo xèo vui tai. Một phần đầy đặn với trứng ốp la lòng đào, pate gan béo mịn, xúc xích và khoai tây, quyện trong nước sốt sánh đặc đậm đà. Xé một miếng bánh mì giòn tan chấm ngập sốt
+                    </p>
+                    <div>
+                        <a href="menu.html#bmc" class="hl-btn hl-btn-coffee">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hl-col-responsive hl-col-img">
+                    <img src="https://tascusfood.com/menu/master%20menu/bmcmain.webp" 
+                         alt="BÁNH MÌ CHẢO tascus" 
+                         style="max-width: 440px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(179deg,rgba(217, 222, 124, 1) 0%, rgba(127, 140, 13, 1) 92%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive hl-col-img" style="margin-bottom: 30px;">
+                    <img src="https://tascusfood.com/menu/master%20menu/spagettimain.webp" 
+                         alt="MÌ Ý tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); display: inline-block;">
+                </div>
+
+                <div class="hl-col-responsive hl-text-pc-right">
+                    <h2 class="hl-heading" style="color: #006400 !important;">
+                        MÌ Ý
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px; margin-right: 0 !important;">
+                       Mang cả tinh hoa ẩm thực Ý đến bàn ăn của bạn với những sợi mì vàng óng, dai mềm vừa phải. Đắm mình trong làn sốt bò bằm cà chua đậm đà hoặc sốt kem nấm béo ngậy, rắc thêm chút phô mai Parmesan bào mịn để đánh thức mọi giác quan.
+                    </p>
+                    <div>
+                        <a href="menu.html#miy" class="hl-btn hl-btn-freeze">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section style="background: linear-gradient(179deg,rgba(255, 115, 0, 1) 0%, rgba(255, 98, 0, 1) 92%)!important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive" style="margin-bottom: 30px;">
+                    <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        KHOAI TÂY CHIÊN
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; margin-left: 0 !important;">
+                        Món ăn vặt "quốc dân" không thể chối từ. Những thanh khoai tây được tuyển chọn kỹ lưỡng, chiên vàng giòn rụm bên ngoài nhưng vẫn giữ được độ bùi béo bên trong.
+                    </p>
+                    <div>
+                        <a href="menu.html#potato" class="hl-btn hl-btn-coffee">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hl-col-responsive hl-col-img">
+                    <img src="https://tascusfood.com/menu/master%20menu/potato-main.webp" 
+                         alt="KHOAI TAY CHIEN tascus" 
+                         style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section style="background: linear-gradient(179deg,rgba(255, 97, 97, 1) 0%, rgba(140, 13, 13, 1) 92%) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive" style="margin-bottom: 30px;">
+                    <h2 class="hl-heading" style="color: white !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                        TACO
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #f0f0f0 !important; margin-bottom: 20px; margin-left: 0 !important;">
+                      Taco là món có nguồn gốc lâu đời từ Mexico, với nguyên liệu chính là phần nhân (bò, gà, heo, hải sản, phô mai...) kẹp giữa miếng tortilla, ăn với các loại sốt như salsa, guacamole, kem chua...
+                    </p>
+                    <div>
+                        <a href="menu.html#tc" class="hl-btn hl-btn-coffee">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hl-col-responsive hl-col-img">
+                    <img src="https://tascusfood.com/menu/master%20menu/taco.png" 
+                         alt="TACO tascus" 
+                         style="max-width: 400px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4)); display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: linear-gradient(to bottom, #ffffff, #e0f7fa) !important; padding: 80px 0; position: relative; display: block; width: 100%;">
+        <div class="container" style="position: relative; z-index: 10; max-width: 1140px; margin: 0 auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center;">
+                
+                <div class="hl-col-responsive hl-col-img" style="margin-bottom: 30px;">
+                    <img src="https://tascusfood.com/menu/master%20menu/drink%20main.webp" 
+                         alt="DRINK tascus" 
+                         style="max-width: 300px; width: 100%; height: auto; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2)); display: inline-block;">
+                </div>
+
+                <div id="douong" class="hl-col-responsive hl-text-pc-right">
+                    <h2 class="hl-heading" style="color: #006400 !important;">
+                        ĐỒ UỐNG
+                    </h2>
+                    <p style="font-family: 'Roboto', sans-serif; font-size: 16px; line-height: 1.6; color: #333 !important; margin-bottom: 20px; margin-right: 0 !important;">
+                       Giải nhiệt cuộc sống với bộ sưu tập đồ uống đa dạng tại Tascus.Mỗi ly nước là một sự chăm chút tỉ mỉ để mang lại cảm giác thư thái tức thì.
+                    </p>
+                    <div>
+                        <a href="menu.html#drinks" class="hl-btn hl-btn-freeze">
+                            Xem thêm món
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+        <footer class="footer_section">
+         <div class="container">
+            <div class="footer_sectio_2">
+               <div class="row">
+                  <div class="col-lg-4 col-md-4">
+                     <h3 class="useful_text"> LỐI TẮT</h3>
+                     <nav class="footer_menu" aria-label="Footer navigation">
+                        <ul>
+                         
+
+                           <li class="active"><a href="index.html">Trang chủ</a></li>
+                           <li><a href="nhuongquyen.html">Nhượng quyền</a></li>
+                           <li><a href="shop.html">Cửa hàng</a></li>
+                           <li><a href="memu.html">Menu</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                     <h3 class="useful_text">HOTLINE: <BR>1900 998 879</h3>
+                     <p class="footer_text">Theo dõi chúng tôi</p>
+                     <div class="social_icon" style="margin-bottom: 20px;">
+                        <ul style="margin-top: -10px;" component="social-links">
+                           <li><a href="https://www.facebook.com/tascusfood.vn" aria-label="Facebook Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/fb.png" alt="facbook" style="max-width: 40px;margin-right:-15px;"></a></li>
+                           <li><a href="https://www.instagram.com/tascusfood/" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/ins.png" alt="Instagram Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
+                            <li><a href="https://www.tiktok.com/@tascus.food" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
+                           <li><a href="https://www.tiktok.com/@nhatkybaga" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
+                           <li><a href="https://www.threads.com/@tascusfood" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/threads.png" alt="tiktok Tascus Food" style="max-width: 40px;"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                     <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
+                     <div class="food-app-buttons" style="margin-left: 0 !important;">
+                        <a href="https://shopeefood.vn/thuong-hieu/ut-mau" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://tascusfood.com/foodapp%20logo/shopee.webp" alt=" tascus shopeeFood">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://tascusfood.com/foodapp%20logo/grab.webp" alt="GrabFood">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://tascusfood.com/foodapp%20logo/be.webp" alt="BE">
+                        </a>
+                        <a href="https://food.grab.com/vn/vi/restaurant/tascus-food-delivery/4-C3JVYUHHDJY6LT" target="_blank" rel="noopener noreferrer" class="food-app-btn">
+                           <img src="https://tascusfood.com/foodapp%20logo/xanhngon.webp" alt="ShopeeFood">
+                        </a>
+                     </div>
+                     <img src="https://tascusfood.com/bocongthuong.webp" alt="Tascus Food App" class="footer_img" style=" margin-top: 7%;">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+      </footer>
+
+
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">© 2025 Tascus Food. All rights reserved</p>
+         </div>
+      </div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/tascusweb.js"></script>
+
+
+
+<a href="tel:1900998879" class="tascus-call-btn" id="tascusCallBtn">
+    <i class="fa fa-phone"></i>
+    <span class="tascus-pulse"></span>
+</a>
+
+   </body>
+</html>
