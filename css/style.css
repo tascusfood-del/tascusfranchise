@@ -1565,7 +1565,7 @@ h1.about_taital + p {
 .footer_text {
   width: 68%;
   float: left;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   font-family: var(--font-body);
   font-weight: 350;
@@ -1653,6 +1653,8 @@ input.Enter_text::placeholder {
 
 .social_icon li a:hover {
   color: var(--color-primary);
+
+  
 }
 
 /* ===================================================================

@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-  var AUTO_INTERVAL = 3000; // ms
+  var AUTO_INTERVAL = 2000; // ms
 
   // Find all banner carousels (by class instead of ID)
   var banners = Array.prototype.slice.call(document.querySelectorAll('.tascus-fullbleed'));
@@ -457,4 +457,58 @@ const allDetails = document.querySelectorAll('.faq-item');
                 });
             });
         });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.tascus-sl-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.tascus-sl-next');
+    const prevButton = document.querySelector('.tascus-sl-prev');
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    let autoPlayInterval;
+
+    // Hàm chuyển slide
+    const moveToSlide = (index) => {
+        // Xử lý vòng lặp vô tận
+        if (index < 0) {
+            index = totalSlides - 1;
+        } else if (index >= totalSlides) {
+            index = 0;
+        }
+        
+        currentIndex = index;
+        const amountToMove = -currentIndex * 100;
+        track.style.transform = `translateX(${amountToMove}%)`;
+    }
+
+    // Nút Next
+    nextButton.addEventListener('click', () => {
+        moveToSlide(currentIndex + 1);
+        resetAutoPlay();
+    });
+
+    // Nút Prev
+    prevButton.addEventListener('click', () => {
+        moveToSlide(currentIndex - 1);
+        resetAutoPlay();
+    });
+
+    // Tự động chạy (Auto Play)
+    const startAutoPlay = () => {
+        autoPlayInterval = setInterval(() => {
+            moveToSlide(currentIndex + 1);
+        }, 3000); // 3000ms = 3 giây đổi ảnh một lần
+    };
+
+    // Reset lại timer khi người dùng bấm nút (để tránh bị giật)
+    const resetAutoPlay = () => {
+        clearInterval(autoPlayInterval);
+        startAutoPlay();
+    };
+
+    // Bắt đầu chạy
+    startAutoPlay();
+});
 })();
