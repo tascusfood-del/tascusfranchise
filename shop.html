@@ -9,10 +9,19 @@
 
     <style>
         body, html {
-            margin: 0;
-            padding: 0;
+            margin: 0 auto;
+            padding:0;
             font-family: nunito, sans-serif;
             background-color: #f4f4f4;
+        }
+        .chmaster {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 7px;
+            margin-bottom: 40px;
+            background-color: white;
+            border: rgb(255, 230, 209) 2px solid;
+            border-radius: 60px;
         }
         .search-form {
             padding: 15px;
@@ -21,8 +30,10 @@
         }
         .search-form input[type="text"] {
             width: 100%;
+            margin-top: 30px;
             padding: 10px;
             font-size: 16px;
+            font-weight: bold;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
@@ -34,7 +45,7 @@
         }
         .cuahang_l {
             width: 35%;
-            height: 600px;
+            height: 700px;
             overflow-y: auto;
             background-color: #fff;
         }
@@ -43,8 +54,8 @@
             border-bottom: 1px solid #eee;
             cursor: pointer;
         }
-        .item_ch p { margin: 4px 0; font-size: 15px; }
-        .item_ch .ten { font-size: 17px; font-weight: bold; color: #d00000; }
+        .item_ch p { margin: 4px 0; font-size: 15px; font-weight: bold; }
+        .item_ch .ten { font-family: fontcuatoi; font-size: 18px; font-weight: bold; color: #962b2d; }
         .item_ch:hover { background-color: #f9f9f9; }
         .item_ch.item_ch_active {
             background-color: #fef8f8;
@@ -52,7 +63,7 @@
         }
         .cuahang_r {
             width: 65%;
-            height: 600px;
+            height: 700px;
         }
         .cuahang_r iframe {
             display: block;
@@ -106,96 +117,7 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
-       <style>
-         /* CSS cho Food App Buttons - ĐÃ SỬA FIX LỖI XUỐNG DÒNG */
-         .food-app-buttons {
-            display: flex;
-            gap: 18px !important;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: nowrap !important;
-         }
-
-         .food-app-btn {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: #fff;
-            border-radius: 8px;
-            padding: 5px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
-         }
-
-         .food-app-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-         }
-
-         .food-app-btn img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-         }
-
-         /* Màn hình tablet/trung bình */
-         @media (max-width: 991px) and (min-width: 768px) {
-            .food-app-buttons {
-               gap: 6px;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 48px;
-               height: 48px;
-               padding: 5px;
-            }
-         }
-
-         /* Mobile */
-         @media (max-width: 767px) {
-            .food-app-buttons {
-               gap: 8px;
-               justify-content: center;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 50px;
-               height: 50px;
-               padding: 8px;
-            }
-         }
-
-         @media (max-width: 480px) {
-            .food-app-buttons {
-               gap: 5px;
-               flex-wrap: nowrap !important;
-            }
-            
-            .food-app-btn {
-               width: 45px;
-               height: 45px;
-               padding: 5px;
-            }
-         }
-
-         /* Màn hình rất nhỏ */
-         @media (max-width: 360px) {
-            .food-app-buttons {
-               gap: 4px;
-            }
-            
-            .food-app-btn {
-               width: 40px;
-               height: 40px;
-               padding: 6px;
-            }
-         }
-      </style>
-      <!-- Google tag (gtag.js) -->
+      
 
    </head>
    <body>
@@ -228,7 +150,7 @@
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                     <a href="#form" class="btn btn-tu-van my-2 my-sm-0">NHẬN TƯ VẤN NGAY</a>
+                     <a href="https://www.facebook.com/messages/t/Nhuongquyen.tascusfood" class="btn btn-tu-van my-2 my-sm-0">NHẬN TƯ VẤN NGAY</a>
                   </form>
                </div>
             </nav>
@@ -241,12 +163,12 @@
       <!-- banner section end -->
      
 
-
-    <div class="search-form">
+<div class="chmaster">
+    <div class="search-form"  >
         <input type="text" id="search-input" name="keyword" placeholder="Nhập tên, địa chỉ, quận...">
     </div>
 
-    <div class="cuahang">
+    <div class="cuahang" style="padding-bottom: 100px;">
         
         <div class="cuahang_l" id="store-list-container">
             
@@ -304,32 +226,24 @@
         </div>
     </div>
 
-    <!-- Tascus Banner (isolated) -->
-    <section id="tascus-banner-widget" class="tascus-fullbleed" style="max-width: 1200px; margin: 15px auto;" aria-roledescription="carousel" aria-label="Banner nhượng quyền Tascus">
-    <div class="tascus-inner">
-        <div class="tascus-slide">
-            <a href="nhuongquyen.html" title="Xem chi tiết nhượng quyền Tascus Food">
-                <picture>
-                    <source media="(max-width: 768px)" 
-                        srcset="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/No%CC%A3%CC%82i%20dung%20%C4%91oa%CC%A3n%20va%CC%86n%20ba%CC%89n%20cu%CC%89a%20ba%CC%A3n%20(1).gif">
-                    <img class="tascus-img" 
-                        src="https://tascusfood.com/nhu%CC%9Bo%CC%9Bng%20quye%CC%82%CC%80n/No%CC%A3%CC%82i%20dung%20%C4%91oa%CC%A3n%20va%CC%86n%20ba%CC%89n%20cu%CC%89a%20ba%CC%A3n%20(1).gif" 
-                        alt="Nhượng quyền Tascus Food - Mô hình kinh doanh thức ăn nhanh hiệu quả"
-                        width="1920" height="823" loading="eager">
-                </picture>
-            </a>
+</div>
+  <div class="marquee-container-v2">
+            <div class="marquee-track">
+               <div class="marquee-item">
+                  ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷
+               </div>
+               <div class="marquee-item">
+                  TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷ TASCUS FOOD ✷
+               </div>
             </div>
-    </div>
-</section>
-
-        
-     <footer class="footer_section">
+         </div>
+  <footer class="footer_section">
          <div class="container">
             <div class="footer_sectio_2">
                <div class="row">
                   <div class="col-lg-4 col-md-4">
                      <h3 class="useful_text"> LỐI TẮT</h3>
-                     <nav class="footer_menu" aria-label="Footer navigation">
+                     <nav class="footer_menu" aria-label="Footer navigation" style="margin-bottom: 20px;">
                         <ul>
                          
 
@@ -342,20 +256,21 @@
                   </div>
                   <div class="col-lg-4 col-md-4">
                      <h3 class="useful_text">HOTLINE: <BR>1900 998 879</h3>
-                     <p class="footer_text">Theo dõi chúng tôi </p>
-                     <div class="social_icon" style="margin-bottom: 20px;">
-                        <ul style="margin-top: -10px;" component="social-links">
-                           <li><a href="https://www.facebook.com/tascusfood.vn" aria-label="Facebook Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/fb.png" alt="facbook" style="max-width: 40px;margin-right:-15px;"></a></li>
-                           <li><a href="https://www.instagram.com/tascusfood/" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/ins.png" alt="Instagram Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
-                            <li><a href="https://www.tiktok.com/@tascus.food" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
-                           <li><a href="https://www.tiktok.com/@nhatkybaga" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 40px;margin-right:-15px;"></a></li>
-                           <li><a href="https://www.threads.com/@tascusfood" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/threads.png" alt="tiktok Tascus Food" style="max-width: 40px;"></a></li>
+                     <p class="footer_text" >Theo dõi chúng tôi</p>
+                     <div class="social_icon" style="margin-bottom:20px;">
+                        <ul style="margin-top: -20px;" component="social-links">
+                           <li><a href="https://www.facebook.com/tascusfood.vn" aria-label="Facebook Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/fb.png" alt="facbook" style="max-width: 30px;margin-right:-20px;"></a></li>
+                           <li><a href="https://www.instagram.com/tascusfood/" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/ins.png" alt="Instagram Tascus Food" style="max-width: 30px;margin-right:-20px;"></a></li>
+                            <li><a href="https://www.tiktok.com/@tascus.food" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 30px;margin-right:-20px;"></a></li>
+                           <li><a href="https://www.tiktok.com/@nhatkybaga" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/tt.png" alt="tiktok Tascus Food" style="max-width: 30px;margin-right:-20px;"></a></li>
+                           <li><a href="https://www.threads.com/@tascusfood" aria-label="Instagram Tascus Food"> <img src="https://tascusfood.com/menu/icon-social/threads.png" alt="tiktok Tascus Food" style="max-width: 30px;"></a></li>
 
                         </ul>
                      </div>
                   </div>
                   <div class="col-lg-4 col-md-4">
                      <h2 class="useful_text">ĐẶT MÓN ONLINE</h2>
+                     <div class="food-app-buttons" style="margin-left: 0 !important;">
                         <a href="https://shopeefood.vn/thuong-hieu/ut-mau" target="_blank" rel="noopener noreferrer" class="food-app-btn">
                            <img src="https://tascusfood.com/foodapp%20logo/shopee.webp" alt=" tascus shopeeFood">
                         </a>
@@ -369,6 +284,7 @@
                            <img src="https://tascusfood.com/foodapp%20logo/xanhngon.webp" alt="ShopeeFood">
                         </a>
                      </div>
+                     <img src="https://tascusfood.com/bocongthuong.webp" alt="Tascus Food App" class="footer_img" style=" margin-top: 7%;">
                   </div>
                </div>
             </div>
@@ -378,13 +294,14 @@
 
 
       </footer>
-
-
       <div class="copyright_section">
          <div class="container">
             <p class="copyright_text">© 2025 Tascus Food. All rights reserved</p>
          </div>
       </div>
+        
+        
+     
       <!-- copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

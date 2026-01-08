@@ -15,7 +15,7 @@ body {
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 /* --- CONTAINER CHUNG --- */
@@ -1020,7 +1020,8 @@ body {
         }
 
         .ts1-data-table th, .ts1-data-table td {
-            border: 1px solid #f5f3f3;
+            border: 1.5px  solid #decaab;
+            border-style: dotted;
             padding: 10px 8px;
             vertical-align: middle;
         }
@@ -1044,24 +1045,27 @@ body {
 
         .ts1-row-header {
             font-weight: 600;
+            font-family: be vietnam pro, sans-serif;
             color: #2c3e50;
-            background-color: #fafafa;
+            background-color:#ffeac8;
         }
 
         .ts1-row-sub {
-            color: #555;
+            color: #555555;
+             font-family: be vietnam pro, sans-serif;
             padding-left: 20px !important; /* Thụt đầu dòng cho mục con */
         }
 
         .ts1-row-total {
             background-color: #fff8e1; /* Highlight hàng tổng kết */
             font-weight: 700;
+            font-family: be vietnam pro, sans-serif;
             color: #962b2d;
         }
 
         .ts1-col-money {
             text-align: right;
-            font-family: monospace;
+            font-family: be vietnam pro, sans-serif;
             font-size: 13px;
         }
 

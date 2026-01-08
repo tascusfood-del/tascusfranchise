@@ -3,7 +3,7 @@
 (function () {
   'use strict';
 
-  var AUTO_INTERVAL = 2000; // ms
+  var AUTO_INTERVAL = 3000; // ms
 
   // Find all banner carousels (by class instead of ID)
   var banners = Array.prototype.slice.call(document.querySelectorAll('.tascus-fullbleed'));
@@ -63,7 +63,7 @@
     });
 
     // pause on hover
-    root.addEventListener('mouseenter', function () { isHover = true; });
+    root.addEventListener('mouseenter', function () { isHover = false; });
     root.addEventListener('mouseleave', function () { isHover = false; });
 
     // touch / swipe

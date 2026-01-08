@@ -1,0 +1,16 @@
+# Robots.txt for Tascus Franchise
+
+# Áp dụng cho tất cả các bot (Bao gồm Google, Bing...)
+User-agent: *
+Allow: /
+
+# Các thư mục không muốn hiển thị trên Google
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+# Chặn các file hệ thống nếu cần (ví dụ file log)
+Disallow: /*.log
+
+# Sitemap location
+Sitemap: https://tascus.com.vn/sitemap.xml

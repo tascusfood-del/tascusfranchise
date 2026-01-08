@@ -263,7 +263,7 @@ button:focus {
 }
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 40px;
   width: auto;
   transition: max-height var(--transition-fast);
 }
@@ -275,7 +275,7 @@ button:focus {
 .navbar-expand-lg .navbar-nav .nav-link {
   font-family: var(--font-heading);
   padding: 3px 20px;
-  font-size: 25px;
+  font-size: 24px;
   color: #fefefd;
   border-radius: var(--radius-default);
   text-transform: uppercase;
@@ -290,20 +290,20 @@ button:focus {
 
 .btn-tu-van {
   font-family: var(--font-heading);
-  background-color: var(--color-accent-dark);
-  color: var(--color-white);
+  background-color: var(--color-accent-dark) !important;
+  color: white !important;
   border-radius: var(--radius-large);
   padding: 8px 20px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 20px;
   margin-left: 20px;
   transition: all var(--transition-fast);
 }
 
 .btn-tu-van:hover {
-  background-color: var(--color-white);
-  color: var(--color-accent-dark);
+  background-color: white !important;
+  color: var(--color-accent-dark) !important;
 }
 
 /* ===================================================================
@@ -1545,17 +1545,19 @@ h1.about_taital + p {
 
 .useful_text {
   width: 100%;
-  font-size: 26px;
-  color: var(--color-white);
+  font-size: 24px;
+  color: #f9b116;
   margin-bottom: 10px;
   font-weight: bold;
 }
+
+
 
 .footer_text,
 .footer_menu li,
 .footer_menu li a {
   color: var(--color-light);
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 .footer_menu li a:hover {
@@ -1669,7 +1671,7 @@ input.Enter_text::placeholder {
   float: left;
   background-color: #efa425;
   height: auto;
-  padding: 20px calc(50vw - 50%) !important;
+  padding: 0px calc(50vw - 50%) !important;
 }
 
 .copyright_text {
@@ -1782,7 +1784,7 @@ input.Enter_text::placeholder {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0084FF 0%, #006bcf 100%); /* Màu xanh Messenger */
+  background: linear-gradient(135deg, #761414 0%, #7f0303 100%); /* Màu xanh Messenger */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2024,12 +2026,12 @@ ul#artist-banner li.active .section-content .inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 35px;
 }
 
 .hcol {
   flex: 1 1 400px;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .itccinfohh {
@@ -2077,17 +2079,31 @@ ul#artist-banner li.active .section-content .inner {
   background-color: #8c532b;
 }
 
+.hcol:nth-child(1) .itccinfohh .decss:hover {
+  background-color: #962b2d;
+}
+
 .hcol:nth-child(1) .itccinfohh .dstitle h3 a {
   color: var(--color-white);
 }
 
 .hcol:nth-child(2) .itccinfohh .decss {
-  background-color: #F9F4E9;
+  background-color: #8c532b;
+}
+
+.hcol:nth-child(2) .itccinfohh .decss:hover {
+  background-color: #962b2d;
+}
+
+.hcol:nth-child(2) .itccinfohh .decss :hover {
+  background-color: #962b2d;
 }
 
 .hcol:nth-child(2) .itccinfohh .dstitle h3 a {
-  color: #333333;
+  color:  #F9F4E9;
 }
+
+
 
 /* Menu Freeze Section */
 .menu-section-freeze {
@@ -2254,7 +2270,7 @@ ul#artist-banner li.active .section-content .inner {
 @media (max-width: 991px) {
   .header_section .form-inline {
     width: 100%;
-    padding-top: 15px;
+    padding-top: 0;
     padding-bottom: 10px;
   }
 
@@ -2371,12 +2387,16 @@ ul#artist-banner li.active .section-content .inner {
                flex-wrap: nowrap !important;
             }
             
+            .footer_text {
+               margin-bottom:20px;
+            }
             .food-app-btn {
                width: 45px;
                height: 45px;
                padding: 5px;
             }
          }
+
 
          /* Màn hình rất nhỏ */
          @media (max-width: 360px) {
@@ -2561,7 +2581,7 @@ ul#artist-banner li.active .section-content .inner {
         left: 0;
         border-radius: 0 20px 20px 0;
         transform: translate(-100%, 0);
-    }
+    } f
     
     #toc-toggle-btn.show-on-scroll {
         transform: translate(0, 0);
@@ -2572,10 +2592,5 @@ ul#artist-banner li.active .section-content .inner {
     }
 
 }
-
-
-
-
-
 
 
