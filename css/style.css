@@ -166,9 +166,7 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-bg);
   margin: 0;
-  padding: 0;
-  padding-top:80px;
-}
+padding: 40px 0 0 0;}
 
 a {
   color: #1f1f1f;
@@ -2284,6 +2282,7 @@ ul#artist-banner li.active .section-content .inner {
 
   .navbar-brand img {
     max-height: 40px;
+
   }
 
   .header_section .navbar-nav {
@@ -2593,7 +2592,5 @@ ul#artist-banner li.active .section-content .inner {
     }
 
 }
-
-
 
 
