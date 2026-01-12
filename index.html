@@ -356,27 +356,50 @@
       <script src="js/tascusweb.js" defer></script>
       
       <!-- Contact Form Script -->
-      <script>
+     <script>
   (function() {
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwCcV7v3CCZtA212GXs5_QQCiChATcNiRNvz5PxNUrC6jsy4KT6zmWJDXfDIatsLyNswA/exec';
       const form = document.getElementById('tascus-contact-form');
       const statusDiv = document.getElementById('tascus-form-status');
-      
-     if (form) {
+      const submitBtn = form ? form.querySelector('button[type="submit"]') : null; // Lấy nút gửi
+
+      // CẤU HÌNH THỜI GIAN CHẶN (30 giây = 30000 ms)
+      const SPAM_COOLDOWN = 30000; 
+
+      if (form) {
           form.addEventListener('submit', function(e) {
               e.preventDefault();
-              
+
+              // --- 1. KIỂM TRA SPAM (LOCAL STORAGE) ---
+              const lastSubmitTime = localStorage.getItem('tascus_last_submit');
+              const now = new Date().getTime();
+
+              if (lastSubmitTime && (now - lastSubmitTime < SPAM_COOLDOWN)) {
+                  const remainingTime = Math.ceil((SPAM_COOLDOWN - (now - lastSubmitTime)) / 1000);
+                  statusDiv.innerHTML = `⚠️ Bạn gửi quá nhanh! Vui lòng đợi ${remainingTime} giây nữa.`;
+                  statusDiv.style.display = 'block';
+                  statusDiv.style.backgroundColor = '#fff3cd'; // Màu vàng cảnh báo
+                  statusDiv.style.color = '#856404';
+                  return; // Dừng lại, không cho gửi
+              }
+
+              // --- 2. XỬ LÝ GIAO DIỆN KHI ĐANG GỬI ---
               statusDiv.innerHTML = '⏳ Đang gửi...';
               statusDiv.style.display = 'block';
-              statusDiv.style.backgroundColor = '#fff3cd';
-              statusDiv.style.color = '#856404';
+              statusDiv.style.backgroundColor = '#e2e3e5'; // Màu xám
+              statusDiv.style.color = '#383d41';
               
-              // CẬP NHẬT DỮ LIỆU Ở ĐÂY (đã loại bỏ trường `service`)
+              // Khóa nút gửi để tránh click đúp
+              if(submitBtn) {
+                  submitBtn.disabled = true;
+                  submitBtn.innerHTML = "Đang xử lý...";
+              }
+              
               const formData = {
                   name: form.name.value,
                   mobile: form.mobile.value,
-                  city: form.city.value,          // Đã thay email thành city
-                  contact_time: form.contact_time.value, // Thêm mục khung giờ
+                  city: form.city.value,
+                  contact_time: form.contact_time.value,
                   message: form.message.value
               };
               
@@ -387,26 +410,42 @@
                   body: JSON.stringify(formData)
               })
               .then(function() {
+                  // --- 3. GỬI THÀNH CÔNG -> LƯU THỜI GIAN ---
+                  localStorage.setItem('tascus_last_submit', new Date().getTime());
+
                   statusDiv.innerHTML = '✅ Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 24 giờ.';
                   statusDiv.style.backgroundColor = '#d4edda';
                   statusDiv.style.color = '#155724';
                   form.reset();
+                  
+                  // Mở lại nút gửi (để họ gửi tiếp sau 30s nếu muốn)
+                  if(submitBtn) {
+                      submitBtn.disabled = false;
+                      submitBtn.innerHTML = "Gửi ngay"; // Hoặc text ban đầu của nút
+                  }
+
                   setTimeout(function() { statusDiv.style.display = 'none'; }, 5000);
               })
               .catch(function() {
                   statusDiv.innerHTML = '❌ Có lỗi xảy ra. Vui lòng thử lại!';
                   statusDiv.style.backgroundColor = '#f8d7da';
                   statusDiv.style.color = '#721c24';
+                  
+                  // Nếu lỗi thì mở lại nút ngay để khách thử lại
+                  if(submitBtn) {
+                      submitBtn.disabled = false;
+                      submitBtn.innerHTML = "Thử lại";
+                  }
               });
           });
       }
   })();
 </script>
-
       <!-- Custom Cursor Styles -->
      
    </body>
 </html>
+
 
 
 
