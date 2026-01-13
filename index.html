@@ -256,8 +256,7 @@
                 <!-- `service` selection removed as requested -->
          </div>
          
-         <textarea name="message" class="tascus-input tascus-textarea" placeholder="Nội dung tư vấn" aria-label="Nội dung tư vấn"></textarea>
-         <button type="submit" class="tascus-submit-btn">Gửi yêu cầu ngay</button>
+<textarea name="message" class="tascus-input tascus-textarea" placeholder="Nội dung tư vấn" aria-label="Nội dung tư vấn"></textarea>         <button type="submit" class="tascus-submit-btn">Gửi yêu cầu ngay</button>
       </form>
       
       <div id="tascus-form-status" class="tascus-form-status" role="status" aria-live="polite"></div>
@@ -356,50 +355,69 @@
       <script src="js/tascusweb.js" defer></script>
       
       <!-- Contact Form Script -->
-     <script>
+    <script>
   (function() {
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwCcV7v3CCZtA212GXs5_QQCiChATcNiRNvz5PxNUrC6jsy4KT6zmWJDXfDIatsLyNswA/exec';
       const form = document.getElementById('tascus-contact-form');
       const statusDiv = document.getElementById('tascus-form-status');
-      const submitBtn = form ? form.querySelector('button[type="submit"]') : null; // Lấy nút gửi
-
-      // CẤU HÌNH THỜI GIAN CHẶN (30 giây = 30000 ms)
-      const SPAM_COOLDOWN = 30000; 
-
+      const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
+      
+      let lastSubmitTime = 0;
+      const COOLDOWN = 30000; // 30 giây (ms)
+      let countdownInterval = null;
+      
       if (form) {
           form.addEventListener('submit', function(e) {
               e.preventDefault();
-
-              // --- 1. KIỂM TRA SPAM (LOCAL STORAGE) ---
-              const lastSubmitTime = localStorage.getItem('tascus_last_submit');
-              const now = new Date().getTime();
-
-              if (lastSubmitTime && (now - lastSubmitTime < SPAM_COOLDOWN)) {
-                  const remainingTime = Math.ceil((SPAM_COOLDOWN - (now - lastSubmitTime)) / 1000);
-                  statusDiv.innerHTML = `⚠️ Bạn gửi quá nhanh! Vui lòng đợi ${remainingTime} giây nữa.`;
+              
+              const now = Date.now();
+              const timeSinceLastSubmit = now - lastSubmitTime;
+              
+              // Kiểm tra nếu chưa đủ 30 giây
+              if (timeSinceLastSubmit < COOLDOWN) {
+                  const secondsLeft = Math.ceil((COOLDOWN - timeSinceLastSubmit) / 1000);
+                  statusDiv.innerHTML = `⏳ Vui lòng chờ <strong>${secondsLeft}</strong> giây trước khi gửi tiếp`;
                   statusDiv.style.display = 'block';
-                  statusDiv.style.backgroundColor = '#fff3cd'; // Màu vàng cảnh báo
+                  statusDiv.style.backgroundColor = '#fff3cd';
                   statusDiv.style.color = '#856404';
-                  return; // Dừng lại, không cho gửi
+                  
+                  // Bắt đầu bộ đếm ngược
+                  if (countdownInterval) clearInterval(countdownInterval);
+                  let remaining = secondsLeft;
+                  
+                  countdownInterval = setInterval(function() {
+                      remaining--;
+                      if (remaining > 0) {
+                          statusDiv.innerHTML = `⏳ Vui lòng chờ <strong>${remaining}</strong> giây trước khi gửi tiếp`;
+                      } else {
+                          clearInterval(countdownInterval);
+                          statusDiv.style.display = 'none';
+                      }
+                  }, 1000);
+                  return;
               }
-
-              // --- 2. XỬ LÝ GIAO DIỆN KHI ĐANG GỬI ---
+              
+              // Cập nhật thời gian gửi cuối cùng
+              lastSubmitTime = now;
+              
+              // Vô hiệu hóa nút submit
+              if (submitBtn) {
+                  submitBtn.disabled = true;
+                  submitBtn.style.opacity = '0.6';
+                  submitBtn.style.cursor = 'not-allowed';
+              }
+              
               statusDiv.innerHTML = '⏳ Đang gửi...';
               statusDiv.style.display = 'block';
-              statusDiv.style.backgroundColor = '#e2e3e5'; // Màu xám
-              statusDiv.style.color = '#383d41';
+              statusDiv.style.backgroundColor = '#fff3cd';
+              statusDiv.style.color = '#856404';
               
-              // Khóa nút gửi để tránh click đúp
-              if(submitBtn) {
-                  submitBtn.disabled = true;
-                  submitBtn.innerHTML = "Đang xử lý...";
-              }
-              
+              // CẬP NHẬT DỮ LIỆU Ở ĐÂY (đã loại bỏ trường `service`)
               const formData = {
                   name: form.name.value,
                   mobile: form.mobile.value,
-                  city: form.city.value,
-                  contact_time: form.contact_time.value,
+                  city: form.city.value,          // Đã thay email thành city
+                  contact_time: form.contact_time.value, // Thêm mục khung giờ
                   message: form.message.value
               };
               
@@ -410,31 +428,43 @@
                   body: JSON.stringify(formData)
               })
               .then(function() {
-                  // --- 3. GỬI THÀNH CÔNG -> LƯU THỜI GIAN ---
-                  localStorage.setItem('tascus_last_submit', new Date().getTime());
-
                   statusDiv.innerHTML = '✅ Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 24 giờ.';
                   statusDiv.style.backgroundColor = '#d4edda';
                   statusDiv.style.color = '#155724';
                   form.reset();
                   
-                  // Mở lại nút gửi (để họ gửi tiếp sau 30s nếu muốn)
-                  if(submitBtn) {
-                      submitBtn.disabled = false;
-                      submitBtn.innerHTML = "Gửi ngay"; // Hoặc text ban đầu của nút
-                  }
-
-                  setTimeout(function() { statusDiv.style.display = 'none'; }, 5000);
+                  // Bắt đầu countdown
+                  let remaining = 30;
+                  if (countdownInterval) clearInterval(countdownInterval);
+                  countdownInterval = setInterval(function() {
+                      remaining--;
+                      if (remaining > 0) {
+                          statusDiv.innerHTML = `✅ Cảm ơn bạn! Chúng tôi sẽ liên hệ trong vòng 24 giờ.<br><small>Có thể gửi lại trong <strong>${remaining}</strong> giây</small>`;
+                      } else {
+                          clearInterval(countdownInterval);
+                          setTimeout(function() { statusDiv.style.display = 'none'; }, 1000);
+                      }
+                  }, 1000);
+                  
+                  // Kích hoạt lại nút submit sau 30 giây
+                  setTimeout(function() {
+                      if (submitBtn) {
+                          submitBtn.disabled = false;
+                          submitBtn.style.opacity = '1';
+                          submitBtn.style.cursor = 'pointer';
+                      }
+                  }, COOLDOWN);
               })
               .catch(function() {
                   statusDiv.innerHTML = '❌ Có lỗi xảy ra. Vui lòng thử lại!';
                   statusDiv.style.backgroundColor = '#f8d7da';
                   statusDiv.style.color = '#721c24';
                   
-                  // Nếu lỗi thì mở lại nút ngay để khách thử lại
-                  if(submitBtn) {
+                  // Kích hoạt lại nút submit khi có lỗi
+                  if (submitBtn) {
                       submitBtn.disabled = false;
-                      submitBtn.innerHTML = "Thử lại";
+                      submitBtn.style.opacity = '1';
+                      submitBtn.style.cursor = 'pointer';
                   }
               });
           });
@@ -445,7 +475,6 @@
      
    </body>
 </html>
-
 
 
 
