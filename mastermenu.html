@@ -3,13 +3,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- Favicon -->
+      
+      <title>Thực Đơn Tascus Food - Burger, Taco, Mì Ý & Bánh Mì Chảo</title>
+      <meta name="keywords" content="Tascus Food, menu Tascus, thực đơn Tascus, burger ngon, bánh mì chảo, mì ý, taco mexico, bánh crepe, sandwich, đồ uống, thức ăn nhanh Hà Nội">
+      <meta name="description" content="Khám phá thực đơn đa dạng tại Tascus Food: Burger bò nướng, Taco Mexico, Mì Ý sốt bò bằm, Bánh mì chảo và Crepe Pháp. Đặt món ngay - Hotline: 1900 998 879.">
+      <meta name="author" content="Tascus Food">
+      
+      <meta property="og:title" content="Thực Đơn Tascus Food - Thế Giới Đồ Ăn Nhanh Đa Dạng">
+      <meta property="og:description" content="Hơn 8 nhóm món ngon từ Burger, Taco đến Bánh mì chảo và Đồ uống. Xem menu và chọn món yêu thích ngay!">
+      <meta property="og:image" content="https://tascusfood.com/logo.webp">
+      <meta property="og:url" content="https://tascusfood.com/mastermenu.html">
+      <meta property="og:type" content="article">
+
       <link rel="icon" href="https://tascusfood.com/logo.webp" type="image/png">
-      <title>Tascus Food-Menu</title>
       
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="css/style.css"> 
@@ -20,95 +30,94 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-                  <link rel="stylesheet" href="css/tascus.css">
-
+      
+      <link rel="stylesheet" href="css/tascus.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-<style>
-    /* 1. KHAI BÁO FONT CHỮ MỚI */
-    @font-face {
-        font-family: 'FontCuaToi';
-        /* Lưu ý: Kiểm tra kỹ đường dẫn file font */
-        src: url('fonts/kenyan.ttf') format('truetype'); 
-        font-weight: normal;
-        font-style: normal;
-    }
 
-    /* 2. QUY ĐỊNH HIỂN THỊ MOBILE/PC */
-    .hl-col-responsive {
-        flex: 0 0 100%;
-        max-width: 100%;
-        padding: 0 15px;
-        text-align: center;
-    }
+      <style>
+         /* 1. KHAI BÁO FONT CHỮ MỚI */
+         @font-face {
+             font-family: 'FontCuaToi';
+             /* Lưu ý: Kiểm tra kỹ đường dẫn file font */
+             src: url('fonts/kenyan.ttf') format('truetype'); 
+             font-weight: normal;
+             font-style: normal;
+         }
 
-    @media (min-width: 768px) {
-        .hl-col-responsive {
-            flex: 0 0 50%;
-            max-width: 50%;
-            text-align: left;
-        }
-        .hl-col-img { text-align: center !important; }
-        .hl-text-pc-right { text-align: right !important; }
-    }
+         /* 2. QUY ĐỊNH HIỂN THỊ MOBILE/PC */
+         .hl-col-responsive {
+             flex: 0 0 100%;
+             max-width: 100%;
+             padding: 0 15px;
+             text-align: center;
+         }
 
-    /* 3. QUY ĐỊNH NÚT BẤM & HIỆU ỨNG HOVER */
-    .hl-btn {
-        display: inline-block;
-        padding: 12px 35px;
-        text-transform: uppercase;
-        font-weight: 800;
-        text-decoration: none !important;
-        transition: all 0.3s ease-in-out;
-        letter-spacing: 1px;
-        position: relative;
-        z-index: 20;
-        font-family: 'Roboto', sans-serif; /* Nút bấm giữ font dễ đọc */
-    }
+         @media (min-width: 768px) {
+             .hl-col-responsive {
+                 flex: 0 0 50%;
+                 max-width: 50%;
+                 text-align: left;
+             }
+             .hl-col-img { text-align: center !important; }
+             .hl-text-pc-right { text-align: right !important; }
+         }
 
-    /* Style cho nút Cà phê */
-    .hl-btn-coffee {
-        border: 2px solid white;
-        color: white !important;
-        background: transparent;
-    }
-    .hl-btn-coffee:hover {
-        background-color: white;
-        color: #3E2723 !important;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-        transform: translateY(-3px);
-    }
+         /* 3. QUY ĐỊNH NÚT BẤM & HIỆU ỨNG HOVER */
+         .hl-btn {
+             display: inline-block;
+             padding: 12px 35px;
+             text-transform: uppercase;
+             font-weight: 800;
+             text-decoration: none !important;
+             transition: all 0.3s ease-in-out;
+             letter-spacing: 1px;
+             position: relative;
+             z-index: 20;
+             font-family: 'Roboto', sans-serif; /* Nút bấm giữ font dễ đọc */
+         }
 
-    /* Style cho nút Freeze */
-    .hl-btn-freeze {
-        border: 2px solid #006400;
-        color: #006400 !important;
-        background: transparent;
-    }
-    .hl-btn-freeze:hover {
-        background-color: #006400;
-        color: white !important;
-        box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
-        transform: translateY(-3px);
-    }
-   
+         /* Style cho nút Cà phê */
+         .hl-btn-coffee {
+             border: 2px solid white;
+             color: white !important;
+             background: transparent;
+         }
+         .hl-btn-coffee:hover {
+             background-color: white;
+             color: #3E2723 !important;
+             box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+             transform: translateY(-3px);
+         }
 
-    /* 4. TIÊU ĐỀ DÙNG FONT KENYAN (FontCuaToi) */
-    .hl-heading {
-        /* ÁP DỤNG FONT TẠI ĐÂY */
-        font-family: 'FontCuaToi', 'Montserrat', sans-serif !important; 
-        
-        font-weight: normal; /* Font Kenyan thường đã đậm sẵn, để normal cho đẹp */
-        font-size: 45px; /* Tăng size lên chút vì font Kenyan thường hiển thị nhỏ hơn */
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        line-height: 1.1;
-        letter-spacing: 1px;
-    }
-    @media (min-width: 768px) { .hl-heading { font-size: 55px; } }
-</style>
+         /* Style cho nút Freeze */
+         .hl-btn-freeze {
+             border: 2px solid #006400;
+             color: #006400 !important;
+             background: transparent;
+         }
+         .hl-btn-freeze:hover {
+             background-color: #006400;
+             color: white !important;
+             box-shadow: 0 5px 15px rgba(0, 100, 0, 0.3);
+             transform: translateY(-3px);
+         }
+         
 
-
+         /* 4. TIÊU ĐỀ DÙNG FONT KENYAN (FontCuaToi) */
+         .hl-heading {
+             /* ÁP DỤNG FONT TẠI ĐÂY */
+             font-family: 'FontCuaToi', 'Montserrat', sans-serif !important; 
+             
+             font-weight: normal; /* Font Kenyan thường đã đậm sẵn, để normal cho đẹp */
+             font-size: 45px; /* Tăng size lên chút vì font Kenyan thường hiển thị nhỏ hơn */
+             text-transform: uppercase;
+             margin-bottom: 15px;
+             line-height: 1.1;
+             letter-spacing: 1px;
+         }
+         @media (min-width: 768px) { .hl-heading { font-size: 55px; } }
+      </style>
 </head>
   <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
       <div class="header_section" style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
@@ -499,4 +508,5 @@
 
    </body>
 </html>
+
 
